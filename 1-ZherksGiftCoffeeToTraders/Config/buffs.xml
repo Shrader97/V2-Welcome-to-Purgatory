@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+	<append xpath="//buffs">
+	
+		<buff name="buffCoffeeGiftDiscount"
+			name_key="buffCoffeeGiftDiscountName"
+			description_key="buffCoffeeGiftDiscountDesc"
+			icon="ui_game_symbol_coffee"
+			hidden="false">
+
+			<stack_type value="replace" />
+			<duration value="180" />
+
+			  
+			<display_value value=".buffCoffeeGiftDisplay"/>
+			<display_value_format value="time"/>
+
+			<effect_group>
+				
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar"
+								  cvar="$buffCoffeeGiftDuration" operation="set" value="180"/>
+			</effect_group>
+
+			<effect_group>
+				
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+								  cvar="$buffCoffeeGiftDuration" operation="subtract" value="@$MetabolismDuration"/>
+
+				
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+								  cvar=".buffCoffeeGiftDisplay" operation="set" value="@$buffCoffeeGiftDuration"/>
+
+				
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+								  cvar=".buffCoffeeGiftDisplay" operation="divide" value="@$MetabolismDuration"/>
+			
+			</effect_group>
+
+			<effect_group>
+				
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffCoffeeGiftDiscount">
+					<requirement name="CVarCompare" cvar="$buffCoffeeGiftDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+
+				
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar"
+								  cvar=".buffCoffeeGiftDisplay,$buffCoffeeGiftDuration"/>
+			</effect_group>
+
+			<effect_group>
+				<passive_effect name="BarteringBuying" operation="base_add" value="0.05" />
+				<passive_effect name="BarteringSelling" operation="base_add" value="0.05"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="buffCoffeeGiftDiscountBlackStrap"
+			name_key="buffCoffeeGiftDiscountBlackStrapName"
+			description_key="buffCoffeeGiftDiscountBlackStrapDesc"
+			icon="ui_game_symbol_coffee" icon_color="0,255,0"
+			hidden="false">
+
+			<stack_type value="replace" />
+			<duration value="360" /> <!-- longer -->
+
+			<display_value value=".buffCoffeeGiftBlackStrapDisplay"/>
+			<display_value_format value="time"/>
+
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar"
+								  cvar="$buffCoffeeGiftBlackStrapDuration" operation="set" value="360"/>
+			</effect_group>
+
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+								cvar="$buffCoffeeGiftBlackStrapDuration" operation="subtract" value="@$MetabolismDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+								  cvar=".buffCoffeeGiftBlackStrapDisplay" operation="set" value="@$buffCoffeeGiftBlackStrapDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+								  cvar=".buffCoffeeGiftBlackStrapDisplay" operation="divide" value="@$MetabolismDuration"/>
+			</effect_group>
+
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffCoffeeGiftDiscountBlackStrap">
+				  <requirement name="CVarCompare" cvar="$buffCoffeeGiftBlackStrapDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar"
+								  cvar=".buffCoffeeGiftBlackStrapDisplay,$buffCoffeeGiftBlackStrapDuration"/>
+			</effect_group>
+
+			<effect_group>
+				<!-- same discount (or bump it slightly if you want) -->
+				<passive_effect name="BarteringBuying" operation="base_add" value="0.07" />
+				<passive_effect name="BarteringSelling" operation="base_add" value="0.07"/>
+			</effect_group>
+		</buff>
+		
+		<buff name="buffBeerGiftDiscount"
+			name_key="buffBeerGiftDiscountName"
+			description_key="buffBeerGiftDiscountDesc"
+			icon="ui_game_symbol_beer" icon_color="0,255,0"
+			hidden="false">
+
+			<stack_type value="replace" />
+			<duration value="240" />
+
+			  
+			<display_value value=".buffBeerGiftDisplay"/>
+			<display_value_format value="time"/>
+
+			<effect_group>
+				
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar"
+								  cvar="$buffBeerGiftDuration" operation="set" value="240"/>
+			</effect_group>
+
+			<effect_group>
+				
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+								  cvar="$buffBeerGiftDuration" operation="subtract" value="@$MetabolismDuration"/>
+
+				
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+								  cvar=".buffBeerGiftDisplay" operation="set" value="@$buffBeerGiftDuration"/>
+
+				
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar"
+								  cvar=".buffBeerGiftDisplay" operation="divide" value="@$MetabolismDuration"/>
+			
+			</effect_group>
+
+			<effect_group>
+				
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffCoffeeGiftDiscount">
+					<requirement name="CVarCompare" cvar="$buffBeerGiftDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+
+				
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar"
+								  cvar=".buffBeerGiftDisplay,$buffBeerGiftDuration"/>
+			</effect_group>
+
+			<effect_group>
+				<passive_effect name="BarteringBuying" operation="base_add" value="0.05" />
+				<passive_effect name="BarteringSelling" operation="base_add" value="0.05"/>
+			</effect_group>
+		</buff>
+		
+	</append>
+</configs>
