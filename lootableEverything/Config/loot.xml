@@ -1,0 +1,505 @@
+<lootableEverything>
+	<append xpath="/lootcontainers">
+		<!--boxes-->
+		<lootgroup name="groupepiano">
+			<item  name="resourcePaper" count="4,20" loot_prob_template="high"/>
+			<item  name="resourceScrapPolymers" count="2,10" loot_prob_template="med"/>
+			<item  name="resourceDuctTape" count="1,3" loot_prob_template="med"/>
+			<item  name="resourceWood" count="5,50" loot_prob_template="med"/>
+			<item  name="resourceScrapBrass" count="5,50" loot_prob_template="med"/>
+			<item  name="resourceScrapLead" count="5,50" loot_prob_template="med"/>
+			<item  name="resourceLeather" count="1,10" loot_prob_template="med"/>
+			<item  name="resourceMechanicalParts" count="1,5" loot_prob_template="high"/>
+		</lootgroup>
+		
+		<lootcontainer name="1piano1" count="3" size="3,3" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="qualBaseTemplate" destroy_on_close="false">	
+			<item  group="groupepiano" count="1,3" loot_prob_template="high"/>
+		</lootcontainer>
+		
+		<!--Solar bank-->
+		<lootcontainer name="1solarbank" count="1" size="2,2" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="qualBaseTemplate" destroy_on_close="false">	
+			<item  name="resourceElectricParts" count="1,3" loot_prob_template="high"/>
+			<item  name="solarCell" count="1" loot_prob_template="verylow"/>
+			<item  name="carBattery" count="1" loot_prob_template="med"/>
+		</lootcontainer>
+		
+		<!--IV Stand-->
+		<lootcontainer name="1standIV" count="1" size="1,1" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="qualBaseTemplate" destroy_on_close="false">	
+			<item  name="medicalBloodBag" count="1" loot_prob_template="guaranteed"/>
+		</lootcontainer>
+		
+		<!--Water Barrels-->
+		<lootcontainer name="1waterBarrel1" count="1" size="2,2" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="qualBaseTemplate" destroy_on_close="false">	
+			<item  name="drinkJarRiverWater" count="1,3" loot_prob_template="high"/>
+			<item name="drinkJarBoiledWater" count="1,3" loot_prob_template="high"/>
+			<item name="drinkJarPureMineralWater" count="1,2"  loot_prob_template="med"/>
+		</lootcontainer>
+		
+		<lootcontainer name="1waterBarrel2" count="1" size="2,2" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="qualBaseTemplate" destroy_on_close="false">	
+			<item  name="drinkJarRiverWater" count="1,8" loot_prob_template="high"/>
+			<item name="drinkJarBoiledWater" count="1,3" loot_prob_template="high"/>
+			<item name="drinkJarPureMineralWater" count="1,2"  loot_prob_template="med"/>
+		</lootcontainer>
+	
+	
+		<!--Computers-->
+		<lootcontainer name="1computer1" count="1" size="2,2" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+				<item  name="resourceElectricParts" count="1,3" loot_prob_template="high"/>
+				<item name="resourceScrapPolymers" count="1,3" loot_prob_template="high"/>
+				<item name="resourceScrapIron" count="1,2"  loot_prob_template="high"/>
+			</lootcontainer>
+			
+		<!--pet cage-->
+		<lootgroup name="groupPetCage">
+			<item  name="foodRottingFlesh" count="1,3" loot_prob_template="high"/>
+			<item name="resourceFeather" count="2,10" loot_prob_template="high"/>
+			<item name="foodRawMeat" count="1,4"  loot_prob_template="high"/>
+			<item name="foodEgg" count="1,6"  loot_prob_template="high"/>
+			<item name="resourcePotassiumNitratePowder" count="10,60"  loot_prob_template="high"/>
+		</lootgroup>
+			
+		<lootcontainer name="1petCage1" count="1" size="2,2" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualBaseTemplate" destroy_on_close="false">	
+			<item group="groupPetCage" count="3" loot_prob_template="med"/>
+		</lootcontainer>
+		
+		<!--boxes-->
+		<lootgroup name="groupBoxes">
+			<item  name="resourcePaper" count="4,20" loot_prob_template="high"/>
+			<item  name="resourceScrapPolymers" count="2,10" loot_prob_template="med"/>
+			<item  name="resourceCobblestones" count="5,50" loot_prob_template="med"/>
+			<item  name="resourceElectricParts" count="1,5" loot_prob_template="high"/>
+			<item  name="resourceDuctTape" count="1,3" loot_prob_template="med"/>
+			<item  name="resourceWood" count="5,50" loot_prob_template="med"/>
+			<item  name="electricwirerelay" count="1,3" loot_prob_template="med"/>
+			<item  name="resourceScrapBrass" count="5,50" loot_prob_template="med"/>
+			<item  name="resourceScrapLead" count="5,50" loot_prob_template="med"/>
+			<item  name="resourceLeather" count="1,10" loot_prob_template="med"/>
+			<item  name="resourceMechanicalParts" count="1,5" loot_prob_template="high"/>
+		</lootgroup>
+		
+		<lootgroup name="groupAppliances">
+			<item  name="satelliteUnitSmallWall" count="1" loot_prob_template="med"/>
+			<item  name="cntDishwasherFullWhite" count="1" loot_prob_template="med"/>
+			<item  name="cntDryerClosed" count="1" loot_prob_template="med"/>
+			<item  name="cntToaster" count="1" loot_prob_template="med"/>
+			<item  name="cntCoffeeMaker" count="1" loot_prob_template="high"/>
+			<item  name="decoComputerDeskTopPC" count="1" loot_prob_template="med"/>
+			<item  name="endTableLamp" count="1" loot_prob_template="med"/>
+			<item  name="officeChair01Black" count="1" loot_prob_template="med"/>
+			<item  name="cntWaterCoolerBottle" count="1" loot_prob_template="med"/>
+			<item  name="cntRollingToolBoxClosedRed" count="1" loot_prob_template="high"/>
+			<item  name="cntStoreElectronicsBookShelfSpeaker" count="1" loot_prob_template="med"/>
+			<item  name="cntGunSafe_Player" count="1" loot_prob_template="low"/>
+		</lootgroup>
+		
+		<lootcontainer name="1boxes1" count="3" size="5,5" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualPlus1Template" destroy_on_close="true">	
+			<item group="groupBoxes" count="5" loot_prob_template="high"/>
+			<item group="groupAppliances" count="1" loot_prob_template="high"/>
+			<item group="groupJunk" loot_prob_template="high"/>
+			<item group="groupCardboardBox" loot_prob_template="high"/>
+			<item group="groupGarage" loot_prob_template="low"/>
+			<item group="groupElectricalDevices" loot_prob_template="low"/>
+			<item group="groupBackpacks" loot_prob_template="med"/>
+			<item group="groupMoPowerShelves" loot_prob_template="low"/>
+			<item name="tvLargeStand2x2" loot_prob_template="low"/>
+			<item name="tvSmallWall1x1" loot_prob_template="low"/>
+			<item name="chandelierLight" loot_prob_template="low"/>
+		</lootcontainer>
+
+		<!--pallets-->
+		<lootcontainer name="1palletTV" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceElectricParts" count="1,5" loot_prob_template="high"/>
+			<item name="tvLargeStand2x2" loot_prob_template="high"/>
+		</lootcontainer>
+		
+		<lootcontainer name="1palletBagBlankBaseFull" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceClayLump" count="30,40" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagBlankTile" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceClayLump" count="30,40" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagBlankBaseMed" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceClayLump" count="15,20" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagBlankCapMed" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceClayLump" count="15,20" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagBlankCapSml" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceClayLump" count="6,12" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagBlankSingleBent" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceClayLump" count="2,4" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagBlankSingleFlat" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceClayLump" count="2,4" loot_prob_template="high"/>
+		</lootcontainer>
+		
+		<lootcontainer name="1palletBricks1" count="2" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceRockSmall" count="50,100" loot_prob_template="high"/>
+		</lootcontainer>
+		
+		<lootgroup name="groupPalletTarp">
+			<item  name="resourceRockSmall" count="50,80" loot_prob_template="med"/>
+			<item  name="resourceCrushedSand" count="40,60" loot_prob_template="med"/>
+			<item  name="resourceClayLump" count="40,60" loot_prob_template="med"/>
+			<item  name="resourceCobblestones" count="25,75" loot_prob_template="med"/>
+		</lootgroup>
+		
+		<lootcontainer name="1palletTarpBase1" count="2" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  group="groupPalletTarp" count="3" loot_prob_template="high"/>
+		</lootcontainer>
+		
+		<lootcontainer name="1palletCompressedCardboard1" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourcePaper" count="25,50" loot_prob_template="high"/>
+		</lootcontainer>
+		
+		<lootcontainer name="1palletCans1" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceScrapIron" count="25,50" loot_prob_template="high"/>
+		</lootcontainer>
+
+		<lootcontainer name="1OSBWoodStack1" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceWood" count="20,30" loot_prob_template="high"/>
+		</lootcontainer>
+
+		<lootcontainer name="1plywoodStack1" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item name="resourceWood" count="15,50" loot_prob_template="high"/>
+		</lootcontainer>
+
+		<lootcontainer name="1woodPlanksStack1" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item name="resourceWood" count="10,30" loot_prob_template="high"/>
+		</lootcontainer>
+		
+		<lootgroup name="groupdryWallStack">
+			<item  name="resourceRockSmall" count="20,40" loot_prob_template="high"/>
+			<item  name="resourcePaper" count="10,15" loot_prob_template="high"/>
+			<item  name="resourceCrushedSand" count="15,35" loot_prob_template="high"/>
+		</lootgroup>
+
+		<lootcontainer name="1dryWallStack1" count="3" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  group="groupdryWallStack" count="3" loot_prob_template="high"/>
+		</lootcontainer>
+
+		<lootcontainer name="1metalPipeStack1" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceMetalPipe" count="8,10" loot_prob_template="high"/>
+		</lootcontainer>
+
+		<lootcontainer name="1metalPipeStackLoose1" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceMetalPipe" count="4,5" loot_prob_template="high"/>
+		</lootcontainer>
+
+		<lootcontainer name="1bricksStack1" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceRockSmall" count="50,60" loot_prob_template="high"/>
+		</lootcontainer>
+		
+		<lootcontainer name="1palletBagFertilizerBaseFull" count="2" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourcePotassiumNitratePowder" count="30,40" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagFertilizerBaseMed" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourcePotassiumNitratePowder" count="15,20" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagFertilizerCapMed" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourcePotassiumNitratePowder" count="15,20" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagFertilizerCapSml" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourcePotassiumNitratePowder" count="6,12" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagFertilizerSingleBent" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourcePotassiumNitratePowder" count="2,4" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagFertilizerSingleFlat" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourcePotassiumNitratePowder" count="2,4" loot_prob_template="high"/>
+		</lootcontainer>
+		
+		<lootcontainer name="1palletBagCowFeedBaseFull1" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="plantedCorn1" count="3,5" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagCowFeedTile" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="plantedCorn1" count="3,5" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagCowFeedBaseMed" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="plantedCorn1" count="2,4" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagCowFeedCapMed" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="plantedCorn1" count="2,3" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagCowFeedCapSml" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="plantedCorn1" count="1,2" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagCowFeedSingleBent" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="plantedCorn1" count="1" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagCowFeedSingleFlat" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="plantedCorn1" count="1" loot_prob_template="high"/>
+		</lootcontainer>
+		
+		<lootcontainer name="1palletBagSandBaseFull" count="2" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceCrushedSand" count="30,40" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagSandTile" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceCrushedSand" count="30,40" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagSandBaseMed" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceCrushedSand" count="15,20" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagSandCapMed" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceCrushedSand" count="15,20" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagSandCapSml" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceCrushedSand" count="6,12" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagSandSingleBent" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceCrushedSand" count="2,4" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagSandSingleFlat" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceCrushedSand" count="2,4" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagConcreteBaseFull" count="2" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceCement" count="30,40" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagConcreteTile" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceCement" count="30,40" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagConcreteBaseMed" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceCement" count="15,20" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagConcreteCapMed" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceCement" count="15,20" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagConcreteBaseSml" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceCement" count="6,12" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagConcreteCapSml" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceCement" count="6,12" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagConcreteSingleBent" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceCement" count="2,4" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagConcreteSingleFlat" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="resourceCement" count="2,4" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagFlourBaseFull" count="2" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="foodCornMeal" count="3,5" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagFlourTile" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="foodCornMeal" count="3,5" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagFlourBaseMed" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="foodCornMeal" count="2,4" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagFlourCapMed" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="foodCornMeal" count="2,3" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagFlourCapSml" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="foodCornMeal" count="1,2" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagFlourSingleBent" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="foodCornMeal" count="1" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<lootcontainer name="1palletBagFlourSingleFlat" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
+			<item  name="foodCornMeal" count="1" loot_prob_template="high"/>
+		</lootcontainer>
+		
+		<!--toaster-->
+		<lootcontainer name="1toaster1" count="1" size="2,2" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_drawer" loot_quality_template="qualBaseTemplate" destroy_on_close="false">	
+			<item  name="foodCharredMeat" count="1,1" loot_prob_template="high"/>
+			<item name="foodShamSandwich" count="1,1" loot_prob_template="high"/>
+			<item name="foodCornBread" count="1,1"  loot_prob_template="high"/>
+			<item name="foodPumpkinBread" count="1,1"  loot_prob_template="verylow"/>
+		</lootcontainer>
+		
+		<!--Ice machines-->
+		<lootcontainer name="1iceMachine1" count="1" size="2,2" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="qualBaseTemplate" destroy_on_close="false">	
+			<item  name="resourceSnowBall" count="5,100" loot_prob_template="high"/>
+			<item name="drinkYuccaJuiceSmoothie" count="1,3" loot_prob_template="med"/>
+		</lootcontainer>
+			
+		<!--wine barrels and bottles-->
+		<lootcontainer name="1wineBarrel1" count="1" size="2,2" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="qualBaseTemplate" destroy_on_close="false">	
+			<item name="drinkJarBeer" count="1,3" loot_prob_template="high"/>
+			<item  name="drinkJarRiverWater" count="1,3" loot_prob_template="high"/>
+		</lootcontainer>
+		
+		<lootcontainer name="1wineBarrel2" count="1" size="2,2" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="qualBaseTemplate" destroy_on_close="false">	
+			<item name="drinkJarBeer" count="1,3" loot_prob_template="high"/>
+			<item  name="drinkJarRiverWater" count="1,4" loot_prob_template="high"/>
+			<item name="drinkJarGrandpasMoonshine" count="1,2" loot_prob_template="verylow"/>
+		</lootcontainer>
+		
+		<lootcontainer name="1wineBarrel3" count="1" size="2,2" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="qualBaseTemplate" destroy_on_close="false">	
+			<item  name="drinkJarRiverWater" count="0,5" loot_prob_template="high"/>
+			<item name="drinkJarBeer" count="1,3" loot_prob_template="high"/>
+		</lootcontainer>
+		
+		<lootcontainer name="1wineBottle1" count="1" size="2,2" sound_open="UseActions/open_drawer" sound_close="UseActions/close_drawer" loot_quality_template="qualBaseTemplate" destroy_on_close="false">	
+			<item name="drinkJarBeer" count="1,3" loot_prob_template="high"/>
+		</lootcontainer>
+			
+		<!--Military crates-->		
+		<lootcontainer name="1munitions1" size="8,4" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualPlus1Template" destroy_on_close="true">	
+			<item group="groupAmmoMunitions"/>
+		</lootcontainer>
+		
+		<!--sofas-->
+		<lootgroup name="groupSofa">
+			<item  name="resourcePaper" count="4,20" loot_prob_template="high"/>
+			<item  name="oldCash" count="50,250" loot_prob_template="med"/>
+			<item name="casinoCoin" count="50,200" loot_prob_template="med"/>
+		</lootgroup>
+		
+		<lootcontainer name="1sofa1" count="1" size="2,1" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="qualPlus1Template" destroy_on_close="false">	
+			<item group="groupSofa" count="2" loot_prob_template="high"/>
+		</lootcontainer>
+		
+		<!--body bags-->
+		<lootgroup name="groupBodyBad">
+			<item  name="foodRottingFlesh" count="5,20" loot_prob_template="high"/>
+			<item name="resourcePotassiumNitratePowder" count="50,150"  loot_prob_template="med"/>
+		</lootgroup>
+		
+		<lootcontainer name="1bodyBag1" count="1" size="2,2" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualPlus1Template" destroy_on_close="true">	
+			<item group="groupBodyBad" count="2" loot_prob_template="high"/>
+		</lootcontainer>
+		
+		<!--Hydroponics-->
+		<lootcontainer name="1seedsNoFlowers1" size="3,3" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualPlus1Template" destroy_on_close="false">	
+			<item group="seedsNoFlowers" loot_prob_template="high"/>
+		</lootcontainer>
+		
+		<!--Propane tanks-->
+		<lootcontainer name="1gasBarrel1" size="1,1" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualPlus1Template" destroy_on_close="false">	
+			<item name="ammoGasCan" count="50,750" loot_prob_template="high"/>
+		</lootcontainer>
+	
+		<!--Tractors-->
+		<lootcontainer name="1tractor1" size="3,3" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualPlus1Template" destroy_on_close="false">	
+			<item group="groupCars" loot_prob_template="guaranteed"/>
+			<item group="seedsNoFlowers" count="1,3" loot_prob_template="med"/>
+			<item name="farmPlotBlockVariantHelper" count="1,5" loot_prob_template="med"/>
+		</lootcontainer>
+		
+		<!--Excavators-->
+		<lootgroup name="basicRessources" count="1,4">
+			<item  name="resourceClayLump" count="100,400" loot_prob_template="med"/>
+			<item  name="resourceScrapBrass" count="50,150" loot_prob_template="med"/>
+			<item  name="resourceScrapLead" count="50,150" loot_prob_template="med"/>
+			<item name="resourceScrapIron" count="100,450"  loot_prob_template="med"/>
+			<item  name="resourceCobblestones" count="100,500" loot_prob_template="med"/>
+			<item  name="resourceRockSmall" count="130,450" loot_prob_template="med"/>
+			<item  name="resourceCrushedSand" count="130,450" loot_prob_template="med"/>
+			<item  name="resourceCoal" count="130,450" loot_prob_template="med"/>
+		</lootgroup>
+		
+		<lootcontainer name="1excavator1" count="2" size="5,5" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualPlus1Template" destroy_on_close="false">	
+			<item group="groupCars" loot_prob_template="guaranteed"/>
+			<item group="basicRessources" loot_prob_template="med"/>
+		</lootcontainer>
+	
+		<!--Trader static vehicle on lifts-->
+		<lootcontainer name="1bicycleStatic1" count="1" size="1,1" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualPlus1Template" destroy_on_close="false">	
+			<item name="vehicleWheels" loot_prob_template="med"/>
+			<item name="vehicleBicycleChassis" loot_prob_template="low"/>
+			<item name="vehicleBicycleHandlebars" loot_prob_template="med"/>
+		</lootcontainer>
+		
+		<lootcontainer name="1minibikeStatic1" count="1" size="1,1" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualPlus1Template" destroy_on_close="false">	
+			<item name="vehicleWheels" loot_prob_template="low"/>
+			<item name="vehicleMinibikeChassis" loot_prob_template="low"/>
+			<item name="vehicleMinibikeHandlebars" loot_prob_template="low"/>
+			<item name="smallEngine" loot_prob_template="med"/>
+			<item name="carBattery" loot_prob_template="med"/>
+		</lootcontainer>
+		
+		<lootcontainer name="1motorcycleStatic1" count="1" size="1,1" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualPlus1Template" destroy_on_close="false">	
+			<item name="vehicleWheels" loot_prob_template="low"/>
+			<item name="vehicleMotorcycleChassis" loot_prob_template="low"/>
+			<item name="vehicleMotorcycleHandlebars" loot_prob_template="low"/>
+			<item name="smallEngine" loot_prob_template="med"/>
+			<item name="carBattery" loot_prob_template="med"/>
+		</lootcontainer>
+		
+		<lootcontainer name="14x4Static1" count="1" size="1,1" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualPlus1Template" destroy_on_close="false">	
+			<item name="vehicleWheels" loot_prob_template="low"/>
+			<item name="vehicleTruck4x4Chassis" loot_prob_template="low"/>
+			<item name="vehicleTruck4x4Accessories" loot_prob_template="low"/>
+			<item name="smallEngine" loot_prob_template="med"/>
+			<item name="carBattery" loot_prob_template="med"/>
+		</lootcontainer>
+		
+		<lootcontainer name="1gyrocopterStatic1" count="1" size="1,1" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualPlus1Template" destroy_on_close="false">	
+			<item name="vehicleWheels" loot_prob_template="low"/>
+			<item name="vehicleGyroCopterChassis" loot_prob_template="low"/>
+			<item name="vehicleGyroCopterAccessories" loot_prob_template="low"/>
+			<item name="smallEngine" loot_prob_template="med"/>
+			<item name="carBattery" loot_prob_template="med"/>
+		</lootcontainer>
+		
+		<!--Forklift-->
+		<lootcontainer name="forklift1" count="1" size="7,4" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" open_time="4" loot_quality_template="qualBaseTemplate">
+			<item group="groupCars"/>
+		</lootcontainer>
+		
+		<!--Wild West Wagon-->
+		<lootcontainer name="1WildWestWagon1" count="1,3" size="3,3" sound_open="UseActions/open_vehicle" sound_close="UseActions/close_vehicle" loot_quality_template="qualPlus1Template" destroy_on_close="false">	
+			<item name="hayBaleSquare" count="1,2" loot_prob_template="med"/>
+			<item name="hayBaleRound" count="1,2" loot_prob_template="med"/>
+			<item name="decoPumpkinJackOLantern" count="1,2" loot_prob_template="med"/>
+			<item name="foodCropPumpkin" count="1,5" loot_prob_template="med"/>
+		</lootcontainer>
+		
+		<!--Pool table-->
+		<lootcontainer name="1poolTable" count="1,2" size="1,2" sound_open="UseActions/open_supply_crate" sound_close="UseActions/close_supply_crate" loot_quality_template="qualPlus1Template" destroy_on_close="false">	
+			<item name="drinkJarBeer" count="1,3" loot_prob_template="high"/>
+			<item  name="oldCash" count="15,50" loot_prob_template="med"/>
+		</lootcontainer>
+		
+		<!--Wood Burning Stove-->
+		<lootcontainer name="1WoodBurningStove1" count="1,3" size="1,3" sound_open="UseActions/casket_metal_open" sound_close="UseActions/casket_metal_close" loot_quality_template="qualPlus1Template" destroy_on_close="false">	
+			<ingredient name="resourceWood" count="10,30" loot_prob_template="high"/>
+			<item  name="foodCharredMeat" count="1,1" loot_prob_template="high"/>
+			<item  name="resourceCoal" count="15,50" loot_prob_template="high"/>
+		</lootcontainer>
+		
+		
+		
+		
+		
+	</append>
+</lootableEverything>
