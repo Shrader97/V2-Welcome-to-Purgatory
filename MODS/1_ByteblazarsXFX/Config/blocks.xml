@@ -1,0 +1,18 @@
+<Byteblazar>
+
+	<set xpath="/blocks/block[@name='SingularityConfig']/property[@class='XMLExtensions']/property[@name='ShaderlessFX']/@value">true</set>
+	<set xpath="/blocks/block[@name='SingularityConfig']/property[@class='XMLExtensions']/property[@name='EntityStun']/@value">true</set>
+	<set xpath="/blocks/block[@name='SingularityConfig']/property[@class='XMLExtensions']/property[@name='NonlethalExplosives']/@value">true</set>
+	<set xpath="/blocks/block[@name='SingularityConfig']/property[@class='XMLExtensions']/property[@name='AmmoSounds']/@value">true</set>
+	<!-- <set xpath="/blocks/block[@name='·SingularityConfig']/property[@class='ScreenEffects']/property[@name='DisableBloodDropsOverlay']/@value">true</set> -->
+	<set xpath="/blocks/block[@name='SingularityConfig']/property[@class='ScreenEffects']/property[@name='UseCustomDrowningEffects']/@value">true</set>
+	<set xpath="/blocks/block[@name='SingularityConfig']/property[@class='ScreenEffects']/property[@name='UseCustomBurningEffects']/@value">true</set>
+	
+	<insertBefore xpath="/blocks/block/property[@name='Explosion.BlockDamage']">
+		<property name="Explosion.Buff" value="bbxfx_buffGeneralExplosiveBuff"/>
+	</insertBefore>
+	<prepend xpath="/blocks/block/property[@class='Explosion']">
+		<property name="Buff" value="bbxfx_buffGeneralExplosiveBuff"/>
+	</prepend>
+	
+</Byteblazar>

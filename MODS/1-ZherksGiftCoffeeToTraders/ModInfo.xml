@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+    <Name value="ZherksGiftCoffeeToTraders" /> 
+    <DisplayName value="ZherksGiftCoffeeToTraders" /> 
+    <Description value="Adds an option to gift a morning coffee to traders for a slight discount. Idea from the loud and lovable Aussie, Jawoodle"/>
+    <Author value="Zherkezhi"/>
+    <Version value="1.0.0"/>
+</xml>

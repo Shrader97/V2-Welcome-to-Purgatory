@@ -1,0 +1,13 @@
+<Byteblazar>
+	<insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='thrownAmmo']/item[@name='thrownGrenade']">
+		<item name="bbxfx_itemFlashbang" count="5,20"/>
+	</insertAfter>
+	<insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='ammoAll']/item[@name='ammoShotgunShell']">
+		<item name="bbxfx_itemAmmoFlashThunderGrenade" count="15,100"/>
+	</insertAfter>
+	
+	<insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='groupArmorMods']/item[@name='modArmorCigar']">
+		<item name="bbxfx_modifierEarmuffs"/>
+	</insertAfter>
+	
+</Byteblazar>

@@ -1,0 +1,12 @@
+<lootableEverything>
+	
+	<remove xpath="//item[@name='solarCell']/property[@name='SellableToTrader']"/>
+		
+	<set xpath="//item[starts-with(@name,'solarCell')]/property[@name='EconomicValue']/@value">5000</set>
+	
+	<append xpath="//item[starts-with(@name,'solarCell')]">
+		<property name="RepairTools" value="resourceRepairKit"/>
+	</append>
+
+		
+</lootableEverything>

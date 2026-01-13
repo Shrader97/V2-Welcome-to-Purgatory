@@ -1,9 +1,0 @@
-Key,Source,Context,Changes,English
-dialog_trader_response_giftcoffee,,,,"Gift Coffee (1)"
-dialog_trader_response_giftbeer,,,,"Gift Beer (1)"
-buffCoffeeGiftDiscountName,,,,"Morning Coffee"
-buffCoffeeGiftDiscountDesc,,,,"Traders appreciate a morning brew.\n\nBetter buy prices for a short time."
-buffCoffeeGiftDiscountBlackStrapName,,,,"Morning Coffee"
-buffCoffeeGiftDiscountBlackStrapDesc,,,,"Traders appreciate a morning brew.\n\nYou gifted the strong stuff, enjoy even better buy prices for a longer time."
-buffBeerGiftDiscountName,,,,"Beer Bribe"
-buffBeerGiftDiscountDesc,,,,"A cold beer loosens tongues - and prices.\n\nBetter buy prices for a short time."

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+	<insertAfter xpath="//dialog[@id='trader']/statement[@id='start']/response_entry[@id='shop']">
+		<response_entry id="giftcoffee" />
+		<response_entry id="giftbeer" />
+	</insertAfter>
+	
+	<append xpath="//dialog[@id='trader']">
+		<response id="giftcoffee" text="dialog_trader_response_giftcoffee">
+			<requirement type="CheckCVar" id="CoffeeBribeHasItem" value="1" requirementtype="Hide" />
+			<action type="Trader" id="gift_coffee" />
+		</response>
+		
+		<response id="giftbeer" text="dialog_trader_response_giftbeer">
+			<requirement type="CheckCVar" id="BeerBribeEnabled" value="1" requirementtype="Hide" />
+			<requirement type="CheckCVar" id="BeerBribeHasItem" value="1" requirementtype="Hide" />
+			<action type="Trader" id="gift_beer" />
+		</response>
+	</append>
+        
+</configs>
