@@ -1,0 +1,118 @@
+<shark>
+
+	<append xpath="twitch">
+	
+		<action name="spawn_shark">
+			<property name="command" value="#spawn_shark" />
+			<property name="command_key" value="#spawn_shark" />
+			<property name="title_key" value="spawn shark" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_shark" />
+			<property name="default_cost" value="350" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="25" />
+			<property name="description_key" value="spawn_shark" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="50" />
+			<property name="cooldown" value="60"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_baby_shark">
+			<property name="command" value="#spawn_baby_shark" />
+			<property name="command_key" value="#spawn_baby_shark" />
+			<property name="title_key" value="spawn baby shark" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_baby_shark" />
+			<property name="default_cost" value="175" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="15" />
+			<property name="description_key" value="spawn_baby_shark" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="50" />
+			<property name="cooldown" value="60"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_bat">
+			<property name="command" value="#spawn_bat" />
+			<property name="command_key" value="#spawn_bat" />
+			<property name="title_key" value="spawn_bat" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_bat" />
+			<property name="default_cost" value="150" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="45" />
+			<property name="description_key" value="spawn_bat" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="50" />
+			<property name="cooldown" value="60"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_shark_horde">
+			<property name="command" value="#spawn_shark_horde" />
+			<property name="command_key" value="#spawn_shark_horde" />
+			<property name="title_key" value="spawn shark horde" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_shark_horde" />
+			<property name="default_cost" value="1000" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="45" />
+			<property name="point_type" value="Bits" />
+			<property name="description_key" value="spawn_shark_horde" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="200" />
+			<property name="cooldown" value="60"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_shark_family">
+			<property name="command" value="#spawn_shark_family" />
+			<property name="command_key" value="#spawn_shark_family" />
+			<property name="title_key" value="spawn shark family" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_shark_family" />
+			<property name="default_cost" value="750" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="35" />
+			<property name="point_type" value="Bits" />
+			<property name="description_key" value="spawn_shark_family" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="200" />
+			<property name="cooldown" value="60"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+
+		<action name="spawn_bat_horde">
+			<property name="command" value="#spawn_bat_horde" />
+			<property name="command_key" value="#spawn_bat_horde" />
+			<property name="title_key" value="spawn_bat_horde" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_bat_horde" />
+			<property name="default_cost" value="575" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="65" />
+			<property name="point_type" value="Bits" />
+			<property name="description_key" value="spawn_bat_horde" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="200" />
+			<property name="cooldown" value="60"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
+	
+	</append>
+
+</shark>

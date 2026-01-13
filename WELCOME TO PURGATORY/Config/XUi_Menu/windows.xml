@@ -1,0 +1,9 @@
+<configs>
+
+<set xpath="/windows/window[@name='menuBackground']/texture[@name='bgTexture']/@texture">@modfolder:Images/background.png</set>
+
+<remove xpath="/windows/window[@name='mainMenuLogo']"/>
+
+
+
+</configs>

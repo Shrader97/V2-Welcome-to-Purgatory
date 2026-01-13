@@ -1,0 +1,26 @@
+<configs>
+
+    <append xpath="/buffs/buff[@name='twitch_buckethead']">
+        <effect_group>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="IronBucketEmptyPrefab" parent_transform="Head">
+				<requirement name="!EntityTagCompare" tags="Shark"/>
+			</triggered_effect>
+        </effect_group>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" local_offset="0,.1,0" local_rotation="180,90,0" local_scale="1.75,1.75,1.75" parent_transform="Head">
+				<requirement name="EntityTagCompare" tags="Shark"/>
+				<requirement name="!HasAttachedPrefab" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" parent_transform="Head"/>
+			</triggered_effect>
+        </effect_group>
+
+        <effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" local_offset="0,.1,0" local_rotation="180,90,0" local_scale="1.75,1.75,1.75" parent_transform="Head">
+				<requirement name="EntityTagCompare" tags="Shark"/>
+				<requirement name="!HasAttachedPrefab" prefab="@:Other/Items/Crafting/Metal/IronBucketEmptyPrefab.prefab" parent_transform="Head"/>
+			</triggered_effect>
+        </effect_group>
+
+    </append>
+
+</configs>

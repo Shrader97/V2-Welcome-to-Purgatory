@@ -1,0 +1,177 @@
+<configs>
+
+    <append xpath="/game_events">
+
+        <action_sequence name="reward_hornet_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_hornet_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_behemoth_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_behemoth_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_Tickle_Me_Demo_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_Tickle_Me_Demo_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_jumpingbean_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_jumpingbean_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_battlechicken_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_battlechicken_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_battlewolf_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_battlewolf_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_flamincop_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_flamincop_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_ragechicken_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_ragechicken_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <!--action_sequence name="reward_hornet_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_hornet_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_hornet_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_hornet_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_hornet_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_hornet_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_hornet_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_hornet_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_hornet_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_hornet_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_hornet_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_hornet_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_hornet_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_hornet_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_hornet_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_hornet_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_hornet_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_hornet_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_hornet_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_hornet_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence>
+
+        <action_sequence name="reward_hornet_zombie_slayer">
+            <property name="action_type" value="Game" />
+
+            <action class="AddQuest">
+                <property name="quest" value="quest_reward_hornet_zombie_slayer" param1="quest" />
+                <property name="notify" value="false" />
+            </action>
+        </action_sequence-->
+
+    </append>
+</configs>

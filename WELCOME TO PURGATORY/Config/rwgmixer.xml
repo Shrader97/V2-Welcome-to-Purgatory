@@ -1,0 +1,12 @@
+<configs>
+
+	<append xpath="/rwgmixer">
+		<!--prefab_spawn_adjust partial_name="military_camp" biomeTags="wasteland" min_count="1" max_count="2" bias="20"/>
+		<prefab_spawn_adjust partial_name="Prison" biomeTags="desert" min_count="1" max_count="2" bias="10"/>
+		<prefab_spawn_adjust partial_name="Night_Club" biomeTags="burnt_forest" min_count="1" max_count="2" bias="20"/>
+		<prefab_spawn_adjust partial_name="TOWN_HALL" biomeTags="forest"  min_count="1" max_count="2" bias="10"/-->
+
+		<prefab_spawn_adjust partial_name="trader_Noah" biomeTags="wasteland" bias="20" min_count="1" max_count="1"/>
+	</append>
+
+</configs> 

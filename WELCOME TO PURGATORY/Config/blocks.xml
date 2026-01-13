@@ -1,0 +1,3007 @@
+<configs>
+
+	<set xpath="blocks/block[@name='spawnTrader']/property[@name='SpawnClass']/@value">npcTraderJoel,npcTraderRekt,npcTraderHugh,npcTraderBob,npcTraderJen,npcTraderNoah,npcTraderBartender,npcTraderBouner,npcTraderCommanderInChief,npcTraderHomelessDude,npcTraderMechanic,npcTraderSecretary</set>
+
+
+	<insertAfter xpath="/blocks/block[@name='cntCar03SedanDamage0Master']/drop[@name='resourceScrapIron']">
+		<drop event="Harvest" name="carDoors" count="1,2" prob="0.04" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carHood" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carTrunk" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carWheelrims" count="1,2" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="vehicleVMWheels" count="1,2" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedWheel" count="1,2" prob="0.03" tag="salvageHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='cntCar03SedanDamage1Master']/drop[@name='resourceElectricParts']">
+		<drop event="Harvest" name="damagedcarSeats" count="1,2" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarTransmission" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carTransmission" count="1" prob="0.023" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carSeats" count="1,2" prob="0.028" tag="salvageHarvest"/>
+		<drop event="Harvest" name="ElectricalWire" count="2,5" prob="0.07" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carBumperFront" count="1" prob="0.026" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carFender" count="1" prob="0.028" tag="salvageHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='cntCar03SedanDamage2Master']/drop[@name='resourceElectricParts']">
+		<drop event="Harvest" name="damagedcarEngine" count="1" prob="0.04" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carEngine" count="1" prob="0.02" tag="salvageHarvest"/>  
+		<drop event="Harvest" name="damagedcarCarburetor" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carCarburetor" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarAlternator" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarBattery" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="ElectricalWire" count="3,8" prob="0.07" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carAlternator" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="smallEngine" count="1" prob="0.021" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceRadiator" count="1" prob="0.023" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carBattery" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Destroy" name="damagedcarChassis" count="1" prob=".017" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='cntSedan01White']/drop[@name='resourceElectricParts']">
+		<drop event="Harvest" name="damagedcarEngine" count="1" prob="0.04" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carEngine" count="1" prob="0.02" tag="salvageHarvest"/>  
+		<drop event="Harvest" name="damagedcarCarburetor" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carCarburetor" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarAlternator" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarBattery" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="ElectricalWire" count="3,8" prob="0.07" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carAlternator" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="smallEngine" count="1" prob="0.021" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceRadiator" count="1" prob="0.023" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carBattery" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Destroy" name="damagedcarChassis" count="1" prob=".017" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='cntSedan3Wide01White']/drop[@name='resourceElectricParts']">
+		<drop event="Harvest" name="damagedcarEngine" count="1" prob="0.04" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carEngine" count="1" prob="0.02" tag="salvageHarvest"/>  
+		<drop event="Harvest" name="damagedcarCarburetor" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carCarburetor" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarAlternator" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarBattery" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="ElectricalWire" count="3,8" prob="0.07" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carAlternator" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="smallEngine" count="1" prob="0.021" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceRadiator" count="1" prob="0.023" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carBattery" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Destroy" name="damagedcarChassis" count="1" prob=".017" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='cntMinivan3Wide01White']/drop[@name='resourceElectricParts']">
+		<drop event="Harvest" name="damagedcarEngine" count="1" prob="0.04" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carEngine" count="1" prob="0.02" tag="salvageHarvest"/>  
+		<drop event="Harvest" name="damagedcarCarburetor" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carCarburetor" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarAlternator" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarBattery" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="ElectricalWire" count="3,8" prob="0.07" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carAlternator" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="smallEngine" count="1" prob="0.021" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceRadiator" count="1" prob="0.023" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carBattery" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Destroy" name="damagedcarChassis" count="1" prob=".017" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='cntSUV01White']/drop[@name='resourceElectricParts']">
+		<drop event="Harvest" name="damagedcarEngine" count="1" prob="0.04" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carEngine" count="1" prob="0.02" tag="salvageHarvest"/>  
+		<drop event="Harvest" name="damagedcarCarburetor" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carCarburetor" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarAlternator" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarBattery" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="ElectricalWire" count="3,8" prob="0.07" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carAlternator" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="smallEngine" count="1" prob="0.021" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceRadiator" count="1" prob="0.023" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carBattery" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Destroy" name="damagedcarChassis" count="1" prob=".017" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='cntSUV3Wide01White']/drop[@name='resourceElectricParts']">
+		<drop event="Harvest" name="damagedcarEngine" count="1" prob="0.04" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carEngine" count="1" prob="0.02" tag="salvageHarvest"/>  
+		<drop event="Harvest" name="damagedcarCarburetor" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carCarburetor" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarAlternator" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarBattery" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="ElectricalWire" count="3,8" prob="0.07" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carAlternator" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="smallEngine" count="1" prob="0.021" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceRadiator" count="1" prob="0.023" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carBattery" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Destroy" name="damagedcarChassis" count="1" prob=".017" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='cntPickupTruck01White']/drop[@name='resourceElectricParts']">
+		<drop event="Harvest" name="damagedcarEngine" count="1" prob="0.04" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carEngine" count="1" prob="0.02" tag="salvageHarvest"/>  
+		<drop event="Harvest" name="damagedcarCarburetor" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carCarburetor" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarAlternator" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarBattery" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="ElectricalWire" count="3,8" prob="0.07" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carAlternator" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="smallEngine" count="1" prob="0.021" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceRadiator" count="1" prob="0.023" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carBattery" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Destroy" name="damagedcarChassis" count="1" prob=".017" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='cntPickupTruck3Wide01White']/drop[@name='resourceElectricParts']">
+		<drop event="Harvest" name="damagedcarEngine" count="1" prob="0.04" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carEngine" count="1" prob="0.02" tag="salvageHarvest"/>  
+		<drop event="Harvest" name="damagedcarCarburetor" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carCarburetor" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarAlternator" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarBattery" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="ElectricalWire" count="3,8" prob="0.07" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carAlternator" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="smallEngine" count="1" prob="0.021" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceRadiator" count="1" prob="0.023" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carBattery" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Destroy" name="damagedcarChassis" count="1" prob=".017" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='cntSemiTruck01White']/drop[@name='resourceElectricParts']">
+		<drop event="Harvest" name="damagedcarEngine" count="1" prob="0.04" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carEngine" count="1" prob="0.02" tag="salvageHarvest"/>  
+		<drop event="Harvest" name="damagedcarCarburetor" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carCarburetor" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarAlternator" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarBattery" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="ElectricalWire" count="3,8" prob="0.07" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carAlternator" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="smallEngine" count="1" prob="0.021" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceRadiator" count="1" prob="0.023" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carBattery" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Destroy" name="damagedcarChassis" count="1" prob=".017" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='cntPoliceCar01PickedLockBonus']/drop[@name='resourceElectricParts']">
+		<drop event="Harvest" name="damagedcarEngine" count="1" prob="0.04" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carEngine" count="1" prob="0.02" tag="salvageHarvest"/>  
+		<drop event="Harvest" name="damagedcarCarburetor" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carCarburetor" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarAlternator" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarBattery" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="ElectricalWire" count="3,8" prob="0.07" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carAlternator" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="smallEngine" count="1" prob="0.021" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceRadiator" count="1" prob="0.023" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carBattery" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Destroy" name="damagedcarChassis" count="1" prob=".017" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='cntPoliceCar01AlarmUnlocked']/drop[@name='resourceElectricParts']">
+		<drop event="Harvest" name="damagedcarEngine" count="1" prob="0.04" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carEngine" count="1" prob="0.02" tag="salvageHarvest"/>  
+		<drop event="Harvest" name="damagedcarCarburetor" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carCarburetor" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarAlternator" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarBattery" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="ElectricalWire" count="3,8" prob="0.07" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carAlternator" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="smallEngine" count="1" prob="0.021" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceRadiator" count="1" prob="0.023" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carBattery" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Destroy" name="damagedcarChassis" count="1" prob=".017" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='cntFireTruck01White']/drop[@name='resourceElectricParts']">
+		<drop event="Harvest" name="damagedcarEngine" count="1" prob="0.04" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carEngine" count="1" prob="0.02" tag="salvageHarvest"/>  
+		<drop event="Harvest" name="damagedcarCarburetor" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carCarburetor" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarAlternator" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarBattery" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="ElectricalWire" count="3,8" prob="0.07" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carAlternator" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="smallEngine" count="1" prob="0.021" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceRadiator" count="1" prob="0.023" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carBattery" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Destroy" name="damagedcarChassis" count="1" prob=".017" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='cntBusSchool']/drop[@name='resourceElectricParts']">
+		<drop event="Harvest" name="damagedcarEngine" count="1" prob="0.04" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carEngine" count="1" prob="0.02" tag="salvageHarvest"/>  
+		<drop event="Harvest" name="damagedcarCarburetor" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carCarburetor" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarAlternator" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarBattery" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="ElectricalWire" count="3,8" prob="0.07" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carAlternator" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="smallEngine" count="1" prob="0.021" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceRadiator" count="1" prob="0.023" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carBattery" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Destroy" name="damagedcarChassis" count="1" prob=".017" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='cntArmyTruckOpen']/drop[@name='resourceElectricParts']">
+		<drop event="Harvest" name="damagedcarEngine" count="1" prob="0.04" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carEngine" count="1" prob="0.02" tag="salvageHarvest"/>  
+		<drop event="Harvest" name="damagedcarCarburetor" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carCarburetor" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarAlternator" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarBattery" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="ElectricalWire" count="3,8" prob="0.07" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carAlternator" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="smallEngine" count="1" prob="0.021" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceRadiator" count="1" prob="0.023" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carBattery" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Destroy" name="damagedcarChassis" count="1" prob=".017" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='cntFarmTruckClosed']/drop[@name='resourceElectricParts']">
+		<drop event="Harvest" name="damagedcarEngine" count="1" prob="0.04" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carEngine" count="1" prob="0.02" tag="salvageHarvest"/>  
+		<drop event="Harvest" name="damagedcarCarburetor" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carCarburetor" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarAlternator" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarBattery" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="ElectricalWire" count="3,8" prob="0.07" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carAlternator" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="smallEngine" count="1" prob="0.021" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceRadiator" count="1" prob="0.023" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carBattery" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Destroy" name="damagedcarChassis" count="1" prob=".017" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='forkliftWhite']/drop[@name='resourceElectricParts']">
+		<drop event="Harvest" name="damagedcarEngine" count="1" prob="0.04" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carEngine" count="1" prob="0.02" tag="salvageHarvest"/>  
+		<drop event="Harvest" name="damagedcarCarburetor" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carCarburetor" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarAlternator" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarBattery" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="ElectricalWire" count="3,8" prob="0.07" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carAlternator" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="smallEngine" count="1" prob="0.021" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceRadiator" count="1" prob="0.023" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carBattery" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Destroy" name="damagedcarChassis" count="1" prob=".017" tag="allHarvest"/>
+	</insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='forklift2White']/drop[@name='resourceElectricParts']">
+		<drop event="Harvest" name="damagedcarEngine" count="1" prob="0.04" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carEngine" count="1" prob="0.02" tag="salvageHarvest"/>  
+		<drop event="Harvest" name="damagedcarCarburetor" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carCarburetor" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarAlternator" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="damagedcarBattery" count="1" prob="0.03" tag="salvageHarvest"/>
+		<drop event="Harvest" name="ElectricalWire" count="3,8" prob="0.07" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carAlternator" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Harvest" name="smallEngine" count="1" prob="0.021" tag="salvageHarvest"/>
+		<drop event="Harvest" name="resourceRadiator" count="1" prob="0.023" tag="salvageHarvest"/>
+		<drop event="Harvest" name="carBattery" count="1" prob="0.02" tag="salvageHarvest"/>
+		<drop event="Destroy" name="damagedcarChassis" count="1" prob=".017" tag="allHarvest"/>
+	</insertAfter>
+
+	<append xpath="/blocks/block[@name='wallClock']">
+		<drop event="Harvest" name="resourceElectricParts" count="1,4" tag="salvageHarvest"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='plantedMushroom3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedMushroom1"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='plantedYucca3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedYucca1"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='plantedCotton3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedCotton1"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='plantedCoffee3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedCoffee1"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='plantedGoldenrod3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedGoldenrod1"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='plantedAloe3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedAloe1"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='plantedBlueberry3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedBlueberry1"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='plantedPotato3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedPotato1"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='plantedChrysanthemum3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedChrysanthemum1"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='plantedCorn3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedCorn1"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='plantedGraceCorn3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedGraceCorn1"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='plantedHop3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedHop1"/>
+	</append>
+	
+	<append xpath="/blocks/block[@name='plantedPumpkin3HarvestPlayer']">
+	<property name="DowngradeBlock" value="plantedPumpkin1"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='decoCarTireSmallFlat']">
+		<property name="CanPickup" value="true"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='trophy']">
+		<property name="CanPickup" value="true"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='trophyOffset']">
+		<property name="CanPickup" value="true"/>
+	</append>
+
+	<append xpath="/blocks/block[@name='steelMaster']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="stainlessSteelMaster"/>
+			<property name="Item" value="StainLessSteelPolish"/>
+			<property name="ItemCount" value="2"/>
+			<property name="UpgradeHitCount" value="2"/></property>
+	</append>
+
+	<append xpath="/blocks/block[@name='steelShapes']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="stainlessSteelShapes"/>
+			<property name="Item" value="StainLessSteelPolish"/>
+			<property name="ItemCount" value="2"/>
+			<property name="UpgradeHitCount" value="2"/></property>
+	</append>
+
+	<append xpath="/blocks">
+
+		<block name="KnoxVaultDoor">
+     		<property name="CustomIcon" value="KnoxVaultDoor"/>
+			<property name="Class" value="DoorSecure"/>
+			<property name="Material" value="Msteel"/>
+			<property name="MaxDamage" value="100000"/>
+			<property name="PassThroughDamage" value="true"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="5,4,3"/>
+			<property name="ModelOffset" value="0,0,-0.5"/>
+			<property name="Collide" value="movement,melee,rocket"/> <!-- -rocket -->
+			<property name="Tag" value="Door"/>
+			<property name="Place" value="Door"/>
+			<property name="PlaceEverywhere" value="true"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/KnoxVaultDoor.unity3d?KnoxVaultDoor.prefab"/>
+			<property name="ImposterExclude" value="false"/>
+			<property name="Stacknumber" value="5"/>
+			<property name="OpenSound" value="knox_vault_open"/>
+			<property name="CloseSound" value="knox_vault_close"/>
+			<property class="RepairItems"> <property name="resourceForgedSteel" value="200"/> </property>
+			<property name="Group" value="Building"/>
+			<property name="DescriptionKey" value="vaultDoor03_PoweredDesc"/>
+		</block>
+
+		<!-- TRADER_BOB_ONLY -->
+		<block name="busCityTraderOnly1">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="cntBusCity"/>
+			<property name="CustomIconTint" value="FF00FF"/>
+			<property name="Material" value="Mmetal_hard"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Vehicles/bus_city_traderPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0.5,0"/> <!-- buses are shifted in the fbx file -->
+			<property name="MultiBlockDim" value="3,3,9"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="PlacementDistance" value="15"/>
+			<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket"/>
+			<property name="BigDecorationRadius" value="5"/>
+			<property name="CanDecorateOnSlopes" value="false"/>
+			<property name="ShowModelOnFall" value="false"/>
+			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<property name="SortOrder1" value="LD04"/>
+			<property name="SortOrder2" value="0600"/>
+			<property name="FilterTags" value="MC_building,SC_automotive"/>
+		</block>
+
+		<!-- TRADER_BOB_ONLY -->
+		<block name="bicycleStatic1">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="vehicleBicyclePlaceable"/>
+			<property name="TintColor" value="218,200,135"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Vehicles/TraderVehicles/traderMountainBikeStaticPrefab.prefab"/>
+			<property name="ModelOffset" value="1.2,0,0"/>
+			<property name="MultiBlockDim" value="1,1,2"/>
+			<property name="WaterFlow" value="permitted"/>
+			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<property name="SortOrder1" value="LD04"/>
+			<property name="SortOrder2" value="0700"/>
+		</block>
+
+		<!-- TRADER_BOB_ONLY -->
+		<block name="minibikeStatic1">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="vehicleMinibikePlaceable"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="TintColor" value="798991"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Vehicles/TraderVehicles/traderMiniBikeStaticPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="WaterFlow" value="permitted"/>
+			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<property name="SortOrder1" value="LD04"/>
+			<property name="SortOrder2" value="0701"/>
+		</block>
+
+		<!-- TRADER_BOB_ONLY -->
+		<block name="motorcycleStatic1">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="vehicleMotorcyclePlaceable"/>
+			<property name="TintColor" value="808080"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Vehicles/TraderVehicles/traderMotorcycleStaticPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,3,1"/>
+			<property name="WaterFlow" value="permitted"/>
+			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<property name="SortOrder1" value="LD04"/>
+			<property name="SortOrder2" value="0702"/>
+		</block>
+
+		<!-- TRADER_BOB_ONLY -->
+		<block name="4x4Static1">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="TintColor" value="D45454"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Vehicles/TraderVehicles/Trader4x4StaticPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,1,4"/>
+			<property name="WaterFlow" value="permitted"/>
+			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<property name="SortOrder1" value="LD04"/>
+			<property name="SortOrder2" value="0703"/>
+		</block>
+
+		<!-- TRADER_BOB_ONLY -->
+		<block name="gyrocopterStatic1">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="TintColor" value="132,105,84"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Vehicles/TraderVehicles/traderGyrocopterStaticPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,1,4"/>
+			<property name="WaterFlow" value="permitted"/>
+			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<property name="SortOrder1" value="LD04"/>
+			<property name="SortOrder2" value="0704"/>
+		</block>
+
+ 		<block name="stainlessSteelMaster">
+			<property name="CreativeMode" value="None"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="DescriptionKey" value="steelBlockGroupDesc"/>
+			<property name="Material" value="MstainlessSteel"/>
+			<property name="DisplayType" value="blockHardened"/>
+			<property name="PassThroughDamage" value="false"/>
+			<property name="TintColor" value="f9e6ff"/>
+			<property name="Texture" value="191"/>
+			<property class="RepairItems">
+				<property name="StainLessSteelPolish" value="5"/></property>
+			<property name="CustomUpgradeSound" value="place_block_metal"/>
+			<drop event="Harvest" name="resourceScrapIron" count="15" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="DescriptionKey" value="steelBlockGroupDesc"/>
+			<property name="DowngradeBlock" value="steelMaster"/>
+			<property name="FilterTags" value="MC_building"/>
+			<property name="SortOrder1" value="40p0"/>
+			<property name="SortOrder2" value="0002"/>
+		</block>
+
+		<block name="stainlessSteelShapes" shapes="All">
+			<property name="DescriptionKey" value="steelBlockGroupDesc" />
+			<property name="Material" value="Mstainlesssteel_shapes" />
+			<property name="TintColor" value="f9e6ff"/>
+			<property name="Shape" value="New"/>
+			<property name="DisplayType" value="blockHardened" />
+			<property name="PassThroughDamage" value="false" />
+			<property name="Texture" value="191" />
+			<property name="UiBackgroundTexture" value="191" />
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="TitaniumShapes"/>
+				<property name="Item" value="resourceForgedTitanium"/>
+				<property name="ItemCount" value="5"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property class="RepairItems">
+				<property name="StainLessSteelPolish" value="5" />
+			</property>
+			<property name="CustomUpgradeSound" value="place_block_metal" />
+			<drop event="Harvest" name="resourceScrapIron" count="15" tag="allHarvest" />
+			<drop event="Destroy" count="0" />
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1" />
+			<property name="EconomicValue" value="160" />
+			<property name="Group" value="Building,advBuilding" />
+			<property name="DowngradeBlock" value="steelShapes"/>
+			<property name="FilterTags" value="MC_Shapes" />
+			<property name="SortOrder1" value="0011" />
+		</block>
+
+	</append>
+
+	<append xpath="/blocks">
+
+		<block name="TitaniumShapes" shapes="All">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIconTint" value="47556e" />
+			<property name="DisplayType" value="blockHardened"/>
+			<property name="DescriptionKey" value="steelBlockGroupDesc"/>
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="Texture" value="435"/>
+			<property name="UiBackgroundTexture" value="435"/>
+			<property name="TintColor" value="47556e"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="cube"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="FilterTags" value="MC_Shapes"/>
+			<property class="RepairItems"> 
+				<property name="resourceForgedTitanium" value="1"/>
+			</property>
+			<property name="DowngradeBlock" value="stainlessSteelShapes"/>
+			<drop event="Harvest" name="resourceScrapIron" count="15" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="SortOrder1" value="S200"/> 
+			<property name="CanPickup" value="false"/>
+		</block>
+
+	<!-- drawbridges -->
+		<block name="TitaniumReinforcedDrawBridge">
+			<property name="UnlockedBy" value="perkAdvancedEngineering"/>
+			<property name="CustomIcon" value="metalReinforcedWoodDrawBridge"/>
+			<property name="CustomIconTint" value="33FFE3" />
+			<property name="Extends" value="metalReinforcedWoodDrawBridge" param1="DowngradeBlock"/>
+			<property name="CanPickup" value="false"/>
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="OpenSound" value="open_bridge"/>
+			<property name="CloseSound" value="close_bridge"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="100"/>
+				<property name="resourceWood" value="800"/>
+			</property>
+			<drop event="Harvest" name="TitaniumDrawBridge" count="1" tag="allHarvest"/>
+			<property name="SortOrder1" value="B400"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="TitaniumReinforcedDrawBridge_Powered"/>
+				<property name="Item" value="resourceForgedSpring,resourceForgedTitanium"/>
+				<property name="ItemCount" value="2"/>
+				<property name="UpgradeHitCount" value="5"/>
+			</property>
+		</block>
+		<block name="TitaniumReinforcedDrawBridge_Powered">
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="Extends" value="TitaniumReinforcedDrawBridge" param1="UpgradeBlock.Item"/>
+			<property name="Class" value="PoweredDoor"/>
+			<property name="UnlockedBy" value="craftingElectrician"/>
+			<property name="Tags" value="electricianSkill"/>
+		</block>
+
+	<!-- vault doors -->
+		<block name="TitaniumvaultDoor01">
+			<property name="UnlockedBy" value="perkAdvancedEngineering"/>
+			<property name="CustomIcon" value="vaultDoor01"/>
+			<property name="CustomIconTint" value="33FFE3" />
+			<property name="Extends" value="vaultDoor01" param1="DowngradeBlock"/>
+			<property name="CanPickup" value="false"/>
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="MaxDamage" value="18000"/>
+			<property name="MeshDamage" value="
+			Door/DMG0, 18000,
+			Door/DMG1, 12000,
+			Door/DMG2, 8000,
+			Door/DMG3, 4000,
+			-, 1
+			"/>
+			<property class="RepairItems"> <property name="TitaniumresourceSpring" value="5"/> </property>
+			<drop event="Harvest" name="TitaniumvaultDoor01" count="1" tag="allHarvest"/>
+			<property name="SortOrder1" value="B360"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="TitaniumvaultDoor01_Powered"/>
+				<property name="Item" value="resourceForgedSpring,resourceForgedTitanium"/>
+				<property name="ItemCount" value="2"/>
+				<property name="UpgradeHitCount" value="5"/>
+			</property>
+		</block>
+		<block name="TitaniumvaultDoor01_Powered">
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="Extends" value="TitaniumvaultDoor01"  param1="UpgradeBlock.Item"/>
+			<property name="Class" value="PoweredDoor"/>
+			<property name="UnlockedBy" value="craftingElectrician"/>
+			<property name="Tags" value="electricianSkill"/>
+		</block>
+
+		<block name="TitaniumvaultDoor01Double">
+			<property name="UnlockedBy" value="perkAdvancedEngineering"/>
+			<property name="CustomIcon" value="vaultDoor01Double"/>
+			<property name="CustomIconTint" value="33FFE3" />
+			<property name="Extends" value="vaultDoor01Double" param1="UpgradeBlock.Item"/>
+			<property name="CanPickup" value="false"/>
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="MaxDamage" value="18000"/>
+			<property name="MeshDamage" value="
+			Door/DMG0, 18000,
+			Door/DMG1, 12000,
+			Door/DMG2, 8000,
+			Door/DMG3, 4000,
+			-, 1
+			"/>
+			<property class="RepairItems"> <property name="TitaniumresourceSpring" value="5"/> </property>
+			<drop event="Harvest" name="TitaniumVaultDoorDouble" count="1" tag="allHarvest"/>
+			<property name="SortOrder1" value="B370"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="TitaniumvaultDoor01Double_Powered"/>
+				<property name="Item" value="resourceForgedSpring,resourceForgedTitanium"/>
+				<property name="ItemCount" value="2"/>
+				<property name="UpgradeHitCount" value="5"/>
+			</property>
+		</block>
+		<block name="TitaniumvaultDoor01Double_Powered">
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="Extends" value="TitaniumvaultDoor01Double" param1="DowngradeBlock"/>
+			<property name="Class" value="PoweredDoor"/>
+			<property name="UnlockedBy" value="craftingElectrician"/>
+			<property name="Tags" value="electricianSkill"/>
+		</block>
+
+	<!-- hatches -->
+		<block name="TitaniumvaultHatch01">
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="Extends" value="vaultHatch01" param1="UpgradeBlock.Item"/>
+			<property name="CustomIcon" value="vaultHatch01"/>
+			<property name="CustomIconTint" value="33FFE3" />
+			<property name="DisplayType" value="blockHardened"/>
+			<property name="MaxDamage" value="24000"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="TitaniumvaultHatch01_Powered"/>
+				<property name="Item" value="resourceForgedSpring,resourceForgedTitanium"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="5"/>
+			</property>
+		</block>
+		<block name="TitaniumvaultHatch01_Powered">
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="Extends" value="TitaniumvaultHatch01" param1="DowngradeBlock"/>
+			<property name="Class" value="PoweredDoor"/>
+			<property name="UnlockedBy" value="craftingElectrician"/>
+			<property name="CustomIcon" value="vaultHatch01"/>
+			<property name="Tags" value="electricianSkill"/>
+		</block>
+
+	<!-- bars -->
+			<block name="TitaniumBarsCentered">
+			<property name="UnlockedBy" value="perkAdvancedEngineering"/>
+			<property name="CustomIcon" value="ironBarsCentered"/>
+			<property name="CustomIconTint" value="33FFE3" />
+			<property name="Extends" value="ironBarsCentered"/>
+			<property name="Material" value="MresourceTitanium"/>
+			<property class="RepairItems"> <property name="TitaniumMix" value="1"/> </property>
+			<drop event="Harvest" name="TitaniumBarsCentered" count="1" tag="allHarvest"/>
+		</block>
+		<block name="TitaniumBars">
+			<property name="UnlockedBy" value="craftingElectrician"/>
+			<property name="Extends" value="TitaniumBarsCentered"/>
+			<property name="CustomIcon" value="ironBarsCentered"/>
+			<property name="CustomIconTint" value="33FFE3" />
+			<drop event="Harvest" name="TitaniumBars" count="1" tag="allHarvest"/>
+		</block>
+
+	<!-- jail doors -->
+			<block name="TitaniumjailDoorSingle">
+			<property name="UnlockedBy" value="perkAdvancedEngineering"/>
+			<property name="CustomIcon" value="jailDoorWhite"/>
+			<property name="CustomIconTint" value="33FFE3" />
+			<property name="Extends" value="jailDoorWhite"/>
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="MaxDamage" value="10000"/>
+			<property name="MeshDamage" value="
+			Door/DMG0, 10000,
+			Door/DMG1, 7000,
+			Door/DMG2, 5000,
+			Door/DMG3, 2500,
+			"/>
+			<property class="RepairItems"> <property name="TitaniumMix" value="1"/> </property>
+			<drop event="Harvest" name="TitaniumjailDoorWhite" count="1" tag="allHarvest"/>
+		</block>
+		<block name="TitaniumjailDoorDouble">
+			<property name="UnlockedBy" value="perkAdvancedEngineering"/>
+			<property name="Extends" value="jailDoorDoubleWhite"/>
+			<property name="CustomIcon" value="jailDoorDoubleWhite"/>
+			<property name="CustomIconTint" value="33FFE3" />
+			<property name="MaxDamage" value="10000"/>
+			<property name="MeshDamage" value="
+			Door/DMG0, 10000,
+			Door/DMG1, 7000,
+			Door/DMG2, 5000,
+			Door/DMG3, 2500,
+			"/>
+			<drop event="Harvest" name="TitaniumjailDoorDoubleWhite" count="1" tag="allHarvest"/>
+		</block>
+
+	<!-- garage doors -->
+		<block name="TitaniumGarageDoor">
+			<property name="Extends" value="ironGarageDoorWhite"/>
+			<property name="UnlockedBy" value="perkAdvancedEngineering"/>
+			<property name="CustomIcon" value="ironGarageDoorWhite"/>
+			<property name="CustomIconTint" value="33FFE3" />
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MaxDamage" value="15000"/>
+			<property name="MeshDamage" value="
+			Door/DMG0, 15000,
+			Door/DMG1, 10000,
+			Door/DMG2, 5000,
+			Door/DMG3, 2500,
+			"/>
+			<property class="RepairItems"> <property name="TitaniumresourceSpring" value="5"/> </property>
+			<property name="CustomUpgradeSound" value="place_block_metal"/>
+			<drop event="Harvest" name="TitaniumGarageDoor" count="1" tag="allHarvest"/>/>
+		</block>
+
+		<block name="TitaniumGarageDoor_Powered">
+			<property name="Extends" value="TitaniumGarageDoor" param1="DowngradeBlock"/>
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="Class" value="PoweredDoor"/>
+			<property name="UnlockedBy" value="craftingElectrician"/>
+			<property name="CustomIcon" value="ironGarageDoorWhite"/>
+			<property name="Tags" value="electricianSkill"/>
+		</block>
+
+        <block name="resourceTitaniumRock01"> <!-- biome decoration -->
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DisplayType" value="blockHardenedMulti"/>
+            <property name="Map.Color" value="160,32,240"/>
+            <property name="Material" value="Mboulder"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/titaniumore.unity3d?OreTitanium.prefab"/>
+            <property name="ModelOffset" value="0,0,0"/>
+            <property name="MultiBlockDim" value="3,2,3"/>
+            <property name="ImposterDontBlock" value="true"/>
+			<property name="MaxDamage" value="5000"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="OnlySimpleRotations" value="true"/>
+            <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+            <property name="BigDecorationRadius" value="3"/>
+            <property name="IsDistantDecoration" value="false"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="StabilitySupport" value="false"/>
+            <property name="PassThroughDamage" value="true"/>
+            <drop event="Harvest" name="resourceTitanium" count="250" tag="oreWoodHarvest"/>
+            <drop event="Destroy" count="0"/>
+            <property name="FilterTags" value="MC_outdoor,SC_decor"/>
+        </block>
+
+        <block name="resourceCopperRock01"> <!-- biome decoration -->
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DisplayType" value="blockHardenedMulti"/>
+            <property name="Map.Color" value="160,32,240"/>
+            <property name="Material" value="Mboulder"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Ore2.unity3d?CopperOre.prefab"/>
+            <property name="ModelOffset" value="0,0,0"/>
+            <property name="MultiBlockDim" value="3,2,3"/>
+            <property name="ImposterDontBlock" value="true"/>
+			<property name="MaxDamage" value="5000"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="OnlySimpleRotations" value="true"/>
+            <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+            <property name="BigDecorationRadius" value="3"/>
+            <property name="IsDistantDecoration" value="false"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="StabilitySupport" value="false"/>
+            <property name="PassThroughDamage" value="true"/>
+            <drop event="Harvest" name="resourceCopper" count="250" tag="oreWoodHarvest"/>
+            <drop event="Destroy" count="0"/>
+            <property name="FilterTags" value="MC_outdoor,SC_decor"/>
+        </block>
+
+        <block name="resourceZincRock01"> <!-- biome decoration -->
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DisplayType" value="blockHardenedMulti"/>
+            <property name="Map.Color" value="160,32,240"/>
+            <property name="Material" value="Mboulder"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Ore2.unity3d?ZincOre.prefab"/>
+            <property name="ModelOffset" value="0,0,0"/>
+            <property name="MultiBlockDim" value="3,2,3"/>
+            <property name="ImposterDontBlock" value="true"/>
+			<property name="MaxDamage" value="5000"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="OnlySimpleRotations" value="true"/>
+            <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+            <property name="BigDecorationRadius" value="3"/>
+            <property name="IsDistantDecoration" value="false"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="StabilitySupport" value="false"/>
+            <property name="PassThroughDamage" value="true"/>
+            <drop event="Harvest" name="resourceZinc" count="250" tag="oreWoodHarvest"/>
+            <drop event="Destroy" count="0"/>
+            <property name="FilterTags" value="MC_outdoor,SC_decor"/>
+        </block>
+
+        <block name="resourceSulfurRock01"> <!-- biome decoration -->
+            <property name="CreativeMode" value="Dev"/>
+            <property name="DisplayType" value="blockHardenedMulti"/>
+            <property name="Map.Color" value="160,32,240"/>
+            <property name="Material" value="Mboulder"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Ore2.unity3d?SulfurOre.prefab"/>
+            <property name="ModelOffset" value="0,0,0"/>
+            <property name="MultiBlockDim" value="3,2,3"/>
+            <property name="ImposterDontBlock" value="true"/>
+			<property name="MaxDamage" value="5000"/>
+            <property name="WaterFlow" value="permitted"/>
+            <property name="OnlySimpleRotations" value="true"/>
+            <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+            <property name="BigDecorationRadius" value="3"/>
+            <property name="IsDistantDecoration" value="false"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="StabilitySupport" value="false"/>
+            <property name="PassThroughDamage" value="true"/>
+            <drop event="Harvest" name="resourceSulfur" count="250" tag="oreWoodHarvest"/>
+            <drop event="Destroy" count="0"/>
+            <property name="FilterTags" value="MC_outdoor,SC_decor"/>
+        </block>
+
+
+
+
+		<!--The master growing block, to set the respawn rate and health of the stand in-->
+		<block name="vehicleGrowingMaster">
+			<property name="CustomIcon" value="decoCarSeatUpright" />
+			<property name="CustomIconTint" value="8c5600"/>
+			<property name="ItemTypeIcon" value="computer"/>	
+			<property name="CreativeMode" value="None"/>	
+			<property name="Class" value="PlantGrowing" />
+			<property name="Material" value="Mmetal"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Texture" value="282"/>
+			<drop event="Destroy" count="0"/>
+			
+			<!--I used this model to help infer the space the car will take up-->
+			<property name="Model" value="@:Entities/Vehicles/Car/car_seat_uprightPrefab.prefab"/>						
+			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+			<property name="CanMobsSpawnOn" value="false" />
+			<drop event="Fall" name="plantedCar" count="1" prob="0.3" stick_chance=".8"/>	
+			<property name="IsTerrainDecoration" value="true" />
+			<property name="PlantGrowing.Next" value="carsRandomHelper" />
+			<property name="PlantGrowing.FertileLevel" value="0" />
+			<property name="PlantGrowing.IsRandom" value="true" />
+			
+
+
+<!--Editables-->			<!--change the value for respawn time-->
+			<property name="PlantGrowing.GrowthRate" value="600" />	<!--Real Life Minutes. So a value of 60 would be 60 minutes 1hour.-->
+			
+			
+							<!--change the value for how strong the block left behind is-->
+			<property name="MaxDamage" value="2500"/> <!--just strong enough to deter unfamiliar players from breaking it-->
+	
+					
+		</block>
+		
+		
+		
+		<!--all the planted versions of cars-->
+		<block name="plantedCar">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="vehicleGrowingMaster"/>	
+			<property name="PlantGrowing.Next" value="carsRandomHelper" />
+		</block>	
+		<block name="plantedSchoolBus">	
+			<property name="CreativeMode" value="None"/>		
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="cntBusSchool" />
+		</block>
+		<block name="plantedShortSchoolBus">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>		
+			<property name="PlantGrowing.Next" value="cntBusSchoolShort" />
+		</block>
+		<block name="plantedShuttleBus">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>	
+			<property name="PlantGrowing.Next" value="cntBusShuttle" />
+		</block>		
+		<block name="plantedCityBus">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="cntBusCity" />
+		</block>		
+		<block name="plantedAmbulance">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>	
+			<property name="PlantGrowing.Next" value="cntAmbulanceTruck01" />
+		</block>		
+		<block name="plantedMoPower">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="cntServiceTruckMoPower" />
+		</block>		
+		<block name="plantedWorkingStiff">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="cntServiceTruckWorkingStiffTools" />
+		</block>		
+		<block name="plantedArmyOpen">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="cntArmyTruckRandomLootHelper" />
+		</block>
+		<block name="plantedArmyClosed">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="cntArmyTruckRandomLootHelper" />
+		</block>
+		<block name="plantedVan">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="cntMinivan01RandomHelper" />
+		</block>
+		<block name="plantedWideVan">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="cntMinivan3Wide01RandomHelper" />
+		</block>
+		<block name="plantedSUV">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>	
+			<property name="PlantGrowing.Next" value="cntSUV01RandomHelper" />
+		</block>
+		<block name="plantedWideSUV">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="cntSUV3Wide01RandomHelper" />
+		</block>
+		<block name="plantedTruck">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>	
+			<property name="PlantGrowing.Next" value="cntPickupTruck01RandomHelper" />
+		</block>
+		<block name="plantedWideTruck">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="cntPickupTruck3Wide01RandomHelper" />
+		</block>
+		<block name="plantedSemi">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="cntSemiTruck01RandomHelper" />
+		</block>
+		<block name="plantedFireTruck">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="cntFireTruck01RandomHelper" />
+		</block>
+		<block name="plantedFarmTruckClosed">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="cntFarmTruckRandomLootHelper" />
+		</block>
+		<block name="plantedFarmTruckOpen">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="cntFarmTruckRandomLootHelper" />
+		</block>
+		<block name="plantedTractorWhite">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="tractorWhite" />
+		</block>
+		<block name="plantedTractorRed">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="tractorRed" />
+		</block>
+		<block name="plantedTractorGreen">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="tractorGreen" />
+		</block>
+		<block name="plantedTractorBlue">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="tractorBlue" />
+		</block>
+		<block name="plantedExcavatorWhite">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="excavatorWhite" />
+		</block>
+		<block name="plantedExcavatorRed">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="excavatorRed" />
+		</block>
+		<block name="plantedExcavatorOrange">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>	
+			<property name="PlantGrowing.Next" value="excavatorOrange" />
+		</block>
+		<block name="plantedExcavatorYellow">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="excavatorYellow" />
+		</block>
+		<block name="plantedExcavatorGreen">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="excavatorGreen" />
+		</block>
+		<block name="plantedExcavatorBlue">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="excavatorBlue" />
+		</block>
+		<block name="plantedExcavatorGrey">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="excavatorGrey" />
+		</block>
+		<block name="plantedExcavatorClawWhite">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="excavatorClawWhite" />
+		</block>
+		<block name="plantedExcavatorClawRed">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="excavatorClawRed" />
+		</block>
+		<block name="plantedExcavatorClawOrange">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="excavatorClawOrange" />
+		</block>
+		<block name="plantedExcavatorClawYellow">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="excavatorClawYellow" />
+		</block>
+		<block name="plantedExcavatorClawGreen">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="excavatorClawBlue" />
+		</block>
+		<block name="plantedExcavatorClawBlue">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="excavatorClawRed" />
+		</block>
+		<block name="plantedExcavatorClawGrey">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="excavatorClawGrey" />
+		</block>
+		<block name="plantedbackhoeWhite">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="backhoeWhite" />
+		</block>
+		<block name="plantedbackhoeYellow">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="backhoeYellow" />
+		</block>
+		<block name="plantedbackhoeGreen">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="backhoeGreen" />
+		</block>
+		<block name="plantedbackhoeBlue">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="backhoeBlue" />
+		</block>
+		<block name="plantedbackhoeGrey">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="backhoeGrey" />
+		</block>
+		<block name="plantedForkLiftWhite">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="forkliftWhite" />
+		</block>
+		<block name="plantedForkLiftRed">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="forkliftRed" />
+		</block>
+		<block name="plantedForkLiftOrange">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="forkliftOrange" />
+		</block>
+		<block name="plantedForkLiftYellow">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>	
+			<property name="PlantGrowing.Next" value="forkliftYellow" />
+		</block>
+		<block name="plantedForkLiftGreen">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="forkliftGreen" />
+		</block>
+		<block name="plantedForkLiftBlue">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>	
+			<property name="PlantGrowing.Next" value="forkliftBlue" />
+		</block>
+		<block name="plantedforklift2White">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="forklift2White" />
+		</block>
+		<block name="plantedforklift2Red">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="forklift2Red" />
+		</block>
+		<block name="plantedforklift2Orange">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>
+			<property name="PlantGrowing.Next" value="forklift2Orange" />
+		</block>
+		<block name="plantedforklift2Yellow">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>	
+			<property name="PlantGrowing.Next" value="forklift2Yellow" />
+		</block>
+		<block name="plantedforklift2Green">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>	
+			<property name="PlantGrowing.Next" value="forklift2Green" />
+		</block>
+		<block name="plantedforklift2Blue">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>	
+			<property name="PlantGrowing.Next" value="forklift2Blue" />
+		</block>
+		<block name="plantedcntCar03SedanDamage1Master">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>	
+			<property name="PlantGrowing.Next" value="cntCar03SedanDamage1RandomHelper" />
+		</block>
+		<block name="plantedcntSedan01RandomHelper">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>	
+			<property name="PlantGrowing.Next" value="cntSedan01RandomHelper" />
+		</block>
+		<block name="plantedcntFrontCrumpledSedan01RandomHelper">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>	
+			<property name="PlantGrowing.Next" value="cntFrontCrumpledSedan01RandomHelper" />
+		</block>
+		<block name="plantedcntPoliceCar01">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>	
+			<property name="PlantGrowing.Next" value="cntPoliceCar01" />
+		</block>
+		<block name="plantedburntSedan01">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>	
+			<property name="PlantGrowing.Next" value="burntSedan01" />
+		</block>
+		<block name="plantedburntSedan3Wide01">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>	
+			<property name="PlantGrowing.Next" value="burntSedan3Wide01" />
+		</block>
+		<block name="plantedabandonedSUV01RandomHelper">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>	
+			<property name="PlantGrowing.Next" value="abandonedSUV01RandomHelper" />
+		</block>
+		<block name="plantedabandonedSUV01DoorsRandomHelper">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>	
+			<property name="PlantGrowing.Next" value="abandonedSUV01DoorsRandomHelper" />
+		</block>
+		<block name="plantedabandonedPickupTruck01RandomHelper">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>	
+			<property name="PlantGrowing.Next" value="abandonedPickupTruck01RandomHelper" />
+		</block>
+		<block name="plantedabandonedPickupTruck01DoorRandomHelper">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>	
+			<property name="PlantGrowing.Next" value="abandonedPickupTruck01DoorRandomHelper" />
+		</block>
+		<block name="plantedabandonedSUV3Wide01RandomHelper">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>	
+			<property name="PlantGrowing.Next" value="abandonedSUV3Wide01RandomHelper" />
+		</block>
+		<block name="plantedabandonedSUV3Wide01DoorsRandomHelper">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>	
+			<property name="PlantGrowing.Next" value="abandonedSUV3Wide01DoorsRandomHelper" />
+		</block>
+		<block name="plantedabandonedPickupTruck3Wide01RandomHelper">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>	
+			<property name="PlantGrowing.Next" value="abandonedPickupTruck3Wide01RandomHelper" />
+		</block>
+		<block name="plantedabandonedPickupTruck3Wide01DoorRandomHelper">
+			<property name="CreativeMode" value="None"/>
+			<property name="Extends" value="plantedCar"/>	
+			<property name="PlantGrowing.Next" value="abandonedPickupTruck3Wide01DoorRandomHelper" />
+		</block>
+	
+	</append>	
+
+		<append xpath="/blocks/block[@name='burntSedan01']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedburntSedan01"/>
+		</append> 
+		<append xpath="/blocks/block[@name='burntSedan3Wide01']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedburntSedan3Wide01"/>
+		</append> 
+		<append xpath="/blocks/block[@name='abandonedSUV01White']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedabandonedSUV01RandomHelper"/>
+		</append> 
+		<append xpath="/blocks/block[@name='abandonedSUV01DoorsWhite']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedabandonedSUV01DoorsRandomHelper"/>
+		</append> 
+		<append xpath="/blocks/block[@name='abandonedPickupTruck01White']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedabandonedPickupTruck01RandomHelper"/>
+		</append> 
+		<append xpath="/blocks/block[@name='abandonedPickupTruck01DoorWhite']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedabandonedPickupTruck01DoorRandomHelper"/>
+		</append> 
+		<append xpath="/blocks/block[@name='abandonedSUV3Wide01White']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedabandonedSUV3Wide01RandomHelper"/>
+		</append> 
+		<append xpath="/blocks/block[@name='abandonedSUV3Wide01DoorsWhite']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedabandonedSUV3Wide01DoorsRandomHelper"/>
+		</append> 
+		<append xpath="/blocks/block[@name='abandonedPickupTruck3Wide01White']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedabandonedPickupTruck3Wide01RandomHelper"/>
+		</append> 
+		<append xpath="/blocks/block[@name='abandonedPickupTruck3Wide01DoorWhite']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedabandonedPickupTruck3Wide01DoorRandomHelper"/>
+		</append> 
+		<append xpath="/blocks/block[@name='cntPoliceCar01PickedLockBonus']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedcntPoliceCar01"/>
+		</append> 
+		<append xpath="/blocks/block[@name='cntPoliceCar01AlarmUnlocked']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedcntPoliceCar01"/>
+		</append> 
+		<append xpath="/blocks/block[@name='cntFrontCrumpledSedan01White']"> 
+			<property name="DowngradeBlock" value="plantedcntFrontCrumpledSedan01RandomHelper"/>
+		</append> 
+		<append xpath="/blocks/block[@name='cntSedan3Wide01White']"> 
+			<property name="DowngradeBlock" value="plantedcntSedan01RandomHelper"/>
+		</append> 				
+		<append xpath="/blocks/block[@name='cntSedan01White']"> 
+			<property name="DowngradeBlock" value="plantedcntSedan01RandomHelper"/>
+		</append> 	
+		<append xpath="/blocks/block[@name='cntCar03SedanDamage1Master']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedcntCar03SedanDamage1Master"/>
+		</append> 	
+		<append xpath="/blocks/block[@name='cntCar03SedanDamage2Master']"> 
+			<property name="DowngradeBlock" value="plantedCar"/>
+		</append> 	
+		<append xpath="/blocks/block[@name='cntBusSchool']"> 
+			<property name="DowngradeBlock" value="plantedSchoolBus"/>
+		</append> 
+		<append xpath="/blocks/block[@name='cntBusSchoolShort']"> 
+			<property name="DowngradeBlock" value="plantedShortSchoolBus"/>
+		</append> 
+		<append xpath="/blocks/block[@name='cntBusShuttle']"> 
+			<property name="DowngradeBlock" value="plantedShuttleBus"/>
+		</append> 	
+		<append xpath="/blocks/block[@name='cntBusCity']"> 
+			<property name="DowngradeBlock" value="plantedCityBus"/>
+		</append> 
+		<append xpath="/blocks/block[@name='cntAmbulanceTruck01']">
+			<property name="DowngradeBlock" value="plantedAmbulance"/>
+		</append>
+		<append xpath="/blocks/block[@name='cntServiceTruckMoPower']"> 
+			<property name="DowngradeBlock" value="plantedMoPower"/>
+		</append>
+		<append xpath="/blocks/block[@name='cntServiceTruckWorkingStiffTools']"> 
+			<property name="DowngradeBlock" value="plantedWorkingStiff"/>
+		</append>	
+		<append xpath="/blocks/block[@name='cntArmyTruckClosed']"> 
+			<property name="DowngradeBlock" value="plantedArmyClosed"/>
+		</append>
+		<append xpath="/blocks/block[@name='cntArmyTruckOpen']"> 
+			<property name="DowngradeBlock" value="plantedArmyOpen"/>
+		</append>
+		<append xpath="/blocks/block[@name='cntMinivan01White']"> 
+			<property name="DowngradeBlock" value="plantedVan"/>
+		</append>
+		<append xpath="/blocks/block[@name='cntMinivan3Wide01White']"> 
+			<property name="DowngradeBlock" value="plantedWideVan"/>
+		</append>
+		<append xpath="/blocks/block[@name='cntSUV01White']"> 
+			<property name="DowngradeBlock" value="plantedSUV"/>
+		</append>
+		<append xpath="/blocks/block[@name='cntSUV3Wide01White']"> 
+			<property name="DowngradeBlock" value="plantedWideSUV"/>
+		</append>
+		<append xpath="/blocks/block[@name='cntPickupTruck01White']"> 
+			<property name="DowngradeBlock" value="plantedSUV"/>
+		</append>
+		<append xpath="/blocks/block[@name='cntPickupTruck3Wide01White']"> 
+			<property name="DowngradeBlock" value="plantedWideSUV"/>
+		</append>
+		<append xpath="/blocks/block[@name='cntSemiTruck01White']"> 
+			<property name="DowngradeBlock" value="plantedSemi"/>
+		</append>
+		<append xpath="/blocks/block[@name='cntFireTruck01White']"> 
+			<property name="DowngradeBlock" value="plantedFireTruck"/>
+		</append>
+		<append xpath="/blocks/block[@name='cntFarmTruckClosed']"> 
+			<property name="DowngradeBlock" value="plantedFarmTruckClosed"/>
+		</append>
+		<append xpath="/blocks/block[@name='cntFarmTruckOpen']"> 
+			<property name="DowngradeBlock" value="plantedFarmTruckOpen"/>
+		</append>
+		<append xpath="/blocks/block[@name='tractorWhite']"> 
+			<property name="DowngradeBlock" value="plantedTractorWhite"/>
+		</append>
+		<append xpath="/blocks/block[@name='tractorRed']"> 
+			<property name="DowngradeBlock" value="plantedTractorRed"/>
+		</append>
+		<append xpath="/blocks/block[@name='tractorGreen']">
+			<property name="DowngradeBlock" value="plantedTractorGreen"/>
+		</append>
+		<append xpath="/blocks/block[@name='tractorBlue']">
+			<property name="DowngradeBlock" value="plantedTractorBlue"/>
+		</append>
+		<append xpath="/blocks/block[@name='excavatorWhite']"> 
+			<property name="DowngradeBlock" value="plantedExcavatorWhite"/>
+		</append>
+		<append xpath="/blocks/block[@name='excavatorRed']"> 
+			<property name="DowngradeBlock" value="plantedExcavatorRed"/>
+		</append>
+
+		<append xpath="/blocks/block[@name='excavatorOrange']"> 
+			<property name="DowngradeBlock" value="plantedExcavatorOrange"/>
+		</append>
+
+		<append xpath="/blocks/block[@name='excavatorYellow']"> 
+			<property name="DowngradeBlock" value="plantedExcavatorYellow"/>
+		</append>
+
+		<append xpath="/blocks/block[@name='excavatorGreen']"> 
+			<property name="DowngradeBlock" value="plantedExcavatorGreen"/>
+		</append>
+
+		<append xpath="/blocks/block[@name='excavatorBlue']"> 
+			<property name="DowngradeBlock" value="plantedExcavatorBlue"/>
+		</append>
+
+		<append xpath="/blocks/block[@name='excavatorGrey']">
+			<property name="DowngradeBlock" value="plantedExcavatorGrey"/>
+		</append>
+
+		
+		<append xpath="/blocks/block[@name='excavatorClawWhite']"> 
+			<property name="DowngradeBlock" value="plantedExcavatorClawWhite"/>
+		</append>	
+		<append xpath="/blocks/block[@name='excavatorClawRed']"> 
+			<property name="DowngradeBlock" value="plantedExcavatorClawRed"/>
+		</append>
+
+		<append xpath="/blocks/block[@name='excavatorClawOrange']">
+			<property name="DowngradeBlock" value="plantedExcavatorClawOrange"/>
+		</append>
+
+		<append xpath="/blocks/block[@name='excavatorClawYellow']">
+			<property name="DowngradeBlock" value="plantedExcavatorClawYellow"/>
+		</append>
+
+		<append xpath="/blocks/block[@name='excavatorClawGreen']">
+			<property name="DowngradeBlock" value="plantedExcavatorClawGreen"/>
+		</append>
+
+		<append xpath="/blocks/block[@name='excavatorClawBlue']"> 
+			<property name="DowngradeBlock" value="plantedExcavatorClawBlue"/>
+		</append>
+
+		<append xpath="/blocks/block[@name='excavatorClawGrey']"> 
+			<property name="DowngradeBlock" value="plantedExcavatorClawGrey"/>
+		</append>
+
+
+		
+		<append xpath="/blocks/block[@name='backhoeWhite']"> 
+			<property name="DowngradeBlock" value="plantedbackhoeWhite"/>
+		</append>	
+		<append xpath="/blocks/block[@name='backhoeYellow']"> 
+			<property name="DowngradeBlock" value="plantedbackhoeYellow"/>
+		</append>
+		<append xpath="/blocks/block[@name='backhoeGreen']"> 
+			<property name="DowngradeBlock" value="plantedbackhoeGreen"/>
+		</append>
+		<append xpath="/blocks/block[@name='backhoeBlue']"> 
+			<property name="DowngradeBlock" value="plantedbackhoeBlue"/>
+		</append>
+		<append xpath="/blocks/block[@name='backhoeGrey']"> 
+			<property name="DowngradeBlock" value="plantedbackhoeGrey"/>
+		</append>
+
+
+		
+		<append xpath="/blocks/block[@name='forkliftWhite']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedForkLiftWhite"/>
+		</append>
+		<append xpath="/blocks/block[@name='forkliftRed']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedForkLiftRed"/>
+		</append>
+		<append xpath="/blocks/block[@name='forkliftOrange']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedForkLiftOrange"/>
+		</append>
+		<append xpath="/blocks/block[@name='forkliftYellow']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedForkLiftYellow"/>
+		</append>
+		<append xpath="/blocks/block[@name='forkliftGreen']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedForkLiftGreen"/>
+		</append>
+		<append xpath="/blocks/block[@name='forkliftBlue']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedForkLiftBlue"/>
+		</append>
+		
+		
+		
+		<append xpath="/blocks/block[@name='forklift2White']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedforklift2White"/>
+		</append>
+		<append xpath="/blocks/block[@name='forklift2Red']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedforklift2Red"/>
+		</append>
+		<append xpath="/blocks/block[@name='forklift2Orange']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedforklift2Orange"/>
+		</append>
+		<append xpath="/blocks/block[@name='forklift2Yellow']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedforklift2Yellow"/>
+		</append>
+		<append xpath="/blocks/block[@name='forklift2Green']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedforklift2Green"/>
+		</append>
+		<append xpath="/blocks/block[@name='forklift2Blue']"> 
+			<property name="Tags" value="carSeed"/>
+			<property name="DowngradeBlock" value="plantedforklift2Blue"/>
+		</append>
+		
+
+	<append xpath="blocks">
+
+
+		<block name="AdvForge">
+			<!-- Class -->
+			<property name="Class" value="Forge"/>
+			<property class="Workstation">
+				<property name="CraftingAreaRecipes" value="Advforge"/>
+				<property name="Modules" value="tools,output,fuel"/>
+				<property name="ToolNames" value="1,2,3"/>
+			</property>
+			<property name="UnlockedBy" value="craftingWorkstations"/>
+			<!-- UI_Info -->
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="forgeDesc"/>
+			<property name="WorkstationIcon" value="ui_game_symbol_forge"/>
+			<property name="Stacknumber" value="1"/>
+			<!-- Visual -->
+			<property name="Material" value="Mstone_scrap"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Workbences.unity3d?AdvForge"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="WaterFlow" value="permitted"/>
+			<!-- Placement -->
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="Path" value="solid"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="StabilitySupport" value="true"/>
+			<!-- Value -->
+			<property name="Weight" value="0"/>
+			<property name="EconomicValue" value="1000"/>
+			<property name="TraderStageTemplate" value="midTier0"/><!-- forge -->
+			<!-- Interaction -->
+			<property name="MaxDamage" value="800"/>
+			<property name="HeatMapStrength" value="6"/>
+			<property name="HeatMapTime" value="5000"/>
+			<property name="HeatMapFrequency" value="1000"/>
+			<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
+			<property name="ActiveRadiusEffects" value="buffCampfireAOE(5)"/>
+			<property name="OpenSound" value="forge_open"/>
+			<property name="CloseSound" value="forge_close"/>
+			<property name="CraftSound" value="forge_smelt_click"/>
+			<property name="CraftCompleteSound" value="forge_item_complete"/>
+			<property name="TakeDelay" value="15"/>
+			<property class="RepairItems">
+				<property name="resourceCobblestones" value="50"/>
+			</property>
+			<drop event="Harvest" name="resourceRockSmall" count="40" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceClayLump" count="20" tag="allHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="5" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
+			<!-- Sorting -->
+			<property name="SortOrder1" value="B281"/>
+			<property name="SortOrder2" value="0200"/>
+			<property name="Group" value="Building,TCScience,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			<property name="SoundPickup" value="forge_grab"/>
+			<property name="SoundPlace" value="forge_place"/>
+		</block>
+
+		<block name="GunsmithBence">
+			<property name="Class" value="Workstation"/>
+			<property name="Material" value="Mmetal_hard"/>
+			<property name="MaxDamage" value="800"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="2,2,1"/>
+			<property name="ModelOffset" value="0,0.9,0.5"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Workbences.unity3d?GunsmithBence"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="HeatMapStrength" value="2"/>
+			<property name="HeatMapTime" value="2500"/>
+			<property name="HeatMapFrequency" value="500"/>
+			<property name="Stacknumber" value="10"/>
+            <property name="UnlockedBy" value="craftingWorkstations"/>
+			<property class="Workstation">
+				<property name="Modules" value="tools,output"/>
+				<property name="CraftingAreaRecipes" value="GunsmithBence"/>
+				<property name="ToolNames" value="1,2,3,4,5,6"/>
+			</property>
+			<property name="WorkstationIcon" value="ui_game_symbol_gunsmithing"/>
+			<property name="CraftIcon" value="ui_game_symbol_gunsmithing"/>
+			<property name="OpenSound" value="open_workbench"/>
+			<property name="CloseSound" value="close_workbench"/>
+			<property name="WorkstationJournalTip" value="workbenchTip"/>
+
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="5"/>
+				<property name="resourceWood" value="10"/>
+			</property>
+			<drop event="Harvest" name="resourceWood" count="30" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
+			<property name="TakeDelay" value="5"/>
+			<property name="DescriptionKey" value="CombiningAnvilDesc"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+			<property name="SortOrder1" value="70i0"/>
+		</block>
+
+		<block name="AmmoBench">
+			<property name="Class" value="Workstation"/>
+			<property name="Material" value="Mmetal_hard"/>
+			<property name="MaxDamage" value="800"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="2,2,1"/>
+			<property name="ModelOffset" value="0.08,0.5,-0.5"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Workbences.unity3d?AmmoBench"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="HeatMapStrength" value="2"/>
+			<property name="HeatMapTime" value="2500"/>
+			<property name="HeatMapFrequency" value="500"/>
+			<property name="Stacknumber" value="10"/>
+            <property name="UnlockedBy" value="craftingWorkstations"/>
+			<property class="Workstation">
+				<property name="Modules" value="tools,output"/>
+				<property name="CraftingAreaRecipes" value="AmmoBench"/>
+			</property>
+			<property name="WorkstationIcon" value="ui_game_symbol_gunsmithing"/>
+			<property name="CraftIcon" value="ui_game_symbol_gunsmithing"/>
+			<property name="OpenSound" value="open_workbench"/>
+			<property name="CloseSound" value="close_workbench"/>
+			<property name="WorkstationJournalTip" value="workbenchTip"/>
+
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="5"/>
+				<property name="resourceWood" value="10"/>
+			</property>
+			<drop event="Harvest" name="resourceWood" count="30" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
+			<property name="TakeDelay" value="5"/>
+			<property name="DescriptionKey" value="CombiningAnvilDesc"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+			<property name="SortOrder1" value="70i0"/>
+		</block>
+
+		<block name="BenchtopLathe">
+			<property name="Class" value="Workstation"/>
+			<property name="Material" value="Mmetal_hard"/>
+			<property name="MaxDamage" value="800"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="2,2,1"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Workbences.unity3d?BenchtopLathe"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="HeatMapStrength" value="2"/>
+			<property name="HeatMapTime" value="2500"/>
+			<property name="HeatMapFrequency" value="500"/>
+			<property name="Stacknumber" value="10"/>
+            <property name="UnlockedBy" value="craftingWorkstations"/>
+			<property class="Workstation">
+				<property name="Modules" value="tools,output"/>
+				<property name="CraftingAreaRecipes" value="BenchtopLathe"/>
+				<property name="ToolNames" value="1,2,3"/>
+			</property>
+			<property name="WorkstationIcon" value="ui_game_symbol_gunsmithing"/>
+			<property name="CraftIcon" value="ui_game_symbol_gunsmithing"/>
+			<property name="OpenSound" value="open_workbench"/>
+			<property name="CloseSound" value="close_workbench"/>
+			<property name="WorkstationJournalTip" value="workbenchTip"/>
+
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="5"/>
+				<property name="resourceWood" value="10"/>
+			</property>
+			<drop event="Harvest" name="resourceWood" count="30" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
+			<property name="TakeDelay" value="5"/>
+			<property name="DescriptionKey" value="CombiningAnvilDesc"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+			<property name="SortOrder1" value="70i0"/>
+		</block>
+
+		<block name="Recycler">
+			<property name="Class" value="Workstation"/>
+			<property name="Material" value="Mmetal_hard"/>
+			<property name="MaxDamage" value="2500"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Workbences.unity3d?Recycler"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="HeatMapStrength" value="2"/>
+			<property name="HeatMapTime" value="2500"/>
+			<property name="HeatMapFrequency" value="500"/>
+			<property name="Stacknumber" value="1"/>
+            <property name="UnlockedBy" value="craftingWorkstations"/>
+			<property class="Workstation">
+				<property name="Modules" value="output"/>
+				<property name="CraftingAreaRecipes" value="Recycler"/>
+			</property>
+			<property name="WorkstationIcon" value="ui_game_symbol_drillpress"/>
+			<property name="CraftIcon" value="ui_game_symbol_drillpress"/>
+			<property name="OpenSound" value="open_workbench"/>
+			<property name="CloseSound" value="close_workbench"/>
+			<property name="WorkstationJournalTip" value="workbenchTip"/>
+
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="5"/>
+				<property name="resourceWood" value="10"/>
+			</property>
+			<drop event="Harvest" name="resourceWood" count="30" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
+			<property name="TakeDelay" value="5"/>
+			<property name="DescriptionKey" value="CombiningAnvilDesc"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+			<property name="SortOrder1" value="70i0"/>
+		</block>
+
+
+	<!-- Plants -->
+
+		<!-- *** SEEDS_BellPepper1 -->
+        <block name="plantedBellPepper1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="BellPepperSeed"/>
+            <property name="CustomIconTint" value="191,150,116"/>
+            <property name="PlantGrowing.Next" value="plantedBellPepper2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?BellPepper1.prefab"/>
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedBellPepper1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedBellPepper2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="PlantGrowing.Next" value="plantedBellPepper3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?BellPepper2.prefab"/>
+            <drop event="Destroy" name="plantedBellPepper1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedBellPepper3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?BellPepper3.prefab"/>
+            <drop event="Harvest" name="foodCropBellPepper" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropBellPepper" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropBellPepper" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedBellPepper3HarvestPlayer">
+            <property name="Extends" value="plantedBellPepper3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="BellPepper3"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedBellPepper3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropBellPepper" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropBellPepper" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropBellPepper" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedBellPepper1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedBellPepper1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedBellPepper1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<!-- *** SEEDS_Cabbage -->
+        <block name="plantedCabbage1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="CabbageSeed"/>
+            <property name="CustomIconTint" value="191,150,116"/>
+            <property name="PlantGrowing.Next" value="plantedCabbage2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Cabbage1.prefab"/>
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedCabbage1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedCabbage2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="PlantGrowing.Next" value="plantedCabbage3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Cabbage2.prefab"/>
+            <drop event="Destroy" name="plantedCabbage1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedCabbage3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Cabbage3.prefab"/>
+            <drop event="Harvest" name="foodCropCabbage1" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropCabbage1" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropCabbage1" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedCabbage3HarvestPlayer">
+            <property name="Extends" value="plantedCabbage3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Cabbage3"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedCabbage3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropCabbage1" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropCabbage1" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropCabbage1" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedCabbage1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedCabbage1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedCabbage1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<!-- *** SEEDS_Cantaloupe -->
+        <block name="plantedCantaloupe1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="CantaloupeSeed"/>
+            <property name="CustomIconTint" value="191,150,116"/>
+            <property name="PlantGrowing.Next" value="plantedCantaloupe2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Cantaloupe1.prefab"/>
+
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedCantaloupe1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedCantaloupe2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="PlantGrowing.Next" value="plantedCantaloupe3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Cantaloupe2.prefab"/>
+            <drop event="Destroy" name="plantedCantaloupe" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedCantaloupe3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Cantaloupe3.prefab"/>
+            <drop event="Harvest" name="foodCropCantaloupe" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropCantaloupe" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropCantaloupe" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedCantaloupe3HarvestPlayer">
+            <property name="Extends" value="plantedCantaloupe3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Cantaloupe3"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedCantaloupe3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropCantaloupe" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropCantaloupe" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropCantaloupe" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedCantaloupe1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedCantaloupe1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedCantaloupe1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<!-- *** SEEDS_ChiliPepper -->
+        <block name="plantedChiliPepper1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="ChiliPepperSeed"/>
+            <property name="CustomIconTint" value="191,150,116"/>
+            <property name="PlantGrowing.Next" value="plantedChiliPepper2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?ChiliPepper1.prefab"/>
+
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedChiliPepper1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedChiliPepper2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="PlantGrowing.Next" value="plantedChiliPepper3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?ChiliPepper2.prefab"/>
+            <drop event="Destroy" name="plantedChiliPepper1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedChiliPepper3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?ChiliPepper3.prefab"/>
+            <drop event="Harvest" name="foodCropChiliPepper" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropChiliPepper" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropChiliPepper" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedChiliPepper3HarvestPlayer">
+            <property name="Extends" value="plantedChiliPepper3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="ChiliPepper3"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedChiliPepper3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropChiliPepper" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropChiliPepper" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropChiliPepper" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedChiliPepper1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedChiliPepper1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedChiliPepper1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<!-- *** SEEDS_Eggplant -->
+        <block name="plantedEggplant1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="EggplantSeed"/>
+            <property name="CustomIconTint" value="191,150,116"/>
+            <property name="PlantGrowing.Next" value="plantedEggplant2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Eggplant1.prefab"/>
+
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedEggplant1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedEggplant2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="PlantGrowing.Next" value="plantedEggplant3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Eggplant2.prefab"/>
+            <drop event="Destroy" name="plantedEggplant1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedEggplant3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Eggplant3.prefab"/>
+            <drop event="Harvest" name="foodCropEggplant" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropEggplant" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropEggplant" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedEggplant3HarvestPlayer">
+            <property name="Extends" value="plantedEggplant3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Eggplant3"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedEggplant3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropEggplant" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropEggplant" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropEggplant" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedEggplant1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedEggplant1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedEggplant1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<!-- *** SEEDS_Garlic -->
+        <block name="plantedGarlic1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="GarlicSeed"/>
+            <property name="CustomIconTint" value="191,150,116"/>
+            <property name="PlantGrowing.Next" value="plantedGarlic2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Garlic1.prefab"/>
+
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedGarlic1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedGarlic2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="PlantGrowing.Next" value="plantedGarlic3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Garlic2.prefab"/>
+            <drop event="Destroy" name="plantedGarlic1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedGarlic3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Garlic3.prefab"/>
+            <drop event="Harvest" name="foodCropGarlic" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropGarlic" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropGarlic" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedGarlic3HarvestPlayer">
+            <property name="Extends" value="plantedGarlic3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Garlic3"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedGarlic3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropGarlic" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropGarlic" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropGarlic" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedGarlic1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedGarlic1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedGarlic1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<!-- *** SEEDS_Grapes -->
+        <block name="plantedGrapes1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="GrapesSeed"/>
+            <property name="CustomIconTint" value="191,150,116"/>
+            <property name="PlantGrowing.Next" value="plantedGrapes2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Grapes1.prefab"/>
+
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedGrapes1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedGrapes2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="PlantGrowing.Next" value="plantedGrapes3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Grapes2.prefab"/>
+            <drop event="Destroy" name="plantedGrapes1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedGrapes3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Grapes3.prefab"/>
+            <drop event="Harvest" name="foodCropGrapes" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropGrapes" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropGrapes" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedGrapes3HarvestPlayer">
+            <property name="Extends" value="plantedGrapes3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Grapes3"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedGrapes3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropGrapes" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropGrapes" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropGrapes" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedGrapes1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedGrapes1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedGrapes1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<!-- *** SEEDS_Leek -->
+        <block name="plantedLeek1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="LeekSeed"/>
+            <property name="CustomIconTint" value="191,150,116"/>
+            <property name="PlantGrowing.Next" value="plantedLeek2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Leek1.prefab"/>
+
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedLeek1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedLeek2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="PlantGrowing.Next" value="plantedLeek3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Leek2.prefab"/>
+            <drop event="Destroy" name="plantedLeek1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedLeek3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Leek3.prefab"/>
+            <drop event="Harvest" name="foodCropLeek" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropLeek" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropLeek" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedLeek3HarvestPlayer">
+            <property name="Extends" value="plantedLeek3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Leek3"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedLeek3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropLeek" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropLeek" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropLeek" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedLeek1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedLeek1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedLeek1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<!-- *** SEEDS_Onion -->
+        <block name="plantedOnion1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="OnionSeed"/>
+            <property name="CustomIconTint" value="191,150,116"/>
+            <property name="PlantGrowing.Next" value="plantedOnion2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Onion1.prefab"/>
+
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedOnion1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedOnion2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="PlantGrowing.Next" value="plantedOnion3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Onion2.prefab"/>
+            <drop event="Destroy" name="plantedOnion1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedOnion3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Onion3.prefab"/>
+            <drop event="Harvest" name="foodCropOnion" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropOnion" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropOnion" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedOnion3HarvestPlayer">
+            <property name="Extends" value="plantedOnion3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Onion3"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedOnion3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropOnion" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropOnion" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropOnion" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedOnion1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedOnion1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedOnion1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<!-- *** SEEDS_Strawberry -->
+        <block name="plantedStrawberry1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="StrawberrySeed"/>
+            <property name="CustomIconTint" value="191,150,116"/>
+            <property name="PlantGrowing.Next" value="plantedStrawberry2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Strawberry1.prefab"/>
+
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedStrawberry1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedStrawberry2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="PlantGrowing.Next" value="plantedStrawberry3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Strawberry2.prefab"/>
+            <drop event="Destroy" name="plantedStrawberry1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedStrawberry3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Strawberry3.prefab"/>
+            <drop event="Harvest" name="foodCropStrawberry" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropStrawberry" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropStrawberry" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedStrawberry3HarvestPlayer">
+            <property name="Extends" value="plantedStrawberry3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Strawberry3"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedStrawberry3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropStrawberry" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropStrawberry" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropStrawberry" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedStrawberry1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedStrawberry1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedStrawberry1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<!-- *** SEEDS_Tomato -->
+        <block name="plantedTomato1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="TomatoSeed"/>
+            <property name="CustomIconTint" value="191,150,116"/>
+            <property name="PlantGrowing.Next" value="plantedTomato2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?TomatoPlant1.prefab"/>
+
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedTomato1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedTomato2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="PlantGrowing.Next" value="plantedTomato3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?TomatoPlant2.prefab"/>
+            <drop event="Destroy" name="plantedTomato1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedTomato3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?TomatoPlant3.prefab"/>
+            <drop event="Harvest" name="foodCropTomato" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropTomato" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropTomato" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedTomato3HarvestPlayer">
+            <property name="Extends" value="plantedTomato3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Tomato3"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedTomato3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropTomato" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropTomato" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropTomato" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedTomato1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedTomato1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedTomato1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<!-- *** SEEDS_Wheat -->
+        <block name="plantedWheat1">
+            <property name="Extends" value="cropsGrowingMaster" param1="CustomIcon"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="WheatSeed"/>
+            <property name="CustomIconTint" value="191,150,116"/>
+            <property name="PlantGrowing.Next" value="plantedWheat2"/>
+            <property name="UnlockedBy" value="craftingSeeds"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Wheat1.prefab"/>
+
+            <property name="PlaceAsRandomRotation" value="true"/>
+            <drop event="Destroy" name="plantedWheat1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="Tags" value="seedSkill"/>
+        </block>
+            <!-- Growing -->
+        <block name="plantedWheat2">
+            <property name="Extends" value="cropsGrowingMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="PlantGrowing.Next" value="plantedWheat3HarvestPlayer"/>
+            <property name="CustomIcon" value="plantedPotato1"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Wheat2.prefab"/>
+            <drop event="Destroy" name="plantedWheat1" count="1"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0001"/>
+        </block>
+
+        <block name="plantedWheat3Harvest">
+            <property name="Extends" value="cropsHarvestableMaster"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="#@modfolder:Resources/Plants.unity3d?Wheat3.prefab"/>
+            <drop event="Harvest" name="foodCropWheat" count="1" tag="wildCropsHarvest"/>
+            <drop event="Harvest" name="foodCropWheat" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropWheat" count="1" tag="farmerBonusHarvest"/>
+            <property name="SortOrder1" value="B958"/>
+            <property name="SortOrder2" value="0002"/>
+        </block>
+
+        <block name="plantedWheat3HarvestPlayer">
+            <property name="Extends" value="plantedWheat3Harvest"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="CustomIcon" value="Wheat3"/>
+            <property name="CustomIconTint" value="808080"/>
+            <property name="DescriptionKey" value="plantedWheat3HarvestDesc"/>
+            <drop event="Harvest" name="foodCropWheat" count="2" tag="cropHarvest"/>
+            <drop event="Harvest" name="foodCropWheat" prob="0.5" count="1" tag="bonusCropHarvest"/>
+            <drop event="Harvest" name="foodCropWheat" count="1" tag="farmerBonusHarvest"/>
+            <drop event="Harvest" name="plantedWheat1" count="1" tag="farmerBonusSeed"/>
+            <drop event="Destroy" name="plantedWheat1" count="1" prob="0.5"/>
+            <property name="DowngradeBlock" value="plantedWheat1"/>
+            <property name="SortOrder2" value="0005"/>
+        </block>
+
+		<block name="ThugModel">
+			<property name="DescriptionKey" value="ThugModelDesc"/>
+			<property name="DisplayType" value="blockHardened"/>
+			<property name="Material" value="Mconcrete_shapes"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Taxidermy.unity3d?ThugModel.prefab"/>
+			<property name="EconomicValue" value="50"/>
+			<property name="EconomicBundleSize" value="20"/>
+			<property class="RepairItems">
+				<property name="resourceConcreteMix" value="8"/>
+			</property>
+			<drop event="Harvest" name="resourceRockSmall" count="25" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
+			<property name="SoundPickup" value="concreteblock_grab"/>
+			<property name="SoundPlace" value="concreteblock_place"/>
+			<property name="SortOrder1" value="S030"/>
+			<!-- SortOrder2 is assigned in code to keep all of the shapes in the same order for each material -->
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="FilterTags" value="MC_Shapes"/>
+		</block>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</append>
+
+    <insertAfter xpath="/blocks/block[@name='terrOreLead']/drop[@event='Harvest' and @name='resourceGoldNugget']">
+        <drop event="Harvest" name="resourceRadioactiveDust" prob=".08" count="1" tag="artOfMiningLuckyStrikeHarvest"/> 
+        <drop event="Harvest" name="resourceRadioactiveCrystal" prob=".08" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+        <drop event="Harvest" name="resourcesapphire" prob=".05" count="1" tag="artOfMiningLuckyStrikeHarvest"/> 
+		<drop event="Harvest" name="resourceJade" prob=".05" count="1" tag="artOfMiningLuckyStrikeHarvest"/> 
+		<drop event="Harvest" name="resourceturquoise" prob=".05" count="1" tag="artOfMiningLuckyStrikeHarvest"/> 
+    </insertAfter>
+
+	<insertAfter xpath="/blocks/block[@name='terrOreIron']/drop[@event='Harvest' and @name='resourceScrapIron']">
+		<drop event="Harvest" name="resourceRosequartz" prob=".05" count="1" tag="artOfMiningLuckyStrikeHarvest"/> 
+		<drop event="Harvest" name="resourceGarnet" prob=".05" count="1" tag="artOfMiningLuckyStrikeHarvest"/> 
+		<drop event="Harvest" name="resourceCarnelian" prob=".05" count="1" tag="artOfMiningLuckyStrikeHarvest"/> 
+		<drop event="Harvest" name="resourceTopaz" prob=".05" count="1" tag="artOfMiningLuckyStrikeHarvest"/> 
+	</insertAfter>
+
+
+	<append xpath="/blocks">
+
+		<block name="workingMicrowave">
+			<property name="Material" value="MmetalNoGlue"/>
+			<property name="MaxDamage" value="400"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Class" value="Workstation"/>
+			<property name="CustomIcon" value="cntMicrowaveOvenVer1Closed"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/LootContainers/microwaveElectricModern_01Prefab.prefab"/>
+			<property name="Place" value="TowardsPlacer90"/>
+			<property class="Workstation">
+				<property name="Modules" value="output"/>
+				<property name="CraftingAreaRecipes" value="microwave"/>
+			</property>
+			<property name="WorkstationIcon" value="ui_game_symbol_campfire"/>
+			<property name="CraftActionName" value="lblContextActionCook"/>
+			<property name="OpenSound" value="open_workbench"/>
+			<property name="CloseSound" value="close_workbench"/>
+			<property name="WorkstationJournalTip" value="microwaveTip"/>
+
+			<property class="RepairItems">
+				<property name="resourceElectricParts" value="2"/>
+				<property name="resourceMechanicalParts" value="2"/>
+				<property name="resourceScrapIron" value="5"/>
+			</property>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceElectricParts" count="0" tag="salvageHarvest"/>
+			<drop event="Destroy" name="workingMicrowave" count="1" prob="0.7"/>
+			<drop event="Destroy" name="resourceScrapIron" count="0"/>
+			<property name="EconomicValue" value="450"/>
+			<property name="FilterTags" value="floot,ffurniture,fdesign"/>
+			<property name="TakeDelay" value="15"/>
+		</block>
+
+            <!-- *** Working Stove -->
+        <block name="WorkingStove">
+            <!-- Class -->
+            <property name="Class" value="Campfire"/>
+            <property name="MaxDamage" value="2500"/>
+            <property class="Workstation">
+                <property name="Modules" value="tools,output,fuel,input"/>
+                <property name="Collide" value="melee,bullet,arrow,rocket"/>
+            </property>
+            <property name="UnlockedBy" value="craftingFood"/>
+            <!-- UI_Info -->
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="cntStoveOldVer1Closed" />
+            <property name="DescriptionKey" value="campfireDesc"/>
+            <property name="WorkstationIcon" value="ui_game_symbol_campfire"/>
+            <property name="CraftIcon" value="ui_game_symbol_spatula"/>
+            <property name="CraftActionName" value="lblContextActionCook"/>
+            <property name="Stacknumber" value="1"/>
+            <!-- Visual -->
+            <property name="Material" value="Mmetal"/>
+            <property name="Shape" value="ModelEntity"/>
+            <property name="Model" value="@:Entities/LootContainers/stoveElectricRetro_01Prefab.prefab"/>
+            <property name="ImposterDontBlock" value="true"/>
+            <property name="WaterFlow" value="permitted"/>
+            <!-- Placement -->
+            <property name="Place" value="TowardsPlacer90"/>
+            <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+            <property name="IsTerrainDecoration" value="true"/>
+            <property name="StabilitySupport" value="true"/>
+            <!-- Value -->
+            <property name="EconomicValue" value="5"/>
+            <property name="EconomicBundleSize" value="1"/>
+            <property name="SellableToTrader" value="false"/>
+            <!-- Interaction -->
+            <property name="HeatMapStrength" value="1"/>
+            <property name="HeatMapTime" value="1"/>
+            <property name="HeatMapFrequency" value="100"/>
+            <property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
+            <property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
+            <property name="OpenSound" value="campfire_open"/>
+            <property name="CloseSound" value="campfire_close"/>
+            <property name="CraftSound" value="campfire_cook_click"/>
+            <property name="CraftCompleteSound" value="campfire_complete_item"/>
+            <property class="RepairItems">
+                <property name="resourceScrapIron" value="5"/>
+            </property>
+            <drop event="Destroy" name="resourceScrapIron" count="3,6"/>
+            <!-- Sorting -->
+            <property name="SortOrder1" value="B281"/>
+            <property name="SortOrder2" value="0000"/>
+            <property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+            <property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+            <property name="SoundPickup" value="campfire_grab"/>
+            <property name="SoundPlace" value="campfire_place"/>
+        </block>
+
+
+
+
+
+
+
+
+
+
+
+
+	</append>
+
+
+	<append xpath="/blocks/block[@name='cntMicrowaveOvenVer1Open']">
+		<drop event="Destroy" name="workingMicrowave" count="1" prob="1"/>
+
+	</append>
+
+    <csv xpath="//block[
+            descendant::property[
+                @name='Material'
+                and not(@value='Mair')
+                and not(@value='MCardboardLoot')
+                and not(@value='Mcloth')
+                and not(@value='MclothStable')
+                and not(@value='MclothStable_shapes')
+                and not(@value='Mcorn')
+                and not(@value='MDesertGround')
+                and not(@value='Mdirt')
+                and not(@value='MdroppedBackpack')
+                and not(@value='Mfarmland')
+                and not(@value='MfertilizedClayPlanter')
+                and not(@value='MfertilizedClayStable')
+                and not(@value='MforestGround')
+                and not(@value='Mfurniture')
+                and not(@value='Mgravel')
+                and not(@value='Mhay')
+                and not(@value='Mleather')
+                and not(@value='Mleaves')
+                and not(@value='MleavesStable')
+                and not(@value='Mmushrooms')
+                and not(@value='Morganic')
+                and not(@value='Mpaper')
+                and not(@value='Mplants')
+                and not(@value='Mplastics')
+                and not(@value='Msand')
+                and not(@value='Msandstone')
+                and not(@value='Msnow')
+                and not(@value='Mtallgrass')
+                and not(@value='Mtrash')
+                and not(@value='Mwater')
+            ]
+            and not(@name='piano')
+            and not(contains(@name, 'Helper'))
+            and not(starts-with(@name, 'churchBell'))
+            and not(starts-with(@name, 'curtain'))
+            and not(starts-with(@name, 'decals'))
+            and not(starts-with(@name, 'painting'))
+            and not(starts-with(@name, 'picture'))
+            and not(starts-with(@name, 'verticalBlinds'))
+        ]/property[@name='Tags']/@value" delim="," op="add">hard</csv>
+
+    <append xpath="//block[
+            descendant::property[
+                @name='Material'
+                and not(@value='Mair')
+                and not(@value='MCardboardLoot')
+                and not(@value='Mcloth')
+                and not(@value='MclothStable')
+                and not(@value='MclothStable_shapes')
+                and not(@value='Mcorn')
+                and not(@value='MDesertGround')
+                and not(@value='Mdirt')
+                and not(@value='MdroppedBackpack')
+                and not(@value='Mfarmland')
+                and not(@value='MfertilizedClayPlanter')
+                and not(@value='MfertilizedClayStable')
+                and not(@value='MforestGround')
+                and not(@value='Mfurniture')
+                and not(@value='Mgravel')
+                and not(@value='Mhay')
+                and not(@value='Mleather')
+                and not(@value='Mleaves')
+                and not(@value='MleavesStable')
+                and not(@value='Mmushrooms')
+                and not(@value='Morganic')
+                and not(@value='Mpaper')
+                and not(@value='Mplants')
+                and not(@value='Mplastics')
+                and not(@value='Msand')
+                and not(@value='Msandstone')
+                and not(@value='Msnow')
+                and not(@value='Mtallgrass')
+                and not(@value='Mtrash')
+                and not(@value='Mwater')
+            ]
+            and not(@name='piano')
+            and not(contains(@name, 'Helper'))
+            and not(starts-with(@name, 'churchBell'))
+            and not(starts-with(@name, 'curtain'))
+            and not(starts-with(@name, 'decals'))
+            and not(starts-with(@name, 'painting'))
+            and not(starts-with(@name, 'picture'))
+            and not(starts-with(@name, 'verticalBlinds'))
+            and not(descendant::property[@name='Tags'])
+        ]">
+        <property name="Tags" value="hard" />
+    </append>
+
+    <!-- Blocks that extend other "hard" blocks without specifying their own material -->
+    <csv xpath="//block[
+            descendant::property[@name='Extends' and @value='birdBathPlanter']
+            or descendant::property[@name='Extends' and @value='breakerBoxClosed']
+            or descendant::property[@name='Extends' and @value='brickNoUpgradeMaster']
+            or descendant::property[@name='Extends' and @value='bunkBedMade']
+            or descendant::property[@name='Extends' and @value='cinderBlocks01']
+            or descendant::property[@name='Extends' and @value='cntBathTubEmpty']
+            or descendant::property[@name='Extends' and @value='cntgasRangeWhite']
+            or descendant::property[@name='Extends' and @value='cntPillCaseEmpty']
+            or descendant::property[@name='Extends' and @value='cntPostMailbox']
+            or descendant::property[@name='Extends' and @value='cntToilet01']
+            or descendant::property[@name='Extends' and @value='cntTroughPigEmpty']
+            or descendant::property[@name='Extends' and @value='corrugatedMetalNoUpgradeMaster']
+            or descendant::property[@name='Extends' and @value='concreteNoUpgradeMaster']
+            or descendant::property[@name='Extends' and @value='decoEntityGlassMaster']
+            or descendant::property[@name='Extends' and @value='decoEntityMetalMaster']
+            or descendant::property[@name='Extends' and @value='decoEntityWoodMaster']
+            or descendant::property[@name='Extends' and @value='decoWeightBar']
+            or descendant::property[@name='Extends' and @value='driftwood']
+            or descendant::property[@name='Extends' and @value='drinkingfountainSingle']
+            or descendant::property[@name='Extends' and @value='electricalBox01']
+            or descendant::property[@name='Extends' and @value='gurneyBed']
+            or descendant::property[@name='Extends' and @value='hoodRangeWhite']
+            or descendant::property[@name='Extends' and @value='horseshoe_01']
+            or descendant::property[@name='Extends' and @value='ironWroughtFence_01']
+            or descendant::property[@name='Extends' and @value='lightDisplayXRayFull']
+            or descendant::property[@name='Extends' and @value='lightPorchWhite']
+            or descendant::property[@name='Extends' and @value='lightSconce']
+            or descendant::property[@name='Extends' and @value='lightWallGooseneckWhite']
+            or descendant::property[@name='Extends' and @value='logWallLeft']
+            or descendant::property[@name='Extends' and @value='metalPipeStack']
+            or descendant::property[@name='Extends' and @value='metalReinforcedWoodDrawBridge']
+            or descendant::property[@name='Extends' and @value='metalSignLetter_0']
+            or descendant::property[@name='Extends' and @value='modularFireWoodStackA']
+            or descendant::property[@name='Extends' and @value='OSBWoodStack']
+            or descendant::property[@name='Extends' and @value='oreBoulderMaster']
+            or descendant::property[@name='Extends' and @value='palletCartonMilitaryBase']
+            or descendant::property[@name='Extends' and @value='pedestalSink']
+            or descendant::property[@name='Extends' and @value='powerSwitch01']
+            or descendant::property[@name='Extends' and @value='pushButtonSwitch01']
+            or descendant::property[@name='Extends' and @value='resourceRock01']
+            or descendant::property[@name='Extends' and @value='rock01']
+            or descendant::property[@name='Extends' and @value='satelliteUnitLarge']
+            or descendant::property[@name='Extends' and @value='scrapIronNoUpgradeMaster']
+            or descendant::property[@name='Extends' and @value='securityGateCTRPlate']
+            or descendant::property[@name='Extends' and @value='stoneNoUpgradeMaster']
+            or descendant::property[@name='Extends' and @value='streetLight01']
+            or descendant::property[@name='Extends' and @value='terrOreStoneIronRandom']
+            or descendant::property[@name='Extends' and @value='terrStone']
+            or descendant::property[@name='Extends' and @value='trophy']
+            or descendant::property[@name='Extends' and @value='treeMaster']
+            or descendant::property[@name='Extends' and @value='treeOakLrg01']
+            or descendant::property[@name='Extends' and @value='utilitySink']
+            or descendant::property[@name='Extends' and @value='utilityTransformer']
+            or descendant::property[@name='Extends' and @value='woodNoUpgradeMaster']
+            or descendant::property[@name='Extends' and @value='woodWeakNoUpgradeMaster']
+            or descendant::property[@name='Extends' and contains(@value, 'Bars')]
+            or descendant::property[@name='Extends' and contains(@value, 'Door')]
+            or descendant::property[@name='Extends' and contains(@value, 'Gate')]
+            or descendant::property[@name='Extends' and contains(@value, 'Hatch')]
+            or descendant::property[@name='Extends' and contains(@value, 'MailBox')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'burntSedan')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntArmyTruck')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'bathroomStall')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'ceilingLight')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'chainlink')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'chairFolding')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntArmoire')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntBarrel')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntBus')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntCabinet')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntCasket')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntCar03SedanDamage')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntCharcoalGrill')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntCoffin')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntCommercialCooler')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntDesk')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntDishwasher')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntDumpster')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntFireTruck')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntFrontCrumpledSedan')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntGasGrill')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntGunSafe')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntHardenedChest')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntLootChest')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntMedicineCabinet')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntMicrowaveOven')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntMiniBeverageCooler')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntMinivan')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntMortician')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntMunitionsBox')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntNightstand')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntPickupTruck')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntPoliceCar')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntRetroFridge')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntSedan')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntSemiTruck')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntShippingCrate')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntSteel')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntStove')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntSUV')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntwallOven')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntWallSafe')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntWasher')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntWoodenChest')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'controlPanel')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'crushedCars')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'deskLampLight')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'emberPile')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'faucet')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'fluorescentLight')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'forklift')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'glass')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'graveStone')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'lantern')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'lightCeiling')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'lightIndustrial')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'lightPanel')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'palletBricks')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'pipeSmall')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'spotlight')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'tableLampLight')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'tvSmallStand')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'wheelchair')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'woodFenceSheet')]
+            and not(contains(@name, 'Helper'))
+            and not(descendant::property[@name='Material'])
+            and not(contains(descendant::property[@name='Tags']/@value, 'hard'))
+        ]/property[@name='Tags']/@value" delim="," op="add">hard</csv>
+
+    <append xpath="//block[
+            descendant::property[@name='Extends' and @value='birdBathPlanter']
+            or descendant::property[@name='Extends' and @value='breakerBoxClosed']
+            or descendant::property[@name='Extends' and @value='brickNoUpgradeMaster']
+            or descendant::property[@name='Extends' and @value='bunkBedMade']
+            or descendant::property[@name='Extends' and @value='cinderBlocks01']
+            or descendant::property[@name='Extends' and @value='cntBathTubEmpty']
+            or descendant::property[@name='Extends' and @value='cntgasRangeWhite']
+            or descendant::property[@name='Extends' and @value='cntPillCaseEmpty']
+            or descendant::property[@name='Extends' and @value='cntPostMailbox']
+            or descendant::property[@name='Extends' and @value='cntToilet01']
+            or descendant::property[@name='Extends' and @value='cntTroughPigEmpty']
+            or descendant::property[@name='Extends' and @value='corrugatedMetalNoUpgradeMaster']
+            or descendant::property[@name='Extends' and @value='concreteNoUpgradeMaster']
+            or descendant::property[@name='Extends' and @value='decoEntityGlassMaster']
+            or descendant::property[@name='Extends' and @value='decoEntityMetalMaster']
+            or descendant::property[@name='Extends' and @value='decoEntityWoodMaster']
+            or descendant::property[@name='Extends' and @value='decoWeightBar']
+            or descendant::property[@name='Extends' and @value='driftwood']
+            or descendant::property[@name='Extends' and @value='drinkingfountainSingle']
+            or descendant::property[@name='Extends' and @value='electricalBox01']
+            or descendant::property[@name='Extends' and @value='gurneyBed']
+            or descendant::property[@name='Extends' and @value='hoodRangeWhite']
+            or descendant::property[@name='Extends' and @value='horseshoe_01']
+            or descendant::property[@name='Extends' and @value='ironWroughtFence_01']
+            or descendant::property[@name='Extends' and @value='lightDisplayXRayFull']
+            or descendant::property[@name='Extends' and @value='lightPorchWhite']
+            or descendant::property[@name='Extends' and @value='lightSconce']
+            or descendant::property[@name='Extends' and @value='lightWallGooseneckWhite']
+            or descendant::property[@name='Extends' and @value='logWallLeft']
+            or descendant::property[@name='Extends' and @value='metalPipeStack']
+            or descendant::property[@name='Extends' and @value='metalReinforcedWoodDrawBridge']
+            or descendant::property[@name='Extends' and @value='metalSignLetter_0']
+            or descendant::property[@name='Extends' and @value='modularFireWoodStackA']
+            or descendant::property[@name='Extends' and @value='OSBWoodStack']
+            or descendant::property[@name='Extends' and @value='oreBoulderMaster']
+            or descendant::property[@name='Extends' and @value='palletCartonMilitaryBase']
+            or descendant::property[@name='Extends' and @value='pedestalSink']
+            or descendant::property[@name='Extends' and @value='powerSwitch01']
+            or descendant::property[@name='Extends' and @value='pushButtonSwitch01']
+            or descendant::property[@name='Extends' and @value='resourceRock01']
+            or descendant::property[@name='Extends' and @value='rock01']
+            or descendant::property[@name='Extends' and @value='satelliteUnitLarge']
+            or descendant::property[@name='Extends' and @value='scrapIronNoUpgradeMaster']
+            or descendant::property[@name='Extends' and @value='securityGateCTRPlate']
+            or descendant::property[@name='Extends' and @value='stoneNoUpgradeMaster']
+            or descendant::property[@name='Extends' and @value='streetLight01']
+            or descendant::property[@name='Extends' and @value='terrOreStoneIronRandom']
+            or descendant::property[@name='Extends' and @value='terrStone']
+            or descendant::property[@name='Extends' and @value='trophy']
+            or descendant::property[@name='Extends' and @value='treeMaster']
+            or descendant::property[@name='Extends' and @value='treeOakLrg01']
+            or descendant::property[@name='Extends' and @value='utilitySink']
+            or descendant::property[@name='Extends' and @value='utilityTransformer']
+            or descendant::property[@name='Extends' and @value='woodNoUpgradeMaster']
+            or descendant::property[@name='Extends' and @value='woodWeakNoUpgradeMaster']
+            or descendant::property[@name='Extends' and contains(@value, 'Bars')]
+            or descendant::property[@name='Extends' and contains(@value, 'Door')]
+            or descendant::property[@name='Extends' and contains(@value, 'Gate')]
+            or descendant::property[@name='Extends' and contains(@value, 'Hatch')]
+            or descendant::property[@name='Extends' and contains(@value, 'MailBox')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'burntSedan')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntArmyTruck')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'bathroomStall')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'ceilingLight')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'chainlink')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'chairFolding')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntArmoire')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntBarrel')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntBus')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntCabinet')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntCasket')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntCar03SedanDamage')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntCharcoalGrill')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntCoffin')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntCommercialCooler')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntDesk')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntDishwasher')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntDumpster')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntFireTruck')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntFrontCrumpledSedan')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntGasGrill')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntGunSafe')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntHardenedChest')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntLootChest')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntMedicineCabinet')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntMicrowaveOven')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntMiniBeverageCooler')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntMinivan')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntMortician')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntMunitionsBox')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntNightstand')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntPickupTruck')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntPoliceCar')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntRetroFridge')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntSedan')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntSemiTruck')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntShippingCrate')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntSteel')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntStove')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntSUV')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntwallOven')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntWallSafe')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntWasher')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'cntWoodenChest')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'controlPanel')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'crushedCars')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'deskLampLight')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'emberPile')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'faucet')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'fluorescentLight')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'forklift')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'glass')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'graveStone')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'lantern')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'lightCeiling')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'lightIndustrial')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'lightPanel')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'palletBricks')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'pipeSmall')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'spotlight')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'tableLampLight')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'tvSmallStand')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'wheelchair')]
+            or descendant::property[@name='Extends' and starts-with(@value, 'woodFenceSheet')]
+            and not(contains(@name, 'Helper'))
+            and not(descendant::property[@name='Material'])
+            and not(descendant::property[@name='Tags'])
+        ]">
+        <property name="Tags" value="hard" />
+    </append>
+
+</configs>

@@ -1,0 +1,321 @@
+<configs>
+
+    <remove xpath="progression/perks/book[@name='perkShotgunMessiahBreachingSlugs']"/>
+    <remove xpath="progression/perks/book[@name='perkShotgunMessiahSlugs']"/>
+    <remove xpath="progression/perks/book[@name='perkShotgunMessiahComplete']"/>
+
+    <remove xpath="progression/perks/book[@name='perkPistolPeteAPAmmo']"/>
+    <remove xpath="progression/perks/book[@name='perkPistolPeteHPAmmo']"/>
+    <remove xpath="progression/perks/book[@name='perkPistolPeteComplete']"/>
+
+    <remove xpath="progression/perks/book[@name='perkRangersAPAmmo']"/>
+    <remove xpath="progression/perks/book[@name='perkRangersComplete']"/>
+    <remove xpath="progression/perks/book[@name='perkRangersExplodingBolts']"/>
+
+    <remove xpath="progression/perks/book[@name='perkEnforcerComplete']"/>
+    <remove xpath="progression/perks/book[@name='perkEnforcerHPAmmo']"/>
+    <remove xpath="progression/perks/book[@name='perkEnforcerAPAmmo']"/>
+
+    <remove xpath="progression/perks/book[@name='perkSniperHPAmmo']"/>
+    <remove xpath="progression/perks/book[@name='perkSniperAPAmmo']"/>
+    <remove xpath="progression/perks/book[@name='perkSniperComplete']"/>
+
+    <remove xpath="progression/perks/book[@name='perkTechJunkie4Shells']"/>
+    <remove xpath="progression/perks/book[@name='perkTechJunkie3APAmmo']"/>
+    <remove xpath="progression/perks/book[@name='perkTechJunkie8Complete']"/>
+
+
+
+
+    <append xpath="/progression/perks">
+            <!-- *** ammo_SKILLS -->
+        <crafting_skill name="CraftingAmmo" max_level="100" parent="attCrafting" name_key="CraftingAmmoName" desc_key="CraftingAmmoDesc" long_desc_key="CraftingAmmoLongDesc" icon="ui_game_symbol_small_caliber">
+
+            <display_entry icon="ammo9mmBulletHP,ammo9mmBulletAP,ammoBundleArrowStone,ammoBundleArrowIron" name_key="ammoT1-1,ammoT1-2,ammoT1-3,ammoT1-4" has_quality="false" unlock_level="2,4,6,8" >
+                <unlock_entry item="ammo9mmBulletHP,ammo45ACPBulletHP" unlock_tier="1"/>
+                <unlock_entry item="ammo9mmBulletAP,ammo45ACPBulletAP" unlock_tier="2"/>
+                <unlock_entry item="ammoBundleArrowStone,ammoBundleCrossbowBoltStone" unlock_tier="3"/>
+                <unlock_entry item="ammoBundleArrowIron,ammoBundleCrossbowBoltIron" unlock_tier="4"/>
+            </display_entry>
+            <display_entry icon="ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammoBundleArrowSteelAP,ammoBundleJunkTurretRegular" name_key="ammoT2-1,ammoT2-2,ammoT2-3,ammoT2-4" has_quality="false" unlock_level="11,14,18,22" >
+                <unlock_entry item="ammo44MagnumBulletHP,ammoBundle9mmBulletBall,ammoBundle9mmBulletHP,ammoBundle9mmBulletAP" unlock_tier="1"/>
+                <unlock_entry item="ammo44MagnumBulletAP" unlock_tier="2"/>
+                <unlock_entry item="ammoBundleArrowSteelAP,ammoBundleCrossbowBoltSteelAP" unlock_tier="3"/>
+                <unlock_entry item="ammoBundleJunkTurretRegular,ammoBundleJunkTurretShell,ammoBundleJunkTurretAP,ammoBundle9mmBulletBall,ammoBundle9mmBulletHP,ammoBundle9mmBulletAP" unlock_tier="4"/>
+            </display_entry>
+            <display_entry icon="ammo762mmBulletHP,ammo762mmBulletAP,ammoBundleArrowFlaming,ammoBundleArrowExploding" name_key="ammoT3-1,ammoT3-2,ammoT3-3,ammoT3-4" has_quality="false" unlock_level="27,35,43,51" >
+                <unlock_entry item="ammo762mmBulletHP,Ammo57mmBulletHP,Ammo50CalBulletHP" unlock_tier="1"/>
+                <unlock_entry item="ammo762mmBulletAP,Ammo57mmBulletAP,Ammo50CalBulletAP" unlock_tier="2"/>
+                <unlock_entry item="ammoShotgunShellFlechette,ammoBundleArrowFlaming,ammoBundleCrossbowBoltFlaming" unlock_tier="3"/>
+                <unlock_entry item="ammoBundleArrowExploding,ammoBundleCrossbowBoltExploding,ammoBundle44MagnumBulletBall,ammoBundle44MagnumBulletHP,ammoBundle44MagnumBulletAP" unlock_tier="4"/>
+            </display_entry>
+            <display_entry icon="ammoShotgunSlug,ammoShotgunBreachingSlug,ammoBundleShotgunShell,ammoBundle57mmBullet" name_key="ammoT4-1,ammoT4-2,ammoT4-3" has_quality="false" unlock_level="60,70,80,90" >
+                <unlock_entry item="ammoShotgunSlug,ammoBundle45ACPBullet,ammoBundle45ACPBulletHP,ammoBundle45ACPBulletAP" unlock_tier="1"/>
+                <unlock_entry item="ammoShotgunBreachingSlug,ammoBundle50CalBullet,ammoBundle50CalBulletHP,ammoBundle50CalBulletAP" unlock_tier="2"/>
+                <unlock_entry item="ammoBundleShotgunShell,ammoBundleShotgunSlug,ammoBundleShotgunBreachingSlug" unlock_tier="3"/>
+                <unlock_entry item="ammoBundle57mmBullet,ammoBundle57mmBulletHP,ammoBundle57mmBulletAP," unlock_tier="4"/>
+            </display_entry>
+            <display_entry icon="ammo762mmBulletHP" name_key="ammoT5-1" has_quality="false" unlock_level="100" >
+                <unlock_entry item="ammoBundle762mmBulletBall,ammoBundle762mmBulletHP,ammoBundle762mmBulletAP,ammoBundleShotgunShellFlechette" unlock_tier="1"/>
+            </display_entry>
+
+            <effect_group>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,100" value="1" tags="ammo9mmBulletHP,ammo45ACPBulletHP"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,100" value="1" tags="ammo9mmBulletAP,ammo45ACPBulletAP"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,100" value="1" tags="ammoBundleArrowStone,ammoBundleCrossbowBoltStone"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="8,100" value="1" tags="ammoBundleArrowIron,ammoBundleCrossbowBoltIron"/>
+
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="ammo44MagnumBulletHP"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="14,100" value="1" tags="ammo44MagnumBulletAP"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="18,100" value="1" tags="ammoBundleArrowSteelAP,ammoBundleCrossbowBoltSteelAP"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="22,100" value="1" tags="ammoBundleJunkTurretRegular,ammoBundleJunkTurretShell,ammoBundleJunkTurretAP,ammoBundle9mmBulletBall,ammoBundle9mmBulletHP,ammoBundle9mmBulletAP"/>
+
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="27,100" value="1" tags="ammo762mmBulletHP,Ammo57mmBulletHP,Ammo50CalBulletHP"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="35,100" value="1" tags="ammo762mmBulletAP,Ammo57mmBulletAP,Ammo50CalBulletAP"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="43,100" value="1" tags="ammoShotgunShellFlechette,ammoBundleArrowFlaming,ammoBundleCrossbowBoltFlaming"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="51,100" value="1" tags="ammoBundleArrowExploding,ammoBundleCrossbowBoltExploding,ammoBundle44MagnumBulletBall,ammoBundle44MagnumBulletHP,ammoBundle44MagnumBulletAP"/>
+
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="60,100" value="1" tags="ammoShotgunSlug,ammoBundle45ACPBullet,ammoBundle45ACPBulletHP,ammoBundle45ACPBulletAP"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="70,100" value="1" tags="ammoShotgunBreachingSlug,ammoBundle50CalBullet,ammoBundle50CalBulletHP,ammoBundle50CalBulletAP"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="80,100" value="1" tags="ammoBundleShotgunShell,ammoBundleShotgunSlug,ammoBundleShotgunBreachingSlug"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="90,100" value="1" tags="ammoBundle57mmBullet,ammoBundle57mmBulletHP,ammoBundle57mmBulletAP"/>           
+            
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="100,100" value="1" tags="ammoBundle762mmBulletBall,ammoBundle762mmBulletHP,ammoBundle762mmBulletAP,ammoBundleShotgunShellFlechette"/>
+            
+            </effect_group>
+        </crafting_skill>
+
+    </append>
+
+	<csv xpath="//crafting_skill[@name='craftingMedical']//unlock_entry[contains(@item, 'drugAntibiotics')]/@item" op="add">drugAnti-NorovirusPill</csv>
+    <csv xpath="//crafting_skill[@name='craftingMedical']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'drugAntibiotics')]/@tags" op="add">drugAnti-NorovirusPill</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingMedical']//unlock_entry[contains(@item, 'drugAntibiotics')]/@item" op="add">drugAnti-InfluenzaPill</csv>
+    <csv xpath="//crafting_skill[@name='craftingMedical']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'drugAntibiotics')]/@tags" op="add">drugAnti-InfluenzaPill</csv>
+	
+    <csv xpath="//crafting_skill[@name='craftingMedical']//unlock_entry[contains(@item, 'drugAntibiotics')]/@item" op="add">drugAnti-TuberculosisPill</csv>
+    <csv xpath="//crafting_skill[@name='craftingMedical']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'drugAntibiotics')]/@tags" op="add">drugAnti-TuberculosisPill</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingMedical']//unlock_entry[contains(@item, 'drugRecog')]/@item" op="add">medicalAdvFirstAidBandage</csv>
+    <csv xpath="//crafting_skill[@name='craftingMedical']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'drugRecog')]/@tags" op="add">medicalAdvFirstAidBandage</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingMedical']//unlock_entry[contains(@item, 'drugSteroids')]/@item" op="add">medicalAdvFirstAidKit</csv>
+    <csv xpath="//crafting_skill[@name='craftingMedical']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'drugSteroids')]/@tags" op="add">medicalAdvFirstAidKit</csv>
+
+	
+	<append xpath="//crafting_skill[@name='craftingHandguns']">
+		<display_entry item="GunMGP90,GunMGRuger45" unlock_level="71,76,82,88,94,100" />
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="71,100" value="1" tags="GunMGP90,GunMGRuger45"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="76,82,88,94,100" value="1,2,3,4,5" tags="GunMGP90,GunMGRuger45"/>
+		</effect_group>
+	</append>
+
+	<append xpath="//crafting_skill[@name='craftingMachineGuns']">
+		<display_entry item="GunMGAR-57" unlock_level="61,68,76,84,92,100" />
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="61,100" value="1" tags="GunMGAR-57"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="68,76,84,92,100" value="1,2,3,4,5" tags="GunMGAR-57"/>
+		</effect_group>
+	</append>
+
+	<append xpath="//crafting_skill[@name='craftingShotguns']">
+		<display_entry item="gunShotgunT4Spas" unlock_level="61,68,76,84,92,100" />
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="61,100" value="1" tags="gunShotgunT4Spas"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="68,76,84,92,100" value="1,2,3,4,5" tags="gunShotgunT4Spas"/>
+		</effect_group>
+	</append>
+
+	<append xpath="//crafting_skill[@name='craftingRobotics']">
+		<display_entry item="meleeWpnBatonT3LazerBaton" unlock_level="55,60,65,70,75,100" />
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="51,100" value="1" tags="meleeWpnBatonT3LazerBaton"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="60,65,70,75,100" value="1,2,3,4,5" tags="meleeWpnBatonT3LazerBaton"/>
+		</effect_group>
+	</append>
+
+	<append xpath="//crafting_skill[@name='craftingKnuckles']">
+		<display_entry item="meleeWpnKnucklesT4SteelKnuckles" unlock_level="36,43,51,59,67,75" />
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="36,75" value="1" tags="meleeWpnKnucklesT4SteelKnuckles"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="43,51,59,67,75" value="1,2,3,4,5" tags="meleeWpnKnucklesT4SteelKnuckles"/>
+		</effect_group>
+	</append>
+
+	<append xpath="//crafting_skill[@name='craftingHandguns']">
+		<display_entry item="gunHandgunT3Revolver50cal" unlock_level="26,29,33,37,41,45" />
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="26,100" value="1" tags="gunHandgunT3Revolver50cal"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="29,33,37,41,45,100" value="1,2,3,4,5" tags="gunHandgunT3Revolver50cal"/>
+		</effect_group>
+	</append>
+
+	<append xpath="//crafting_skill[@name='craftingSledgehammers']">
+		<display_entry item="meleeWpnSledgeT2HardenSledgehammer" unlock_level="26,29,33,37,41,45" />
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="26,75" value="1" tags="meleeWpnSledgeT2HardenSledgehammer"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="25,30,35,36,43,51" value="1,2,3,4,5" tags="meleeWpnSledgeT2HardenSledgehammer"/>
+		</effect_group>
+	</append>
+
+	<append xpath="//crafting_skill[@name='craftingBlades']">
+		<display_entry item="meleeWpnBladeT2Wakizashi" unlock_level="25,30,35,36,43,51" />
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,75" value="1" tags="meleeWpnBladeT2Wakizashi"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="30,35,36,43,51" value="1,2,3,4,5" tags="meleeWpnBladeT2Wakizashi"/>
+		</effect_group>
+	</append>
+
+	<append xpath="//crafting_skill[@name='craftingBlades']">
+		<display_entry item="meleeWpnBladeT4Chevalier" unlock_level="36,43,51,59,67,75" />
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="36,75" value="1" tags="meleeWpnBladeT4Chevalier"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="43,51,59,67,75" value="1,2,3,4,5" tags="meleeWpnBladeT4Chevalier"/>
+		</effect_group>
+	</append>
+
+	<csv xpath="//crafting_skill[@name='craftingWorkstations']//unlock_entry[contains(@item, 'toolAnvil')]/@item" op="add">AmmoBench</csv>
+    <csv xpath="//crafting_skill[@name='craftingWorkstations']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'toolAnvil')]/@tags" op="add">AmmoBench</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingWorkstations']//unlock_entry[contains(@item, 'chemistryStation')]/@item" op="add">BenchtopLathe</csv>
+    <csv xpath="//crafting_skill[@name='craftingWorkstations']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'chemistryStation')]/@tags" op="add">BenchtopLathe</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingWorkstations']//unlock_entry[contains(@item, 'cementMixer')]/@item" op="add">GunsmithBence</csv>
+    <csv xpath="//crafting_skill[@name='craftingWorkstations']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'cementMixer')]/@tags" op="add">GunsmithBence</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingWorkstations']//unlock_entry[contains(@item, 'chemistryStation')]/@item" op="add">AdvForge</csv>
+    <csv xpath="//crafting_skill[@name='craftingWorkstations']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'chemistryStation')]/@tags" op="add">AdvForge</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingWorkstations']//unlock_entry[contains(@item, 'toolApiaryExtractor')]/@item" op="add">Recycler</csv>
+    <csv xpath="//crafting_skill[@name='craftingWorkstations']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'toolApiaryExtractor')]/@tags" op="add">Recycler</csv>
+
+
+
+
+
+
+
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'drinkJarRedTea')]/@item" op="add">Iced Mixed Tea</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'drinkJarRedTea')]/@tags" op="add">Iced Mixed Tea</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'drinkJarCoffee')]/@item" op="add">Iced Coffee</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'drinkJarCoffee')]/@tags" op="add">Iced Coffee</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodPumpkinPie')]/@item" op="add">Yucca Chips</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodPumpkinPie')]/@tags" op="add">Yucca Chips</csv>
+	
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodBakedPotato')]/@item" op="add">Hashbrown</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodBakedPotato')]/@tags" op="add">Hashbrown</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodCornBread')]/@item" op="add">Mashed Potato</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodCornBread')]/@tags" op="add">Mashed Potato</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodSteakAndPotato')]/@item" op="add">Corn Grits</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodSteakAndPotato')]/@tags" op="add">Corn Grits</csv>
+	
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodGrilledMeat')]/@item" op="add">Blueberry Jam</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodGrilledMeat')]/@tags" op="add">Blueberry Jam</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodBoiledMeat')]/@item" op="add">Yucca Jam</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodBoiledMeat')]/@tags" op="add">Yucca Jam</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodHoboStew')]/@item" op="add">Egg Salad</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodHoboStew')]/@tags" op="add">Egg Salad</csv>
+	
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodCornOnTheCob')]/@item" op="add">Fried Meat</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodCornOnTheCob')]/@tags" op="add">Fried Meat</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodBlueberryPie')]/@item" op="add">Corn Chips</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodBlueberryPie')]/@tags" op="add">Corn Chips</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodPumpkinCheesecake')]/@item" op="add">Blueberry Jam Sandwich</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodPumpkinCheesecake')]/@tags" op="add">Blueberry Jam Sandwich</csv>
+	
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodBakedPotato')]/@item" op="add">Yucca Jam Sandwich</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodBakedPotato')]/@tags" op="add">Yucca Jam Sandwich</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodMeatStew')]/@item" op="add">Mashed Potato</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodMeatStew')]/@tags" op="add">Mashed Potato</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodHoboStew')]/@item" op="add">Coffee Cake</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodHoboStew')]/@tags" op="add">Coffee Cake</csv>
+	
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodVegetableStew')]/@item" op="add">Mushroom Pie</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodVegetableStew')]/@tags" op="add">Mushroom Pie</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodTunaFishGravyToast')]/@item" op="add">Meat and Beer Pie</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodTunaFishGravyToast')]/@tags" op="add">Meat and Beer Pie</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'drinkJarYuccaJuice')]/@item" op="add">Fried Mushrooms</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'drinkJarYuccaJuice')]/@tags" op="add">Fried Mushrooms</csv>
+	
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodBaconAndEggs')]/@item" op="add">Fried Egg</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodBaconAndEggs')]/@tags" op="add">Fried Egg</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodPumpkinPie')]/@item" op="add">French Toast</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodPumpkinPie')]/@tags" op="add">French Toast</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodFishTacos')]/@item" op="add">Honey Glazed Meat</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodFishTacos')]/@tags" op="add">Honey Glazed Meat</csv>
+	
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'drinkJarBeer')]/@item" op="add">Kvass Soda,Distilled Vodka</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'drinkJarBeer')]/@tags" op="add">Kvass Soda,Distilled Vodka</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'drinkYuccaJuiceSmoothie')]/@item" op="add">Carbonated Water</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'drinkYuccaJuiceSmoothie')]/@tags" op="add">Carbonated Water</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'drinkJarGoldenRodTea')]/@item" op="add">Sugar Extract</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'drinkJarGoldenRodTea')]/@tags" op="add">Sugar Extract</csv>
+	
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodShamChowder')]/@item" op="add">Rock Candy</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodShamChowder')]/@tags" op="add">Rock Candy</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodFishTacos')]/@item" op="add">Blueberry Candy</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodFishTacos')]/@tags" op="add">Blueberry Candy</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodPumpkinBread')]/@item" op="add">Plain Fudge</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodPumpkinBread')]/@tags" op="add">Plain Fudge</csv>
+	
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodSpaghetti')]/@item" op="add">Energy Tablet</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodSpaghetti')]/@tags" op="add">Energy Tablet</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodShepardsPie')]/@item" op="add">Sponge Cake</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodShepardsPie')]/@tags" op="add">Sponge Cake</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'drinkJarGrandpasMoonshine')]/@item" op="add">Blueberry Sponge Cake</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'drinkJarGrandpasMoonshine')]/@tags" op="add">Blueberry Sponge Cake</csv>
+	
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'drinkJarGrandpasLearningElixir')]/@item" op="add">Yucca Sponge Cake</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'drinkJarGrandpasLearningElixir')]/@tags" op="add">Yucca Sponge Cake</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodGumboStew')]/@item" op="add">Custard Pie</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodGumboStew')]/@tags" op="add">Custard Pie</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodTunaFishGravyToast')]/@item" op="add">WorkingStove</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodTunaFishGravyToast')]/@tags" op="add">WorkingStove</csv>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</configs>

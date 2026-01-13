@@ -1,0 +1,23 @@
+<configs>
+
+	<append xpath="//biome[@name='snow']/subbiome[@noise='.03, 0, .21']/decorations">
+		<decoration type="block" blockname="resourceTitaniumRock01" prob=".05"/>
+	</append>
+
+	<append xpath="//biome[@name='desert']/subbiome[@noise='.02, 0, .3']/decorations">
+		<decoration type="block" blockname="resourceCopperRock01" prob=".05"/>
+	</append>
+
+	<append xpath="//biome[@name='desert']/subbiome[@noise='.02, 0, .3']/decorations">
+		<decoration type="block" blockname="resourceZincRock01" prob=".05"/>
+	</append>
+
+	<append xpath="//biome[@name='wasteland']/subbiome[@noise='.028, 0, .21']/decorations">
+		<decoration type="block" blockname="resourceSulfurRock01" prob=".00075"/>
+	</append>
+
+
+
+
+
+</configs> 

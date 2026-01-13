@@ -1,0 +1,9 @@
+<configs>
+
+
+
+	<insertAfter xpath="//placeholder[@name='carsRandomHelper']">
+		<block name="carMuscleCarS1" prob="1"/>
+	</insertAfter>
+
+</configs>

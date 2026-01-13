@@ -1,0 +1,779 @@
+key,English
+animalHornet,Hornet
+animalQueenHornet,Queen Hornet
+animalRadiatedHornet,Radiated Hornet
+animalInfernalHornet,Infernal Hornet
+animalChargedHornet,Charged Hornet
+zombieBehemoth,Zombie Behemoth
+zombieBehemothRadiated,Radiated Behemoth
+zombieBootyWarrior,"Booty Warrior"
+animalCannibalRabbit,Rabbit
+animalCannibalChicken,Chicken
+
+resourceCopperPlate,"Copper Plate"
+
+resourceLeadPlate,"Lead Plate"
+
+drugAnti-NorovirusPill,"Anti-Norovirus Pill"
+
+drugAnti-TuberculosisPill,"Anti-Tuberculosis Pill"
+
+drugAnti-InfluenzaPill,"Anti-Influenza Pill"
+
+drugAnti-Norovirusvaccine,"Anti-Norovirus vaccine"
+
+drugAnti-Tuberculosisvaccine,"Anti-Tuberculosis vaccine"
+
+drugAnti-Influenzavaccine,"Anti-Influenza vaccine"
+
+
+MailPulmonologist,Note from the Unknown
+MailPulmonologistDesc,"To the one who found and reads this letter. Survivor! For a long time I tried to create a cure for Tuberculosis and protection against infection of Tuberculosis, I succeeded! But the horde of zombies that were chasing me drove me into a trap. There is little time left and the zombies will break down the doors of the room in which I took refuge. I'll die... Fulfill my last wish! Take the vaccine recipe from my suitcase and share it with good people! Farewell..."
+
+BagPulmonologist1,"Pulmonologist's Suitcase"
+BagPulmonologist1Desc,"The suitcase contains a note from the Pulmonologist I."
+
+BagPulmonologist2,"Pulmonologist's Suitcase"
+BagPulmonologist2Desc,"The suitcase contains a note from the Pulmonologist II."
+
+BagPulmonologist3,"Pulmonologist's Suitcase"
+BagPulmonologist3Desc,"The suitcase contains a note from Pulmonologist III."
+
+BagPulmonologist4,"Pulmonologist's Suitcase"
+BagPulmonologist4Desc,"The suitcase contains a note from Pulmonologist IV and an experimental sample of a Tuberculosis and Influenza vaccine."
+
+BagPulmonologist5,"Pulmonologist's Suitcase"
+BagPulmonologist5Desc,"The suitcase contains a bloody letter from the Pulmonologist and a recipe for a Tuberculosis and Influenza vaccine."
+
+Note1Pulmonologist,"Pulmonologist's Note I"
+Note1PulmonologistDesc,"The note contains the address where the Pulmonologist began experiments to create a vaccine that would stop the effects of the Tuberculosis and Influenza."
+
+Note2Pulmonologist,"Pulmonologist's Note II"
+Note2PulmonologistDesc,"In the note, the Pulmonologist complains that it is impossible to work in this building, there are no tools and zombies are constantly attacking. We need to find a new place to work (the address is indicated in the margins of the note)."
+
+Note3Pulmonologist,"Pulmonologist's Note III"
+Note3PulmonologistDesc,"In the note, the Pulmonologist reports that he was able to make mod to protect yourself, the protection is complete! All that remains is to find laboratory equipment and create a vaccine against Tuberculosisand and Influenza (the following address is written in small handwriting)."
+
+Note4Pulmonologist,"Pulmonologist's Note IV"
+Note4PulmonologistDesc,"In the note, the Pulmonologist reports that he was able to make a pill against Tuberculosis and Influenza, but he was tracked down by a horde of zombies, he will try to hide from the zombies at this address."
+
+Note5Pulmonologist,"Pulmonologist's Note V"
+Note5PulmonologistDesc,"In the note, the Pulmonologist reports that he was able to make a vaccine against Tuberculosis and Influenza, but he was tracked down by a horde of zombies, he will try to hide from the zombies at this address."
+
+
+Note1Pulmonologist,Explore Location
+Note1Pulmonologist_subtitle,You must find traces of the Pulmonologist and his research.
+Note1Pulmonologist_Desc,You must find traces of the Pulmonologist and his research.
+Note1Pulmonologist_offer,"You must find traces of the Pulmonologist and his research. \n\n[FFD700]Are you ready to go on a search?"
+
+Note2Pulmonologist,Explore Location
+Note2Pulmonologist_subtitle,You must find traces of the Pulmonologist and his research.
+Note2Pulmonologist_Desc,You must find traces of the Pulmonologist and his research.
+Note2Pulmonologist_offer,"You must find traces of the Pulmonologist and his research. \n\n[FFD700]Are you ready to go on a search?"
+
+Note3Pulmonologist,Explore Location
+Note3Pulmonologist_subtitle,You must find traces of the Pulmonologist and his research.
+Note3Pulmonologist_Desc,You must find traces of the Pulmonologist and his research.
+Note3Pulmonologist_offer,"You must find traces of the Pulmonologist and his research. \n\n[FFD700]Are you ready to go on a search?"
+
+Note4Pulmonologist,Explore Location
+Note4Pulmonologist_subtitle,You must find traces of the Pulmonologist and his research.
+Note4Pulmonologist_Desc,You must find traces of the Pulmonologist and his research.
+Note4Pulmonologist_offer,"You must find traces of the Pulmonologist and his research. \n\n[FFD700]Are you ready to go on a search?"
+
+Note5Pulmonologist,Explore Location
+Note5Pulmonologist_subtitle,You must find traces of the Pulmonologist and his research.
+Note5Pulmonologist_Desc,You must find traces of the Pulmonologist and his research.
+Note5Pulmonologist_offer,"You must find traces of the Pulmonologist and his research. \n\n[FFD700]Are you ready to go on a search?"
+
+
+
+
+MailGastroenterologist,Note from the Unknown
+MailGastroenterologistDesc,"To the one who found and reads this letter. Survivor! For a long time I tried to create a cure for Norovirus and protection against infection of Norovirus, I succeeded! But the horde of zombies that were chasing me drove me into a trap. There is little time left and the zombies will break down the doors of the room in which I took refuge. I'll die... Fulfill my last wish! Take the vaccine recipe from my suitcase and share it with good people! Farewell..."
+
+BagGastroenterologist1,"Gastroenterologist's Suitcase"
+BagGastroenterologist1Desc,"The suitcase contains a note from the Gastroenterologist I."
+
+BagGastroenterologist2,"Gastroenterologist's Suitcase"
+BagGastroenterologist2Desc,"The suitcase contains a note from the Gastroenterologist II."
+
+BagGastroenterologist3,"Gastroenterologist's Suitcase"
+BagGastroenterologist3Desc,"The suitcase contains a note from Gastroenterologist III."
+
+BagGastroenterologist4,"Gastroenterologist's Suitcase"
+BagGastroenterologist4Desc,"The suitcase contains a note from Gastroenterologist IV and an experimental sample of a Norovirus vaccine."
+
+BagGastroenterologist5,"Gastroenterologist's Suitcase"
+BagGastroenterologist5Desc,"The suitcase contains a bloody letter from the Gastroenterologist and a recipe for a Norovirus vaccine."
+
+Note1Gastroenterologist,"Gastroenterologist's Note I"
+Note1GastroenterologistDesc,"The note contains the address where the Gastroenterologist began experiments to create a vaccine that would stop the effects of the Norovirus."
+
+Note2Gastroenterologist,"Gastroenterologist's Note II"
+Note2GastroenterologistDesc,"In the note, the Gastroenterologist complains that it is impossible to work in this building, there are no tools and zombies are constantly attacking. We need to find a new place to work (the address is indicated in the margins of the note)."
+
+Note3Gastroenterologist,"Gastroenterologist's Note III"
+Note3GastroenterologistDesc,"In the note, the Gastroenterologist reports that he was able to make mod to protect yourself, the protection is complete! All that remains is to find laboratory equipment and create a vaccine against Norovirus (the following address is written in small handwriting)."
+
+Note4Gastroenterologist,"Gastroenterologist's Note IV"
+Note4GastroenterologistDesc,"In the note, the Gastroenterologist reports that he was able to make a vaccine against Norovirus, but he was tracked down by a horde of zombies, he will try to hide from the zombies at this address."
+
+
+Note1Gastroenterologist,Explore Location
+Note1Gastroenterologist_subtitle,You must find traces of the Gastroenterologist and his research.
+Note1Gastroenterologist_Desc,You must find traces of the Gastroenterologist and his research.
+Note1Gastroenterologist_offer,"You must find traces of the Gastroenterologist and his research. \n\n[FFD700]Are you ready to go on a search?"
+
+Note2Gastroenterologist,Explore Location
+Note2Gastroenterologist_subtitle,You must find traces of the Gastroenterologist and his research.
+Note2Gastroenterologist_Desc,You must find traces of the Gastroenterologist and his research.
+Note2Gastroenterologist_offer,"You must find traces of the Gastroenterologist and his research. \n\n[FFD700]Are you ready to go on a search?"
+
+Note3Gastroenterologist,Explore Location
+Note3Gastroenterologist_subtitle,You must find traces of the Gastroenterologist and his research.
+Note3Gastroenterologist_Desc,You must find traces of the Gastroenterologist and his research.
+Note3Gastroenterologist_offer,"You must find traces of the Gastroenterologist and his research. \n\n[FFD700]Are you ready to go on a search?"
+
+Note4Gastroenterologist,Explore Location
+Note4Gastroenterologist_subtitle,You must find traces of the Gastroenterologist and his research.
+Note4Gastroenterologist_Desc,You must find traces of the Gastroenterologist and his research.
+Note4Gastroenterologist_offer,"You must find traces of the Gastroenterologist and his research. \n\n[FFD700]Are you ready to go on a search?"
+
+Note5Gastroenterologist,Explore Location
+Note5Gastroenterologist_subtitle,You must find traces of the Gastroenterologist and his research.
+Note5Gastroenterologist_Desc,You must find traces of the Gastroenterologist and his research.
+Note5Gastroenterologist_offer,"You must find traces of the Gastroenterologist and his research. \n\n[FFD700]Are you ready to go on a search?"
+
+
+buffInfluenza01GetBetterDesc,You have a treated mild Influenza. Continue medication until Influenza is cleared up.\nGetting hit by zombies or animals will make an Influenza worse.,
+buffInfluenza01GetBetterName,Treated Mild Influenza,
+buffInfluenza01UntreatedDesc,You have a mild Influenza.\nIt will get worse until treated with honey or antibiotics.\nGetting hit by zombies or animals will make an Influenza worse.,
+buffInfluenza01UntreatedName,Mild Influenza,
+buffInfluenza01UntreatedTooltip,You are infected. Take antibiotics to avoid symptoms.,
+buffInfluenza02GetBetterDesc,You have a treated serious Influenza. Continue medication and keep an eye on the wound.\nGetting hit by zombies or animals will make an Influenza worse.\n\nStamina Regeneration -12.5%,
+buffInfluenza02GetBetterName,Treated Influenza,
+buffInfluenza02UntreatedDesc,You have a serious Influenza. If left untreated it could lead to severe Influenza which can cause death. Take antibiotics as soon as possible.\nGetting hit by zombies or animals will make an Influenza worse.\n\nStamina Regeneration -25%,
+buffInfluenza02UntreatedName,Influenza,
+buffInfluenza03GetBetterDesc,You have a treated life threatening severe Influenza. Continue Medication and avoid contact with infectious substances.\n\nStamina Regeneration -17%\nAll Attributes -1,
+buffInfluenza03GetBetterName,Treated Severe Influenza,
+buffInfluenza03UntreatedDesc,You have a life threatening severe Influenza. Take antibiotics immediately.\n\nStamina Regeneration -35%\nAll Attributes -1,
+buffInfluenza03UntreatedName,Severe Influenza,
+buffInfluenza04Tooltip,You have died from an Influenza.,
+buffInfluenzaCureDisplayDesc,You have taken antibiotic medicine which will reduce Influenza that you may be suffering. You can stack antibiotic medicines to increase duration.,
+buffInfluenzaCureDisplayName,Antibiotic Medicine,
+buffInfluenzaGettingWorseTooltip,Your Influenza will no longer heal on its own.,
+buffInfluenzaImmunityDesc,Your immune system is an Influenza fighting machine!,
+buffInfluenzaImmunityName,Influenza Immunity
+
+buffNorovirus01GetBetterDesc,You have a treated mild Norovirus. Continue medication until Norovirus is cleared up.\nGetting hit by zombies or animals will make an Norovirus worse.,
+buffNorovirus01GetBetterName,Treated Mild Norovirus,
+buffNorovirus01UntreatedDesc,You have a mild Norovirus.\nIt will get worse until treated with honey or antibiotics.\nGetting hit by zombies or animals will make an Norovirus worse.,
+buffNorovirus01UntreatedName,Mild Norovirus,
+buffNorovirus01UntreatedTooltip,You are infected. Take antibiotics to avoid symptoms.,
+buffNorovirus02GetBetterDesc,You have a treated serious Norovirus. Continue medication and keep an eye on the wound.\nGetting hit by zombies or animals will make an Norovirus worse.\n\nStamina Regeneration -12.5%,
+buffNorovirus02GetBetterName,Treated Norovirus,
+buffNorovirus02UntreatedDesc,You have a serious Norovirus. If left untreated it could lead to severe Norovirus which can cause death. Take antibiotics as soon as possible.\nGetting hit by zombies or animals will make an Norovirus worse.\n\nStamina Regeneration -25%,
+buffNorovirus02UntreatedName,Norovirus,
+buffNorovirus03GetBetterDesc,You have a treated life threatening severe Norovirus. Continue Medication and avoid contact with infectious substances.\n\nStamina Regeneration -17%\nAll Attributes -1,
+buffNorovirus03GetBetterName,Treated Severe Norovirus,
+buffNorovirus03UntreatedDesc,You have a life threatening severe Norovirus. Take antibiotics immediately.\n\nStamina Regeneration -35%\nAll Attributes -1,
+buffNorovirus03UntreatedName,Severe Norovirus,
+buffNorovirus04Tooltip,You have died from an Norovirus.,
+buffNorovirusCureDisplayDesc,You have taken antibiotic medicine which will reduce Norovirus that you may be suffering. You can stack antibiotic medicines to increase duration.,
+buffNorovirusCureDisplayName,Antibiotic Medicine,
+buffNorovirusGettingWorseTooltip,Your Norovirus will no longer heal on its own.,
+buffNorovirusImmunityDesc,Your immune system is an Norovirus fighting machine!,
+buffNorovirusImmunityName,Norovirus Immunity
+
+buffTuberculosis01GetBetterDesc,You have a treated mild Tuberculosis. Continue medication until Tuberculosis is cleared up.\nGetting hit by zombies or animals will make an Tuberculosis worse.,
+buffTuberculosis01GetBetterName,Treated Mild Tuberculosis,
+buffTuberculosis01UntreatedDesc,You have a mild Tuberculosis.\nIt will get worse until treated with honey or antibiotics.\nGetting hit by zombies or animals will make an Tuberculosis worse.,
+buffTuberculosis01UntreatedName,Mild Tuberculosis,
+buffTuberculosis01UntreatedTooltip,You are infected. Take antibiotics to avoid symptoms.,
+buffTuberculosis02GetBetterDesc,You have a treated serious Tuberculosis. Continue medication and keep an eye on the wound.\nGetting hit by zombies or animals will make an Tuberculosis worse.\n\nStamina Regeneration -12.5%,
+buffTuberculosis02GetBetterName,Treated Tuberculosis,
+buffTuberculosis02UntreatedDesc,You have a serious Tuberculosis. If left untreated it could lead to severe Tuberculosis which can cause death. Take antibiotics as soon as possible.\nGetting hit by zombies or animals will make an Tuberculosis worse.\n\nStamina Regeneration -25%,
+buffTuberculosis02UntreatedName,Tuberculosis,
+buffTuberculosis03GetBetterDesc,You have a treated life threatening severe Tuberculosis. Continue Medication and avoid contact with infectious substances.\n\nStamina Regeneration -17%\nAll Attributes -1,
+buffTuberculosis03GetBetterName,Treated Severe Tuberculosis,
+buffTuberculosis03UntreatedDesc,You have a life threatening severe Tuberculosis. Take antibiotics immediately.\n\nStamina Regeneration -35%\nAll Attributes -1,
+buffTuberculosis03UntreatedName,Severe Tuberculosis,
+buffTuberculosis04Tooltip,You have died from an Tuberculosis.,
+buffTuberculosisCureDisplayDesc,You have taken antibiotic medicine which will reduce Tuberculosis that you may be suffering. You can stack antibiotic medicines to increase duration.,
+buffTuberculosisCureDisplayName,Antibiotic Medicine,
+buffTuberculosisGettingWorseTooltip,Your Tuberculosis will no longer heal on its own.,
+buffTuberculosisImmunityDesc,Your immune system is an Tuberculosis fighting machine!,
+buffTuberculosisImmunityName,Tuberculosis Immunity
+
+
+KnoxVaultDoor,VaultDoor
+
+foodSharkStew,Shark Stew
+
+
+buffSugerRushTooltip,"WOOHOO You have a Suger Rush!!!"
+
+PickleRickTooltip."You Just Got Pickeled By Pickle Rick BITCH!!!"
+PickleRick,Pickle Rick
+buffBrainDrainName,"Brain Drain"
+buffBrainDrainDesc,"Removes all perks and reset base health."
+
+classStarter,"Class Token"
+classStarterDesc,"Use this Token to craft a starter kit. [FF00FF]See Descriptions in craft menu for contents before choosing."
+
+StartMedic,"Medic Class"
+StartmedicDesc,"Stun Baton \n Extra Medical Supplies \n Food Bundle \n LockPick Bundle \n Book \n Some Skill Magazines \n Repair Kit \n Bicycle"
+
+StartSalvage,"Salvage Class"
+StartSalvageDesc,"Sledge Hammer \n Wrench \n Food Bundle \n Medical Supplies \n LockPick Bundle \n Some Skill Magazines \n Repair Kit \n Bicycle"
+
+StartFarm,"Farmer Class"
+StartFarmDesc,"Baseball bat \n Iron Shovel \n Extra food \n Farm Bundle \n LockPick Bundle \n Some Skill Magazines \n Bicycle"
+
+StartMiner,"Miner Class"
+StartMinerDesc,"Pipe Baton \n Pickaxe \n Food Bundle \n Medical Supplies \n LockPick Bundle \n Repair Kit \n Some Skill Magazines \n Impact Bracers \n Bicycle"
+
+StartBrawler,"Brawler Class"
+StartBrawlerDesc,"Iron Knuckles \n Fire Axe \n Food Bundle \n Medical Supplies \n LockPick Bundle \n Repair Kit \n Some Skill Magazines \n Melee Right Cross Mod \n Bicycle"
+
+StartSledgehammer,"Sledgehammer Class"
+StartSledgehammerDesc,"Iron Knuckles \n Fire Axe \n Food Bundle \n Medical Supplies \n LockPick Bundle \n Repair Kit \n Some Skill Magazines \n Melee Right Cross Mod \n Bicycle"
+
+
+
+BerryTeaDesc,A warm healing tea made from blueberries and snowberries
+
+MixedTeaDesc,A cool refreshing mixed herbal tea that helps protect against the cold
+
+IcedCoffeeDesc,A cool energising iced coffee that helps protect against the cold whilst remaining just as hydrating as the hot counterpart
+
+YuccaChipsDesc,A handful of hearty wedge cut yucca chips
+
+HashbrownDesc,A small triangle of shredded fried potato. A nice snack
+
+MashPotatoDesc,This hefty pot of silky smooth mash potato could be a meal on it's own
+
+CornGritsDesc,A warm pot of boiled corn grits with animal fat
+
+BlueberryJamDesc,Sweet blueberry jam made from rendered fruits. Maybe too sweet on it's own
+
+YuccaJamDesc,Surprisingly savory whilst still being sweet. Yucca jam is made from rendered down yucca fruit
+
+EggSaladDesc,A basic egg salad made from boiled eggs. Boiled potato and oil dressing
+
+FriedMeatDesc,Meat that has been fried in a cornmeal coating
+
+CornChipsDesc,Crispy fried corn chips that make for a nice snack between bashing skulls in
+
+BBJamSandwichDesc,A simple cornbread sandwich with a sweet blueberry jam filling to help recover from a long day
+
+YuccaJamSandwichDesc,A simple cornbread sandwich with a savory yucca jam filling that helps get rid of even the strongest hunger pangs
+
+CoffeeCakeDesc,This cake offers the energising properties of coffee whilst still being delicious
+
+MushroomPieDesc,Savory and buttery pie crust filled to the brim with mushrooms
+
+MeatAndBeerPieDesc,Rich and savory pie crust with a meat and beer filling. Truly a feast fit for the best of the best
+
+FriedMushroomsDesc,Whole mushrooms coated in cornmeal and fried. A very filling snack
+
+FriedEggDesc,A simple sunny side up fried egg. The main component of any good breakfast
+
+FrenchToastDesc,Egg soaked cornbread that has been fried. Simple yet tasty
+
+HoneyGlazedMeatDesc,Roasted meat with a deep honey glaze covering it
+
+BlueberrySodaDesc,A refreshing carbonated soda made from blueberries
+
+CarbonatedWaterDesc,Carbonated water that is both refreshing and useful for digestion
+
+KvassSodaDesc,Kvass soda made from fermented cornbread to make it carbonated. A very basic soda
+
+VodkaDesc,Fermented and distilled potato water that will improve your bartering. This stuff packs a punch
+
+SnowberryGinDesc,A dry gin made from snowberries that will boost your ability to break blocks
+
+BlueberrySpongeDesc,Fluffy sponge cake with a very sweet blueberry jam filling. Filling for both the body and soul.
+
+YuccaSpongeDesc,Sweet and fluffy sponge cake with a somewhat savory yucca jam filling. Extremely filling
+
+CustardPieDesc,Buttery pie crust filled to the brim with a dense custard.
+
+ATEnergyTabletDesc,Energy tablets are great for getting you out of sticky situations. However you can get addicted to them.
+
+FudgeDesc,Sugary fudge that melts in the mouth and rots away the teeth. You didn't need those molars anyway
+
+PopcornDesc,Popped corn - the movie-goers favourite. A basic snack between meals
+
+RockCandyDesc,Unflavoured candy made mostly from sugar. Will give you quite the sugar rush
+
+RockCandyBlueberryDesc,Blueberry flavoured rock candy that tastes good and will give you a sugar rush
+
+RockCandySnowberryDesc,Snowberry infused rock candy that will help with digestion and give you a sugar rush
+
+SpongeCakeDesc,Dense sponge cake with sugar icing atop it.
+
+SugarExtractDesc,You'd have to be pretty desperate to eat raw sugar. Used in soda, candies and cakes
+
+SugarRushDesc,A slight rush from the amount of sugar you just ate. This allows you to slightly run faster
+SugarRushName,Sugar Rush
+SugarRushTooltip,That was a lot of sugar.
+
+ATEnergyTabletDesc,You can run faster. reload slightly quicker and become less exhausted.
+ATEnergyTabletName,Energy Rush
+ATEnergyTabletTooltip,What a rush!
+
+ColdDrinkName,Cold Drink
+ColdDrinkDesc,Iced drinks help you survive better in hot environments.
+FlourDesc,Handy in baking.
+sliceOfBreadDesc,"Just a slice of bread."
+
+
+toolBellowsDesc,,"A tool that can be installed in a forge. It increases air flow and so the crafting speed of the forge."
+statCraftingSmeltTime,ui_display,Item stat,,Forge Crafting Speed.
+
+buffCarRespawnTipDisplayName,"Vehicles Respawn Tip",
+buffCarRespawnTipDisplayDesc,"After salvaging a vehicle, a vehicle seat will be left behind to respawn/grow back.",
+buffCarRespawnTipDisplayTooltip,"THE SEAT GROWS INTO A NEW VEHICLE!!!",
+
+workingMicrowave,Microwave (Powered)
+workingMicrowaveDesc,"This microwave is powered already and can be used to heat up bowls of canned food to gain the maximum benefits from them."
+drinkBowlEmpty,Bowl (Empty)
+drinkBowlEmptyDesc,Use this empty bowl to heat up foods in the microwave.
+foodSoupChicken,Bowl of Chicken Soup
+foodSoupChickenDesc,Using your saved canned food with bowls in the microwave can give you additional benefits. Nothing beats a warm bowl of food.
+foodBowlPasta,Bowl of Pasta
+foodBowlPastaDesc,Using your saved canned food with bowls in the microwave can give you additional benefits. Nothing beats a warm bowl of food.
+foodBowlChili,Bowl of Chili
+foodBowlChiliDesc,Using your saved canned food with bowls in the microwave can give you additional benefits. Nothing beats a warm bowl of food.
+foodBeefStew,Bowl of Beef Stew
+foodBeefStewDesc,Using your saved canned food with bowls in the microwave can give you additional benefits. Nothing beats a warm bowl of food.
+foodLambSoup,Bowl of Lamb Soup
+foodLambSoupDesc,Using your saved canned food with bowls in the microwave can give you additional benefits. Nothing beats a warm bowl of food.
+foodTunaSandwich,Tuna Sandwich
+foodTunaSandwichDesc,Making a delicious tuna sandwich will give you some extra benefits.
+microwaveTip,The microwave can be placed and used to heat canned food recipes. Canned food recipes offer slightly more benefits to them than if you eat them in singles so save those cans when you can. Bowls can be found in loot and are used with the canned foods.,,
+microwaveTip_title,Microwave
+
+perkCaptainmModifierName,"Captain Modifier"
+
+perkCaptainmModifierRank1Desc,"Unlock Mods Stage 1"
+perkCaptainmModifierRank1LongDesc,"modGunBipod, modMeleeWoodSplitter, modArmorInsulatedLiner, modGunBarrelExtender, modGunLaserSight, modGunFlashlight, modArmorStealthBoots, modVehicleOffRoadHeadlights"
+
+perkCaptainmModifierRank2Desc,"Unlock Mods Stage 2"
+perkCaptainmModifierRank2LongDesc,"modMeleeGraveDigger, modGunForegrip, modArmorCoolingMesh, modShotgunSawedOffBarrel, modGunReflexSight, modGunChoke, modArmorWaterPurifier, modVehicleReserveFuelTank, Max Degradation"
+
+perkCaptainmModifierRank3Desc,"Unlock Mods Stage 3"
+perkCaptainmModifierRank3LongDesc,"modMeleeStructuralBrace, modGunMagazineExtender, modGunMeleeTheHunter, modGunMuzzleBrake, modGunDuckbill, modArmorStoragePocket, modArmorHelmetLight, modVehiclePlow, modMeleeBurningFist"
+
+perkCaptainmModifierRank4Desc,"Unlock Mods Stage 4"
+perkCaptainmModifierRank4LongDesc,"modArmorPlatingBasic, modGunScopeSmall, modArmorImprovedFittings, modArmorBandolier, modGunRetractingStock, modArmorDoubleStoragePocket, modArmorCigar, modRoboticDroneArmorPlatingMod, Super Max Degradation"
+
+perkCaptainmModifierRank5Desc,"Unlock Mods Stage 5"
+perkCaptainmModifierRank5LongDesc,"modGunChoke, modGunTriggerGroupSemi, modGunTriggerGroupAutomatic, modGunTriggerGroupBurst3, modArmorPlatingReinforced, modGunScopeMedium, modVehicleFuelSave,modRoboticDroneMedicModr, modArmor12SlotStoragePocket"
+
+perkCaptainmModifierRank6Desc,"Unlock Mods Stage 6"
+perkCaptainmModifierRank6LongDesc,"modGunSoundSuppressorSilencer, modGunBowPolymerString, modMeleeErgonomicGrip,modMeleeClubBarbedWire, modFuelTankSmall, modArmorTripleStoragePocket, modVehicleArmor, modRoboticDroneMedicMod, modMeleeRightCross"
+
+perkCaptainmModifierRank7Desc,"Unlock Mods Stage 7"
+perkCaptainmModifierRank7LongDesc,"modGunShotgunTubeExtenderMagazine, modGunBowArrowRest, modMeleeFortifyingGrip, modMeleeFiremansAxeMod, modArmorCustomizedFittings, modArmorImpactBracing, modRoboticDroneMoraleBoosterMod, modPusher"
+
+perkCaptainmModifierRank8Desc,"Unlock Mods Stage 8"
+perkCaptainmModifierRank8LongDesc,"modGunCrippleEm, modMeleeTemperedBlade, modMeleeSerratedBlade, modMeleeDiamondTip, modMeleeClubBurningShaft, modArmorMuffledConnectors, modVehicleExpandedSeat, modRoboticDroneHeadlampMod, modBerserk"
+
+perkCaptainmModifierRank9Desc,"Unlock Mods Stage 9"
+perkCaptainmModifierRank9LongDesc,"modGunDrumMagazineExtender, modMeleeWeightedHead, modMeleeClubMetalChain, modMeleeIronBreaker,modFuelTankLarge, modArmorQuadStoragePocket, modVehicleSuperCharger, modVehicleFuelSaver, modMeleeStunRepulsor"
+
+perkCaptainmModifierRank10Desc,"Unlock Mods Stage 10"
+perkCaptainmModifierRank10LongDesc,"modGunScopeLarge, modGunMeleeRadRemover, modMeleeClubMetalSpikes,modMeleeBunkerBuster, modMeleeStunBatonRepulsor, modArmorAdvancedMuffledConnectors, modRoboticDroneCargoMod, modArmor50SlotBackPack"
+
+perkGemMiningName,"Gem Mining"
+perkGemMiningDesc,"Increse the perk art of mining lucky strike harvest. /n THIS REQIURES THE BOOK ART OF MINING LUCKY STRAKE HARVEST"
+
+perkGemMiningRank1Desc,"Stage 1"
+perkGemMiningRank1LongDesc,""
+
+perkGemMiningRank2Desc,"Stage 2"
+perkGemMiningRank2LongDesc,""
+
+perkGemMiningRank3Desc,"Stage 3"
+perkGemMiningRank3LongDesc,""
+
+perkGemMiningRank4Desc,"Stage 4"
+perkGemMiningRank4LongDesc,""
+
+perkGemMiningRank5Desc,"Stage 5"
+perkGemMiningRank5LongDesc,""
+
+perkLivingOffTheLandRank1Desc,Gardener
+perkLivingOffTheLandRank2Desc,Grower
+perkLivingOffTheLandRank3Desc,Farmer
+perkLivingOffTheLandRank4Desc,Agriculturist
+perkLivingOffTheLandRank5Desc,Horticulturist
+
+
+perkMoreHealthDesc,"Level up this to learn how to take heavier hits in battle, or to just have more wiggle room in your health pool.",
+perkMoreHealthName,More Health,
+perkMoreHealthRank1Desc,+10 Health,
+perkMoreHealthRank1LongDesc,Tired of dying so quickly? Well you came to the right place. With this skill you can learn how to get an even bigger advantage on life. Just keep leveling this up and eventually it will be way to hard to kill you. [5ACCE5]No Refunds unless you use something that allows you to completely respec yourself.[-],
+perkMoreStaminaDesc,"Level up this to learn how to run farther. Use melee weapons for even longer in combat. Even be able to go mining without as much delay.",
+perkMoreStaminaName,More Stamina,
+perkMoreStaminaRank1Desc,+10 Stamina,
+perkMoreStaminaRank1LongDesc,Tired of always needing to stop to catch your breath? Well you came to the right place. With this skill you can learn how to do quite the opposite. You will be able to go even longer without needing to sit and recharge. This is especially useful in battle. [5ACCE5]No Refunds unless you use something that allows you to completely respec yourself.[-],
+
+
+medicalAdvFirstAidBandage,Adv First Aid Bandage
+
+medicalAdvFirstAidKit,Adv First Aid Kit
+
+
+
+loadingTipFireBad,"If you are on fire, do not try to put it out by dousing yourself with flammable liquids."
+loadingTipFireBad_title,Fire is bad,
+loadingTipGasoline,"Gasoline is used to fuel generators, motor tools, and motorized vehicles.\nDo not drink gasoline."
+loadingTipGasoline_title,Gasoline
+
+
+
+TwitchAction_SpawnHornetCommand,"#Spawn_Hornet"
+TwitchAction_SpawnHornet,"Hornet"
+TwitchAction_SpawnHornetDesc,"Spawns a Hornet."
+
+TwitchAction_SpawnHornetGroupCommand,"#Spawn_HornetGroup"
+TwitchAction_SpawnHornetGroup,"Hornet Group"
+TwitchAction_SpawnHornetGroupDesc,"Spawns a group of Hornet."
+
+TwitchAction_SpawnHornetHordeCommand,"#Spawn_HornetHorde"
+TwitchAction_SpawnHornetHorde,"Hornet Horde"
+TwitchAction_SpawnHornetHordeDesc,"Spawns a Horde of Hornets."
+
+CraftingAmmoName,Ammo
+Ammo57mmBullet,57mm Ammo
+Ammo57mmBulletHP,HP 57mm Ammo
+Ammo57mmBulletAP,AP 57mm Ammo
+ammo45ACPBulletBall,45 ACP
+ammo45ACPBulletHP,HP 45 ACP
+ammo45ACPBulletAP,AP 45 ACP
+Ammo50CalBullet,50 CAL
+Ammo50CalBulletHP,HP 50 CAL
+Ammo50CalBulletAP,AP 50 CAL
+ammoShotgunShellFlechette,Flechette Shotgun Shell
+
+ammoBundle45ACPBullet,Box of 45 ACP
+ammoBundle45ACPBulletHP,Box of HP 45 ACP
+ammoBundle45ACPBulletAP,Box of AP 45 ACP
+ammoBundle57mmBullet,Box of 57mm ACP
+ammoBundle57mmBulletHP,Box of HP 57mm ACP
+ammoBundle57mmBulletAP,Box of AP 57mm ACP
+ammoBundle50CalBullet,Box of 50 CAL
+ammoBundle50CalBulletHP,Box of HP 50 CAL
+ammoBundle50CalBulletAP,Box of AP 50 CAL
+ammoBundleShotgunShellFlechette,Box of Flechette Shotgun Shell
+
+
+
+
+
+
+
+
+
+
+
+toolBellowsDesc,,"A tool that can be installed in a forge. It increases air flow and so the crafting 
+speed of the forge."
+statCraftingSmeltTime,ui_display,Item stat,,Forge Crafting Speed
+
+
+animalExplodingZombieDog,"Exploding Zombie Dog"
+animalExplodingDireWolf,"Exploding Dire Wolf"
+animalChihuahua,"Chihuahua"
+animalFeralHouseCat,"Feral House Cat"
+animalAnacondaSnake,"Anaconda"
+animalPainStag,"Stag"
+animalMiniBossGrace,"Mini Grace"
+animalPainDoe,"Doe"
+animalalphaBear,"Alpha Bear"
+animalRageChicken,"Rage Chicken"
+zombieTickleMeDemo,Tickle Me Demo
+zombieFatCopFlamin,"Flamin Cop"
+animalBattleWolf,"Battle Wolf"
+animalChihuahua,"Zombified Chihuahua"
+animalAlphaBear,"Alpha Bear"
+animalFriendlyChihuahua,"Zombified Chihuahua"
+
+
+
+
+antivenom,"Anti-venom"
+antivenomDesc,"Use this to instantly remove the effects of venom.\n\nCan be crafted at the campfire, in a cooking pot, or use a beaker to save on ingredients."
+buffPoisonedDesc,"You're envenomed. Your attributes are lowered by one, and you are slowly taking damage.\n\nYou'll want some antivenom, and fast."
+buffPoisonedName,Envenomed!
+venomDesc,"Key ingredient for antivenom."
+
+animalCottonMouth,Cotton Mouth
+
+PickleRickTooltip."You Just Got Pickeled By Pickle Rick BITCH!!!"
+PickleRick,Pickle Rick
+buffBrainDrainName,"Brain Drain"
+buffBrainDrainDesc,"Removes all perks and reset base health."
+
+BananaRick,"Banana Rick"
+
+xuiChallenge,"Shrader971's Challenge's"
+
+challengeGroupAdvancedHunter,"Advanced Hunter"
+challengeRewardBonusAdvancedHunterReward,"Advanced Hunter Reward"
+
+challengeGroupAdvancedFarmer,"Advanced Farmer"
+challengeRewardBonusAdvancedFarmerReward,"Advanced Farmer Reward"
+
+challengeGroupAdvancedGatherer,"Advanced Gatherer"
+challengeRewardBonusAdvancedGathererReward,"Advanced Gatherer Reward"
+
+challengeGroupAdvancedCrafting,"Advanced Crafting"
+challengeRewardBonusAdvancedCraftingReward,"Advanced Crafting Reward"
+
+challengeGroupAdvancedZombieSlayer,"Advanced Zombie Slayer"
+challengeRewardBonusAdvancedSlayerReward,"Advanced Zombie Slayer Reward"
+
+challengeGroupEliteZombieSlayer,"Elite Zombie Slayer"
+challengeRewardBonusEliteSlayerReward,"Elite Zombie Slayer Reward"
+
+plantedBellPepper1,"Bell Pepper (Seed)"
+
+plantedBellPepper2,"Bell Pepper (Growing)"
+
+plantedBellPepper3Harvest,
+
+plantedBellPepper3HarvestPlayer,
+plantedBellPepper3HarvestDesc,"Bell Pepper"
+
+plantedCabbage1,"Cabbage (Seed)"
+
+plantedCabbage2,"Cabbage (Growing)"
+
+plantedCabbage3Harvest,
+
+plantedCabbage3HarvestPlayer,
+plantedCabbage3HarvestDesc,"Cabbage"
+
+plantedCantaloupe1,"Cantaloupe (Seed)"
+
+plantedCantaloupe2,"Cantaloupe (Growing)"
+
+plantedCantaloupe3Harvest,
+
+plantedCantaloupe3HarvestPlayer,
+plantedCantaloupe3HarvestDesc,"Cantaloupe"
+
+plantedChiliPepper1,"Chili Pepper (Seed)"
+
+plantedChiliPepper2,"Chili Pepper (Growing)"
+
+plantedChiliPepper3Harvest,
+
+plantedChiliPepper3HarvestPlayer,
+plantedChiliPepper3HarvestDesc,"Chili Pepper"
+
+plantedEggplant1,"Egg Plant (Seed)"
+
+plantedEggplant2,"Egg Plant (Growing)"
+
+plantedEggplant3HarvestPlayer,
+plantedEggplant3HarvestDesc,"Egg Plant"
+
+plantedGarlic1,"Garlic (Seed)"
+
+plantedGarlic2,"Garlic (Growing)"
+
+plantedGarlic3Harvest,
+
+plantedGarlic3HarvestPlayer,
+plantedGarlic3HarvestDesc,"Garlic"
+
+plantedGrapes1,"Grape (Seed)"
+
+plantedGrapes2,"Grape (Growing)"
+
+plantedGrapes3Harvest,
+
+plantedGrapes3HarvestPlayer,
+plantedGrapes3HarvestDesc,"Grape"
+
+plantedLeek1,"Leek (Seed)"
+
+plantedLeek2,"Leek (Growing)"
+
+plantedLeek3Harvest,
+
+plantedLeek3HarvestPlayer,
+plantedLeek3HarvestDesc,"Leek"
+
+plantedOnion1,"Onion (Seed)"
+
+plantedOnion2,"Onion (Growing)"
+
+plantedOnion3Harvest,
+
+plantedOnion3HarvestPlayer,
+plantedOnion3HarvestDesc,"Onion"
+
+plantedStrawberry1,"Strawberry (Seed)"
+
+plantedStrawberry2,"Strawberry (Growing)"
+
+plantedStrawberry3Harvest,
+
+plantedStrawberry3HarvestPlayer,
+plantedStrawberry3HarvestDesc,"Strawberry"
+
+plantedTomato1,"Tomato (Seed)"
+
+plantedTomato2,"Tomato (Growing)"
+
+plantedTomato3Harvest,
+
+plantedTomato3HarvestPlayer,
+plantedTomato3HarvestDesc,"Tomato"
+
+plantedWheat1,"Wheat (Seed)"
+
+plantedWheat2,"Wheat (Growing)"
+
+plantedWheat3Harvest,
+
+plantedWheat3HarvestPlayer,
+plantedWheat3HarvestDesc,"Wheat"
+
+
+challengeKillExplodingZombieDog,Kill Exploding Zombie Dogs.
+challengeKillExplodingZombieDogShort,Kill some Exploding Zombie Dogs.
+challengeKillExplodingZombieDogDesc,[DECEA3]Exploding Zombie Dogs [-]
+
+challengeKillExplodingDireWolf,Kill Exploding Dire Wolf.
+challengeKillExplodingDireWolfShort,Kill some Exploding Dire Wolf.
+challengeKillExplodingDireWolfDesc,[DECEA3]Exploding Dire Wolf [-]
+
+challengeKillChihuahua,Kill Zombified Chihuahuas.
+challengeKillChihuahuaShort,Kill some Zombified Chihuahuas.
+challengeKillChihuahuaDesc,[DECEA3]Zombified Chihuahuas [-]
+
+challengeKillMiniBossGrace,Kill Mini Graces.
+challengeKillMiniBossGraceShort,Kill some Mini Graces
+challengeKillMiniBossGraceDesc,[DECEA3]Mini Grace [-]
+
+challengeKillCottonMouth,Kill Cotton Mouth
+challengeKillCottonMouthShort,Kill some Cotton Mouths
+challengeKillCottonMouthDesc,[DECEA3]Cotton Mouths [-]
+
+challengeKillPainDeers,Kill Pain Deer
+challengeKillPainDeersShort,Kill some Pain Deer
+challengeKillPainDeersDesc,[DECEA3] Pain Deer [-]
+
+challengeKillAnaconda,Kill Anaconda
+challengeKillAnacondaShort,Kill some Anacondas
+challengeKillAnacondaDesc,[DECEA3] Anaconda [-]
+
+challengeKillFeralHouseCats,Kill Feral House Cats
+challengeKillFeralHouseCatsShort,Kill some Feral House Cats
+challengeKillFeralHouseCatsDesc,[DECEA3] Feral House Cat [-]
+
+challengeKillAlphaBears,Kill Alpha Bears
+challengeKillAlphaBearsShort,Kill some Alpha Bears
+challengeKillAlphaBearsDesc,[DECEA3] Alpha Bears [-]
+
+challengeHuntSpecialAnimals,Kill Special Animals
+challengeSpecialHuntAnimalsShort,Kill some Special Animals
+challengeHuntSpecialAnimalsDesc,[DECEA3] Hunt Special Animals [-]
+
+challengeFarmingBellPepper,Farming Bell Pepper
+challengeFarmingBellPepperShort,Harvest some Bell Peppers
+challengeFarmingBellPepperDesc,[DECEA3] Bell Pepper [-]
+
+challengeFarmingCabbage,Farming Cabbage
+challengeFarmingCabbageShort,Harvest some Cabbages
+challengeFarmingCabbageDesc,[DECEA3] Cabbages [-]
+
+challengeFarmingCantaloupe,Farming Cantaloupe
+challengeFarmingCantaloupeShort,Harvest some Cantaloupes
+challengeFarmingCantaloupeDesc,[DECEA3] Cantaloupes [-]
+
+challengeFarmingChiliPepper,Farming Chili Pepper
+challengeFarmingChiliPepperShort,Harvest some Chili Peppers
+challengeFarmingChiliPepperDesc,[DECEA3] Chili Peppers [-]
+
+challengeFarmingEggplant,Farming Eggplant
+challengeFarmingEggplantShort,Harvest some Eggplants
+challengeFarmingEggplantDesc,[DECEA3] Eggplant [-]
+
+challengeFarmingStrawberry,Farming Strawberry
+challengeFarmingStrawberryShort,Harvest some Strawberrys
+challengeFarmingStrawberryDesc[DECEA3] Strawberry [-]
+
+challengeFarmingGarlic,Farming Garlic
+challengeFarmingGarlicShort,Harvest some Garlics
+challengeFarmingGarlicDesc,[DECEA3] Garlic [-]
+
+challengeFarmingGrapes,Farming Grapes 
+challengeFarmingGrapesShort,Harvest some Grapes
+challengeFarmingGrapesDesc,[DECEA3] Grapes [-]
+
+challengeFarmingLeek,Farming Leek
+challengeFarmingLeekShort,Harvest some Leeks
+challengeFarmingLeekDesc,[DECEA3] Leek [-]
+
+challengeFarmingOnion,Farming Onion
+challengeFarmingOnionShort,Harvest some Onions
+challengeFarmingOnionDesc,[DECEA3] Onion [-]
+
+
+challengeGathererTitanium,Gather Titanium
+challengeGathererTitaniumShort,[DECEA3] Titanium [-]
+challengeGathererTitaniumDesc,Gather some Titanium
+
+challengeGathererCopper,Gather Copper
+challengeGathererCopperShort,[DECEA3] Copper [-]
+challengeGathererCopperDesc,Gather some Copper
+
+challengeGathererZinc,Gather Zinc 
+challengeGathererZincShort,[DECEA3] Zinc [-]
+challengeGathererZincDesc,Gather some Zinc
+
+
+challengePlaceAdvForge,Place Advanced Forge
+challengePlaceAdvForgeShort,"[DECEA3]Advanced Forge[-]
+challengePlaceAdvForgeDesc,Place a Advanced Forge
+
+challengePlaceBenchtopLathe,Place Benchtop Lathe
+challengePlaceBenchtopLatheShort,"[DECEA3]Benchtop Lathe[-]
+challengePlaceBenchtopLatheDesc,Place a Benchtop Lathe
+
+challengeCraftForgedTitanium,Craft Forged Titanium
+challengeCraftForgedTitaniumShort,"To use the [DECEA3]Forge[-]"
+challengeCraftForgedTitaniumDesc,Craft some Forged Titanium in the Forge.
+
+challengePlaceAmmoBench,Place Ammo Bench
+challengePlaceAmmoBenchShort,[DECEA3]Ammo Bench[-]
+challengePlaceAmmoBenchDesc,Place a Ammo Bench
+
+challengeCraftAdvGrenadeContact,Craft Advanced Contant Grenades
+challengeCraftAdvGrenadeContactShort,"[DECEA3]Advanced Contant Grenades[-] are a type of thrown [DECEA3]Explosive[-] 
+challengeCraftAdvGrenadeContactDesc,Craft 50 Advanced Contant Grenades.
+
+challengeCraftAdvGrenade,Craft Advanced Grenades.
+challengeCraftAdvGrenadeShort,"[DECEA3]Pipe Bombs[-] are a type of thrown [DECEA3]Explosive[-] 
+challengeCraftAdvGrenadeDesc,Craft 50 Advanced Grenades.
+
+
+challengeCraftStainLessSteelPolish,Craft Stainless Steel Polish
+challengeCraftStainLessSteelPolishShort,"[DECEA3]Advanced Grenades[-]"
+challengeCraftStainLessSteelPolishDesc,Craft 1000 Stainless Steel Polish
+
+
+
+
+
+
+

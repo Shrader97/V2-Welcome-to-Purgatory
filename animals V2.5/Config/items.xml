@@ -1,0 +1,23 @@
+<configs>
+    <append xpath="/items">
+        <item name="meleeHandAnimalShark">
+            <property name="Extends" value="meleeHandMaster"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="HoldType" value="35"/>
+            <property class="Action0">
+                <property name="Delay" value=".7"/> <!-- obsolete if rounds per minute exists -->
+                <property name="Range" value="5"/>
+                <property name="DamageEntity" value="10"/>
+                <property name="DamageBlock" value="6"/>
+            </property>
+            <effect_group name="meleeHandAnimalShark" tiered="false">
+                <passive_effect name="ModSlots" operation="base_set" value="0"/>
+                <!--<passive_effect name="AttacksPerMinute" operation="base_set" value="85"/> A16 .7 -->
+                <passive_effect name="DamageModifier" operation="perc_add" value="3" tags="earth"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+                    buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+                    weights=".11,.07,.07,.05,.29,.36,.11"/>
+            </effect_group>
+        </item>
+    </append>
+</configs>

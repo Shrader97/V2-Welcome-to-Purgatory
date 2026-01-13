@@ -1,0 +1,51 @@
+<shark>
+		
+	<append xpath="gameevents">
+
+		<action_sequence name="spawn_shark" template="spawn_single">
+			<variable name="zombiename" value="animalShark" />
+			<variable name="alertsound" value="zombiemalealert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_baby_shark" template="spawn_single">
+			<variable name="zombiename" value="animalBabyShark" />
+			<variable name="alertsound" value="zombiemalealert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_bat" template="spawn_single">
+			<variable name="zombiename" value="animalVampireBat" />
+			<variable name="alertsound" value="vulturealert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_shark_horde" template="spawn_horde">
+			<variable name="zombiename" value="animalShark" />
+			<variable name="spawncount" value="5" />
+			<variable name="alertsound" value="zombiemalealert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_bat_horde" template="spawn_horde">
+			<variable name="zombiename" value="animalVampireBat" />
+			<variable name="spawncount" value="5" />
+			<variable name="alertsound" value="vulturealert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_shark_family">
+			<property name="allow_user_trigger" value="true" />
+			<property name="category" value="twitch_actions" />
+
+			<action class="SpawnEntity">
+				<property name="entity_names" value="animalShark" />
+				<property name="spawn_count" value="2" />
+				<property name="air_spawn" value="false" param1="airspawn" />
+			</action>
+
+			<action class="SpawnEntity">
+				<property name="entity_names" value="animalBabyShark" param1="zombiename" />
+				<property name="spawn_count" value="3" param1="spawncount" />
+				<property name="air_spawn" value="false" param1="airspawn" />
+			</action>
+		</action_sequence>
+
+	</append>
+
+</shark>

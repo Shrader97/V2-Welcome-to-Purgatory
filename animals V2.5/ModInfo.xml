@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+    <Name value="spawnshark" />
+	<DisplayName value="spawnshark" />
+    <Description value="spawns sharks" />
+    <Author value="shrader97" />
+    <Version value="0.0.0" />
+</xml>
