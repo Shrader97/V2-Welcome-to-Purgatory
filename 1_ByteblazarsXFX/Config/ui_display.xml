@@ -1,0 +1,20 @@
+<Byteblazar>
+	<append xpath="ui_display_info/item_display">
+
+		<item_display_info display_type="bbxfx_itemAmmoFlashThunderGrenade" display_group="groupAmmo">
+			<display_entry name="EntityDamage" display_type="Decimal1" title_key="statEntityDamageRanged" tags="perkGunslinger,perkBoomstick,perkDeadEye,perkMachineGunner,perkBookAutoWeapons,perkTurrets,perkArchery,admin"/>
+			<display_entry name="RoundRayCount" title_key="statRoundRayCount" tags="perkGunslinger,perkBoomstick,perkDeadEye,perkMachineGunner,perkBookAutoWeapons,perkTurrets,perkArchery,admin"/>
+			<display_entry name="BlockDamage" display_type="Decimal1" title_key="statBlockDamage" tags="perkGunslinger,perkBoomstick,perkDeadEye,perkMachineGunner,perkBookAutoWeapons,perkTurrets,perkArchery,admin"/>
+			<display_entry name="DamageFalloffRange" title_key="statDamageFalloffRange" tags="perkGunslinger,perkBoomstick,perkDeadEye,perkMachineGunner,perkBookAutoWeapons,perkTurrets,perkArchery,admin"/>
+		</item_display_info>
+
+
+		<item_display_info display_type="bbxfx_itemFlashbang" display_group="groupAmmo">
+			<display_entry name="dExEntityDamage" title_key="statEntityDamageExplosion" tags="perkDemolitionsExpert,admin"/>		
+			<display_entry name="dExBlockDamage" title_key="statBlockDamageExplosion" tags="perkDemolitionsExpert,admin"/>
+			<display_entry name="dExRadius" title_key="statExRadius" display_type="Decimal1"/>
+			<display_entry name="dFuseTime" title_key="statFuseTime" display_type="Time" negative_preferred="true"/>
+		</item_display_info>
+		
+	</append>
+</Byteblazar>

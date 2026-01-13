@@ -1,0 +1,27 @@
+<Byteblazar>
+	<append xpath="/recipes">
+		<recipe name="bbxfx_itemAmmoFlashThunderGrenade" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceGunPowder" count="6"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="4"/>
+			<ingredient name="resourceElectricParts" count="1"/>
+			<ingredient name="resourceMechanicalParts" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="1"/>
+		</recipe>
+
+		<recipe name="bbxfx_itemAmmoBundleFlashThunderGrenade" count="1" craft_time="300" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceGunPowder" count="480"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="320"/>
+			<ingredient name="resourceElectricParts" count="80"/>
+			<ingredient name="resourceMechanicalParts" count="80"/>
+			<ingredient name="resourceScrapPolymers" count="80"/>
+		</recipe>
+
+		<recipe name="bbxfx_itemFlashbang" count="1" craft_time="18" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="resourceGunPowder" count="10"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="6"/>
+			<ingredient name="resourceElectricParts" count="1"/>
+			<ingredient name="resourceDuctTape" count="2"/>
+			<ingredient name="resourceMechanicalParts" count="1"/>
+		</recipe>
+	</append>
+</Byteblazar>
