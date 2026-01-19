@@ -290,7 +290,7 @@
 			<ingredient name="classStarter" count="1"/>
 		</recipe>
 
-        <recipe name="resourceForgedTitanium" count="1" material_based="true" craft_area="AdvForge" is_trackable="false" craft_tool="toolForgeCrucible">
+        <recipe name="resourceForgedTitanium" count="1" craft_area="AdvForge" is_trackable="false" craft_tool="toolForgeCrucible">
             <ingredient name="resourceTitanium" count="20"/>
             <ingredient name="resourceClayLump" count="10"/>
             <effect_group>
@@ -298,7 +298,7 @@
             </effect_group>
         </recipe>
 
-        <recipe name="resourceCopperPlate" count="1" material_based="true" craft_area="forge" is_trackable="false" craft_tool="toolAnvil">
+        <recipe name="resourceCopperPlate" count="1" craft_area="forge" is_trackable="false" craft_tool="toolAnvil">
             <ingredient name="resourceCopper" count="20"/>
             <ingredient name="resourceClayLump" count="10"/>
             <effect_group>
@@ -306,7 +306,7 @@
             </effect_group>
         </recipe>
 
-        <recipe name="resourceLeadPlate" count="1" material_based="true" craft_area="forge" is_trackable="false" craft_tool="toolAnvil">
+        <recipe name="resourceLeadPlate" count="1" craft_area="forge" is_trackable="false" craft_tool="toolAnvil">
             <ingredient name="resourceScrapLead" count="20"/>
             <ingredient name="resourceClayLump" count="10"/>
             <effect_group>
@@ -314,7 +314,7 @@
             </effect_group>
         </recipe>
 
-        <recipe name="resourceScrapBrass" count="10" material_based="true" craft_area="forge" is_trackable="false" craft_tool="toolAnvil">
+        <recipe name="resourceScrapBrass" count="10" craft_area="forge" is_trackable="false" craft_tool="toolAnvil">
             <ingredient name="resourceZinc" count="10"/>
             <ingredient name="resourceCopper" count="20"/>
         </recipe>
@@ -353,6 +353,16 @@
             <ingredient name="resourceDuctTape" count="5"/>
             <ingredient name="resourceNail" count="250"/>
             <ingredient name="resourceWood" count="250"/>
+        </recipe>
+
+        <recipe name="WorkingAirConditioner" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable"> 
+            <ingredient name="resourceForgedIron" count="10"/>
+            <ingredient name="resourceForgedSteel" count="10"/>
+            <ingredient name="resourceMechanicalParts" count="5"/>
+            <ingredient name="resourceElectricParts" count="5"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="0,1,2,3" operation="perc_add" value=".56,.56,.56,.34" tags="resourceForgedIron,resourceForgedSteel,resourceMechanicalParts,resourceElectricParts"/>
+            </effect_group>
         </recipe>
 
     <!-- new ammo -->
@@ -668,7 +678,7 @@
 
     <!-- Wakizashi -->
 
-        <recipe name="WakizashiBlade" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering" craft_tool="toolForgeCrucible">
+        <recipe name="WakizashiBlade" count="1" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering" craft_tool="toolForgeCrucible">
             <ingredient name="resourceScrapIron" count="100"/>
             <ingredient name="resourceClayLump" count="20"/>
             <effect_group>
@@ -863,7 +873,7 @@
 
     <!-- Chevalier -->
 
-        <recipe name="ChevalierBlade" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering" craft_tool="toolAnvil">
+        <recipe name="ChevalierBlade" count="1" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering" craft_tool="toolAnvil">
             <ingredient name="resourceScrapIron" count="100"/>
             <ingredient name="resourceClayLump" count="20"/>
             <effect_group>
@@ -897,7 +907,7 @@
 
     <!-- HardenSledgehammer -->
 
-       <recipe name="HardenSledgehammerHead" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering" craft_tool="toolAnvil">
+       <recipe name="HardenSledgehammerHead" count="1" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering" craft_tool="toolAnvil">
             <ingredient name="resourceScrapIron" count="500"/>
             <ingredient name="resourceClayLump" count="30"/>
             <effect_group>

@@ -1,5 +1,8 @@
 <configs>
 
+    <set xpath="/item_modifiers/item_modifier[@name='modGunBowPolymerString']/property[@name='UnlockedBy']/@value">perkRangersFlamingArrows</set>
+    <set xpath="/item_modifiers/item_modifier[@name='modGunBowArrowRest']/property[@name='UnlockedBy']/@value">perkRangersFlamingArrows</set>
+
     <append xpath="/item_modifiers/item_modifier[@name='modGunRetractingStock']">
 
         <effect_group tiered="false" name="mod effects">

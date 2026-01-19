@@ -1,30 +1,165 @@
 <configs>
 
-    <remove xpath="progression/perks/book[@name='perkShotgunMessiahBreachingSlugs']"/>
-    <remove xpath="progression/perks/book[@name='perkShotgunMessiahSlugs']"/>
-    <remove xpath="progression/perks/book[@name='perkShotgunMessiahComplete']"/>
 
-    <remove xpath="progression/perks/book[@name='perkPistolPeteAPAmmo']"/>
-    <remove xpath="progression/perks/book[@name='perkPistolPeteHPAmmo']"/>
-    <remove xpath="progression/perks/book[@name='perkPistolPeteComplete']"/>
+    <remove xpath="/progression/perks/book[@name='perkShotgunMessiahBreachingSlugs']"/>
+    <insertAfter xpath="/progression/perks/book[@name='perkShotgunMessiahDamage']">
+        <!-- *** SHOTGUN_MESSIAH_VOLUME_02_BREACHING_SLUGS -->
+        <book name="perkShotgunMessiahBreachingSlugs" parent="skillShotguns" max_level="1" base_skill_point_cost="0" name_key="bookShotgunMessiahBreachingSlugs" desc_key="perkShotgunMessiahBreachingSlugsDesc" long_desc_key="perkShotgunMessiahBreachingSlugsLongDesc">
+            <effect_group>
+                <passive_effect name="PlayerExpGain" operation="perc_add" level="1" value=".2">
+                    <requirement name="HoldingItemHasTags" tags="perkBoomstick"/>
+                </passive_effect>
+            </effect_group>
+        </book>
+    </insertAfter>
+    <remove xpath="/progression/perks/book[@name='perkShotgunMessiahSlugs']"/>
+    <insertAfter xpath="/progression/perks/book[@name='perkShotgunMessiahLimbShot']">
+        <!-- *** SHOTGUN_MESSIAH_VOLUME_04_SLUGS -->
+        <book name="perkShotgunMessiahSlugs" parent="skillShotguns" max_level="1" base_skill_point_cost="0" name_key="bookShotgunMessiahSlugs" desc_key="perkShotgunMessiahSlugsDesc" long_desc_key="perkShotgunMessiahSlugsLongDesc">
+            <effect_group>
+                <passive_effect name="LootProb" operation="perc_add" level="1" value="1" tags="ammoShells"/>
+            </effect_group>
+        </book>
+    </insertAfter>
 
-    <remove xpath="progression/perks/book[@name='perkRangersAPAmmo']"/>
-    <remove xpath="progression/perks/book[@name='perkRangersComplete']"/>
-    <remove xpath="progression/perks/book[@name='perkRangersExplodingBolts']"/>
+    <remove xpath="/progression/perks/book[@name='perkShotgunMessiahComplete']"/>
+    <insertAfter xpath="/progression/perks/book[@name='perkShotgunMessiahPartyStarter']">
+        <book name="perkShotgunMessiahComplete" parent="skillShotguns" max_level="1" base_skill_point_cost="0" name_key="perkShotgunMessiahCompleteName" desc_key="perkShotgunMessiahCompleteDesc" long_desc_key="perkShotgunMessiahCompleteLongDesc">
+            <effect_group>
+                <passive_effect name="EntityDamage" operation="perc_add" level="1" value="3">
+                    <requirement name="HoldingItemHasTags" tags="perkBoomstick"/>
+                </passive_effect>
+            </effect_group>
+        </book>
+    </insertAfter>
 
-    <remove xpath="progression/perks/book[@name='perkEnforcerComplete']"/>
-    <remove xpath="progression/perks/book[@name='perkEnforcerHPAmmo']"/>
-    <remove xpath="progression/perks/book[@name='perkEnforcerAPAmmo']"/>
+    <remove xpath="/progression/perks/book[@name='perkPistolPeteHPAmmo']"/>
+    <remove xpath="/progression/perks/book[@name='perkPistolPeteAPAmmo']"/>
+    <insertAfter xpath="/progression/perks/book[@name='perkPistolPeteMaintenance']">
+        <!-- *** PISTOL_PETE_VOLUME_05_HPAMMO -->
+        <book name="perkPistolPeteHPAmmo" parent="skillPistolPete" max_level="1" base_skill_point_cost="0" name_key="bookPistolPeteHPAmmo" desc_key="perkPistolPeteHPAmmoDesc" long_desc_key="perkPistolPeteHPAmmoLongDesc">
+            <effect_group>
+                <passive_effect name="PlayerExpGain" operation="perc_add" level="1" value=".2">
+                    <requirement name="HoldingItemHasTags" tags="9mmGun"/>
+                </passive_effect>
+            </effect_group>
+        </book>
+        <!-- *** PISTOL_PETE_VOLUME_06_APAMMO -->
+        <book name="perkPistolPeteAPAmmo" parent="skillPistolPete" max_level="1" base_skill_point_cost="0" name_key="bookPistolPeteAPAmmo" desc_key="perkPistolPeteAPAmmoDesc" long_desc_key="perkPistolPeteAPAmmoLongDesc">
+            <effect_group>
+                <passive_effect name="LootProb" operation="perc_add" level="1" value="1" tags="ammo9mm"/>
+            </effect_group>
+        </book>
+    </insertAfter>
+    <remove xpath="/progression/perks/book[@name='perkPistolPeteComplete']"/>
+    <insertAfter xpath="/progression/perks/book[@name='perkPistolPeteDamage']">
+        <!-- *** 7/7 PISTOL_PETE_COMPLETE -->
+        <book name="perkPistolPeteComplete" parent="skillPistolPete" max_level="1" base_skill_point_cost="0" name_key="perkPistolPeteCompleteName" desc_key="perkPistolPeteCompleteDesc" long_desc_key="perkPistolPeteCompleteLongDesc">
+            <effect_group>
+                <passive_effect name="TargetArmor" operation="perc_add" level="1" value="-.2">
+                    <requirement name="ItemHasTags" tags="9mmGun"/>
+                    <requirement name="TargetRange" target="other" operation="LTE" value="3"/>
+                </passive_effect>
+            </effect_group>
 
-    <remove xpath="progression/perks/book[@name='perkSniperHPAmmo']"/>
-    <remove xpath="progression/perks/book[@name='perkSniperAPAmmo']"/>
-    <remove xpath="progression/perks/book[@name='perkSniperComplete']"/>
+            <effect_group>
+                <requirement name="ProgressionLevel" progression_name="perkPistolPeteComplete" operation="Equals" value="1"/>
+                <requirement name="ItemHasTags" tags="9mmGun"/>
+                <requirement name="TargetRange" target="other" operation="LTE" value="3"/>
+                    <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1">
+                        <requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="1" target="other"/>
+                    </triggered_effect>
+                    <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+            </effect_group>
+        </book>
+    </insertAfter>
+    <remove xpath="/progression/perks/book[@name='perkRangersAPAmmo']"/>
+    <remove xpath="/progression/perks/book[@name='perkRangersFlamingArrows']"/>
+    <insertAfter xpath="/progression/perks/book[@name='perkRangersCripplingShot']">
+        <!-- *** RANGER'S_GUIDE_TO_ARCHERY_VOLUME_04_APARROWS -->
+        <book name="perkRangersAPAmmo" parent="skillArchery" max_level="1" base_skill_point_cost="0" name_key="bookRangersAPAmmo" desc_key="perkRangersAPAmmoDesc" long_desc_key="perkRangersAPAmmoLongDesc">
+            <effect_group>
+                <passive_effect name="LootProb" operation="perc_add" level="1" value="1" tags="ammoArrows"/>
+            </effect_group>
+        </book>
+        <!-- *** RANGER'S_GUIDE_TO_ARCHERY_VOLUME_05_FLAMING_ARROWS -->
+        <book name="perkRangersFlamingArrows" parent="skillArchery" max_level="1" base_skill_point_cost="0" name_key="bookRangersFlamingArrows" desc_key="perkRangersFlamingArrowsDesc" long_desc_key="perkRangersFlamingArrowsLongDesc">
+            <effect_group>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="modGunBowPolymerString,modGunBowArrowRest"/>
+            </effect_group>
+        </book>
+    </insertAfter>
+    <remove xpath="/progression/perks/book[@name='perkRangersComplete']"/>
+    <insertAfter xpath="/progression/perks/book[@name='perkRangersKnockdown']">
+        <!-- *** 7/7 RANGER'S_GUIDE_TO_ARCHERY_COMPLETE -->
+        <book name="perkRangersComplete" parent="skillArchery" max_level="1" base_skill_point_cost="0" name_key="perkRangersCompleteName" desc_key="perkRangersCompleteDesc" long_desc_key="perkRangersCompleteLongDesc">
+            <effect_group>
+                <requirement name="HoldingItemHasTags" tags="perkArchery"/>
+                <requirement name="ProgressionLevel" progression_name="perkRangersComplete" operation="Equals" value="1"/>
+                <requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="25"/>
+                <requirement name="IsAlive" target="other"/>
+                    <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="bleedCounter" operation="add" value="1">
+                        <requirement name="CVarCompare" cvar="bleedCounter" operation="LT" value="1" target="other"/>
+                    </triggered_effect>
+                    <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+            </effect_group>
+        </book>
+    </insertAfter>
 
-    <remove xpath="progression/perks/book[@name='perkTechJunkie4Shells']"/>
-    <remove xpath="progression/perks/book[@name='perkTechJunkie3APAmmo']"/>
-    <remove xpath="progression/perks/book[@name='perkTechJunkie8Complete']"/>
+    <remove xpath="/progression/perks/book[@name='perkEnforcerAPAmmo']"/>
+    <remove xpath="/progression/perks/book[@name='perkEnforcerHPAmmo']"/>
+    <insertAfter xpath="/progression/perks/book[@name='perkEnforcerIntimidation']">
+        <!-- *** MAGNUM_ENFORCER_VOLUME_05_APAMMO -->
+        <book name="perkEnforcerAPAmmo" parent="skillEnforcer" max_level="1" base_skill_point_cost="0" name_key="bookEnforcerAPAmmo" desc_key="perkEnforcerAPAmmoDesc" long_desc_key="perkEnforcerAPAmmoLongDesc">
+            <effect_group>
+                <passive_effect name="PlayerExpGain" operation="perc_add" level="1" value=".2">
+                    <requirement name="HoldingItemHasTags" tags="gunHandgunT2Magnum44"/>
+                </passive_effect>
+            </effect_group>
+        </book>
+        <!-- *** MAGNUM_ENFORCER_VOLUME_06_HPAMMO -->
+        <book name="perkEnforcerHPAmmo" parent="skillEnforcer" max_level="1" base_skill_point_cost="0" name_key="bookEnforcerHPAmmo" desc_key="perkEnforcerHPAmmoDesc" long_desc_key="perkEnforcerHPAmmoLongDesc">
+            <effect_group>
+                <passive_effect name="LootProb" operation="perc_add" level="1" value="1" tags="ammo44Mag"/>
+            </effect_group>
+        </book>
+    </insertAfter>
+    <remove xpath="/progression/perks/book[@name='perkEnforcerComplete']"/>
+    <insertAfter xpath="/progression/perks/book[@name='perkEnforcerCriminalPursuit']">
+        <!-- *** 7/7 MAGNUM_ENFORCER_COMPLETE -->
+        <book name="perkEnforcerComplete" parent="skillEnforcer" max_level="1" base_skill_point_cost="0" name_key="perkEnforcerCompleteName" desc_key="perkEnforcerCompleteDesc" long_desc_key="perkEnforcerCompleteLongDesc">
+            <effect_group>
+            </effect_group>
+        </book>
+    </insertAfter>
 
-
+    <remove xpath="/progression/perks/book[@name='perkSniperAPAmmo']"/>
+    <remove xpath="/progression/perks/book[@name='perkSniperHPAmmo']"/>
+    <remove xpath="/progression/perks/book[@name='perkSniperComplete']"/>
+    <insertAfter xpath="/progression/perks/book[@name='perkSniperControlledBreathing']">
+        <!-- *** SNIPER_VOLUME_06_APAMMO -->
+        <book name="perkSniperAPAmmo" parent="skillSniper" max_level="1" base_skill_point_cost="0" name_key="bookSniperAPAmmo" desc_key="perkSniperAPAmmoDesc" long_desc_key="perkSniperAPAmmoLongDesc">
+            <effect_group>
+                <passive_effect name="PlayerExpGain" operation="perc_add" level="1" value=".2">
+                    <requirement name="HoldingItemHasTags" tags="perkDeadEye"/>
+                </passive_effect>
+            </effect_group>
+        </book>
+        <!-- *** SNIPER_VOLUME_07_HPAMMO -->
+        <book name="perkSniperHPAmmo" parent="skillSniper" max_level="1" base_skill_point_cost="0" name_key="bookSniperHPAmmo" desc_key="perkSniperHPAmmoDesc" long_desc_key="perkSniperHPAmmoLongDesc">
+            <effect_group>
+                <passive_effect name="LootProb" operation="perc_add" level="1" value="1" tags="ammo762mm"/>
+            </effect_group>
+        </book>
+        <!-- *** 7/7 SNIPER_COMPLETE -->
+        <book name="perkSniperComplete" parent="skillSniper" max_level="1" base_skill_point_cost="0" name_key="perkSniperCompleteName" desc_key="perkSniperCompleteDesc" long_desc_key="perkSniperCompleteLongDesc">
+            <effect_group>
+                <passive_effect name="EntityDamage" operation="perc_add" level="1" value="3">
+                    <requirement name="HoldingItemHasTags" tags="perkDeadEye"/>
+                </passive_effect>
+            </effect_group>
+        </book>
+    </insertAfter>
 
 
     <append xpath="/progression/perks">
@@ -39,7 +174,7 @@
             </display_entry>
             <display_entry icon="ammo44MagnumBulletHP,ammo44MagnumBulletAP,ammoBundleArrowSteelAP,ammoBundleJunkTurretRegular" name_key="ammoT2-1,ammoT2-2,ammoT2-3,ammoT2-4" has_quality="false" unlock_level="11,14,18,22" >
                 <unlock_entry item="ammo44MagnumBulletHP,ammoBundle9mmBulletBall,ammoBundle9mmBulletHP,ammoBundle9mmBulletAP" unlock_tier="1"/>
-                <unlock_entry item="ammo44MagnumBulletAP" unlock_tier="2"/>
+                <unlock_entry item="ammo44MagnumBulletAP,ammoArrowSteelAP,ammoCrossbowBoltSteelAP,ammoArrowFlaming,ammoCrossbowBoltFlaming" unlock_tier="2"/>
                 <unlock_entry item="ammoBundleArrowSteelAP,ammoBundleCrossbowBoltSteelAP" unlock_tier="3"/>
                 <unlock_entry item="ammoBundleJunkTurretRegular,ammoBundleJunkTurretShell,ammoBundleJunkTurretAP,ammoBundle9mmBulletBall,ammoBundle9mmBulletHP,ammoBundle9mmBulletAP" unlock_tier="4"/>
             </display_entry>
@@ -65,8 +200,8 @@
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,100" value="1" tags="ammoBundleArrowStone,ammoBundleCrossbowBoltStone"/>
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="8,100" value="1" tags="ammoBundleArrowIron,ammoBundleCrossbowBoltIron"/>
 
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="ammo44MagnumBulletHP"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="14,100" value="1" tags="ammo44MagnumBulletAP"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="ammo44MagnumBulletHP,ammoBundle9mmBulletBall,ammoBundle9mmBulletHP,ammoBundle9mmBulletAP"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="14,100" value="1" tags="ammo44MagnumBulletAP,ammoArrowSteelAP,ammoCrossbowBoltSteelAP,ammoArrowFlaming,ammoCrossbowBoltFlaming"/>
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="18,100" value="1" tags="ammoBundleArrowSteelAP,ammoBundleCrossbowBoltSteelAP"/>
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="22,100" value="1" tags="ammoBundleJunkTurretRegular,ammoBundleJunkTurretShell,ammoBundleJunkTurretAP,ammoBundle9mmBulletBall,ammoBundle9mmBulletHP,ammoBundle9mmBulletAP"/>
 
@@ -190,6 +325,8 @@
 	<csv xpath="//crafting_skill[@name='craftingWorkstations']//unlock_entry[contains(@item, 'toolApiaryExtractor')]/@item" op="add">Recycler</csv>
     <csv xpath="//crafting_skill[@name='craftingWorkstations']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'toolApiaryExtractor')]/@tags" op="add">Recycler</csv>
 
+	<csv xpath="//crafting_skill[@name='craftingWorkstations']//unlock_entry[contains(@item, 'toolApiaryExtractor')]/@item" op="add">WorkingAirConditioner</csv>
+    <csv xpath="//crafting_skill[@name='craftingWorkstations']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'toolApiaryExtractor')]/@tags" op="add">WorkingAirConditioner</csv>
 
 
 
@@ -296,10 +433,39 @@
 	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodTunaFishGravyToast')]/@item" op="add">WorkingStove</csv>
     <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodTunaFishGravyToast')]/@tags" op="add">WorkingStove</csv>
 
+    <remove xpath="/progression/perks/perk[@name='perkInfiltrator']" />
 
+    <insertBefore xpath="/progression/perks/perk[@name='perkAnimalTracker']">
+    <!-- *** PERCEPTION:GENERAL_PERKS -->
+            <!-- *** INFILTRATOR -->
+        <perk name="perkInfiltrator" max_level="6" parent="skillPerceptionGeneral" name_key="perkInfiltratorName" desc_key="perkInfiltratorDesc" icon="ui_game_symbol_stealth">
+            <level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="1" desc_key="reqPerceptionLevel01"/></level_requirements>
+            <level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="2" desc_key="reqPerceptionLevel02"/></level_requirements>
+            <level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="3" desc_key="reqPerceptionLevel03"/></level_requirements>
+            <level_requirements level="4"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="5" desc_key="reqPerceptionLevel05"/></level_requirements>
+            <level_requirements level="5"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="7" desc_key="reqPerceptionLevel07"/></level_requirements>
+            
+            <effect_group>
+                <passive_effect name="TrapDoorTriggerDelay" operation="base_add" level="1,2,3,4,5" value=".5,1,2,3,5"/>
+                <passive_effect name="LandMineTriggerDelay" operation="base_add" level="1,2,3,4,5" value=".5,1,2,3,5"/>
+                <passive_effect name="TrapIncomingDamage" operation="perc_add" level="1,2,3,4,5,6" value="-.2,-.35,-.5,-.6,-.75"/>
 
+                <!-- Allows the pick up of mineCandyTin, mineCookingPot, mineHubcap, and then mineAirFilter -->
+                <passive_effect name="BlockPickup" operation="base_set" level="1" value="1" tags="Mine1"/>
+                <passive_effect name="BlockPickup" operation="base_set" level="2" value="1" tags="Mine1,Mine2"/>
+                <passive_effect name="BlockPickup" operation="base_set" level="3" value="1" tags="Mine1,Mine2,Mine3"/>
+                <passive_effect name="BlockPickup" operation="base_set" level="4,5" value="1" tags="Mine1,Mine2,Mine3,Mine4"/>
+                <passive_effect name="LandMineImmunity" operation="base_set" level="5" value="1"/>
 
+                <effect_description level="1" desc_key="perkInfiltratorRank1Desc" long_desc_key="perkInfiltratorRank1LongDesc"/>
+                <effect_description level="2" desc_key="perkInfiltratorRank2Desc" long_desc_key="perkInfiltratorRank2LongDesc"/>
+                <effect_description level="3" desc_key="perkInfiltratorRank3Desc" long_desc_key="perkInfiltratorRank3LongDesc"/>
+                <effect_description level="4" desc_key="perkInfiltratorRank4Desc" long_desc_key="perkInfiltratorRank4LongDesc"/>
+                <effect_description level="5" desc_key="perkInfiltratorRank5Desc" long_desc_key="perkInfiltratorRank5LongDesc"/>
+            </effect_group>
+        </perk>
 
+    </insertBefore>
 
 
 

@@ -1,23 +1,13 @@
 <configs>
 
-	<append xpath="//biome[@name='snow']/subbiome[@noise='.03, 0, .21']/decorations">
-		<decoration type="block" blockname="resourceTitaniumRock01" prob=".05"/>
-	</append>
+	<set xpath="/worldgeneration/biomes/biome[@name='snow']/subbiome/layers/layer/resource[@blockname='terrOrePotassiumNitrate']/@blockname">terrOreCopper</set>
+	<set xpath="/worldgeneration/biomes/biome[@name='snow']/subbiome/decorations/decoration[@name='deco_nitrate_vein']/@name">deco_copper_vein</set>
 
-	<append xpath="//biome[@name='desert']/subbiome[@noise='.02, 0, .3']/decorations">
-		<decoration type="block" blockname="resourceCopperRock01" prob=".05"/>
-	</append>
-
-	<append xpath="//biome[@name='desert']/subbiome[@noise='.02, 0, .3']/decorations">
-		<decoration type="block" blockname="resourceZincRock01" prob=".05"/>
-	</append>
-
-	<append xpath="//biome[@name='wasteland']/subbiome[@noise='.028, 0, .21']/decorations">
-		<decoration type="block" blockname="resourceSulfurRock01" prob=".00075"/>
-	</append>
-
-
-
+	<set xpath="/worldgeneration/biomes/biome[@name='snow']/subbiome/layers/layer/resource[@blockname='terrOreLead']/@blockname">terrOreZinc</set>
+	<set xpath="/worldgeneration/biomes/biome[@name='snow']/subbiome/decorations/decoration[@name='deco_lead_vein']/@name">deco_zinc_vein</set>
+	
+	<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/subbiome/layers/layer/resource[@blockname='terrOreIron']/@blockname">terrOreTitanium</set>
+	<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/subbiome/decorations/decoration[@name='deco_iron_vein']/@name">deco_titanium_vein</set>
 
 
 </configs> 

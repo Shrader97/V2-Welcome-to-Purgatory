@@ -473,7 +473,38 @@ ammoBundleShotgunShellFlechette,Box of Flechette Shotgun Shell
 
 
 
-
+perkEnforcerAPAmmoDesc,Gain 20% more experience while using a 44 Magnum.,
+perkEnforcerAPAmmoLongDesc,Gain 20% more experience while using a 44 Magnum.,
+perkEnforcerHPAmmoDesc,Increased 44 mag ammo in loot.,
+perkEnforcerHPAmmoLongDesc,Increased 44 mag ammo in loot,
+perkEnforcerCompleteDesc,All shots with .44 ammo penetrate enemies.,
+perkEnforcerCompleteLongDesc,All shots with .44 ammo penetrate enemies.,
+perkPistolPeteHPAmmoDesc,Increase experience gain by 20% while using 9mm guns.,
+perkPistolPeteHPAmmoLongDesc,Increase experience gain by 20% while using 9mm guns.,
+perkPistolPeteAPAmmoDesc,Increase 9mm ammo in loot.,
+perkPistolPeteAPAmmoLongDesc,Increase 9mm ammo in loot.,
+perkPistolPeteCompleteDesc,Shots fired at point blank ignore armor.,
+perkPistolPeteCompleteLongDesc,Shots fired at point blank ignore armor.,
+perkRangersExplodingBoltsDesc,Gain 20% more experience while using bows/crossbows.,
+perkRangersExplodingBoltsLongDesc,Gain 20% more experience while using bows/crossbows.,
+perkRangersAPAmmoDesc,Increase arrow and bolts in loot.,
+perkRangersAPAmmoLongDesc,Increase arrow and bolts in loot.,
+perkRangersFlamingArrowsDesc,Learn how to craft a Arrow Rest Mod and a Polymer String Mod.,
+perkRangersFlamingArrowsLongDesc,Learn how to craft a Arrow Rest Mod and a Polymer String Mod.,
+perkRangersCompleteDesc,Adds bleed chance to enemies while using bows or crossbows.,
+perkRangersCompleteLongDesc,Adds bleed chance to enemies while using bows or crossbows.,
+perkShotgunMessiahBreachingSlugsDesc,Increase experience gain by 20% while using shotguns.,
+perkShotgunMessiahBreachingSlugsLongDesc,Increase experience gain by 20% while using shotguns.,
+perkShotgunMessiahSlugsDesc,Increase shotgun ammuntion in loot.,
+perkShotgunMessiahSlugsLongDesc,Increase shotgun ammuntion in loot.,
+perkShotgunMessiahCompleteDesc,Increased entity damage by 30% while using shotguns.,
+perkShotgunMessiahCompleteLongDesc,Increased entity damage by 30% while using shotguns.,
+perkSniperAPAmmoDesc,Increase experience gain by 20% while using rifles.,
+perkSniperAPAmmoLongDesc,Increase experience gain by 20% while using rifles.,
+perkSniperHPAmmoDesc,Increase 7.62mm ammunition in loot.,
+perkSniperHPAmmoLongDesc,Increase 7.62mm ammunition in loot.,
+perkSniperCompleteDesc,Increased entity damage by 30% while using rifles.,
+perkSniperCompleteLongDesc,Increased entity damage by 30% while using rifles.,
 
 
 

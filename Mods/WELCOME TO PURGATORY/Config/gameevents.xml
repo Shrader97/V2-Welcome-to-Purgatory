@@ -1,6 +1,6 @@
 <configs>
 
-    <append xpath="/game_events">
+    <append xpath="/gameevents">
 
         <action_sequence name="reward_hornet_zombie_slayer">
             <property name="action_type" value="Game" />

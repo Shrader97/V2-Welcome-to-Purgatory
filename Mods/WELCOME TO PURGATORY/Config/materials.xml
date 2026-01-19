@@ -13,6 +13,20 @@
             <property name="MaxDamage" value="45000"/>
             <property name="Experience" value="3"/>
         </material>
+
+        <material id="MresourceReinforcedTitanium">
+            <property name="damage_category" value="metal"/>
+            <property name="surface_category" value="metal"/>
+            <property name="forge_category" value="Titanium"/>
+            <property name="Hardness" type="float" value="1"/>
+            <property name="stepsound" value="metal"/>
+            <property name="stability_glue" value="4000"/>
+            <property name="Mass" type="int" value="1"/>
+            <property name="explosionresistance" value="3"/>
+            <property name="MaxDamage" value="100000"/>
+            <property name="Experience" value="3"/>
+        </material>
+
     </append>
 
     <append xpath="/materials">
@@ -58,10 +72,39 @@
 			<property name="MaxDamage" value="20000" />
 			<property name="Experience" value="30" />
 		</material>	
-	</append>
+    </append>
+
+    <append xpath="/materials">
+        <material id="MtrapSpikesSteel">
+            <property name="damage_category" value="metal"/>
+            <property name="surface_category" value="metal"/>
+            <property name="forge_category" value="iron"/>
+            <property name="Hardness" type="float" value="1"/>
+            <property name="stepsound" value="metal"/>
+            <property name="stability_glue" value="300"/>
+            <property name="Mass" type="int" value="20"/>
+            <property name="explosionresistance" value="0.8"/>
+            <property name="MaxDamage" value="66"/>
+            <property name="Experience" value="4"/>
+            <property name="movement_factor" value="0.32"/>
+        </material>
+
+        <material id="MtrapSpikesTitanium">
+            <property name="damage_category" value="metal"/>
+            <property name="surface_category" value="metal"/>
+            <property name="forge_category" value="Titanium"/>
+            <property name="Hardness" type="float" value="1"/>
+            <property name="stepsound" value="metal"/>
+            <property name="stability_glue" value="300"/>
+            <property name="Mass" type="int" value="20"/>
+            <property name="explosionresistance" value="1.6"/>
+            <property name="MaxDamage" value="99"/>
+            <property name="Experience" value="8"/>
+            <property name="movement_factor" value="0.54"/>
+        </material>
 
 
-
+    </append>
 
 
 

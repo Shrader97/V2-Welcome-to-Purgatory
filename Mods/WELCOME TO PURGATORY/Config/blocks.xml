@@ -3,6 +3,180 @@
 	<set xpath="blocks/block[@name='spawnTrader']/property[@name='SpawnClass']/@value">npcTraderJoel,npcTraderRekt,npcTraderHugh,npcTraderBob,npcTraderJen,npcTraderNoah,npcTraderBartender,npcTraderBouner,npcTraderCommanderInChief,npcTraderHomelessDude,npcTraderMechanic,npcTraderSecretary</set>
 
 
+	<append xpath="/blocks/block[@name='trapSpikesIronDmg0']">
+		<property class="UpgradeBlock">
+			<property name="ToBlock" value="trapSpikesSteelDmg0"/>
+			<property name="Item" value="resourceForgedSteel"/>
+			<property name="ItemCount" value="4"/>
+			<property name="UpgradeHitCount" value="4"/>
+		</property>
+	</append>
+
+
+	<append xpath="/blocks">
+
+			<!-- *** Steel_SPIKES -->
+		<block name="trapSpikesScrapSteelMaster">
+			<property name="CreativeMode" value="None"/>
+			<property name="Class" value="TrunkTip"/>
+			<property name="Damage" value="66"/>
+			<property name="Damage_received" value="6"/>
+			<property name="DescriptionKey" value="trapSpikesGroupDesc"/>
+			<property name="DisplayType" value="blockHardened"/>
+			<property name="Material" value="MtrapSpikesSteel"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Trap.unity3d?SteelSpikesTrap.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ImposterExclude" value="true"/>
+			<property name="LightOpacity" value="6"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Collide" value="melee"/>
+			<property name="Path" value="solid"/>
+			<property name="IsTerrainDecoration" value="false"/>
+			<property name="EconomicValue" value="60"/>
+			<property name="EconomicBundleSize" value="20"/>
+			<property name="MaxDamage" value="400"/>
+			<property name="SoundPickup" value="trapiron_grab"/>
+			<property name="SoundPlace" value="trapiron_place"/>
+			<property class="RepairItems">
+				<property name="resourceForgedSteel" value="2"/>
+			</property>
+			<property name="UpgradeSound" value="place_block_metal"/>
+			<drop event="Destroy" name="resourceScrapIron" count="10,20"/>
+			<drop event="Fall" count="0"/>
+			<property name="SortOrder1" value="B751"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="Group" value="Building"/>
+			<property name="BlockTag" value="Spike"/>
+			<property name="FilterTags" value="MC_building,SC_traps"/>
+		</block>
+
+		<!-- Player made Stage 3 with blood -->
+		<block name="trapSpikesSteelDmg2">
+			<property name="Extends" value="trapSpikesScrapSteelMaster"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Model" value="#@modfolder:Resources/Trap.unity3d?SteelSpikesTrap2.prefab"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="trapSpikesSteelDmg0"/>
+				<property name="Item" value="resourceForgedSteel"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property name="SortOrder2" value="0001"/>
+		</block>
+
+		<!-- Player made Stage 2 with blood -->
+		<block name="trapSpikesSteelDmg1">
+			<property name="Extends" value="trapSpikesScrapSteelMaster"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Model" value="#@modfolder:Resources/Trap.unity3d?SteelSpikesTrap1.prefab"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="trapSpikesSteelDmg0"/>
+				<property name="Item" value="resourceForgedSteel"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property name="DowngradeBlock" value="trapSpikesSteelDmg2"/>
+			<property name="SortOrder2" value="0002"/>
+		</block>
+
+		<!-- Player made Stage 1 with no blood -->
+		<block name="trapSpikesSteelDmg0">
+			<property name="Extends" value="trapSpikesScrapSteelMaster"/>
+			<property name="CustomIcon" value="trapSpikesScrapIronMaster"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="trapSpikesTitaniumDmg0"/>
+				<property name="Item" value="resourceForgedTitanium"/>
+				<property name="ItemCount" value="4"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property name="DowngradeBlock" value="trapSpikesSteelDmg1"/>
+			<property name="SortOrder2" value="0003"/>
+		</block>
+
+			<!-- *** Titanium_SPIKES -->
+		<block name="trapSpikesScrapTitaniumMaster">
+			<property name="CreativeMode" value="None"/>
+			<property name="Class" value="TrunkTip"/>
+			<property name="Damage" value="99"/>
+			<property name="Damage_received" value="99"/>
+			<property name="DescriptionKey" value="trapSpikesGroupDesc"/>
+			<property name="DisplayType" value="blockHardened"/>
+			<property name="Material" value="MtrapSpikesTitanium"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/Trap.unity3d?TitaniumSpikesTrap.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ImposterExclude" value="true"/>
+			<property name="LightOpacity" value="6"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Collide" value="melee"/>
+			<property name="Path" value="solid"/>
+			<property name="IsTerrainDecoration" value="false"/>
+			<property name="EconomicValue" value="60"/>
+			<property name="EconomicBundleSize" value="20"/>
+			<property name="MaxDamage" value="800"/>
+			<property name="SoundPickup" value="trapiron_grab"/>
+			<property name="SoundPlace" value="trapiron_place"/>
+			<property class="RepairItems">
+				<property name="resourceForgedTitanium" value="2"/>
+			</property>
+			<property name="UpgradeSound" value="place_block_metal"/>
+			<drop event="Destroy" name="resourceScrapIron" count="10,20"/>
+			<drop event="Fall" count="0"/>
+			<property name="SortOrder1" value="B751"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="Group" value="Building"/>
+			<property name="BlockTag" value="Spike"/>
+			<property name="FilterTags" value="MC_building,SC_traps"/>
+		</block>
+
+		<!-- Player made Stage 3 with blood -->
+		<block name="trapSpikesTitaniumDmg2">
+			<property name="Extends" value="trapSpikesScrapTitaniumMaster"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Model" value="#@modfolder:Resources/Trap.unity3d?TitaniumSpikesTrap2.prefab"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="trapSpikesTitaniumDmg0"/>
+				<property name="Item" value="resourceForgedTitanium"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property name="SortOrder2" value="0001"/>
+		</block>
+
+		<!-- Player made Stage 2 with blood -->
+		<block name="trapSpikesTitaniumDmg1">
+			<property name="Extends" value="trapSpikesScrapTitaniumMaster"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Model" value="#@modfolder:Resources/Trap.unity3d?TitaniumSpikesTrap1.prefab"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="trapSpikesTitaniumDmg0"/>
+				<property name="Item" value="resourceForgedTitanium"/>
+				<property name="ItemCount" value="1"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property name="DowngradeBlock" value="trapSpikesTitaniumDmg2"/>
+			<property name="SortOrder2" value="0002"/>
+		</block>
+
+		<!-- Player made Stage 1 with no blood -->
+		<block name="trapSpikesTitaniumDmg0">
+			<property name="Extends" value="trapSpikesScrapTitaniumMaster"/>
+			<property name="CustomIcon" value="trapSpikesScrapIronMaster"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="trapSpikesTitaniumDmg0"/>
+				<property name="Item" value="resourceForgedTitanium"/>
+				<property name="ItemCount" value="4"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property name="DowngradeBlock" value="trapSpikesTitaniumDmg1"/>
+			<property name="SortOrder2" value="0003"/>
+		</block>
+
+	</append>
+
 	<insertAfter xpath="/blocks/block[@name='cntCar03SedanDamage0Master']/drop[@name='resourceScrapIron']">
 		<drop event="Harvest" name="carDoors" count="1,2" prob="0.04" tag="salvageHarvest"/>
 		<drop event="Harvest" name="carHood" count="1" prob="0.03" tag="salvageHarvest"/>
@@ -361,145 +535,10 @@
 			<property name="UpgradeHitCount" value="2"/></property>
 	</append>
 
+
+
+
 	<append xpath="/blocks">
-
-		<block name="KnoxVaultDoor">
-     		<property name="CustomIcon" value="KnoxVaultDoor"/>
-			<property name="Class" value="DoorSecure"/>
-			<property name="Material" value="Msteel"/>
-			<property name="MaxDamage" value="100000"/>
-			<property name="PassThroughDamage" value="true"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="DisplayType" value="blockMulti"/>
-			<property name="MultiBlockDim" value="5,4,3"/>
-			<property name="ModelOffset" value="0,0,-0.5"/>
-			<property name="Collide" value="movement,melee,rocket"/> <!-- -rocket -->
-			<property name="Tag" value="Door"/>
-			<property name="Place" value="Door"/>
-			<property name="PlaceEverywhere" value="true"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="Model" value="#@modfolder:Resources/KnoxVaultDoor.unity3d?KnoxVaultDoor.prefab"/>
-			<property name="ImposterExclude" value="false"/>
-			<property name="Stacknumber" value="5"/>
-			<property name="OpenSound" value="knox_vault_open"/>
-			<property name="CloseSound" value="knox_vault_close"/>
-			<property class="RepairItems"> <property name="resourceForgedSteel" value="200"/> </property>
-			<property name="Group" value="Building"/>
-			<property name="DescriptionKey" value="vaultDoor03_PoweredDesc"/>
-		</block>
-
-		<!-- TRADER_BOB_ONLY -->
-		<block name="busCityTraderOnly1">
-			<property name="CreativeMode" value="Dev"/>
-			<property name="CustomIcon" value="cntBusCity"/>
-			<property name="CustomIconTint" value="FF00FF"/>
-			<property name="Material" value="Mmetal_hard"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="Model" value="@:Entities/Vehicles/bus_city_traderPrefab.prefab"/>
-			<property name="ModelOffset" value="0,0.5,0"/> <!-- buses are shifted in the fbx file -->
-			<property name="MultiBlockDim" value="3,3,9"/>
-			<property name="ImposterDontBlock" value="true"/>
-			<property name="WaterFlow" value="permitted"/>
-			<property name="Place" value="TowardsPlacer"/>
-			<property name="PlacementDistance" value="15"/>
-			<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket"/>
-			<property name="BigDecorationRadius" value="5"/>
-			<property name="CanDecorateOnSlopes" value="false"/>
-			<property name="ShowModelOnFall" value="false"/>
-			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest,perkJunkMiner"/>
-			<drop event="Destroy" count="0"/>
-			<property name="SortOrder1" value="LD04"/>
-			<property name="SortOrder2" value="0600"/>
-			<property name="FilterTags" value="MC_building,SC_automotive"/>
-		</block>
-
-		<!-- TRADER_BOB_ONLY -->
-		<block name="bicycleStatic1">
-			<property name="CreativeMode" value="Dev"/>
-			<property name="CustomIcon" value="vehicleBicyclePlaceable"/>
-			<property name="TintColor" value="218,200,135"/>
-			<property name="DisplayType" value="blockMulti"/>
-			<property name="Material" value="Mmetal"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="Model" value="@:Entities/Vehicles/TraderVehicles/traderMountainBikeStaticPrefab.prefab"/>
-			<property name="ModelOffset" value="1.2,0,0"/>
-			<property name="MultiBlockDim" value="1,1,2"/>
-			<property name="WaterFlow" value="permitted"/>
-			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest,perkJunkMiner"/>
-			<drop event="Destroy" count="0"/>
-			<property name="SortOrder1" value="LD04"/>
-			<property name="SortOrder2" value="0700"/>
-		</block>
-
-		<!-- TRADER_BOB_ONLY -->
-		<block name="minibikeStatic1">
-			<property name="CreativeMode" value="Dev"/>
-			<property name="CustomIcon" value="vehicleMinibikePlaceable"/>
-			<property name="DisplayType" value="blockMulti"/>
-			<property name="TintColor" value="798991"/>
-			<property name="Material" value="Mmetal"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="Model" value="@:Entities/Vehicles/TraderVehicles/traderMiniBikeStaticPrefab.prefab"/>
-			<property name="ModelOffset" value="0,0,0"/>
-			<property name="MultiBlockDim" value="1,1,1"/>
-			<property name="WaterFlow" value="permitted"/>
-			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest,perkJunkMiner"/>
-			<drop event="Destroy" count="0"/>
-			<property name="SortOrder1" value="LD04"/>
-			<property name="SortOrder2" value="0701"/>
-		</block>
-
-		<!-- TRADER_BOB_ONLY -->
-		<block name="motorcycleStatic1">
-			<property name="CreativeMode" value="Dev"/>
-			<property name="CustomIcon" value="vehicleMotorcyclePlaceable"/>
-			<property name="TintColor" value="808080"/>
-			<property name="DisplayType" value="blockMulti"/>
-			<property name="Material" value="Mmetal"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="Model" value="@:Entities/Vehicles/TraderVehicles/traderMotorcycleStaticPrefab.prefab"/>
-			<property name="ModelOffset" value="0,0,0"/>
-			<property name="MultiBlockDim" value="1,3,1"/>
-			<property name="WaterFlow" value="permitted"/>
-			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest,perkJunkMiner"/>
-			<drop event="Destroy" count="0"/>
-			<property name="SortOrder1" value="LD04"/>
-			<property name="SortOrder2" value="0702"/>
-		</block>
-
-		<!-- TRADER_BOB_ONLY -->
-		<block name="4x4Static1">
-			<property name="CreativeMode" value="Dev"/>
-			<property name="TintColor" value="D45454"/>
-			<property name="DisplayType" value="blockMulti"/>
-			<property name="Material" value="Mmetal"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="Model" value="@:Entities/Vehicles/TraderVehicles/Trader4x4StaticPrefab.prefab"/>
-			<property name="ModelOffset" value="0,0,0"/>
-			<property name="MultiBlockDim" value="1,1,4"/>
-			<property name="WaterFlow" value="permitted"/>
-			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest,perkJunkMiner"/>
-			<drop event="Destroy" count="0"/>
-			<property name="SortOrder1" value="LD04"/>
-			<property name="SortOrder2" value="0703"/>
-		</block>
-
-		<!-- TRADER_BOB_ONLY -->
-		<block name="gyrocopterStatic1">
-			<property name="CreativeMode" value="Dev"/>
-			<property name="TintColor" value="132,105,84"/>
-			<property name="DisplayType" value="blockMulti"/>
-			<property name="Material" value="Mmetal"/>
-			<property name="Shape" value="ModelEntity"/>
-			<property name="Model" value="@:Entities/Vehicles/TraderVehicles/traderGyrocopterStaticPrefab.prefab"/>
-			<property name="ModelOffset" value="0,0,0"/>
-			<property name="MultiBlockDim" value="1,1,4"/>
-			<property name="WaterFlow" value="permitted"/>
-			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest,perkJunkMiner"/>
-			<drop event="Destroy" count="0"/>
-			<property name="SortOrder1" value="LD04"/>
-			<property name="SortOrder2" value="0704"/>
-		</block>
 
  		<block name="stainlessSteelMaster">
 			<property name="CreativeMode" value="None"/>
@@ -551,10 +590,6 @@
 			<property name="FilterTags" value="MC_Shapes" />
 			<property name="SortOrder1" value="0011" />
 		</block>
-
-	</append>
-
-	<append xpath="/blocks">
 
 		<block name="TitaniumShapes" shapes="All">
 			<property name="CreativeMode" value="None"/>
@@ -784,7 +819,7 @@
 			<property name="Tags" value="electricianSkill"/>
 		</block>
 
-        <block name="resourceTitaniumRock01"> <!-- biome decoration -->
+        <!--block name="resourceTitaniumRock01">
             <property name="CreativeMode" value="Dev"/>
             <property name="DisplayType" value="blockHardenedMulti"/>
             <property name="Map.Color" value="160,32,240"/>
@@ -808,7 +843,7 @@
             <property name="FilterTags" value="MC_outdoor,SC_decor"/>
         </block>
 
-        <block name="resourceCopperRock01"> <!-- biome decoration -->
+        <block name="resourceCopperRock01">
             <property name="CreativeMode" value="Dev"/>
             <property name="DisplayType" value="blockHardenedMulti"/>
             <property name="Map.Color" value="160,32,240"/>
@@ -832,7 +867,7 @@
             <property name="FilterTags" value="MC_outdoor,SC_decor"/>
         </block>
 
-        <block name="resourceZincRock01"> <!-- biome decoration -->
+        <block name="resourceZincRock01">
             <property name="CreativeMode" value="Dev"/>
             <property name="DisplayType" value="blockHardenedMulti"/>
             <property name="Map.Color" value="160,32,240"/>
@@ -854,7 +889,7 @@
             <drop event="Harvest" name="resourceZinc" count="250" tag="oreWoodHarvest"/>
             <drop event="Destroy" count="0"/>
             <property name="FilterTags" value="MC_outdoor,SC_decor"/>
-        </block>
+        </block-->
 
         <block name="resourceSulfurRock01"> <!-- biome decoration -->
             <property name="CreativeMode" value="Dev"/>
@@ -880,8 +915,164 @@
             <property name="FilterTags" value="MC_outdoor,SC_decor"/>
         </block>
 
+		<block name="oreTitaniumBoulder">
+			<property name="Extends" value="oreBoulderMaster"/>
+			<property name="Map.Color" value="135,135,134"/>
+			<property name="Material" value="MoreMetal"/>
+			<property name="Model" value="#@modfolder:Resources/titaniumore.unity3d?OreTitanium.prefab"/>
+			<drop event="Harvest" name="resourceTitanium" count="105" tag="oreWoodHarvest"/>
+			<property name="SortOrder2" value="0101"/>
+		</block>
+
+		<block name="oreCopperBoulder">
+			<property name="Extends" value="oreBoulderMaster"/>
+			<property name="Map.Color" value="184,115,51"/>
+			<property name="Material" value="MoreMetal"/>
+			<property name="Model" value="#@modfolder:Resources/Ore2.unity3d?CopperOre.prefab"/>
+			<drop event="Harvest" name="resourceCopper" count="105" tag="oreWoodHarvest"/>
+			<property name="SortOrder2" value="0101"/>
+		</block>
+
+		<block name="oreZincBoulder">
+			<property name="Extends" value="oreBoulderMaster"/>
+			<property name="Map.Color" value="144,137,136"/>
+			<property name="Material" value="MoreMetal"/>
+			<property name="Model" value="#@modfolder:Resources/Ore2.unity3d?ZincOre.prefab"/>
+			<drop event="Harvest" name="resourceZinc" count="105" tag="oreWoodHarvest"/>
+			<property name="SortOrder2" value="0101"/>
+		</block>
+		
+		<!--block name="terrOreCopper">
+			<property name="CanMobsSpawnOn" value="true"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Material" value="MoreMetal"/>
+			<property name="Shape" value="Terrain"/>
+			<property name="Mesh" value="terrain"/>
+			<property name="Texture" value="33"/>
+			<property name="Tags" value="ore,deepOre"/>
+			<property name="SortOrder1" value="0000"/>
+			<property name="SortOrder2" value="0950"/>
+			<property name="FilterTags" value="MC_outdoor,SC_terrain"/>
+			<property name="Map.Color" value="184,115,51"/>
+			<property name="ImposterExclude" value="true"/>
+			<property name="DisplayType" value="blockTerrain"/>
+			<property name="DescriptionKey" value="terrainBlockGroupDesc"/>
+			<property name="MaxDamage" value="750"/>
+			<drop event="Harvest" name="resourceCopper" count="105" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceRockSmall" count="14" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceScrapBrass" prob=".05" count="200,400" tag="perkStrengthMasteryBrassHarvest"/>
+			<drop event="Harvest" name="resourceRawDiamond" prob=".005" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceSilverNugget" prob=".01" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceGoldNugget" prob=".007" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceCopper" count="150" prob="0.4" stick_chance="0"/>
+		</block-->		
+				
+		<block name="terrOreCopper">
+			<property name="CanMobsSpawnOn" value="true"/>
+			<property name="DescriptionKey" value="terrainBlockGroupDesc"/>
+			<property name="DisplayType" value="blockTerrain"/>
+			<property name="Map.Color" value="184,115,51"/>
+			<property name="Material" value="MoreMetal"/>
+			<property name="Shape" value="Terrain"/>
+			<property name="Mesh" value="terrain"/>
+			<property name="Texture" value="33"/>
+			<property name="ImposterExclude" value="true"/>
+			<drop event="Harvest" name="resourceCopper" count="105" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceRockSmall" count="14" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceScrapBrass" prob=".05" count="200,400" tag="perkStrengthMasteryBrassHarvest"/>
+			<drop event="Harvest" name="resourceRawDiamond" prob=".005" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceSilverNugget" prob=".01" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceGoldNugget" prob=".007" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceCopper" count="150" prob="0.4" stick_chance="0"/>
+			<property name="SortOrder1" value="0000"/>
+			<property name="SortOrder2" value="0950"/>
+			<property name="Tags" value="ore,deepOre"/>
+			<property name="FilterTags" value="MC_outdoor,SC_terrain"/>
+		</block>
+
+		<block name="terrOreTitanium">
+			<property name="CanMobsSpawnOn" value="true"/>
+			<property name="DescriptionKey" value="terrainBlockGroupDesc"/>
+			<property name="DisplayType" value="blockTerrain"/>
+			<property name="Map.Color" value="135,134,129"/>
+			<property name="Material" value="MoreMetal"/>
+			<property name="Shape" value="Terrain"/>
+			<property name="Mesh" value="terrain"/>
+			<property name="Texture" value="33"/>
+			<property name="ImposterExclude" value="true"/>
+			<drop event="Harvest" name="resourceTitanium" count="105" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceRockSmall" count="14" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceScrapBrass" prob=".05" count="200,400" tag="perkStrengthMasteryBrassHarvest"/>
+			<drop event="Harvest" name="resourceRawDiamond" prob=".005" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceSilverNugget" prob=".01" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceGoldNugget" prob=".007" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceTitanium" count="150" prob="0.4" stick_chance="0"/>
+			<property name="SortOrder1" value="0000"/>
+			<property name="SortOrder2" value="0950"/>
+			<property name="Tags" value="ore,deepOre"/>
+			<property name="FilterTags" value="MC_outdoor,SC_terrain"/>
+		</block>
 
 
+		<block name="terrOreZinc">
+			<property name="CanMobsSpawnOn" value="true"/>
+			<property name="DescriptionKey" value="terrainBlockGroupDesc"/>
+			<property name="DisplayType" value="blockTerrain"/>
+			<property name="Map.Color" value="144,137,136"/>
+			<property name="Material" value="MoreMetal"/>
+			<property name="Shape" value="Terrain"/>
+			<property name="Mesh" value="terrain"/>
+			<property name="Texture" value="33"/>
+			<property name="ImposterExclude" value="true"/>
+			<drop event="Harvest" name="resourceZinc" count="105" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceRockSmall" count="14" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceScrapBrass" prob=".05" count="200,400" tag="perkStrengthMasteryBrassHarvest"/>
+			<drop event="Harvest" name="resourceRawDiamond" prob=".005" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceSilverNugget" prob=".01" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Harvest" name="resourceGoldNugget" prob=".007" count="1" tag="artOfMiningLuckyStrikeHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="resourceZinc" count="150" prob="0.4" stick_chance="0"/>
+			<property name="SortOrder1" value="0000"/>
+			<property name="SortOrder2" value="0950"/>
+			<property name="Tags" value="ore,deepOre"/>
+			<property name="FilterTags" value="MC_outdoor,SC_terrain"/>
+		</block>
+
+		<block name="WorkingAirConditioner">
+			<property name="Class" value="Light"/>
+			<property name="CustomIcon" value="airConditioner" />
+			<property name="ActiveRadiusEffects" value="buffElementCold,8"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="WorkingAirConditionerDesc"/>
+			<property name="CraftIcon" value="airConditioner"/>
+			<property name="UnlockedBy" value="craftingWorkstations"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Appliances/ACUnitPrefab.prefab"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="52"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="HandleFace" value="Bottom"/>
+			<property name="Path" value="solid"/>
+			<property name="EconomicValue" value="450"/> <!-- disassemble value -->
+			<property class="RepairItems">
+				<property name="resourceScrapIron" value="30"/>
+			</property>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceElectricParts" count="3,12" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="1,4" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMetalPipe" count="1,5" tag="salvageHarvest"/>
+			<drop event="Destroy" name="resourceScrapIron" count="1,20"/>
+			<drop event="Destroy" name="resourceRadiator" count="1" prob="0.7" tag="salvageHarvest" tool_category="Disassemble"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="SortOrder1" value="B150"/>
+			<property name="SortOrder2" value="0000"/>
+			<property name="FilterTags" value="MC_outdoor,SC_decor"/>
+			<property name="Tags" value="challenge_elec_parts,challenge_mech_parts,challenge_sinks,challenge_cars"/>
+			<property name="IndexName" value="challenge_sinks"/>
+		</block>
 
 		<!--The master growing block, to set the respawn rate and health of the stand in-->
 		<block name="vehicleGrowingMaster">
@@ -1529,9 +1720,124 @@
 			<property name="DowngradeBlock" value="plantedforklift2Blue"/>
 		</append>
 		
+	<append xpath="/blocks">
+
+		<!-- TRADER_BOB_ONLY -->
+		<block name="busCityTraderOnly1">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="cntBusCity"/>
+			<property name="CustomIconTint" value="FF00FF"/>
+			<property name="Material" value="Mmetal_hard"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Vehicles/bus_city_traderPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0.5,0"/> <!-- buses are shifted in the fbx file -->
+			<property name="MultiBlockDim" value="3,3,9"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="WaterFlow" value="permitted"/>
+			<property name="Place" value="TowardsPlacer"/>
+			<property name="PlacementDistance" value="15"/>
+			<property name="Collide" value="sight,movement,melee,bullet,arrow,rocket"/>
+			<property name="BigDecorationRadius" value="5"/>
+			<property name="CanDecorateOnSlopes" value="false"/>
+			<property name="ShowModelOnFall" value="false"/>
+			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<property name="SortOrder1" value="LD04"/>
+			<property name="SortOrder2" value="0600"/>
+			<property name="FilterTags" value="MC_building,SC_automotive"/>
+		</block>
+
+		<!-- TRADER_BOB_ONLY -->
+		<block name="bicycleStatic1">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="vehicleBicyclePlaceable"/>
+			<property name="TintColor" value="218,200,135"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Vehicles/TraderVehicles/traderMountainBikeStaticPrefab.prefab"/>
+			<property name="ModelOffset" value="1.2,0,0"/>
+			<property name="MultiBlockDim" value="1,1,2"/>
+			<property name="WaterFlow" value="permitted"/>
+			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<property name="SortOrder1" value="LD04"/>
+			<property name="SortOrder2" value="0700"/>
+		</block>
+
+		<!-- TRADER_BOB_ONLY -->
+		<block name="minibikeStatic1">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="vehicleMinibikePlaceable"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="TintColor" value="798991"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Vehicles/TraderVehicles/traderMiniBikeStaticPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="WaterFlow" value="permitted"/>
+			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<property name="SortOrder1" value="LD04"/>
+			<property name="SortOrder2" value="0701"/>
+		</block>
+
+		<!-- TRADER_BOB_ONLY -->
+		<block name="motorcycleStatic1">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="vehicleMotorcyclePlaceable"/>
+			<property name="TintColor" value="808080"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Vehicles/TraderVehicles/traderMotorcycleStaticPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,3,1"/>
+			<property name="WaterFlow" value="permitted"/>
+			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<property name="SortOrder1" value="LD04"/>
+			<property name="SortOrder2" value="0702"/>
+		</block>
+
+		<!-- TRADER_BOB_ONLY -->
+		<block name="4x4Static1">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="TintColor" value="D45454"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Vehicles/TraderVehicles/Trader4x4StaticPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,1,4"/>
+			<property name="WaterFlow" value="permitted"/>
+			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<property name="SortOrder1" value="LD04"/>
+			<property name="SortOrder2" value="0703"/>
+		</block>
+
+		<!-- TRADER_BOB_ONLY -->
+		<block name="gyrocopterStatic1">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="TintColor" value="132,105,84"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="@:Entities/Vehicles/TraderVehicles/traderGyrocopterStaticPrefab.prefab"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,1,4"/>
+			<property name="WaterFlow" value="permitted"/>
+			<drop event="Harvest" name="resourceScrapIron" count="10,20" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Destroy" count="0"/>
+			<property name="SortOrder1" value="LD04"/>
+			<property name="SortOrder2" value="0704"/>
+		</block>
+
+	</append>
 
 	<append xpath="blocks">
-
 
 		<block name="AdvForge">
 			<!-- Class -->
