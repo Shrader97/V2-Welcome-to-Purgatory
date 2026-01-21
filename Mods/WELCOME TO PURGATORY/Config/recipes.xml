@@ -1493,10 +1493,6 @@
             <ingredient name="foodCropGarlic" count="1"/>
         </recipe>
 
-        <recipe name="foodChoppedLeek" count="10" craft_area="workbench" tags="perkMasterChef">
-            <ingredient name="foodCropLeek" count="1"/>
-        </recipe>
-
         <recipe name="foodChoppedOnion" count="10" craft_area="workbench" tags="perkMasterChef">
             <ingredient name="foodRawMeat" count="1"/>
         </recipe>
