@@ -813,7 +813,7 @@ challengeCraftStainLessSteelPolish,Craft Stainless Steel Polish
 challengeCraftStainLessSteelPolishShort,"[DECEA3]Advanced Grenades[-]"
 challengeCraftStainLessSteelPolishDesc,Craft 1000 Stainless Steel Polish
 
-
+meleeWpnBatonT3LazerBaton,Lazer Baton
 
 
 

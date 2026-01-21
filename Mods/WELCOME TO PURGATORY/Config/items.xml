@@ -4756,7 +4756,7 @@
             <property name="DisplayType" value="foodRaw"/>
             <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
             <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-            <property name="Material" value="MresourceChopped"/>
+            <property name="Material" value="Morganic"/>
             <property name="Stacknumber" value="250"/>
             <property name="EconomicValue" value="10"/>
             <!-- <property name="EconomicBundleSize" value="5"/> -->
@@ -4782,7 +4782,7 @@
             <property name="DisplayType" value="foodRaw"/>
             <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
             <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-            <property name="Material" value="MresourceChopped"/>
+            <property name="Material" value="Morganic"/>
             <property name="Stacknumber" value="250"/>
             <property name="EconomicValue" value="10"/>
             <!-- <property name="EconomicBundleSize" value="5"/> -->
@@ -4808,7 +4808,7 @@
             <property name="DisplayType" value="foodRaw"/>
             <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
             <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-            <property name="Material" value="MresourceChopped"/>
+            <property name="Material" value="Morganic"/>
             <property name="Stacknumber" value="250"/>
             <property name="EconomicValue" value="10"/>
             <!-- <property name="EconomicBundleSize" value="5"/> -->
@@ -4834,7 +4834,7 @@
             <property name="DisplayType" value="foodRaw"/>
             <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
             <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-            <property name="Material" value="MresourceChopped"/>
+            <property name="Material" value="Morganic"/>
             <property name="Stacknumber" value="250"/>
             <property name="EconomicValue" value="10"/>
             <!-- <property name="EconomicBundleSize" value="5"/> -->
@@ -4860,7 +4860,7 @@
             <property name="DisplayType" value="foodRaw"/>
             <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
             <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-            <property name="Material" value="MresourceChopped"/>
+            <property name="Material" value="Morganic"/>
             <property name="Stacknumber" value="250"/>
             <property name="EconomicValue" value="10"/>
             <!-- <property name="EconomicBundleSize" value="5"/> -->
@@ -4886,7 +4886,7 @@
             <property name="DisplayType" value="foodRaw"/>
             <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
             <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-            <property name="Material" value="MresourceChopped"/>
+            <property name="Material" value="Morganic"/>
             <property name="Stacknumber" value="250"/>
             <property name="EconomicValue" value="10"/>
             <!-- <property name="EconomicBundleSize" value="5"/> -->
@@ -4913,7 +4913,7 @@
             <property name="DisplayType" value="foodRaw"/>
             <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
             <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-            <property name="Material" value="MresourceChopped"/>
+            <property name="Material" value="Morganic"/>
             <property name="Stacknumber" value="250"/>
             <property name="EconomicValue" value="10"/>
             <!-- <property name="EconomicBundleSize" value="5"/> -->
@@ -4939,7 +4939,7 @@
             <property name="DisplayType" value="foodRaw"/>
             <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
             <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-            <property name="Material" value="MresourceChopped"/>
+            <property name="Material" value="Morganic"/>
             <property name="Stacknumber" value="250"/>
             <property name="EconomicValue" value="10"/>
             <!-- <property name="EconomicBundleSize" value="5"/> -->
@@ -4965,7 +4965,7 @@
             <property name="DisplayType" value="foodRaw"/>
             <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
             <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-            <property name="Material" value="MresourceChopped"/>
+            <property name="Material" value="Morganic"/>
             <property name="Stacknumber" value="250"/>
             <property name="EconomicValue" value="10"/>
             <!-- <property name="EconomicBundleSize" value="5"/> -->
@@ -4991,7 +4991,7 @@
             <property name="DisplayType" value="foodRaw"/>
             <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
             <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-            <property name="Material" value="MresourceChopped"/>
+            <property name="Material" value="Morganic"/>
             <property name="Stacknumber" value="250"/>
             <property name="EconomicValue" value="10"/>
             <!-- <property name="EconomicBundleSize" value="5"/> -->
@@ -5017,7 +5017,7 @@
             <property name="DisplayType" value="foodRaw"/>
             <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
             <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-            <property name="Material" value="MresourceChopped"/>
+            <property name="Material" value="Morganic"/>
             <property name="Stacknumber" value="250"/>
             <property name="EconomicValue" value="10"/>
             <!-- <property name="EconomicBundleSize" value="5"/> -->
