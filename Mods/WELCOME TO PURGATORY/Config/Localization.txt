@@ -507,10 +507,11 @@ perkSniperCompleteDesc,Increased entity damage by 30% while using rifles.,
 perkSniperCompleteLongDesc,Increased entity damage by 30% while using rifles.,
 
 
+WorkingAirConditioner,Working AirConditioner
+WorkingAirConditionerDesc,Working AirConditioner to reduce the heat
 
 
-
-
+resourceEmptyVapeBundle,"Empty Vape Bundle"
 
 toolBellowsDesc,,"A tool that can be installed in a forge. It increases air flow and so the crafting 
 speed of the forge."
@@ -534,7 +535,17 @@ animalChihuahua,"Zombified Chihuahua"
 animalAlphaBear,"Alpha Bear"
 animalFriendlyChihuahua,"Zombified Chihuahua"
 
+seedsT3-1,Tier 3: Bell Pepper,
+seedsT3-2,Tier 3: Cabbage,
+seedsT3-3,Tier 3: Cantaloupe,
+seedsT3-4,Tier 3: Chili Pepper,
+seedsT3-5,Tier 3: Eggplant,
 
+seedsT4-1,Tier 4: Grapes,
+seedsT4-2,Tier 4: Leek,
+seedsT4-3,Tier 4: Strawberry,
+seedsT4-4,Tier 4: Onion,
+seedsT4-5,Tier 4: Wheat,
 
 
 antivenom,"Anti-venom"

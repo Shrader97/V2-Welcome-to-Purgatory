@@ -41,6 +41,13 @@
 		<item name="foodEgg" loot_prob_template="veryLow" count="0,3"/>
 	</append>
 
+	<append xpath="/lootcontainers/lootgroup[@name='groupIngredientsCommon']">
+		<item name="Yeast" loot_prob_template="med" count="1,3"/>
+		<item name="Flour" loot_prob_template="med" count="1,6"/>
+	</append>
+
+
+
 	<set xpath="/lootcontainers/lootcontainer[@name='playerBackpack']/@size">13,6</set>
 	<set xpath="/lootcontainers/lootcontainer[@name='playerWoodWritableStorage']/@size">10,10</set> <!-- 100 Slots -->
 	<set xpath="/lootcontainers/lootcontainer[@name='playerIronWritableStorage']/@size">12,10</set> <!-- 120 Slots -->
@@ -110,21 +117,6 @@
 		<item name="modMeleeStunRepulsor"/>
 	</append>
 
-	<append xpath="/lootcontainers">
-		<lootcontainer name="treeStump" count="1,4" size="6,1" sound_open="UseActions/open_stump" sound_close="UseActions/close_stump" loot_quality_template="qualBaseTemplate" buff="buffScavengingServerHack,buffScavengingSkillXPTick">
-			<item group="cannedfood" loot_prob_template="high" count="0,2" />
-			<item group="groupAmmoSmall" loot_prob_template="veryLow" count="0,2" />
-			<item group="groupWeaponsAllScaled" loot_prob_template="veryLow" count="0,1" />
-			<item name="drinkJarBoiledWater" count="1,2" loot_prob_template="low">
-			</item>
-			<item name="modArmorNightVision" count="0,1" loot_prob_template="veryLow">
-			</item>
-			<item name="drugPainkillers" loot_prob_template="veryLow" />
-			<item name="medicalFirstAidBandage" loot_prob_template="veryLow" />
-			<item name="drugVitamins" loot_prob_template="veryLow" />
-			<item name="foodHoney" loot_prob_template="low" />
-		</lootcontainer>
-	</append>
 
     <append xpath="/lootcontainers">	
 

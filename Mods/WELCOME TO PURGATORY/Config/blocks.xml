@@ -1088,7 +1088,7 @@
 			<drop event="Destroy" count="0"/>
 			
 			<!--I used this model to help infer the space the car will take up-->
-			<property name="Model" value="@:Entities/Vehicles/Car/car_seat_uprightPrefab.prefab"/>						
+			<property name="Model" value="@:Entities/OutdoorDecor/tire02Prefab.prefab"/>						
 			<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
 			<property name="CanMobsSpawnOn" value="false" />
 			<drop event="Fall" name="plantedCar" count="1" prob="0.3" stick_chance=".8"/>	

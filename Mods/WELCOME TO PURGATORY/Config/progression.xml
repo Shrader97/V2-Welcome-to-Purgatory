@@ -328,11 +328,69 @@
 	<csv xpath="//crafting_skill[@name='craftingWorkstations']//unlock_entry[contains(@item, 'toolApiaryExtractor')]/@item" op="add">WorkingAirConditioner</csv>
     <csv xpath="//crafting_skill[@name='craftingWorkstations']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'toolApiaryExtractor')]/@tags" op="add">WorkingAirConditioner</csv>
 
+    <remove xpath="//crafting_skill[@name='craftingSeeds']"/>
+
+    <insertBefore xpath="//crafting_skill[@name='craftingElectrician']">
+        <crafting_skill name="craftingSeeds" max_level="40" parent="attCrafting" name_key="craftingSeedsName" desc_key="craftingSeedsDesc" long_desc_key="craftingSeedsLongDesc" icon="ui_game_symbol_crops">
+
+            <display_entry icon="plantedCotton1,plantedGoldenrod1,plantedCoffee1,plantedYucca1,plantedAloe1" name_key="seedsT1-1,seedsT1-2,seedsT1-3,seedsT1-4,seedsT1-5" has_quality="false" unlock_level="2,4,6,8,10" >
+                <unlock_entry item="plantedCotton1" unlock_tier="1"/>
+                <unlock_entry item="plantedGoldenrod1,plantedChrysanthemum1" unlock_tier="2"/>
+                <unlock_entry item="plantedCoffee1" unlock_tier="3"/>
+                <unlock_entry item="plantedYucca1" unlock_tier="4"/>
+                <unlock_entry item="plantedAloe1" unlock_tier="5"/>
+            </display_entry>
+            <display_entry icon="plantedBlueberry1,plantedPumpkin1,plantedMushroom1,plantedCorn1,plantedPotato1" name_key="seedsT2-1,seedsT2-2,seedsT2-3,seedsT2-4,seedsT2-5" has_quality="false" unlock_level="12,14,16,18,20" >
+                <unlock_entry item="plantedBlueberry1,plantedHop1" unlock_tier="1"/>
+                <unlock_entry item="plantedPumpkin1" unlock_tier="2"/>
+                <unlock_entry item="plantedMushroom1" unlock_tier="3"/>
+                <unlock_entry item="plantedCorn1" unlock_tier="4"/>
+                <unlock_entry item="plantedPotato1" unlock_tier="5"/>
+            </display_entry>
+            <display_entry icon="plantedBellPepper1,plantedCabbage1,plantedCantaloupe1,plantedChiliPepper1,plantedEggplant1" name_key="seedsT3-1,seedsT3-2,seedsT3-3,seedsT3-4,seedsT3-5" has_quality="false" unlock_level="22,24,26,28,30" >
+                <unlock_entry item="plantedBellPepper1,plantedTomato1" unlock_tier="1"/>
+                <unlock_entry item="plantedCabbage1" unlock_tier="2"/>
+                <unlock_entry item="plantedCantaloupe1" unlock_tier="3"/>
+                <unlock_entry item="plantedChiliPepper1" unlock_tier="4"/>
+                <unlock_entry item="plantedEggplant1" unlock_tier="5"/>
+            </display_entry>
+            <display_entry icon="plantedGrapes1,plantedLeek1,plantedStrawberry1,plantedOnion1,plantedWheat1" name_key="seedsT4-1,seedsT4-2,seedsT4-3,seedsT4-4,seedsT4-5" has_quality="false" unlock_level="32,34,26,38,40" >
+                <unlock_entry item="plantedGrapes1,plantedGarlic1" unlock_tier="1"/>
+                <unlock_entry item="plantedLeek1" unlock_tier="2"/>
+                <unlock_entry item="plantedStrawberry1" unlock_tier="3"/>
+                <unlock_entry item="plantedOnion1" unlock_tier="4"/>
+                <unlock_entry item="plantedWheat1" unlock_tier="5"/>
+            </display_entry>
 
 
 
+            <effect_group>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,100" value="1" tags="plantedCotton1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,100" value="1" tags="plantedGoldenrod1,plantedChrysanthemum1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,100" value="1" tags="plantedCoffee1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="8,100" value="1" tags="plantedYucca1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,100" value="1" tags="plantedAloe1"/>
 
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="12,100" value="1" tags="plantedBlueberry1,plantedHop1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="14,100" value="1" tags="plantedPumpkin1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="16,100" value="1" tags="plantedMushroom1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="18,100" value="1" tags="plantedCorn1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,100" value="1" tags="plantedPotato1"/>
 
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="22,100" value="1" tags="plantedBellPepper1,plantedTomato1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="24,100" value="1" tags="plantedCabbage1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="26,100" value="1" tags="plantedCantaloupe1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="28,100" value="1" tags="plantedChiliPepper1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,100" value="1" tags="plantedEggplant1"/>
+
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="32,100" value="1" tags="plantedGrapes1,plantedGarlic1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="34,100" value="1" tags="plantedLeek1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="36,100" value="1" tags="plantedStrawberry1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="38,100" value="1" tags="plantedOnion1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,100" value="1" tags="plantedWheat1"/>
+            </effect_group>
+        </crafting_skill>
+    </insertBefore>
 
 	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'drinkJarRedTea')]/@item" op="add">Iced Mixed Tea</csv>
     <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'drinkJarRedTea')]/@tags" op="add">Iced Mixed Tea</csv>

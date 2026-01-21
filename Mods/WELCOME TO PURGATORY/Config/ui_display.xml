@@ -40,6 +40,7 @@
 
 		<crafting_category_list display_type="Recycler">
 			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+			<crafting_category name="Science" icon="ui_game_symbol_science" display_name="lblCategoryScience" />	
 		</crafting_category_list>
 
 

@@ -145,7 +145,7 @@
 	
 	<append xpath="/blocks/block[@name='decoComputerMonitorKeyboardMousePC']">
 		<property name="Class" value="Loot"/>
-		<property name='LootList' value='1computer1'/>
+		<property name='LootList' value='1computer2'/>
 	</append>
 	
 	<!--pet cage-->

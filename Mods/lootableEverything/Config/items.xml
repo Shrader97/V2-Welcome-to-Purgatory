@@ -8,5 +8,108 @@
 		<property name="RepairTools" value="resourceRepairKit"/>
 	</append>
 
+	<append xpath="/items">
+
+        <item name="resourceGPU2060">
+            <property name="HoldType" value="45"/>
+			<property name="CustomIcon" value="gpu"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mglass"/>
+            <property name="Weight" value="10"/>
+            <property name="Stacknumber" value="250"/> <!-- STK resource -->
+            <property name="EconomicValue" value="1000"/>
+            <property name="Group" value="Science"/>
+        </item>
+
+        <item name="resourceGPU1060">
+            <property name="HoldType" value="45"/>
+			<property name="CustomIcon" value="gpu"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mglass"/>
+            <property name="Weight" value="10"/>
+            <property name="Stacknumber" value="250"/> <!-- STK resource -->
+            <property name="EconomicValue" value="500"/>
+            <property name="Group" value="Science"/>
+        </item>
+
+		<item name="resourceBrokenGPU">
+            <property name="HoldType" value="45"/>
+			<property name="CustomIcon" value="gpu"/>
+			<property name="CustomIconTint" value="#ff0000"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mglass"/>
+            <property name="Weight" value="10"/>
+            <property name="Stacknumber" value="250"/> <!-- STK resource -->
+            <property name="EconomicValue" value="100"/>
+            <property name="Group" value="Science"/>
+        </item>
+
+		<item name="resourceRam">
+            <property name="HoldType" value="45"/>
+			<property name="CustomIcon" value="ram"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mglass"/>
+            <property name="Weight" value="10"/>
+            <property name="Stacknumber" value="250"/> <!-- STK resource -->
+            <property name="EconomicValue" value="250"/>
+            <property name="Group" value="Science"/>
+        </item>
+
+		<item name="resourceBrokenRam">
+            <property name="HoldType" value="45"/>
+			<property name="CustomIcon" value="ram"/>
+			<property name="CustomIconTint" value="#ff0000"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mglass"/>
+            <property name="Weight" value="10"/>
+            <property name="Stacknumber" value="250"/> <!-- STK resource -->
+            <property name="EconomicValue" value="250"/>
+            <property name="Group" value="Science"/>
+        </item>
+
+        <item name="resourcei7-6700K">
+            <property name="HoldType" value="45"/>
+			<property name="CustomIcon" value="cpu"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mglass"/>
+            <property name="Weight" value="10"/>
+            <property name="Stacknumber" value="250"/> <!-- STK resource -->
+            <property name="EconomicValue" value="1000"/>
+            <property name="Group" value="Science"/>
+        </item>
+
+        <item name="resourcei5-6600K">
+            <property name="HoldType" value="45"/>
+			<property name="CustomIcon" value="cpu"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mglass"/>
+            <property name="Weight" value="10"/>
+            <property name="Stacknumber" value="250"/> <!-- STK resource -->
+            <property name="EconomicValue" value="500"/>
+            <property name="Group" value="Science"/>
+        </item>
+
+        <item name="resourceBrokenCPU">
+            <property name="HoldType" value="45"/>
+			<property name="CustomIcon" value="cpu"/>
+			<property name="CustomIconTint" value="#ff0000"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Mglass"/>
+            <property name="Weight" value="10"/>
+            <property name="Stacknumber" value="250"/> <!-- STK resource -->
+            <property name="EconomicValue" value="500"/>
+            <property name="Group" value="Science"/>
+        </item>
+
+
+	</append>
 		
 </lootableEverything>

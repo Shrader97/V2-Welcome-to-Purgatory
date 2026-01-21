@@ -347,6 +347,14 @@
             <ingredient name="resourceWood" count="250"/>
         </recipe>
 
+        <recipe name="Recycler" count="1" tags="learnable,workbenchCrafting">
+            <ingredient name="resourceForgedIron" count="50"/>
+            <ingredient name="resourceMechanicalParts" count="20"/>
+            <ingredient name="resourceDuctTape" count="5"/>
+            <ingredient name="resourceNail" count="250"/>
+            <ingredient name="resourceWood" count="250"/>
+        </recipe>
+
         <recipe name="BenchtopLathe" count="1" tags="learnable,workbenchCrafting">
             <ingredient name="resourceForgedSteel" count="50"/>
             <ingredient name="resourceMechanicalParts" count="20"/>
@@ -1435,9 +1443,111 @@
 			<ingredient name="drinkBowlEmpty" count="1"/>
 		</recipe>
 
-		<!--recipe name="SliceOfBread" count="32">
+		<recipe name="Yeast" count="2">
+			<ingredient name="drinkJarBoiledWater" count="1" />
+			<ingredient name="foodCropWheat" count="1" />
+			<ingredient name="Flour" count="1" />
+		</recipe>
+
+		<recipe name="dough" count="1">
+			<ingredient name="drinkJarBoiledWater" count="1" />
+			<ingredient name="Flour" count="1" />
+			<ingredient name="Yeast" count="1" />
+		</recipe>
+
+		<recipe name="Bread" count="1" craft_area="campfire" craft_tool="toolCookingPot">
+			<ingredient name="dough" count="2" />
+		</recipe>
+
+		<recipe name="Bread" count="1" craft_area="WorkingStove" craft_tool="carBattery">
+			<ingredient name="dough" count="1" />
+		</recipe>
+
+		<recipe name="SliceOfBread" count="32">
 			<ingredient name="Bread" count="1" />
-		</recipe-->
+		</recipe>
+
+    <!-- chopped Stuff -->
+
+        <recipe name="foodChoppedBellPepper" count="10" craft_area="workbench" tags="perkMasterChef">
+            <ingredient name="foodCropBellPepper" count="1"/>
+        </recipe>
+
+        <recipe name="foodChoppedCabbage" count="10" craft_area="workbench" tags="perkMasterChef">
+            <ingredient name="foodCropCabbage" count="1"/>
+        </recipe>
+
+        <recipe name="foodChoppedCantaloupe" count="10" craft_area="workbench" tags="perkMasterChef">
+            <ingredient name="foodCropCantaloupe" count="1"/>
+        </recipe>
+
+        <recipe name="foodChoppedChiliPepper" count="10" craft_area="workbench" tags="perkMasterChef">
+            <ingredient name="foodCropChiliPepper" count="1"/>
+        </recipe>
+
+        <recipe name="foodChoppedEggplant" count="10" craft_area="workbench" tags="perkMasterChef">
+            <ingredient name="foodCropEggplant" count="1"/>
+        </recipe>
+
+        <recipe name="foodChoppedGarlic" count="10" craft_area="workbench" tags="perkMasterChef">
+            <ingredient name="foodCropGarlic" count="1"/>
+        </recipe>
+
+        <recipe name="foodChoppedLeek" count="10" craft_area="workbench" tags="perkMasterChef">
+            <ingredient name="foodCropLeek" count="1"/>
+        </recipe>
+
+        <recipe name="foodChoppedOnion" count="10" craft_area="workbench" tags="perkMasterChef">
+            <ingredient name="foodRawMeat" count="1"/>
+        </recipe>
+
+        <recipe name="foodChoppedStrawberry" count="10" craft_area="workbench" tags="perkMasterChef">
+            <ingredient name="foodCropStrawberry" count="1"/>
+        </recipe>
+
+        <recipe name="foodChoppedTomato" count="10" craft_area="workbench" tags="perkMasterChef">
+            <ingredient name="foodCropTomato" count="1"/>
+        </recipe>
+
+        <!--recipe name="foodGroundPork" count="10" craft_area="workbench" tags="perkMasterChef">
+            <ingredient name="foodRawMeat" count="10"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add" value="-1,-3,-5" tags="foodRawMeat"/>
+            </effect_group>
+        </recipe-->
+
+        <recipe name="foodGroundBeef" count="10" craft_area="workbench" tags="perkMasterChef">
+            <ingredient name="foodRawMeat" count="10"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add" value="-1,-3,-5" tags="foodRawMeat"/>
+            </effect_group>
+        </recipe>
+
+        <recipe name="foodstuffedbellpepper" craft_time="25" count="1" tags="perkMasterChef,learnable">
+            <ingredient name="foodCropBellPepper" count="2"/>
+            <ingredient name="foodGroundBeef" count="1"/>
+            <ingredient name="foodChoppedTomato" count="1"/>
+            <ingredient name="foodChoppedOnion" count="1"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add" value="-1,-3,-5" tags="foodCropGrapes"/>
+            </effect_group>
+        </recipe>
+
+        <recipe name="drinkGrapeJuiceSmoothie" craft_time="25" count="1" tags="perkMasterChef,learnable,packMuleCrafting">
+            <ingredient name="foodCropGrapes" count="8"/>
+            <ingredient name="resourceSnowBall" count="1"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add" value="-1,-3,-5" tags="foodCropGrapes"/>
+            </effect_group>
+        </recipe>
+
+        <recipe name="drinkStrawberryJuiceSmoothie" craft_time="25" count="1" tags="perkMasterChef,learnable,packMuleCrafting">
+            <ingredient name="foodCropStrawberry" count="8"/>
+            <ingredient name="resourceSnowBall" count="1"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add" value="-1,-3,-5" tags="foodCropStrawberry"/>
+            </effect_group>
+        </recipe>
 
         <recipe name="resourceAnimalFat" craft_time="10" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkMasterChef">
             <ingredient name="foodRottingFlesh" count="3"/>
@@ -2159,6 +2269,32 @@
         <recipe name="resourceScrapIron" count="24" craft_time="1" craft_area="Recycler">
             <ingredient name="showerHead" count="1"/>
         </recipe>
+
+        <recipe name="resourcePlatinumNugget" count="5" craft_time="1" craft_area="Recycler">
+            <ingredient name="resourceBrokenCPU" count="1"/>
+        </recipe>
+
+        <recipe name="resourcePlatinumNugget" count="7" craft_time="1" craft_area="Recycler">
+            <ingredient name="resourcei5-6600K" count="1"/>
+        </recipe>
+
+        <recipe name="resourcePlatinumNugget" count="10" craft_time="1" craft_area="Recycler">
+            <ingredient name="resourcei7-6700K" count="1"/>
+        </recipe>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </append>
 

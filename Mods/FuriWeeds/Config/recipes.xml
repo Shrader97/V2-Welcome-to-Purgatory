@@ -2,42 +2,42 @@
 	<append xpath="/recipes">
 
 		<recipe name="PlantedAk471" count="1" craft_time="1" craft_exp_gain="5" tags="learnable">
-			<ingredient name="Grams Of Ak47" count="5"/>
+			<ingredient name="Grams Of Ak47" count="1"/>
 		</recipe>
 
 		<recipe name="PlantedChemDawg1" count="1" craft_time="1" craft_exp_gain="5" tags="learnable">
-			<ingredient name="Grams Of ChemDawg" count="5"/>
+			<ingredient name="Grams Of ChemDawg" count="1"/>
 		</recipe>
 
 		<recipe name="PlantedWeddingCake1" count="1" craft_time="1" craft_exp_gain="5" tags="learnable">
-			<ingredient name="Grams Of Wedding Cake" count="5"/>
+			<ingredient name="Grams Of Wedding Cake" count="1"/>
 		</recipe>
 
 		<recipe name="PlantedBlueDream1" count="1" craft_time="1" craft_exp_gain="5" tags="learnable">
-			<ingredient name="Grams Of Blue Dream" count="5"/>
+			<ingredient name="Grams Of Blue Dream" count="1"/>
 		</recipe>
 
 		<recipe name="PlantedPurpleHaze1" count="1" craft_time="1" craft_exp_gain="5" tags="learnable">
-			<ingredient name="Grams Of Purple Haze" count="5"/>
+			<ingredient name="Grams Of Purple Haze" count="1"/>
 		</recipe>
 
-		<recipe name="Grams Of Ak47" count="5" craft_time="420" craft_area="Weedworkstation" craft_exp_gain="10" always_unlocked="true">
+		<recipe name="Grams Of Ak47" count="1" craft_time="420" craft_area="Weedworkstation" craft_exp_gain="10" always_unlocked="true">
 			<ingredient name="WeedStemAk47" count="1"/>
 		</recipe>
 
-		<recipe name="Grams Of ChemDawg" count="5" craft_time="420" craft_area="Weedworkstation" craft_exp_gain="10" always_unlocked="true">
+		<recipe name="Grams Of ChemDawg" count="1" craft_time="420" craft_area="Weedworkstation" craft_exp_gain="10" always_unlocked="true">
 			<ingredient name="WeedStemChemDawg" count="1"/>
 		</recipe>
 
-		<recipe name="Grams Of Wedding Cake" count="5" craft_time="420" craft_area="Weedworkstation" craft_exp_gain="10" always_unlocked="true">
+		<recipe name="Grams Of Wedding Cake" count="1" craft_time="420" craft_area="Weedworkstation" craft_exp_gain="10" always_unlocked="true">
 			<ingredient name="WeedStemWeddingCake" count="1"/>
 		</recipe>
 
-		<recipe name="Grams Of Blue Dream" count="5" craft_time="420" craft_area="Weedworkstation" craft_exp_gain="10" always_unlocked="true">
+		<recipe name="Grams Of Blue Dream" count="1" craft_time="420" craft_area="Weedworkstation" craft_exp_gain="10" always_unlocked="true">
 			<ingredient name="WeedStemBlueDream" count="1"/>
 		</recipe>
 
-		<recipe name="Grams Of Purple Haze" count="5" craft_time="420" craft_area="Weedworkstation" craft_exp_gain="10" always_unlocked="true">
+		<recipe name="Grams Of Purple Haze" count="1" craft_time="420" craft_area="Weedworkstation" craft_exp_gain="10" always_unlocked="true">
 			<ingredient name="WeedStemPurpleHaze" count="1"/>
 		</recipe>
 
@@ -166,27 +166,27 @@
 
 		<recipe name="Bong Filled With AK-47" count="1" craft_time="5" craft_exp_gain="10" always_unlocked="true">
 			<ingredient name="Bong" count="1"/>
-			<ingredient name="Grams Of Ak47" count="5"/>
+			<ingredient name="Grams Of Ak47" count="1"/>
 		</recipe>
 
 		<recipe name="Bong Filled With ChemDawg" count="1" craft_time="5" craft_exp_gain="10" always_unlocked="true">
 			<ingredient name="Bong" count="1"/>
-			<ingredient name="Grams Of ChemDawg" count="5"/>
+			<ingredient name="Grams Of ChemDawg" count="1"/>
 		</recipe>
 
 		<recipe name="Bong Filled With Wedding Cake" count="1" craft_time="5" craft_exp_gain="10" always_unlocked="true">
 			<ingredient name="Bong" count="1"/>
-			<ingredient name="Grams Of Wedding Cake" count="5"/>
+			<ingredient name="Grams Of Wedding Cake" count="1"/>
 		</recipe>
 
 		<recipe name="Bong Filled With Blue Dream" count="1" craft_time="5" craft_exp_gain="10" always_unlocked="true">
 			<ingredient name="Bong" count="1"/>
-			<ingredient name="Grams Of Blue Dream" count="5"/>
+			<ingredient name="Grams Of Blue Dream" count="1"/>
 		</recipe>
 
 		<recipe name="Bong Filled With Purple Haze" count="1" craft_time="5" craft_exp_gain="10" always_unlocked="true">
 			<ingredient name="Bong" count="1"/>
-			<ingredient name="Grams Of Purple Haze" count="5"/>
+			<ingredient name="Grams Of Purple Haze" count="1"/>
 		</recipe>
 
 		<recipe name="Oil Rig Filled with Shatter" count="1" craft_time="5" craft_exp_gain="10" always_unlocked="true">
@@ -245,7 +245,7 @@
 		</recipe>
 
 		<recipe name="ratrasta" count="1" craft_time="60" craft_area="workbench" craft_exp_gain="0" tags="learnable,workbenchCrafting">
-			<ingredient name="resourceWood" count="5"/>
+			<ingredient name="resourceWood" count="1"/>
 			<ingredient name="resourceLeather" count="10"/>
 			<ingredient name="resourcePaper" count="1"/>
 			<ingredient name="SuperWeed" count="1"/>

@@ -1,0 +1,8 @@
+key,English
+resourceGPU1060,GPU 1060
+resourceGPU2060,GPU 2060
+resourceRam,DDR3 Ram 8GB 
+resourcei7-6700K,CPU i7-6700K
+resourcei5-6600K,CPU i5-6600K
+
+
