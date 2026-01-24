@@ -206,10 +206,19 @@ buffTuberculosisGettingWorseTooltip,Your Tuberculosis will no longer heal on its
 buffTuberculosisImmunityDesc,Your immune system is an Tuberculosis fighting machine!,
 buffTuberculosisImmunityName,Tuberculosis Immunity
 
-
-KnoxVaultDoor,VaultDoor
-
 foodSharkStew,Shark Stew
+foodBurgerFrenchFryes,"Hamburger & French Fryes"
+foodRamenNoodles,"Ramen Noodles"
+
+
+
+
+
+
+
+
+
+
 
 
 buffSugerRushTooltip,"WOOHOO You have a Suger Rush!!!"
@@ -813,7 +822,7 @@ challengeCraftStainLessSteelPolish,Craft Stainless Steel Polish
 challengeCraftStainLessSteelPolishShort,"[DECEA3]Advanced Grenades[-]"
 challengeCraftStainLessSteelPolishDesc,Craft 1000 Stainless Steel Polish
 
-meleeWpnBatonT3LazerBaton,Lazer Baton
+meleeWpnBatonT3LazerBaton,"Loveshack's Lazer Baton"
 
 
 

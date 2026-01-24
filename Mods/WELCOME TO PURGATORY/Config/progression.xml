@@ -490,6 +490,24 @@
 
 	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodTunaFishGravyToast')]/@item" op="add">WorkingStove</csv>
     <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodTunaFishGravyToast')]/@tags" op="add">WorkingStove</csv>
+	
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodSpaghetti')]/@item" op="add">foodstuffedbellpepper</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodSpaghetti')]/@tags" op="add">foodstuffedbellpepper</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodShepardsPie')]/@item" op="add">foodHamburger</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodShepardsPie')]/@tags" op="add">foodHamburger</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'drinkYuccaJuiceSmoothie')]/@item" op="add">foodCookedHamburger</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'drinkYuccaJuiceSmoothie')]/@tags" op="add">foodCookedHamburger</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodPumpkinPie')]/@item" op="add">foodFrenchFryes</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodPumpkinPie')]/@tags" op="add">foodFrenchFryes</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodFishTacos')]/@item" op="add">foodRamenNoodles</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodFishTacos')]/@tags" op="add">foodRamenNoodles</csv>
+	
+    <csv xpath="//crafting_skill[@name='craftingFood']//unlock_entry[contains(@item, 'foodGumboStew')]/@item" op="add">foodBurgerFrenchFryes</csv>
+    <csv xpath="//crafting_skill[@name='craftingFood']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'foodGumboStew')]/@tags" op="add">foodBurgerFrenchFryes</csv>
 
     <remove xpath="/progression/perks/perk[@name='perkInfiltrator']" />
 
