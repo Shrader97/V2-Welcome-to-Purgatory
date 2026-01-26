@@ -1,5 +1,5 @@
 <Byteblazar>
-	<append xpath="/recipes">
+	<!--append xpath="/recipes">
 		<recipe name="bbxfx_itemAmmoFlashThunderGrenade" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
 			<ingredient name="resourceGunPowder" count="6"/>
 			<ingredient name="resourcePotassiumNitratePowder" count="4"/>
@@ -23,5 +23,5 @@
 			<ingredient name="resourceDuctTape" count="2"/>
 			<ingredient name="resourceMechanicalParts" count="1"/>
 		</recipe>
-	</append>
+	</append-->
 </Byteblazar>

@@ -4788,6 +4788,45 @@
             </effect_group>
         </item>
 
+        <item name="foodHumanFlesh">
+            <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="foodRawMeat"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/raw_meatPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="MfoodRawMeat"/>
+            <property name="Stacknumber" value="125"/> <!-- STK food -->
+            <!-- <property name="EconomicBundleSize" value="5"/> -->
+            <property name="EconomicValue" value="20"/>
+            <property name="CraftingIngredientTime" value="3"/>
+            <property name="SoundPickup" value="meat_raw_grab"/>
+            <property name="SoundPlace" value="meat_raw_place"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+                <property name="SmellUse" value="50"/>
+            </property>
+            <property name="Smell" value="1"/>
+            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+            <effect_group tiered="false" name="Food Tier 0">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="Health" operation="add" value="-1"/>
+                <display_value name="foodHealthAmount" value="-1"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="-1"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="set" value="12"/>
+                <display_value name="dDysenteryRisk" value=".12"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".DiseaseRoll" operation="add" value="@$MetabolismResist"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryCatchFood">
+                    <requirement name="RandomRoll" seed_type="Random" min_max="1,100" operation="LTE" value="@.DiseaseRoll"/>
+                </triggered_effect>
+                <display_value name="dSmell" value="1"/> <!-- 1 = Sets the Display bool to Yes -->
+                <display_value name="dSmellUse" value="1"/> <!-- 1 = Sets the Display bool to Yes -->
+            </effect_group>
+        </item>
+
 
     <!-- chopped stuff -->
 

@@ -26,6 +26,98 @@
 
     <append xpath="/entity_classes/entity_class[@name='zombieYoRadiated']">
         <property name="HandItem" value="meleeHandZombieInfluenza"/>
+    </append>
+
+    <append xpath="/entity_classes/entity_class[@name='npcHarleyEmptyHand']">
+        <drop event="Harvest" name="foodHumanFlesh" count="5" tool_category="Butcher" />
+    </append>
+
+    <append xpath="/entity_classes/entity_class[@name='npcHarleyClub']">
+        <drop event="Harvest" name="foodHumanFlesh" count="5" tool_category="Butcher" />
+    </append>
+
+    <append xpath="/entity_classes/entity_class[@name='npcHarleyKnife']">
+        <drop event="Harvest" name="foodHumanFlesh" count="5" tool_category="Butcher" />
+    </append>
+
+    <append xpath="/entity_classes/entity_class[@name='npcHarleyBat']">
+        <drop event="Harvest" name="foodHumanFlesh" count="5" tool_category="Butcher" />
+    </append>
+
+    <append xpath="/entity_classes/entity_class[@name='npcHarleyMachete']">
+        <drop event="Harvest" name="foodHumanFlesh" count="5" tool_category="Butcher" />
+    </append>
+
+    <append xpath="/entity_classes/entity_class[@name='npcHarleyAxe']">
+        <drop event="Harvest" name="foodHumanFlesh" count="5" tool_category="Butcher" />
+    </append>
+
+    <append xpath="/entity_classes/entity_class[@name='npcHarleySpear']">
+        <drop event="Harvest" name="foodHumanFlesh" count="5" tool_category="Butcher" />
+    </append>
+
+    <append xpath="/entity_classes/entity_class[@name='npcHarleyPipePistol']">
+        <drop event="Harvest" name="foodHumanFlesh" count="5" tool_category="Butcher" />
+    </append>
+
+    <append xpath="/entity_classes/entity_class[@name='npcHarleyPipeRifle']">
+        <drop event="Harvest" name="foodHumanFlesh" count="5" tool_category="Butcher" />
+    </append>
+
+    <append xpath="/entity_classes/entity_class[@name='npcHarleyPipeMG']">
+        <drop event="Harvest" name="foodHumanFlesh" count="5" tool_category="Butcher" />
+    </append>
+
+    <append xpath="/entity_classes/entity_class[@name='npcHarleyPipeShotgun']">
+        <drop event="Harvest" name="foodHumanFlesh" count="5" tool_category="Butcher" />
+    </append>
+
+    <append xpath="/entity_classes/entity_class[@name='npcHarleySMG']">
+        <drop event="Harvest" name="foodHumanFlesh" count="5" tool_category="Butcher" />
+    </append>
+
+    <append xpath="/entity_classes/entity_class[@name='npcHarleyM60']">
+        <drop event="Harvest" name="foodHumanFlesh" count="5" tool_category="Butcher" />
+    </append>
+
+    <append xpath="/entity_classes/entity_class[@name='npcHarleyPistol']">
+        <drop event="Harvest" name="foodHumanFlesh" count="5" tool_category="Butcher" />
+    </append>
+
+    <append xpath="/entity_classes/entity_class[@name='npcHarleyDPistol']">
+        <drop event="Harvest" name="foodHumanFlesh" count="5" tool_category="Butcher" />
+    </append>
+
+    <append xpath="/entity_classes/entity_class[@name='npcHarleyAK47']">
+        <drop event="Harvest" name="foodHumanFlesh" count="5" tool_category="Butcher" />
+    </append>
+
+    <append xpath="/entity_classes/entity_class[@name='npcHarleyHRifle']">
+        <drop event="Harvest" name="foodHumanFlesh" count="5" tool_category="Butcher" />
+    </append>
+
+    <append xpath="/entity_classes/entity_class[@name='npcHarleySRifle']">
+        <drop event="Harvest" name="foodHumanFlesh" count="5" tool_category="Butcher" />
+    </append>
+
+    <append xpath="/entity_classes/entity_class[@name='npcHarleyPShotgun']">
+        <drop event="Harvest" name="foodHumanFlesh" count="5" tool_category="Butcher" />
+    </append>
+
+    <append xpath="/entity_classes/entity_class[@name='npcHarleyAShotgun']">
+        <drop event="Harvest" name="foodHumanFlesh" count="5" tool_category="Butcher" />
+    </append>
+
+    <append xpath="/entity_classes/entity_class[@name='npcHarleyAShotgun']">
+        <drop event="Harvest" name="foodHumanFlesh" count="5" tool_category="Butcher" />
+    </append>
+
+    <append xpath="/entity_classes/entity_class[@name='npcHarleyXBow']">
+        <drop event="Harvest" name="foodHumanFlesh" count="5" tool_category="Butcher" />
+    </append>
+
+    <append xpath="/entity_classes/entity_class[@name='npcHarleyRocketL']">
+        <drop event="Harvest" name="foodHumanFlesh" count="5" tool_category="Butcher" />
     </append-->
 
     <!-- Remover Starter Items Existentes -->
@@ -451,6 +543,7 @@
             <property name="CanBigHead" value="false"/>
             <property name="NavObject" value="twitch_spawn,twitch_spawn_other,animaltracking_snake,clear_sleeper"/>
         </entity_class>
+
 
     </append>
 

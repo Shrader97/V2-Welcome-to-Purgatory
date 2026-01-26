@@ -117,6 +117,24 @@
 		<item name="modMeleeStunRepulsor"/>
 	</append>
 
+	<append xpath="/lootcontainers/lootgroup[@name='seeds']">
+		<item name="plantedBellPepper1"/>
+		<item name="plantedCabbage1"/>
+		<item name="plantedCantaloupe1"/>
+		<item name="plantedChiliPepper1"/>
+		<item name="plantedEggplant1"/>
+		<item name="plantedGarlic1"/>
+		<item name="plantedGrapes1"/>
+		<item name="plantedLeek1"/>
+		<item name="plantedOnion1"/>
+		<item name="plantedStrawberry1"/>
+		<item name="plantedTomato1"/>
+		<item name="plantedWheat1"/>
+	</append>
+
+
+
+
 
     <append xpath="/lootcontainers">	
 

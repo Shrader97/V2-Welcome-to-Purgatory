@@ -1,6 +1,6 @@
 <Byteblazar>
 
-	<append xpath="/items">
+	<!--append xpath="/items">
 		
 		<item name="bbxfx_itemAmmoFlashThunderGrenade">
 			<property name="Tags" value="ammo,shotgun,ammoShells"/>
@@ -12,11 +12,11 @@
 			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="MresourceScrapPolymers"/>
-			<property name="Stacknumber" value="150"/> <!-- STK ammo low -->
+			<property name="Stacknumber" value="150"/> 
 			<property name="EconomicValue" value="25"/>
-			<property name="TraderStageTemplate" value="ammoTier3"/><!-- ammoShotgunBreachingSlug -->
+			<property name="TraderStageTemplate" value="ammoTier3"/>
 			<property name="Group" value="Ammo/Weapons,Ammo,Ranged Weapons"/>
-			<property name="UnlockedBy" value="perkShotgunMessiahSlugs"/> <!-- BOOK_PERK -->
+			<property name="UnlockedBy" value="perkShotgunMessiahSlugs"/>
 			<property name="SoundPickup" value="shotgunshells_grab"/>
 			<property name="SoundPlace" value="shotgunshells_place"/>
 			<property name="Singularity_Sound_start" value="bbxfx_loudBang"/>
@@ -25,7 +25,7 @@
 				<requirement name="RoundsInMagazine" operation="GT" value="0"/>
 				<requirement name="!HoldingItemBroken"/>
 				<triggered_effect trigger="onSelfPrimaryActionStart" target="self" action="AddBuff" buff="bbxfx_buffWeaponFlash"/>
-				<!-- <triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="bbxfx_loudBang" play_at_self="true"/> -->
+				<triggered_effect trigger="onSelfPrimaryActionStart" action="PlaySound" sound="bbxfx_loudBang" play_at_self="true"/>
 				<triggered_effect trigger="onSelfPrimaryActionStart" target="self" action="AddBuff" buff="bbxfx_buffDeafness">
 					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="10"/>
 				</triggered_effect>
@@ -63,9 +63,9 @@
 			<property name="Extends" value="thrownGrenadeContact" param1="ExplodeOnHit"/>
 			<property name="CustomIcon" value="bbxfxflashbang"/> 
 			<property name="DescriptionKey" value="bbxfx_itemFlashbangDesc"/>
-			<!-- <property name="CustomIconTint" value="10,10,10"/> -->
+			<property name="CustomIconTint" value="10,10,10"/>
 			<property name="TintColor" value="0,10,20"/>
-			<property name="UnlockedBy" value="craftingExplosives"/><!-- perkDemolitionsExpert,thrownGrenadeSchematic, -->
+			<property name="UnlockedBy" value="craftingExplosives"/>
 			<property name="DisplayType" value="ammoGrenade"/>
 			<property name="Explosion.BlastPower" value="1"/>
 			<property name="Explosion.BlockDamage" value="0"/>
@@ -104,6 +104,6 @@
 			<property name="Buff" value="bbxfx_buffGeneralExplosiveBuff"/>
 		</prepend>
 	  </if>
-	</conditional>
+	</conditional-->
 	
 </Byteblazar>
