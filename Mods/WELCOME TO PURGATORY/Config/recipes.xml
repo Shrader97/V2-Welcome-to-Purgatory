@@ -289,6 +289,13 @@
 		<recipe name="StartBrawler" count="1">
 			<ingredient name="classStarter" count="1"/>
 		</recipe>
+        
+    <!-- by Deathfromace -->
+		<recipe name="Heatedfloor" count="1" craft_time="5" craft_area="workbench">
+            <ingredient name="campfire" count="5"/>
+            <ingredient name="resourceElectricParts" count="2"/>
+            <ingredient name="resourceCoal" count="10"/>
+		</recipe>
 
         <recipe name="AdvForge" count="1" tags="learnable,packMuleCrafting">
             <ingredient name="resourceCobblestones" count="50"/>
@@ -2288,11 +2295,6 @@
 			<ingredient name="resourceAnimalFat" count="1"/>
 			<ingredient name="drinkJarBoiledWater" count="1"/>
 		</recipe>
-
-
-
-
-
 
 
 

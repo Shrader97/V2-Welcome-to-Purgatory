@@ -27,7 +27,7 @@
 			<window name="windowCraftingQueue"/>
 			<window name="windowToolsAdvForge" />
 			<window name="windowFuel" />
-			<window name="windowForgeOutput" />
+			<window name="windowOutputtwelve" />
 			<window name="windowNonPagingHeader" />
 		</window_group>
 

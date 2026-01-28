@@ -60,6 +60,85 @@
     <set xpath="/lootcontainers/lootcontainer[@name='vehicleGyrocopter']/@size">10,9</set>
     <set xpath="/lootcontainers/lootcontainer[@name='roboticDrone']/@size">10,5</set>
 
+
+	<!-- Create Lootgroup for Magazines -->
+	<insertBefore xpath="//lootgroup[1]">
+		<lootgroup name="egtfishskillmagazinemaggroup">
+				<item name="egtfishskillmagazine" loot_prob_template="veryLow"/>
+		</lootgroup>
+	</insertBefore>
+	
+	<!-- Adding Magazine to vanilla lootgroups -->
+	<append xpath="//lootgroup[@name='groupCrackabookCrate']">
+			<item name="egtfishskillmagazine" loot_prob_template="low" force_prob="true"/>
+	</append>
+
+	<append xpath="//lootgroup[@name='groupPurse01']">
+			<item name="egtfishskillmagazine" loot_prob_template="Low"/>
+	</append>
+
+	<append xpath="//lootgroup[@name='groupMailbox02']">
+			<item name="egtfishskillmagazine" loot_prob_template="low"/>
+	</append>
+
+	<append xpath="//lootgroup[@name='groupNightstand01']">
+			<item name="egtfishskillmagazine" loot_prob_template="low"/>
+	</append>
+
+	<append xpath="//lootgroup[@name='groupCloset01']">
+			<item name="egtfishskillmagazine" loot_prob_template="low"/>
+	</append>
+
+	<append xpath="//lootgroup[@name='groupCementMixerLoot']">
+			<item name="egtfishskillmagazine" loot_prob_template="medLow"/>
+	</append>
+
+	<append xpath="//lootgroup[@name='skillMagazines']">
+			<item name="egtfishskillmagazine"/> 
+	</append>
+
+	<append xpath="//lootgroup[@name='groupHiddenStash01']">
+			<item name="egtfishskillmagazine" loot_prob_template="medLow"/>
+	</append>
+
+	<append xpath="//lootgroup[@name='groupPoliceCar02']">
+			<item name="egtfishskillmagazine" loot_prob_template="low"/>
+	</append>
+
+	<append xpath="//lootgroup[@name='groupBuriedTreasure']">
+			<item name="egtfishskillmagazine"/>
+	</append>
+
+	<append xpath="//lootgroup[@name='groupSmallSafeLoot01']">
+			<item name="egtfishskillmagazine" count="1" loot_prob_template="low"/>
+	</append>
+
+
+	<!-- Adding custom lootgroup to Z Packs -->
+	<append xpath="//lootgroup[@name='groupZpackReg01']">
+			<item group="egtfishskillmagazinemaggroup" loot_prob_template="medLow"/>
+	</append>
+
+	<append xpath="//lootgroup[@name='groupZpackStrong01']">
+			<item group="egtfishskillmagazinemaggroup" loot_prob_template="medHigh"/>
+	</append>
+
+	<append xpath="//lootgroup[@name='groupZpackBoss01']">
+			<item group="egtfishskillmagazinemaggroup" loot_prob_template="high"/>
+	</append>
+
+
+
+
+
+
+
+
+
+
+
+
+
     <insertAfter xpath="lootcontainers/lootgroup[@name='groupShamwayShelves02']">
         <lootgroup name="groupShradersShamwayShelves" count="0,5">
             <item name="Aged Prairie"  count="1" loot_prob_template="high"/>
@@ -133,7 +212,16 @@
 	</append>
 
 
-
+    <!--append xpath="/lootcontainers">	
+		<lootcontainer name="cntFishTrap" count="3,10" size="7,4" destroy_on_close="true" sound_open="bucketplace_water" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">
+			<item name="foodCrawfish" count="6,12" prob="0.375"/>
+			<item name="foodCrab" count="6,12" prob="0.375"/>
+			<item name="foodRawShrimp" count="6,12" prob="0.375"/>
+			<item name="foodClam" count="6,12" prob="0.375"/>
+			<item name="resourceCatfish" count="1" prob="0.3"/>
+			<item name="resourceCod" count="1" prob="0.3"/>
+		</lootcontainer>
+	</append-->
 
 
     <append xpath="/lootcontainers">	

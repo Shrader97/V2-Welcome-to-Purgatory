@@ -136,6 +136,42 @@
         <property name="ItemsOnEnterGame.GameModeSurvivalMP" value="noteDuke01,classStarter" />
     </append>
 
+	<!--remove xpath="/entity_classes/entity_class[@name='animalChicken']/drop[@name='foodRawMeat']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalChicken']/drop[@name='resourceLeather']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalChicken']/drop[@name='resourceBone']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalChicken']/drop[@name='resourceFeather']"/>	
+	<append xpath="/entity_classes/entity_class[contains(@name, 'animalChicken')]"> 
+		<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="10"/>
+			<passive_effect name="HealthMax" operation="perc_add" value=".5"/> 
+		</effect_group>
+			<drop event="Harvest" name="foodRawChickenBreast" tag="butcherHarvest" count="2"/> 		
+			<drop event="Harvest" name="foodRawChickenLegs" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="foodRawChickenWings" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="25" prob="0.25"/> 		
+			<drop event="Harvest" name="foodEgg" tag="butcherHarvest" count="1,2" prob="0.25"/>  		
+	</append> 
+
+	<remove xpath="/entity_classes/entity_class[@name='animalBoar']/drop[@name='foodRawMeat']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalBoar']/drop[@name='resourceLeather']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalBoar']/drop[@name='resourceBone']"/>
+	<remove xpath="/entity_classes/entity_class[@name='animalBoar']/drop[@name='resourceAnimalFat']"/>
+	<append xpath="/entity_classes/entity_class[contains(@name, 'animalBoar')]">
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="200"/>
+		<passive_effect name="HealthMax" operation="perc_add" value=".5"/> 
+	</effect_group>	
+		<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="foodRawPorkSteak" tag="butcherHarvest" count="1" prob="0.05"/> 		
+		<drop event="Harvest" name="foodAnimalMilk" tag="butcherHarvest" count="1,4" prob="0.25"/> 		
+		<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="5" prob="0.25"/> 		
+		<drop event="Harvest" name="RawIntestines" tag="butcherHarvest" count="5" prob="0.25"/> 
+		<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="15" prob="0.50"/>
+		<drop event="Harvest" name="foodRawRibHalves" tag="butcherHarvest" count="2"/> 	
+		<drop event="Harvest" name="foodRawPorkBelly" tag="butcherHarvest" count="2"/> 		
+		<drop event="Harvest" name="foodRawBoarsFeet" tag="butcherHarvest" count="4"/> 		
+	</append--> 
+
     <append xpath="/entity_classes">
         <entity_class name="animalHornet" extends="animalTemplateHostile">
             <property name="UserSpawnType" value="Menu" />

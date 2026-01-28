@@ -651,6 +651,35 @@
     </append>
 
     <append xpath="/buffs">
+
+    	<buff name="heatedfloor" name_key="Heated Floor" description_key="Feeling Warm and Toasty" icon="ui_game_symbol_fire" icon_color="#418726">
+			<stack_type value="replace"/>
+			<duration value="60"/>
+			<display_name value="Comfortable"/>
+			<description value="Feels so warm"/>
+			<display_value value="duration"/>
+
+			<effect_group>
+				<passive_effect name="HealthChangeOT" operation="base_add" value="0.1"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="20"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$WetTempModifierActive" operation="subtract" value=".4"/>
+			</effect_group>
+		</buff> 
+
+    	<buff name="Cooledfloor" name_key="Cooled Floor" description_key="Feeling Cool and Cold" icon="ui_game_symbol_cold" icon_color="#418726">
+			<stack_type value="replace"/>
+			<duration value="60"/>
+			<display_name value="Comfortable"/>
+			<description value="Feels so warm"/>
+			<display_value value="duration"/>
+
+			<effect_group>
+				<passive_effect name="HealthChangeOT" operation="base_add" value="0.1"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="20"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$WetTempModifierActive" operation="subtract" value=".4"/>
+			</effect_group>
+		</buff> 
+
         <buff name="buffSoftHandsPrimaryAttack" hidden="true" remove_on_death="true">
             <damage_type value="Bashing" />
             <duration value="0.5" />

@@ -211,14 +211,68 @@ foodBurgerFrenchFryes,"Hamburger & French Fryes"
 foodRamenNoodles,"Ramen Noodles"
 
 
+Heatedfloor,Heated Floor
+heatedfloorDesc,"The heat warms you up and drys you off.  \n This is used in the Snow Biome to keep you warm."
+
+Cooledfloor,Coolded Floor
+ColdfloorDesc,"The cold air cools you.  \n This is used in the Desert Biome to keep you cool."
 
 
 
 
+FishingBait,"Bait"
+FishingBaitDesc,"Could be used for Fishing."
 
+FishingLoot,"Catched Loot"
+FishingLootDesc,"Your catched Fishing-Loot. By opening you will get back your Fishing Rod without a bait and maybe you get a fish."
 
+FishingLootpro,"Catched PRO Loot"
+FishingLootv3,"Catched Triple Loot"
 
+CaughtFish,"Fresh Fish Salmon"
+CaughtFishDesc,"A fresh Salmon. "Open" it to get the raw fish meat and some scales."
 
+CaughtFish2,"Fresh Fish Tuna"
+CaughtFish2Desc,"A fresh Tuna "Open" it to get the raw fish meat and some scales."
+
+CaughtFish3,"Fresh Fish Golden Carp"
+CaughtFish3Desc,"A fresh Carp "Open" it to get the raw fish meat and some scales."
+
+CaughtFish4,"Fresh Fish Comb Perch"
+CaughtFish4Desc,"A fresh Perch "Open" it to get the raw fish meat and some scales."
+
+RawFish,"Raw Cat Fish"
+RawFishDesc,"Raw Cat Fish, could be cooked at the Campfire"
+
+RawFish2,"Raw Crawfish"
+RawFish2Desc,"Raw Cod, could be cooked at the Campfire"
+
+RawFish3,"Raw Shrimp"
+RawFish3Desc,"Raw Shrimp, could be cooked at the Campfire"
+
+RawFish4,"Raw Clam"
+RawFish4Desc,"Raw Clam, could be cooked at the Campfire"
+
+fishingRodnorm,"Fishing Rod ([ff0000]No Bait[-])"
+fishingRodnormDesc,"Use unbaited fishing rod and baits to craft a baited rod."
+
+fishingRodpro,"Fishing Rod PRO ([ff0000]No Bait[-])"
+fishingRodproDesc,"Faster Fishing. Use unbaited fishing rod and baits to craft a baited pro-rod."
+
+fishingRodv3,"Triple Float Rod ([ff0000]No Bait[-])"
+fishingRodv3Desc,"Triple Fishing. Use unbaited fishing rod and baits to craft a baited triple-rod."
+
+fishingRodBaitednorm,"Fishing Rod ([00ff00]With Bait[-])"
+fishingRodBaitednormDesc,"Go over to the river and left click on the water while the rod is equipped, then wait up to 10 seconds. Tight lines!.\n\n\n[ff0000]YOU'LL BE LOCKED INTO THE ANIMATION UNTIL YOU GET A CATCH[-]"
+
+fishingRodBaitedpro,"Fishing Rod PRO ([00ff00]With Bait[-])"
+fishingRodBaitedproDesc,"Go over to the river and left click on the water while the rod is equipped, then wait up to 10 seconds. Tight lines!.\n\n\n[ff0000]YOU'LL BE LOCKED INTO THE ANIMATION UNTIL YOU GET A CATCH[-]"
+
+fishingRodBaitedv3,"Triple Float Rod ([00ff00]With Bait[-])"
+fishingRodBaitedv3Desc,"Go over to the river and left click on the water while the rod is equipped, then wait up to 10 seconds. Tight lines!.\n\n\n[ff0000]YOU'LL BE LOCKED INTO THE ANIMATION UNTIL YOU GET A CATCH[-]"
+
+fishskillmagazine,"Fishing Magazine"
+fishskillmagazinedesc,"By reading this magazine you increase your knowledge about fishing."
 
 
 buffSugerRushTooltip,"WOOHOO You have a Suger Rush!!!"
