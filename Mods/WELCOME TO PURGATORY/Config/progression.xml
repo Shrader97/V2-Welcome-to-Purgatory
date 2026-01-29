@@ -552,39 +552,6 @@
 
     </insertBefore>
 
-    <append xpath="/progression/perks">
-        <crafting_skill name="fishsing" min_level="1" max_level="30" parent="attCrafting" name_key="Fishing" desc_key="Learn how to craft Fishing Rods and catch some fish!!!" long_desc_key="nodescneeded" icon="ui_game_symbol_spear">
-
-            <display_entry icon="foodBoiledMeat" name_key="Basic Fisher" has_quality="false" unlock_level="4,8,12,16" >
-                <unlock_entry item="FishingBait,fishingRodnorm,fishingRodBaitednorm" unlock_tier="1" />
-                <unlock_entry item="Fishbites" unlock_tier="2" />
-                <unlock_entry item="foodCanSalmon" unlock_tier="3" />
-                <unlock_entry item="foodCanTuna" unlock_tier="4" />
-                <!--unlock_entry item="foodBakedCarp" unlock_tier="5" />
-                <unlock_entry item="foodBakedperch" unlock_tier="6" /-->
-            </display_entry>
-
-            <display_entry icon="foodCanSalmon" name_key="Student Fisher" has_quality="false" unlock_level="21" >
-                <unlock_entry item="fishingRodpro,fishingRodBaitedpro" unlock_tier="1" />
-            </display_entry>
-
-            <display_entry icon="foodCanTuna" name_key="Master Fisher" has_quality="false" unlock_level="30" >
-                <unlock_entry item="fishingRodv3,fishingRodBaitedv3" unlock_tier="1" />
-            </display_entry>
-
-
-            <effect_group>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,30" value="1" tags="FishingBait,fishingRodnorm,fishingRodBaitednorm"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,30" value="1" tags="Fishbites"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,30" value="1" tags="foodCanSalmon"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,30" value="1" tags="foodCanTuna"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="21,30" value="1" tags="fishingRodpro,fishingRodBaitedpro"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,30" value="1" tags="fishingRodv3,fishingRodBaitedv3"/>
-            </effect_group>
-        </crafting_skill>
-
-
-    </append>
 
 
 
