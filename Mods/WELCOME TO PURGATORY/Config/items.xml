@@ -5448,7 +5448,7 @@
 
         <item name="resourceFishBait">
                 <property name="DescriptionKey" value="resourceFishBaitDesc"/>
-                <property name="CustomIcon" value="resourceFishBait"/>
+                <property name="CustomIcon" value="foodSnail"/>
                 <property name="Meshfile" value="#@modfolder:Resources/food.unity3d?Snails.Prefab"/>
                 <property name="Material" value="Morganic" />
                 <property name="HoldType" value="74" />
@@ -9210,7 +9210,16 @@
             </property>
         </item>
 
-
+        <item name="modSpeedLoaderSchematic">
+            <property name="Extends" value="schematicNoQualityMaster"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="modSpeedLoader"/>
+            <property name="Unlocks" value="modSpeedLoader"/>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modSpeedLoader" operation="set" value="1"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+            </effect_group>
+        </item>
 
 
 

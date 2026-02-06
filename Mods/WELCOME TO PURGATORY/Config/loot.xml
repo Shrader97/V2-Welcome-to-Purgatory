@@ -57,6 +57,35 @@
 		<item name="modMeleeStunRepulsor"/>
 	</append>
 
+	<append xpath="/lootcontainers/lootgroup[@name='modGunT3']">
+		<item name="modArrowReload"/>
+		<item name="modBlessedMetal"/>
+		<item name="modFlammableOil"/>
+		<item name="modShockBattery"/>
+		<item name="modRodandSpring"/>
+		<item name="modArmorShredder"/>
+		<item name="modSpeedLoader"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='modArmorT2']">
+		<item name="modCollegeJacket"/>
+		<item name="modRunningShoesHP"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupToilet02']">
+		<item name="GunMGRuger45" loot_prob_template="Low"/>
+		<item name="gunHandgunT3Revolver50cal" loot_prob_template="Low"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='shoes']">
+		<item name="modRunningShoesHP" loot_prob_template="med"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupAllClothing']">
+		<item name="modRunningShoesHP" loot_prob_template="med"/>
+		<item name="modCollegeJacket" loot_prob_template="med"/>
+	</append>
+
 	<append xpath="/lootcontainers/lootgroup[@name='seeds']">
 		<item name="plantedBellPepper1"/>
 		<item name="plantedCabbage1"/>
@@ -72,9 +101,8 @@
 		<item name="plantedWheat1"/>
 	</append>
 
-
-    <!--append xpath="/lootcontainers">	
-		<lootcontainer name="cntFishTrap" count="3,10" size="7,4" destroy_on_close="true" sound_open="bucketplace_water" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">
+    <append xpath="/lootcontainers">	
+		<lootcontainer name="cntFishTrap" count="3,10" size="3,3" destroy_on_close="true" sound_open="bucketplace_water" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">
 			<item name="foodCrawfish" count="6,12" prob="0.375"/>
 			<item name="foodCrab" count="6,12" prob="0.375"/>
 			<item name="foodRawShrimp" count="6,12" prob="0.375"/>
@@ -82,7 +110,7 @@
 			<item name="resourceCatfish" count="1" prob="0.3"/>
 			<item name="resourceCod" count="1" prob="0.3"/>
 		</lootcontainer>
-	</append-->
+	</append>
 
 
     <append xpath="/lootcontainers">	

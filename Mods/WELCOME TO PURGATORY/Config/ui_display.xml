@@ -86,7 +86,7 @@
 
 		<item_display_info display_type="VodkaDisplay" display_group="groupConsumables">
 			<display_entry name="dStaminaRegen" title_key="statStaminaRegen" display_type="Percent" display_leading_plus="true"/>
-      <display_entry name="dBartering" title_key="statBarteringSellBuy" display_type="Percent" display_leading_plus="true"/>
+      		<display_entry name="dBartering" title_key="statBarteringSellBuy" display_type="Percent" display_leading_plus="true"/>
 			<display_entry name="dStunResist" title_key="statStunResist" display_type="Percent" display_leading_plus="true"/>
 			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
 		</item_display_info>
@@ -115,6 +115,29 @@
 			<display_entry name="dHyperthermalResist" title_key="statHyperthermalResist" display_leading_plus="true"/>
 			<display_entry name="dDuration" title_key="statDuration" display_type="Time"/>
 		</item_display_info>
+
+		<item_display_info display_type="clothingJacketLetter" display_group="groupAttire" >
+			<display_entry name="HypothermalResist" display_type="Decimal1" title_key="statHypothermalResist"/>
+			<display_entry name="HyperthermalResist" display_type="Decimal1" title_key="statHyperthermalResist"/>
+			<display_entry name="dRunSpeed" title_key="statRunSpeed" display_type="Percent" display_leading_plus="true"/>
+		</item_display_info>
+
+		 <item_display_info display_type="clothingRunningShoes" display_group="groupAttire" > 
+			 <display_entry name="HypothermalResist" display_type="Decimal1" title_key="statHypothermalResist"/> 
+			 <display_entry name="HyperthermalResist" display_type="Decimal1" title_key="statHyperthermalResist"/> 
+			 <display_entry name="dStaminaRegen" title_key="statStaminaRegenRunning" display_type="Percent" display_leading_plus="true"/> 
+		 </item_display_info>
+
+
+
+
+
+
+
+
+
+
+
 
 	</append>
 

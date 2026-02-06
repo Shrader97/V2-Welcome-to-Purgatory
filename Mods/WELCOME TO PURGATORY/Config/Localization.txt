@@ -878,7 +878,25 @@ challengeCraftStainLessSteelPolishDesc,Craft 1000 Stainless Steel Polish
 
 meleeWpnBatonT3LazerBaton,"Loveshack's Lazer Baton"
 
+modCollegeJacket,"College Jacket Mod"
+apparelCoatJacketLetterZUDesc,"Feel like a pro athlete in this college jacket. Run 10% faster."
 
+modRunningShoesHP,"High Performance Running Shoes Mod"
+apparelRunningShoesHPDesc,"You don't have to be the fastest, you just have to not be the slowest."
+
+modArrowReload,"Arrow Reload"
+
+modBlessedMetal,"Blessed Metal Mod"
+
+modAdvRadRemover,"Adv Rad Remover"
+
+modFlammableOil,"Flammable Oil Mod"
+
+modShockBattery,"Shack Battery"
+
+modRodandSpring,"Rod and Spring "
+
+modArmorShredder,"Armor Shredder mod"
 
 
 

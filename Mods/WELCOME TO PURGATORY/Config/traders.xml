@@ -1,5 +1,11 @@
 <configs>
 
+    <append xpath="/traders/trader_item_groups/trader_item_group[@name='groupRangedMods']">
+        <item name="modSpeedLoader"/>
+    </append>
 
+    <append xpath="/traders/trader_item_groups/trader_item_group[@name='schematicsModsCommon']">
+        <item name="modSpeedLoaderSchematic"/>
+    </append>
 
 </configs>

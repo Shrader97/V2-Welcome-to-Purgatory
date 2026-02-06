@@ -380,7 +380,7 @@
             </effect_group>
         </item_modifier>
 
-        <item_modifier name="Arrow Reload Mod" installable_tags="perkArchery" type="attachment" rarity="1">
+        <item_modifier name="modArrowReload" installable_tags="perkArchery" type="attachment" rarity="1">
             <property name="Extends" value="modGeneralMaster"/>
             <property name="CustomIcon" value="modGunMeleeTheHunter"/>
             <property name="DescriptionKey" value="ArrowRDesc"/>
@@ -391,11 +391,10 @@
             </effect_group>
         </item_modifier>
 
-        <item_modifier name="Blessed Metal Mod" installable_tags="weapon,tool" modifier_tags="DoubleDamage" blocked_tags="noMods" type="attachment">
+        <item_modifier name="modBlessedMetal" installable_tags="weapon,tool" modifier_tags="DoubleDamage" blocked_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster"/>
-            <property name="CustomIcon" value="modMeleeStunBatonRepulsor"/>
+            <property name="CustomIcon" value="modGunMeleeBlessedMetal"/>
             <property name="DescriptionKey" value="BlessDesc"/>
-            <property name="CustomIconTint" value="#1e9d16"/>
             <!--Do double damage to evil / undead-->
             <effect_group tiered="false">
                 <passive_effect name="EntityDamage" operation="perc_add" value="1.1"/>
@@ -404,10 +403,9 @@
                 <requirement name="EntityTagCompare" target="other" tags="Bosszombie"/>
                 <passive_effect name="EntityDamage" operation="perc_add" value="2.2"/>
             </effect_group>
-            <property name="PickupJournalEntry" value="augmentGunsTip"/>
         </item_modifier>
 
-        <item_modifier name="Adv Rad Remover" installable_tags="weapon,ranged,melee" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
+        <!--item_modifier name="modAdvRadRemover" installable_tags="weapon,ranged,melee" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
             <property name="CustomIcon" value="modGunMeleeRadRemover"/>
             <property name="DescriptionKey" value="RadRemoveDesc"/>
@@ -417,31 +415,29 @@
                 <requirement name="EntityTagCompare" target="other" tags="radiated"/>
                     <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffRadiatedRegenBlock"/>
             </effect_group>
-        </item_modifier>
+        </item_modifier-->
 
-        <item_modifier name="Flammable Oil" installable_tags="weapon,ranged,melee" modifier_tags="specialDamage2" blocked_tags="noMods" type="attachment">
+        <item_modifier name="modFlammableOil" installable_tags="weapon,ranged,melee" modifier_tags="specialDamage2" blocked_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
-            <property name="CustomIcon" value="modMeleeClubBurningShaft"/>
+            <property name="CustomIcon" value="modGunMeleeFlammableOil"/>
             <property name="DescriptionKey" value="FOilDesc"/>
-            <property name="CustomIconTint" value="#1e9d16"/>
             <effect_group tiered="false">
                 <requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="30"/>
                 <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffBurningElement"/>
             </effect_group>
         </item_modifier>
 
-        <item_modifier name="Shock Battery" installable_tags="weapon,ranged,melee" modifier_tags="specialDamage2" blocked_tags="noMods" type="attachment">
+        <item_modifier name="modShockBattery" installable_tags="weapon,ranged,melee" modifier_tags="specialDamage2" blocked_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
-            <property name="CustomIcon" value="carBattery"/>
+            <property name="CustomIcon" value="modGunMeleeNiCdBattery"/>
             <property name="DescriptionKey" value="ShockDesc"/>
-            <property name="CustomIconTint" value="#1e9d16"/>	
             <effect_group tiered="false">
                 <requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="30"/>
                     <triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffShocked"/>
             </effect_group>
         </item_modifier>
 
-        <item_modifier name="Rod and Spring" installable_tags="ranged" modifier_tags="fireRate" blocked_tags="noMods" type="attachment">
+        <item_modifier name="modRodandSpring" installable_tags="ranged" modifier_tags="fireRate" blocked_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
             <property name="CustomIcon" value="resourceSpring"/>
             <property name="DescriptionKey" value="RodSpringDesc"/>
@@ -453,7 +449,7 @@
             </effect_group>
         </item_modifier>
 
-        <item_modifier name="Armor Shredder" installable_tags="ranged,turretRanged" modifier_tags="ArmorShredding" blocked_tags="noMods" type="attachment">
+        <item_modifier name="modArmorShredder" installable_tags="ranged,turretRanged" modifier_tags="ArmorShredding" blocked_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
             <property name="CustomIcon" value="modArmorBandolier"/>
             <property name="DescriptionKey" value="ArmorShreddDesc"/>
@@ -468,75 +464,84 @@
             </effect_group>
         </item_modifier>
 
-        <item_modifier name="Ring Blank" installable_tags="" modifier_tags="" type="attachment">
+        <item_modifier name="modCollegeJacket" installable_tags="armorChest" blocked_tags="clothing" modifier_tags="rare" type="attachment"> <!-- collegeJacket -->
+            <property name="CustomIcon" value="apparelCoatJacketLetterZU"/>
+            <property name="Stacknumber" value="1"/>
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
-            <property name="CustomIcon" value="modArmorBandolier"/>
-            <property name="DescriptionKey" value="ArmorShreddDesc"/>
-            <property name="CustomIconTint" value="#1e9d16"/>
-			<property name="ShowQuality" value="true"/>
-			<effect_group tiered="true">
-				<passive_effect name="DegradationMax" operation="base_set" value="500,2000" tier="1,6"/>
-                <passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
-			</effect_group>
-        </item_modifier>
-
-        <item_modifier name="Anti-TuberculosisMod" installable_tags="" modifier_tags="" type="attachment">
-            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
-            <property name="CustomIcon" value="modArmorBandolier"/>
-            <property name="DescriptionKey" value="ArmorShreddDesc"/>
-            <property name="CustomIconTint" value="#1e9d16"/>
+            <property name="DescriptionKey" value="apparelCoatJacketLetterZUDesc"/>
+            <property name="DisplayType" value="clothingJacketLetter"/>
             <effect_group tiered="false">
-                <requirement name="ItemHasTags" tags="armorChest"/>
-                    <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffTuberculosisImmunity"/>
-                    <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffTuberculosisImmunity"/>
+                <passive_effect name="HypothermalResist" operation="base_add" value="11.7,15.5"/>
+                <passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
+                <passive_effect name="RunSpeed" operation="perc_add" value=".1"/>
+                <display_value name="dRunSpeed" value=".1"/>
             </effect_group>
         </item_modifier>
 
-        <item_modifier name="Anti-NorovirusMod" installable_tags="" modifier_tags="" type="attachment">
+        <item_modifier name="modRunningShoesHP" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="rare" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
-            <property name="CustomIcon" value="modArmorBandolier"/>
-            <property name="DescriptionKey" value="ArmorShreddDesc"/>
-            <property name="CustomIconTint" value="#1e9d16"/>
+            <property name="DescriptionKey" value="apparelRunningShoesHPDesc"/>
+            <property name="CustomIcon" value="apparelRunningShoesRegular"/>
+            <property name="CustomIconTint" value="86,255,109"/>
+            <property name="DisplayType" value="clothingRunningShoes"/>
+            <property name="Stacknumber" value="1"/>
+            <property name="EconomicValue" value="200"/>
             <effect_group tiered="false">
-                <requirement name="ItemHasTags" tags="armorChest"/>
-                    <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffNorovirusImmunity"/>
-                    <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffNorovirusImmunity"/>
+                <passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
+                <passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_add" value=".2" tags="running"/>
+                <display_value name="dStaminaRegen" value=".2"/>
             </effect_group>
         </item_modifier>
 
-        <item_modifier name="Anti-InfluenzaMod" installable_tags="" modifier_tags="" type="attachment">
+        <!--item_modifier name="modGunMeleeLiquidNitrogen" installable_tags="weapon,tool" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
-            <property name="CustomIcon" value="modArmorBandolier"/>
-            <property name="DescriptionKey" value="ArmorShreddDesc"/>
-            <property name="CustomIconTint" value="#1e9d16"/>
+            <property name="CreativeMode" value="None"/>
+            <property name="UnlockedBy" value="modGunMeleeLiquidNitrogenSchematic"/> 
+            <property name="TraderStageTemplate" value="modsTier3"/> 
+
+           
+            <item_property_overrides name="*">
+                <property name="DamageType" value="Cold"/>
+            </item_property_overrides>
+
             <effect_group tiered="false">
-                <requirement name="ItemHasTags" tags="armorChest"/>
-                    <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffInfluenzaImmunity"/>
-                    <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffInfluenzaImmunity"/>
+                <passive_effect name="BlockDamage" operation="perc_add" value=".4"/>
+            </effect_group>
+        </item_modifier-->
+
+        <item_modifier name="modSpeedLoader" installable_tags="revolver,dbarrel" modifier_tags="magazine" blocked_tags="noMods,magazine" type="attachment">
+            <property name="Extends" value="modGeneralMaster"/>
+            <property name="CustomIcon" value="modSpeedLoader"/>
+            <property name="UnlockedBy" value="modSpeedLoaderSchematic"/>
+            <property name="TraderStageTemplate" value="modsTier2"/>
+            <effect_group tiered="false">
+                <passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value=".75"/>
             </effect_group>
         </item_modifier>
 
-        <item_modifier name="Anti-diseaseMod" installable_tags="" modifier_tags="" type="attachment">
-            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
-            <property name="CustomIcon" value="modArmorBandolier"/>
-            <property name="DescriptionKey" value="ArmorShreddDesc"/>
-            <property name="CustomIconTint" value="#1e9d16"/>
-            <effect_group tiered="false">
-                <requirement name="ItemHasTags" tags="armorChest"/>
-                    <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffInfluenzaImmunity"/>
-                    <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffInfluenzaImmunity"/>
-            </effect_group>
-            <effect_group tiered="false">
-                <requirement name="ItemHasTags" tags="armorChest"/>
-                    <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffNorovirusImmunity"/>
-                    <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffNorovirusImmunity"/>
-            </effect_group>
-            <effect_group tiered="false">
-                <requirement name="ItemHasTags" tags="armorChest"/>
-                    <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffTuberculosisImmunity"/>
-                    <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffTuberculosisImmunity"/>
-            </effect_group>
-        </item_modifier>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

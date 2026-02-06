@@ -1084,6 +1084,14 @@
             <ingredient name="resourcePaper" count="10"/>
         </recipe>
 
+    <!-- Mods -->
+
+        <recipe name="modSpeedLoader" count="1" craft_area="workbench" tags="learnable,workbenchCrafting" craft_time="120">
+            <ingredient name="resourceForgedIron" count="10"/>
+            <ingredient name="resourceMechanicalParts" count="10"/>
+            <ingredient name="resourceOil" count="5"/>
+            <ingredient name="resourceGlue" count="5"/>
+        </recipe>
 
     <!-- SEED CHANGES  -->
 
