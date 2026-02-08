@@ -6,6 +6,9 @@
 
     <append xpath="/traders/trader_item_groups/trader_item_group[@name='schematicsModsCommon']">
         <item name="modSpeedLoaderSchematic"/>
+        <item name="modMaxDegradationSchematic"/>
+        <item name="modSuperMaxDegradationSchematic"/>
+        <item name="modUltraMaxDegradationSchematic"/>
     </append>
 
 </configs>

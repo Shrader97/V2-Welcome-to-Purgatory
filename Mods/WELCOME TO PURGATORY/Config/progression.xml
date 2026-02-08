@@ -222,15 +222,6 @@
 
     </append>
 
-	<csv xpath="//crafting_skill[@name='craftingMedical']//unlock_entry[contains(@item, 'drugAntibiotics')]/@item" op="add">drugAnti-NorovirusPill</csv>
-    <csv xpath="//crafting_skill[@name='craftingMedical']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'drugAntibiotics')]/@tags" op="add">drugAnti-NorovirusPill</csv>
-
-	<csv xpath="//crafting_skill[@name='craftingMedical']//unlock_entry[contains(@item, 'drugAntibiotics')]/@item" op="add">drugAnti-InfluenzaPill</csv>
-    <csv xpath="//crafting_skill[@name='craftingMedical']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'drugAntibiotics')]/@tags" op="add">drugAnti-InfluenzaPill</csv>
-	
-    <csv xpath="//crafting_skill[@name='craftingMedical']//unlock_entry[contains(@item, 'drugAntibiotics')]/@item" op="add">drugAnti-TuberculosisPill</csv>
-    <csv xpath="//crafting_skill[@name='craftingMedical']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'drugAntibiotics')]/@tags" op="add">drugAnti-TuberculosisPill</csv>
-
 	<csv xpath="//crafting_skill[@name='craftingMedical']//unlock_entry[contains(@item, 'drugRecog')]/@item" op="add">medicalAdvFirstAidBandage</csv>
     <csv xpath="//crafting_skill[@name='craftingMedical']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'drugRecog')]/@tags" op="add">medicalAdvFirstAidBandage</csv>
 
@@ -319,9 +310,6 @@
 	<csv xpath="//crafting_skill[@name='craftingWorkstations']//unlock_entry[contains(@item, 'cementMixer')]/@item" op="add">GunsmithBence</csv>
     <csv xpath="//crafting_skill[@name='craftingWorkstations']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'cementMixer')]/@tags" op="add">GunsmithBence</csv>
 
-	<csv xpath="//crafting_skill[@name='craftingWorkstations']//unlock_entry[contains(@item, 'chemistryStation')]/@item" op="add">AdvForge</csv>
-    <csv xpath="//crafting_skill[@name='craftingWorkstations']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'chemistryStation')]/@tags" op="add">AdvForge</csv>
-
 	<csv xpath="//crafting_skill[@name='craftingWorkstations']//unlock_entry[contains(@item, 'toolApiaryExtractor')]/@item" op="add">Recycler</csv>
     <csv xpath="//crafting_skill[@name='craftingWorkstations']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'toolApiaryExtractor')]/@tags" op="add">Recycler</csv>
 
@@ -331,7 +319,6 @@
 	<csv xpath="//crafting_skill[@name='craftingWorkstations']//unlock_entry[contains(@item, 'cementMixer')]/@item" op="add">tooltailstock,toolChuck,toolToolPost,toolbenchvise,toolToolBox,toolTools,toolBook,toolDrill,toolHammer,toolSaw,toolScrewDriverSet,toolVise</csv>
     <csv xpath="//crafting_skill[@name='craftingWorkstations']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'cementMixer')]/@tags" op="add">tooltailstock,toolChuck,toolToolPost,toolbenchvise,toolToolBox,toolTools,toolBook,toolDrill,toolHammer,toolSaw,toolScrewDriverSet,toolVise</csv>
 
-toolApiarySmoker
 
 
     <remove xpath="//crafting_skill[@name='craftingSeeds']"/>
@@ -520,7 +507,7 @@ toolApiarySmoker
     <insertBefore xpath="/progression/perks/perk[@name='perkAnimalTracker']">
     <!-- *** PERCEPTION:GENERAL_PERKS -->
             <!-- *** INFILTRATOR -->
-        <perk name="perkInfiltrator" max_level="6" parent="skillPerceptionGeneral" name_key="perkInfiltratorName" desc_key="perkInfiltratorDesc" icon="ui_game_symbol_stealth">
+        <perk name="perkInfiltrator" max_level="5" parent="skillPerceptionGeneral" name_key="perkInfiltratorName" desc_key="perkInfiltratorDesc" icon="ui_game_symbol_stealth">
             <level_requirements level="1"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="1" desc_key="reqPerceptionLevel01"/></level_requirements>
             <level_requirements level="2"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="2" desc_key="reqPerceptionLevel02"/></level_requirements>
             <level_requirements level="3"><requirement name="ProgressionLevel" progression_name="attPerception" operation="GTE" value="3" desc_key="reqPerceptionLevel03"/></level_requirements>

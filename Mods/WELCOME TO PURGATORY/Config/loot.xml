@@ -113,6 +113,24 @@
 	</append>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <append xpath="/lootcontainers">	
 
 <!-- zombieArlene -->
@@ -1140,14 +1158,5 @@
 		</lootcontainer>
 
     </append>
-
-
-
-
-
-
-
-
-
 
 </configs>

@@ -156,44 +156,44 @@
 
         </item_modifier>
 
-        <item_modifier name="Max Degradation" installable_tags="armor,weapon,tool,vehicle,drone" modifier_tags="Degradation" blocked_tags="noMods" type="attachment">
+        <item_modifier name="modMaxDegradation" installable_tags="armor,weapon,tool,vehicle,drone" modifier_tags="Degradation" blocked_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
             <property name="CustomIcon" value="modArmorStrength"/>
             <property name="CustomIconTint" value="00FF00"/>
             <property name="TraderStageTemplate" value="modsTier1"/>
             <property name="Material" value="Msteel"/>
             <property name="EconomicValue" value="1000"/>
-            
+            <property name="UnlockedBy" value="modMaxDegradationSchematic"/>
             <effect_group tiered="true">
                 <passive_effect name="DegradationMax" operation="base_add" value="2500"/>
             </effect_group>
         </item_modifier>
 
-        <item_modifier name="Super Max Degradation" installable_tags="armor,weapon,tool,vehicle,drone" modifier_tags="Degradation" blocked_tags="noMods" type="attachment">
+        <item_modifier name="modSuperMaxDegradation" installable_tags="armor,weapon,tool,vehicle,drone" modifier_tags="Degradation" blocked_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
             <property name="CustomIcon" value="modArmorStrength"/>
             <property name="CustomIconTint" value="013220"/>
             <property name="TraderStageTemplate" value="modsTier2"/>
             <property name="Material" value="Msteel"/>
             <property name="EconomicValue" value="1500"/>
-            
+            <property name="UnlockedBy" value="modSuperMaxDegradationSchematic"/>
             <effect_group tiered="true">
                 <passive_effect name="DegradationMax" operation="base_add" value="5000"/>
             </effect_group>
         </item_modifier>
 
-        <!--item_modifier name="Ultra Max Degradation" installable_tags="armor,weapon,tool,vehicle,drone" modifier_tags="Degradation" blocked_tags="noMods" type="attachment">
+        <item_modifier name="modUltraMaxDegradation" installable_tags="armor,weapon,tool,vehicle,drone" modifier_tags="Degradation" blocked_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
             <property name="CustomIcon" value="modArmorStrength"/>
             <property name="CustomIconTint" value="0000FF"/>
             <property name="TraderStageTemplate" value="modsTier2"/>
             <property name="Material" value="Msteel"/>
             <property name="EconomicValue" value="2000"/>
-            
+            <property name="UnlockedBy" value="modUltraMaxDegradationSchematic"/>
             <effect_group tiered="true">
                 <passive_effect name="DegradationMax" operation="base_add" value="10000"/>
             </effect_group>
-        </item_modifier-->
+        </item_modifier>
 
        <item_modifier name="modMeleeBurningFist" installable_tags="perkBrawler" modifier_tags="fire" blocked_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>

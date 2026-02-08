@@ -4678,6 +4678,39 @@
             </effect_group>
         </item>
 
+        <item name="modMaxDegradationSchematic">
+            <property name="Extends" value="schematicNoQualityMaster"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="modVehicleTurboCharger"/>
+            <property name="Unlocks" value="modMaxDegradation"/>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modMaxDegradation" operation="set" value="1"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+            </effect_group>
+        </item>
+
+        <item name="modSuperMaxDegradationSchematic">
+            <property name="Extends" value="schematicNoQualityMaster"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="modVehicleTurboCharger"/>
+            <property name="Unlocks" value="modSuperMaxDegradation"/>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modSuperMaxDegradation" operation="set" value="1"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+            </effect_group>
+        </item>
+
+        <item name="modUltraMaxDegradationSchematic">
+            <property name="Extends" value="schematicNoQualityMaster"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="modVehicleTurboCharger"/>
+            <property name="Unlocks" value="modUltraMaxDegradation"/>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modUltraMaxDegradation" operation="set" value="1"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+            </effect_group>
+        </item>
+
     <!-- raw meat -->
 
         <item name="foodGroundBeef">

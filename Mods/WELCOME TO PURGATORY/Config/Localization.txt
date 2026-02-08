@@ -898,5 +898,41 @@ modRodandSpring,"Rod and Spring "
 
 modArmorShredder,"Armor Shredder mod"
 
+modMaxDegradation,"Max Degradation"
+
+modSuperMaxDegradation,"Super Max Degradation"
+
+modUltraMaxDegradation,"Ultra Max Degradation"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
