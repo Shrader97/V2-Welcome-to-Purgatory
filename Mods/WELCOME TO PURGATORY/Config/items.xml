@@ -559,11 +559,6 @@
 
     </append>
 
-
-    <append xpath="/items/item[@name='carBattery']" >
-        <property name="CustomIcon" value="battery"/>
-    </append>
-
     <append xpath="/items/item[@name='vehicleWheels']" >
        <property name="Stacknumber" value="20"/>
     </append>
@@ -2467,7 +2462,7 @@
             <property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Grenade/GrenadePrefab.prefab"/>
             <property name="DropScale" value="2.5"/>
             <property name="Material" value="Mmetal"/>
-            <property name="Stacknumber" value="25"/>
+            <property name="Stacknumber" value="250"/>
             <property name="EconomicValue" value="75"/>
             <property name="TraderStageTemplate" value="baseTier2"/><!-- thrownGrenadeContact -->
             <property name="Weight" value="0"/>
@@ -2518,7 +2513,8 @@
 
         <item name="thrownAdvGrenade">
             <property name="Extends" value="thrownGrenadeContact" param1="ExplodeOnHit"/>
-            <!-- <property name="CustomIconTint" value="59,62,55"/> -->
+            <property name="CustomIconTint" value="59,62,55"/>
+            <property name="Stacknumber" value="250"/>
             <property name="TintColor" value="59,62,55"/>
             <property name="Meshfile" value="@:Other/Items/Weapons/Ranged/Grenade/GrenadePrefab.prefab"/>
             <property name="UnlockedBy" value="craftingExplosives"/><!-- perkDemolitionsExpert,thrownGrenadeSchematic, -->
@@ -9028,38 +9024,6 @@
             <property name="CraftingIngredientTime" value=".2"/>
         </item>
 
-        <item name="resourceCopperPlate">
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-            <property name="Material" value="Mstone"/>
-            <property name="NoScrapping" value="true"/>
-            <property name="Weight" value="1"/>
-            <property name="Stacknumber" value="15000"/>
-            <property name="EconomicValue" value="10"/>
-            <property name="EconomicBundleSize" value="10"/>
-            <property name="Group" value="Resources"/>
-            <property name="RepairTime" value=".5"/>
-            <property name="RepairAmount" value="20"/>
-            <property name="CraftingIngredientTime" value=".2"/>
-        </item>
-
-        <item name="resourceLeadPlate">
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-            <property name="Material" value="Mstone"/>
-            <property name="NoScrapping" value="true"/>
-            <property name="Weight" value="1"/>
-            <property name="Stacknumber" value="15000"/>
-            <property name="EconomicValue" value="10"/>
-            <property name="EconomicBundleSize" value="10"/>
-            <property name="Group" value="Resources"/>
-            <property name="RepairTime" value=".5"/>
-            <property name="RepairAmount" value="20"/>
-            <property name="CraftingIngredientTime" value=".2"/>
-        </item>
-
         <item name="resourceZinc">
             <property name="HoldType" value="45"/>
             <property name="Meshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
@@ -9383,395 +9347,6 @@
             </effect_group>	
         </item>
 
-    <!-- vhichill -->
-
-        <item name="Tire">
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="Miron_scrap"/> <property name="Weight" value="6"/>
-            <property name="Stacknumber" value="20"/>
-            <property name="EconomicValue" value="32"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="decoCarTireFlat"/>
-        </item>
-
-        <item name="damagedTire">
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="Miron_scrap"/> <property name="Weight" value="3"/>
-            <property name="Stacknumber" value="20"/>
-            <property name="EconomicValue" value="8"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="decoCarTireFlat"/>
-            <property name="CustomIconTint" value="ff0000"/>
-        </item>
-
-        <item name="carAlternator">
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="Miron_scrap"/> <property name="Weight" value="6"/>
-            <property name="Stacknumber" value="16"/>
-            <property name="EconomicValue" value="42"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="altenator"/>
-        </item> 
-        
-        <item name="damagedcarAlternator">
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="Miron_scrap"/><property name="Weight" value="3"/>
-            <property name="Stacknumber" value="16"/>
-            <property name="EconomicValue" value="28"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="altenator"/>
-            <property name="CustomIconTint" value="ff0000"/>
-        </item>
-            
-        <item name="carEngineAssembly">
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="Miron_scrap"/><property name="Weight" value="70"/>
-            <property name="Stacknumber" value="5"/>
-            <property name="EconomicValue" value="200"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="engineassembly"/>
-        </item>
-            
-        <item name="carElectricalAssembly">
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="Miron_scrap"/><property name="Weight" value="50"/>
-            <property name="Stacknumber" value="5"/>
-            <property name="EconomicValue" value="120"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="electricalassembly"/>
-        </item>
-        
-        <item name="carBodyAssembly">
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="Miron_scrap"/><property name="Weight" value="40"/>
-            <property name="Stacknumber" value="5"/>
-            <property name="EconomicValue" value="300"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="bodyassembly"/>
-        </item>
-            
-        <item name="carEngine">
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="Miron_scrap"/><property name="Weight" value="60"/>
-            <property name="Stacknumber" value="10"/>
-            <property name="EconomicValue" value="200"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="engine"/>
-        </item>
-        
-        <item name="damagedcarEngine">
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="Miron_scrap"/><property name="Weight" value="30"/>
-            <property name="Stacknumber" value="10"/>
-            <property name="EconomicValue" value="42"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="engine"/>
-            <property name="CustomIconTint" value="ff0000"/>
-        </item>
-
-        <item name="carCarburetor">
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="MmechanicalParts"/> <property name="Weight" value="10"/>
-            <property name="Stacknumber" value="20"/>
-            <property name="EconomicValue" value="32"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="carb"/>
-        </item>
-
-        <item name="damagedcarCarburetor">
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="MmechanicalParts"/><property name="Weight" value="7"/>
-            <property name="Stacknumber" value="20"/>
-            <property name="EconomicValue" value="22"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="carb"/>
-            <property name="CustomIconTint" value="ff0000"/>
-        </item>
-
-        <item name="carSeats">
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="Mcloth"/><property name="Weight" value="10"/>
-            <property name="Stacknumber" value="10"/>
-            <property name="EconomicValue" value="40"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="seats"/>
-        </item>
-
-        <item name="damagedcarSeats">
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="Mcloth"/> <property name="Weight" value="6"/>
-            <property name="Stacknumber" value="10"/>
-            <property name="EconomicValue" value="15"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="seats"/>
-            <property name="CustomIconTint" value="ff0000"/>
-        </item>
-
-        <item name="damagedcarBattery">
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="Mlead_scrap"/><property name="Weight" value="5"/>
-            <property name="Stacknumber" value="10"/>
-            <property name="EconomicValue" value="22"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="battery"/>
-            <property name="CustomIconTint" value="ff0000"/>
-        </item>
-
-        <item name="carTransmission">
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="MmechanicalParts"/> <property name="Weight" value="25"/>
-            <property name="Stacknumber" value="4"/>
-            <property name="EconomicValue" value="42"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="transmission"/>
-        </item>
-
-        <item name="damagedcarTransmission">
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="MmechanicalParts"/> <property name="Weight" value="15"/>
-            <property name="Stacknumber" value="4"/>
-            <property name="EconomicValue" value="22"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="transmission"/>
-            <property name="CustomIconTint" value="ff0000"/>
-        </item>
-
-        <item name="carChassis">
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="MresourceForgedSteel"/> <property name="Weight" value="15"/>
-            <property name="Stacknumber" value="5"/>
-            <property name="EconomicValue" value="45"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="chassis"/>
-        </item>
-
-        <item name="damagedcarChassis">  
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="MresourceForgedSteel"/> <property name="Weight" value="5"/>
-            <property name="Stacknumber" value="4"/>
-            <property name="EconomicValue" value="16"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="chassis"/>
-            <property name="CustomIconTint" value="ff0000"/> <!--Red to show damaged -->
-        </item>
-
-        <item name="carDoors">
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="MresourceForgedSteel"/> <property name="Weight" value="10"/>
-            <property name="Stacknumber" value="16"/>
-            <property name="EconomicValue" value="32"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="decoCarBackDoorFlipped"/>
-        </item>
-
-        <item name="carHood">
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="MresourceForgedSteel"/> <property name="Weight" value="15"/>
-            <property name="Stacknumber" value="16"/>
-            <property name="EconomicValue" value="32"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="decoCarHoodFlipped"/>
-        </item>
-
-        <item name="carTrunk">
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="MresourceForgedSteel"/> <property name="Weight" value="15"/>
-            <property name="Stacknumber" value="16"/>
-            <property name="EconomicValue" value="32"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="decoCarTrunkLidFlat"/>
-        </item>
-
-        <item name="carBodyKit">
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="MresourceForgedSteel"/> <property name="Weight" value="35"/>
-            <property name="Stacknumber" value="5"/>
-            <property name="EconomicValue" value="100"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="BodyKit"/>
-        </item>
-
-        <item name="carFender">
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="MresourceForgedSteel"/> <property name="Weight" value="8"/>
-            <property name="Stacknumber" value="16"/>
-            <property name="EconomicValue" value="32"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="decoCarFenderFlipped"/>
-        </item>
-
-        <item name="carBumperFront">
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="MresourceForgedSteel"/> <property name="Weight" value="10"/>
-            <property name="Stacknumber" value="16"/>
-            <property name="EconomicValue" value="32"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="decoCarFrontBumperFlat"/>
-        </item>
-
-        <item name="carWheelrims">
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="Items/Misc/sackPrefab"/>
-            <property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-            <property name="Material" value="Miron_scrap"/><property name="Weight" value="10"/>
-            <property name="Stacknumber" value="20"/>
-            <property name="EconomicValue" value="32"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="carWheelrim"/>
-        </item>
-
-        <item name="vehicleVMWheels">
-            <property name="Extends" value="vehicleWheels"/>
-            <property name="Tags" value="salvageHarvest"/>
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="EconomicValue" value="250"/>
-            <property name="Stacknumber" value="20"/>
-            <property name="UnlockedBy" value="craftingVehicles"/>
-            <property name="Weight" value="60"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="VMwheels"/>
-        </item>
-
-        <item name="damagedWheel">
-            <property name="Extends" value="vehicleWheels"/>
-            <property name="Tags" value="vehiclesSkill,salvageHarvest"/>
-            <property name="DescriptionKey" value="TireDesc"/>
-            <property name="EconomicValue" value="70"/>
-            <property name="Stacknumber" value="20"/>
-            <property name="UnlockedBy" value="craftingVehicles"/>
-            <property name="Weight" value="20"/>
-            <property name="Group" value="Resources"/>
-            <property name="CustomIcon" value="VMwheels"/>
-            <property name="CustomIconTint" value="ff0000"/> <!--Red to show damaged -->
-        </item>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </append>
     
     <append xpath="//item[@name='foodCanBeef']">
@@ -9805,7 +9380,7 @@
 			<property name="Stacknumber" value="500"/>
 			<property name="EconomicValue" value="2"/>
 			<property name="EconomicBundleSize" value="1"/>
-			<property name="Group" value="Resources"/>
+			<property name="Group" value="Resources,Chemicals"/>
 		</item>
 		<item name="StainLessSteelPolishBundle">
 			<property name="Extends" value="resourceLockPickBundle"/>
@@ -9813,10 +9388,11 @@
 			<property name="CustomIconTint" value="f9e6ff" />
 			<property name="DescriptionKey" value="SSPolishBundleDesc"/>
 			<property name="SellableToTrader" value="false"/>
-			<property name="Group" value="Resources"/>
+			<property name="Group" value="Resources,Chemicals"/>
 			<property class="Action0">
 				<property name="Create_item" value="StainLessSteelPolish"/>
-				<property name="Create_item_count" value="1000"/></property>
+				<property name="Create_item_count" value="1000"/>
+            </property>
 		</item>
 
 	</append>

@@ -81,9 +81,17 @@
 		animalExplodingDireWolf, .25
 	</append>
 
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
+		Pickle Rick,0.25
+		Jumping Bean, 0.25
+		zombieTickleMeDemo, 0.45
+	</append>
 
-
-
+	<append xpath="/entitygroups/entitygroup[@name='ZombiesNight']">
+		Pickle Rick, 1
+		Jumping Bean, 1
+		zombieTickleMeDemo, 1
+	</append>
 
 	<append xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']">
 		<entity name="zombieBehemoth" prob="0.1"/>

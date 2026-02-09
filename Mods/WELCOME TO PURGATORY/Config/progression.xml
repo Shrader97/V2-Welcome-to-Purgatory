@@ -228,7 +228,12 @@
 	<csv xpath="//crafting_skill[@name='craftingMedical']//unlock_entry[contains(@item, 'drugSteroids')]/@item" op="add">medicalAdvFirstAidKit</csv>
     <csv xpath="//crafting_skill[@name='craftingMedical']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'drugSteroids')]/@tags" op="add">medicalAdvFirstAidKit</csv>
 
-	
+	<csv xpath="//crafting_skill[@name='craftingExplosives']//unlock_entry[contains(@item, 'resourceRocketTip')]/@item" op="add">thrownAdvGrenadeContact</csv>
+    <csv xpath="//crafting_skill[@name='craftingExplosives']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'resourceRocketTip')]/@tags" op="add">thrownAdvGrenadeContact</csv>
+
+	<csv xpath="//crafting_skill[@name='craftingExplosives']//unlock_entry[contains(@item, 'resourceRocketTip')]/@item" op="add">thrownAdvGrenade</csv>
+    <csv xpath="//crafting_skill[@name='craftingExplosives']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'resourceRocketTip')]/@tags" op="add">thrownAdvGrenade</csv>
+
 	<append xpath="//crafting_skill[@name='craftingHandguns']">
 		<display_entry item="GunMGP90,GunMGRuger45" unlock_level="71,76,82,88,94,100" />
 		<effect_group>
@@ -256,7 +261,7 @@
 	<append xpath="//crafting_skill[@name='craftingRobotics']">
 		<display_entry item="meleeWpnBatonT3LazerBaton" unlock_level="55,60,65,70,75,100" />
 		<effect_group>
-			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="51,100" value="1" tags="meleeWpnBatonT3LazerBaton"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="55,100" value="1" tags="meleeWpnBatonT3LazerBaton"/>
 			<passive_effect name="CraftingTier" operation="base_add" level="60,65,70,75,100" value="1,2,3,4,5" tags="meleeWpnBatonT3LazerBaton"/>
 		</effect_group>
 	</append>

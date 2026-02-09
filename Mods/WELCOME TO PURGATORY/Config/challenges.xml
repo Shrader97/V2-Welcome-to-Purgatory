@@ -2,7 +2,7 @@
 
 <insertAfter xpath="/challenges/challenge_category[@name='Twitch']">
 	<challenge_category name="Shrader971's Challenge's" title_key="xuiChallenge" icon="ui_game_symbol_star"/>
-	<!--challenge_category name="Shrader971's Challenge's Stage 2" title_key="xuiChallenge" icon="ui_game_symbol_lightbulb"/-->
+	<!--challenge_category name="Shrader971's Challenge's Stage 2" title_key="xuiChallenge" icon="ui_game_symbol_rank2"/-->
 </insertAfter>
 
 <insertAfter xpath="/challenges/challenge_group[@category='Twitch'][@name='Silly']">

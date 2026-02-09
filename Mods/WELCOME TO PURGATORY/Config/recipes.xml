@@ -262,7 +262,7 @@
 
         
         <recipe name="StainLessSteelPolishBundle" count="1" craft_area="chemistryStation" tags="chemistryStation" craft_time="90">
-            <ingredient name="resourceOil" count="90"/>
+            <ingredient name="resourceOil" count="40"/>
             <ingredient name="resourceAcid" count="20"/>
             <ingredient name="resourceScrapPolymers" count="100"/>
         </recipe>
@@ -313,37 +313,9 @@
             </effect_group>
         </recipe>
 
-        <recipe name="resourceCopperPlate" count="1" craft_area="forge" is_trackable="false" craft_tool="toolAnvil">
-            <ingredient name="resourceCopper" count="20"/>
-            <ingredient name="resourceClayLump" count="10"/>
-            <effect_group>
-                <passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceClayLump,resourceCopper"/>
-            </effect_group>
-        </recipe>
-
-        <recipe name="resourceLeadPlate" count="1" craft_area="forge" is_trackable="false" craft_tool="toolAnvil">
-            <ingredient name="resourceScrapLead" count="20"/>
-            <ingredient name="resourceClayLump" count="10"/>
-            <effect_group>
-                <passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceClayLump,resourceCopper"/>
-            </effect_group>
-        </recipe>
-
         <recipe name="resourceScrapBrass" count="10" craft_area="forge" is_trackable="false" craft_tool="toolAnvil">
             <ingredient name="resourceZinc" count="10"/>
             <ingredient name="resourceCopper" count="20"/>
-        </recipe>
-
-        <recipe name="carBattery" count="1" craft_area="chemistryStation" tags="learnable,chemStationCrafting"><!-- perkGreaseMonkey -->
-            <ingredient name="resourceLeadPlate" count="1"/>
-            <ingredient name="resourceCopperPlate" count="1"/>
-            <ingredient name="resourceAcid" count="1"/>
-            <ingredient name="resourceScrapPolymers" count="10"/>
-            <ingredient name="resourceLegendaryParts" count="0"/>
-            <effect_group>
-                <passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="resourceLeadPlate,resourceCopperPlate,resourceAcid,resourceScrapPolymers"/>
-                <passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="1" tags="resourceLegendaryParts"/>
-            </effect_group>
         </recipe>
 
         <recipe name="GunsmithBence" count="1" tags="learnable,workbenchCrafting">
