@@ -6,6 +6,7 @@
     <append xpath="/doc/tips">
         <tip key="loadingTipFireBad" />
         <tip key="loadingTipGasoline" />
+        <tip key="loadingTipBodyHarvesting" />
     </append>
 
 

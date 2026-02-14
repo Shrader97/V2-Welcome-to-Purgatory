@@ -8,7 +8,7 @@
             <window name="craftingInfoPanel"/>
             <window name="windowCraftingQueue"/>
             <window name="windowToolsGunsmithBence" />
-            <window name="windowGunsmithOutput" />
+            <window name="windowOutputtwelve" />
             <window name="windowNonPagingHeader" />
         </window_group>
 

@@ -496,6 +496,10 @@ loadingTipFireBad,"If you are on fire, do not try to put it out by dousing yours
 loadingTipFireBad_title,Fire is bad,
 loadingTipGasoline,"Gasoline is used to fuel generators, motor tools, and motorized vehicles.\nDo not drink gasoline."
 loadingTipGasoline_title,Gasoline
+loadingTipBodyHarvesting,"You Can loot and harvest the zombie bodys."
+loadingTipBodyHarvesting_title,Bodys
+
+
 
 
 
@@ -847,12 +851,12 @@ challengeGathererZincShort,[DECEA3] Zinc [-]
 challengeGathererZincDesc,Gather some Zinc
 
 
-challengePlaceAdvForge,Place Advanced Forge
-challengePlaceAdvForgeShort,"[DECEA3]Advanced Forge[-]
+challengePlaceAdvForge,"Place Advanced Forge"
+challengePlaceAdvForgeShort,"[DECEA3]Advanced Forge[-]"
 challengePlaceAdvForgeDesc,Place a Advanced Forge
 
-challengePlaceBenchtopLathe,Place Benchtop Lathe
-challengePlaceBenchtopLatheShort,"[DECEA3]Benchtop Lathe[-]
+challengePlaceBenchtopLathe,"Place Benchtop Lathe"
+challengePlaceBenchtopLatheShort,"[DECEA3]Benchtop Lathe[-] Can be used to make gun parts. "
 challengePlaceBenchtopLatheDesc,Place a Benchtop Lathe
 
 challengeCraftForgedTitanium,Craft Forged Titanium
@@ -863,17 +867,20 @@ challengePlaceAmmoBench,Place Ammo Bench
 challengePlaceAmmoBenchShort,[DECEA3]Ammo Bench[-]
 challengePlaceAmmoBenchDesc,Place a Ammo Bench
 
-challengeCraftAdvGrenadeContact,Craft Advanced Contant Grenades
-challengeCraftAdvGrenadeContactShort,"[DECEA3]Advanced Contant Grenades[-] are a type of thrown [DECEA3]Explosive[-] 
-challengeCraftAdvGrenadeContactDesc,Craft 50 Advanced Contant Grenades.
+challengeCraftAdvGrenadeContact,"Craft Advanced Contant Grenades"
+challengeCraftAdvGrenadeContactShort,"[DECEA3]Advanced Contant Grenades[-] are a type of thrown [DECEA3]Explosive[-]"
+challengeCraftAdvGrenadeContactDesc,"Craft 50 Advanced Contant Grenades."
 
-challengeCraftAdvGrenade,Craft Advanced Grenades.
-challengeCraftAdvGrenadeShort,"[DECEA3]Pipe Bombs[-] are a type of thrown [DECEA3]Explosive[-] 
+challengeCraftAdvGrenade,"Craft Advanced Grenades"
+challengeCraftAdvGrenadeShort,"[DECEA3]Advanced Grenades[-] are a type of thrown [DECEA3]Explosive[-]"
 challengeCraftAdvGrenadeDesc,Craft 50 Advanced Grenades.
 
+challengePlaceRecycler,"Place Recycler"
+challengePlaceRecyclerShort,"Place Recycler"
+challengePlaceRecyclerDesc,"Place Recycler to begin Mass Scraping"
 
 challengeCraftStainLessSteelPolish,Craft Stainless Steel Polish
-challengeCraftStainLessSteelPolishShort,"[DECEA3]Advanced Grenades[-]"
+challengeCraftStainLessSteelPolishShort,"[DECEA3]Steel Polish[-]"
 challengeCraftStainLessSteelPolishDesc,Craft 1000 Stainless Steel Polish
 
 meleeWpnBatonT3LazerBaton,"Loveshack's Lazer Baton"
@@ -904,16 +911,17 @@ modSuperMaxDegradation,"Super Max Degradation"
 
 modUltraMaxDegradation,"Ultra Max Degradation"
 
+modBikecycleSpeedBoost,"Bicycle Speed Boost"
+modBikecycleSpeedBoostDesc,"Increases bicycle speed by gear ratio."
 
 
 
 
+resourceForgedTitanium,"Forged Titanium"
 
+StainLessSteelPolish,"StainLess Steel Polish"
 
-
-
-
-
+BenchtopLathe,"Benchtop Lathe"
 
 
 

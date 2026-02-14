@@ -139,23 +139,6 @@
 			</effect_group>
 		</item_modifier>
 
-        <item_modifier name="modBatonExtender" installable_tags="perkElectrocutioner" modifier_tags="barrelAttachment" blocked_tags="knockback" type="attachment">
-            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
-            <property name="UnlockedBy" value="modGunBarrelExtenderSchematic"/>
-            <property name="TraderStageTemplate" value="modsTier2"/>
-            <!--DamageFalloffRange increased by x meters-->
-            <effect_group tiered="false">
-                <passive_effect name="MaxRange" operation="perc_add" value="1.5"/>
-                <passive_effect name="BlockRange" operation="perc_add" value="2"/>
-            </effect_group>
-
-            <effect_group tiered="false" name="internal attachment prefab (A19)">
-                <requirement name="HoldingItemHasTags" tags="attachmentsIncluded"/>
-                    <triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="Aextension"/>
-            </effect_group>
-
-        </item_modifier>
-
         <item_modifier name="modMaxDegradation" installable_tags="armor,weapon,tool,vehicle,drone" modifier_tags="Degradation" blocked_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
             <property name="CustomIcon" value="modArmorStrength"/>
@@ -199,69 +182,35 @@
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
             <property name="CustomIcon" value="modMeleeClubBurningShaft"/>
             <property name="TraderStageTemplate" value="modsTier2"/>
-            <!--
-            <item_property_overrides name="*">
-                <property name="LightValue" value=".25"/> 
-                <property name="LightSource" value="lightSource"/>
-                <property name="ActivateObject" value="lightSource"/>
-                <property name="AlwaysActive" value="true"/>
-                <property name="FlameEffect" value="@:ItemModEffects/mod_flame_defaultPrefab.prefab"/>
-                <property name="MatEmission" value="1"/>
-            </item_property_overrides>
 
-            <item_property_overrides name="meleeWpnKnucklesT0LeatherKnuckles">
-                <property name="FlameEffect" value="@:ItemModEffects/mod_machete_flamePrefab.prefab"/>
-            </item_property_overrides>
-
-            <item_property_overrides name="meleeWpnKnucklesT1IronKnuckles">
-                <property name="FlameEffect" value="@:ItemModEffects/mod_machete_flamePrefab.prefab"/>
-            </item_property_overrides>
-
-            <item_property_overrides name="meleeWpnKnucklesT3SteelKnuckles">
-                <property name="FlameEffect" value="@:ItemModEffects/mod_machete_flamePrefab.prefab"/>
-            </item_property_overrides>
-            -->
-            <effect_group tiered="false" name="SpecialEffects">
-                <passive_effect name="LightMultiplier" operation="base_add" value=".28"/>
-                <passive_effect name="HypothermalResist" operation="base_add" value="4">
-                    <requirement name="CVarCompare" cvar="_underwater" operation="LT" value="1"/>
-                </passive_effect>
-            </effect_group>
-
-            <effect_group name="light/douse torch always" tiered="false">
-                <triggered_effect trigger="onSelfWaterSurface" action="AddPart" part="Flames" prefab="property?FlameEffect" parentTransform="#HeldItemRoot"/>
-                <triggered_effect trigger="onSelfWaterSubmerge" action="RemovePart" part="Flames"/>
-                <triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="Flames"/>
-                <triggered_effect trigger="onSelfDied" action="RemovePart" part="Flames"/>
-            </effect_group>
-
-            <effect_group name="light torch" tiered="false">
-                <requirement name="CVarCompare" cvar="_underwater" operation="LT" value="1"/>
-                    <triggered_effect trigger="onSelfEquipStart" action="AddPart" part="Flames" prefab="property?FlameEffect" parentTransform="#HeldItemRoot"/>
-                    <triggered_effect trigger="onSelfHoldingItemCreated" action="AddPart" part="Flames" prefab="property?FlameEffect" parentTransform="#HeldItemRoot"/>
-                    <triggered_effect trigger="onSelfHoldingItemThrown" action="AddPart" part="Flames" prefab="property?FlameEffect" parentTransform="#HeldItemRoot"/>
-                    <triggered_effect trigger="onSelfHoldingItemThrown" action="AttachPrefabToHeldItem" prefab="property?FlameEffect"/>
-                    <triggered_effect trigger="onSelfSwimStop" action="AddPart" part="Flames" prefab="property?FlameEffect" parentTransform="#HeldItemRoot"/>
-            </effect_group>
-
-            <effect_group name="new Fire Proc" tiered="false">
-                <requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".93"/>
-                <requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="30"/>
-                    <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement"/>
-                    <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="10">
-                        <requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="0"/></triggered_effect>
-                    <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="11">
-                        <requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="1"/></triggered_effect>
-            </effect_group>
-
-            <effect_group name="always refresh existing Fire Proc" tiered="false">
-                <requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".93"/>
-                <requirement name="HasBuff" target="other" buff="buffBurningElement"/>
-                    <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement"/>
-                    <!--default duration is 10-->
-                    <triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="11">
-                        <requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="1"/></triggered_effect>
-            </effect_group>
+                <item_property_overrides name="meleeWpnKnucklesT0LeatherKnuckles">
+                        <property name="FlameEffect" remove="true"/>
+                </item_property_overrides>
+                
+                <item_property_overrides name="meleeWpnKnucklesT1IronKnuckles">
+                        <property name="FlameEffect" remove="true"/>
+                </item_property_overrides>
+                
+                <item_property_overrides name="meleeWpnKnucklesT3SteelKnuckles">
+                        <property name="FlameEffect" remove="true"/>
+                </item_property_overrides>
+                        
+                <effect_group>
+                    <triggered_effect trigger="onSelfEquipStart" action="RemovePart" part="Flames">
+                        <requirement name="HoldingItemHasTags" tags="perkBrawler"/>
+                    </triggered_effect>
+                    <triggered_effect trigger="onSelfEquipStart" action="AttachPrefabToEntity" prefab="@:ItemModEffects/mod_sledge_flamePrefab.prefab" parent_transform="LeftHand" local_offset="0,0,0" local_rotation="0,0,0" local_scale="0,0,0">
+                        <requirement name="HoldingItemHasTags" tags="perkBrawler"/>
+                    </triggered_effect>
+                    <triggered_effect trigger="onSelfEquipStart" action="AttachPrefabToEntity" prefab="@:ItemModEffects/mod_sledge_flamePrefab.prefab" parent_transform="RightHand" local_offset="0,0,0" local_rotation="0,0,0" local_scale="0,0,0">
+                        <requirement name="HoldingItemHasTags" tags="perkBrawler"/>
+                    </triggered_effect>
+                    <triggered_effect trigger="onSelfEquipStop" action="RemovePrefabFromEntity" prefab="mod_sledge_flamePrefab" parent_transform="LeftHand"/>
+                    <triggered_effect trigger="onSelfEquipStop" action="RemovePrefabFromEntity" prefab="mod_sledge_flamePrefab" parent_transform="RightHand"/>
+                    <triggered_effect trigger="onSelfEquipStop" action="RemovePart" part="Flames">
+                        <requirement name="HoldingItemHasTags" tags="perkBrawler"/>
+                    </triggered_effect>
+                </effect_group>
         </item_modifier>
 
         <item_modifier name="modMeleeRightCross" installable_tags="perkBrawler" blocked_tags="noMods" type="attachment">
@@ -473,8 +422,9 @@
             <effect_group tiered="false">
                 <passive_effect name="HypothermalResist" operation="base_add" value="11.7,15.5"/>
                 <passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
-                <passive_effect name="RunSpeed" operation="perc_add" value=".1"/>
-                <display_value name="dRunSpeed" value=".1"/>
+                <passive_effect name="RunSpeed" operation="perc_add" value=".1"/><display_value name="dRunSpeed" value=".1"/>
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_add" value=".20"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_add" value=".29"/>
             </effect_group>
         </item_modifier>
 
@@ -489,10 +439,26 @@
             <effect_group tiered="false">
                 <passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
                 <passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
-                <passive_effect name="StaminaChangeOT" operation="perc_add" value=".2" tags="running"/>
-                <display_value name="dStaminaRegen" value=".2"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_add" value=".2" tags="running"/><display_value name="dStaminaRegen" value=".2"/>
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_add" value=".20"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_add" value=".29"/>
             </effect_group>
         </item_modifier>
+
+        <item_modifier name="modBikecycleSpeedBoost" installable_tags="vehicle" modifier_tags="speed" blocked_tags="noMods" type="attachment">
+			<property name="Extends" value="modGeneralMaster"/>
+			<property name="DescriptionKey" value="modTMBikeSpeedBoostDesc"/>
+			<property name="TraderStageTemplate" value="modsTier1"/>
+            <property name="CustomIcon" value="modVehicleSuperCharger"/>
+            <property name="CustomIconTint" value="86,255,109"/>
+			<property name="Stacknumber" value="1"/>
+            <property name="UnlockedBy" value="modBikecycleSpeedBoostSchematic"/>
+			<property name="EconomicValue" value="500"/>
+			<effect_group tiered="false">
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_add" value=".40"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_add" value=".58"/>
+			</effect_group>
+		</item_modifier>
 
         <!--item_modifier name="modGunMeleeLiquidNitrogen" installable_tags="weapon,tool" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
@@ -520,48 +486,6 @@
             </effect_group>
         </item_modifier>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	</append>
-
-
-
-
-
-
-
-
-
 
 </configs>

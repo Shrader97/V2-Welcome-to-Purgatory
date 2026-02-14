@@ -321,8 +321,8 @@
 	<csv xpath="//crafting_skill[@name='craftingWorkstations']//unlock_entry[contains(@item, 'toolApiaryExtractor')]/@item" op="add">WorkingAirConditioner</csv>
     <csv xpath="//crafting_skill[@name='craftingWorkstations']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'toolApiaryExtractor')]/@tags" op="add">WorkingAirConditioner</csv>
 
-	<csv xpath="//crafting_skill[@name='craftingWorkstations']//unlock_entry[contains(@item, 'cementMixer')]/@item" op="add">tooltailstock,toolChuck,toolToolPost,toolbenchvise,toolToolBox,toolTools,toolBook,toolDrill,toolHammer,toolSaw,toolScrewDriverSet,toolVise</csv>
-    <csv xpath="//crafting_skill[@name='craftingWorkstations']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'cementMixer')]/@tags" op="add">tooltailstock,toolChuck,toolToolPost,toolbenchvise,toolToolBox,toolTools,toolBook,toolDrill,toolHammer,toolSaw,toolScrewDriverSet,toolVise</csv>
+	<csv xpath="//crafting_skill[@name='craftingWorkstations']//unlock_entry[contains(@item, 'cementMixer')]/@item" op="add">tooltailstock,toolChuck,toolToolPost,toolbenchvise,toolToolBox,toolTools,toolBook,toolDrill,toolHammer</csv>
+    <csv xpath="//crafting_skill[@name='craftingWorkstations']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'cementMixer')]/@tags" op="add">tooltailstock,toolChuck,toolToolPost,toolbenchvise,toolToolBox,toolTools,toolBook,toolDrill,toolHammer</csv>
 
 
 

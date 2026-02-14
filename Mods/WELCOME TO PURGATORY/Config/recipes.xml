@@ -994,27 +994,6 @@
             <ingredient name="resourceSpring" count="1"/>
         </recipe>
 
-        <recipe name="toolSaw" count="1" craft_time="20" craft_area="workbench" tags="learnable,workbenchCrafting">
-            <ingredient name="resourceMechanicalParts" count="2"/>
-            <ingredient name="resourceForgedSteel" count="14"/>
-            <ingredient name="resourceForgedIron" count="4"/>
-            <ingredient name="resourceSpring" count="1"/>
-        </recipe>
-
-        <recipe name="toolScrewDriverSet" count="1" craft_time="20" craft_area="workbench" tags="learnable,workbenchCrafting">
-            <ingredient name="resourceMechanicalParts" count="2"/>
-            <ingredient name="resourceForgedSteel" count="14"/>
-            <ingredient name="resourceForgedIron" count="4"/>
-            <ingredient name="resourceSpring" count="1"/>
-        </recipe>
-
-        <recipe name="toolVise" count="1" craft_time="20" craft_area="workbench" tags="learnable,workbenchCrafting">
-            <ingredient name="resourceMechanicalParts" count="2"/>
-            <ingredient name="resourceForgedSteel" count="14"/>
-            <ingredient name="resourceForgedIron" count="4"/>
-            <ingredient name="resourceSpring" count="1"/>
-        </recipe>
-
     <!-- explose -->
 
         <recipe name="thrownAmmoMolotovCocktail" count="1" craft_time="12">
@@ -1059,6 +1038,48 @@
     <!-- Mods -->
 
         <recipe name="modSpeedLoader" count="1" craft_area="workbench" tags="learnable,workbenchCrafting" craft_time="120">
+            <ingredient name="resourceForgedIron" count="10"/>
+            <ingredient name="resourceMechanicalParts" count="10"/>
+            <ingredient name="resourceOil" count="5"/>
+            <ingredient name="resourceGlue" count="5"/>
+        </recipe>
+
+        <recipe name="modVehicleTurboCharger" count="1" craft_area="workbench" tags="learnable,workbenchCrafting" craft_time="120">
+            <ingredient name="resourceForgedIron" count="10"/>
+            <ingredient name="resourceMechanicalParts" count="10"/>
+            <ingredient name="resourceOil" count="5"/>
+            <ingredient name="resourceGlue" count="5"/>
+        </recipe>
+
+        <recipe name="modVehicleDoubleTurboCharger" count="1" craft_area="workbench" tags="learnable,workbenchCrafting" craft_time="120">
+            <ingredient name="resourceForgedIron" count="10"/>
+            <ingredient name="resourceMechanicalParts" count="10"/>
+            <ingredient name="resourceOil" count="5"/>
+            <ingredient name="resourceGlue" count="5"/>
+        </recipe>
+
+        <recipe name="modMaxDegradation" count="1" craft_area="workbench" tags="learnable,workbenchCrafting" craft_time="120">
+            <ingredient name="resourceForgedIron" count="10"/>
+            <ingredient name="resourceMechanicalParts" count="10"/>
+            <ingredient name="resourceOil" count="5"/>
+            <ingredient name="resourceGlue" count="5"/>
+        </recipe>
+
+        <recipe name="modSuperMaxDegradation" count="1" craft_area="workbench" tags="learnable,workbenchCrafting" craft_time="120">
+            <ingredient name="resourceForgedSteel" count="10"/>
+            <ingredient name="resourceMechanicalParts" count="10"/>
+            <ingredient name="resourceOil" count="5"/>
+            <ingredient name="resourceGlue" count="5"/>
+        </recipe>
+
+        <recipe name="modUltraMaxDegradation" count="1" craft_area="workbench" tags="learnable,workbenchCrafting" craft_time="120">
+            <ingredient name="resourceForgedTitanium" count="10"/>
+            <ingredient name="resourceMechanicalParts" count="10"/>
+            <ingredient name="resourceOil" count="5"/>
+            <ingredient name="resourceGlue" count="5"/>
+        </recipe>
+
+        <recipe name="modBikecycleSpeedBoost" count="1" craft_area="workbench" tags="learnable,workbenchCrafting" craft_time="120">
             <ingredient name="resourceForgedIron" count="10"/>
             <ingredient name="resourceMechanicalParts" count="10"/>
             <ingredient name="resourceOil" count="5"/>

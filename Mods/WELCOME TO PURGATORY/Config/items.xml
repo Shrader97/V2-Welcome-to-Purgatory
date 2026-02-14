@@ -1,5 +1,6 @@
 <configs>
 
+    <set xpath="/items/item[contains(@name, 'vehicle')]/effect_group/passive_effect[@name='ModSlots']/@value">6</set>
 
     <append xpath="/items">
 
@@ -1443,63 +1444,6 @@
                 <requirement name="!HoldingItemHasTags" tags="toolAnvil"/>
                     <passive_effect name="CraftingTime" operation="perc_add" value="-.333"/>
                     <display_value name="dCraftingTime" value=".5"/>
-            </effect_group>
-        </item>
-
-        <item name="toolSaw">
-            <property name="UnlockedBy" value="craftingWorkstations"/>
-            <property name="Tags" value="workstationSkill"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
-            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-            <property name="Material" value="Msteel"/>
-            <property name="Weight" value="0"/>
-            <property name="Stacknumber" value="1"/> <!-- STK loot -->
-            <property name="EconomicValue" value="240"/>
-            <property name="Group" value="Tools/Traps"/>
-            <property name="DisplayType" value="toolAnvil"/>
-            <property name="ItemTypeIcon" value="forge"/>
-            <property name="SoundPickup" value="anvil_grab"/>
-            <property name="SoundPlace" value="anvil_place"/>
-            <effect_group tiered="false">
-            </effect_group>
-        </item>
-
-        <item name="toolScrewDriverSet">
-            <property name="UnlockedBy" value="craftingWorkstations"/>
-            <property name="Tags" value="workstationSkill"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
-            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-            <property name="Material" value="Msteel"/>
-            <property name="Weight" value="0"/>
-            <property name="Stacknumber" value="1"/> <!-- STK loot -->
-            <property name="EconomicValue" value="240"/>
-            <property name="Group" value="Tools/Traps"/>
-            <property name="DisplayType" value="toolAnvil"/>
-            <property name="ItemTypeIcon" value="forge"/>
-            <property name="SoundPickup" value="anvil_grab"/>
-            <property name="SoundPlace" value="anvil_place"/>
-            <effect_group tiered="false">
-            </effect_group>
-        </item>
-
-        <item name="toolVise">
-            <property name="UnlockedBy" value="craftingWorkstations"/>
-            <property name="Tags" value="workstationSkill"/>
-            <property name="HoldType" value="45"/>
-            <property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
-            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
-            <property name="Material" value="Msteel"/>
-            <property name="Weight" value="0"/>
-            <property name="Stacknumber" value="1"/> <!-- STK loot -->
-            <property name="EconomicValue" value="240"/>
-            <property name="Group" value="Tools/Traps"/>
-            <property name="DisplayType" value="toolAnvil"/>
-            <property name="ItemTypeIcon" value="forge"/>
-            <property name="SoundPickup" value="anvil_grab"/>
-            <property name="SoundPlace" value="anvil_place"/>
-            <effect_group tiered="false">
             </effect_group>
         </item>
 
@@ -4646,16 +4590,12 @@
             </property>
         </item>
 
-
-
-
     <!-- mods -->
             
-
         <item name="modVehicleTurboChargerSchematic">
             <property name="Extends" value="schematicNoQualityMaster"/>
             <property name="CreativeMode" value="Player"/>
-            <property name="CustomIcon" value="modVehicleTurboCharger"/>
+            <property name="CustomIcon" value="modVehicleTurbo"/>
             <property name="Unlocks" value="modVehicleTurboCharger"/>
             <effect_group tiered="false">
                 <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modVehicleTurboCharger" operation="set" value="1"/>
@@ -4666,7 +4606,7 @@
         <item name="modVehicleDoubleTurboChargerSchematic">
             <property name="Extends" value="schematicNoQualityMaster"/>
             <property name="CreativeMode" value="Player"/>
-            <property name="CustomIcon" value="modVehicleTurboCharger"/>
+            <property name="CustomIcon" value="modVehicleTurbo"/>
             <property name="Unlocks" value="modVehicleDoubleTurboCharger"/>
             <effect_group tiered="false">
                 <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modVehicleDoubleTurboCharger" operation="set" value="1"/>
@@ -4677,7 +4617,7 @@
         <item name="modMaxDegradationSchematic">
             <property name="Extends" value="schematicNoQualityMaster"/>
             <property name="CreativeMode" value="Player"/>
-            <property name="CustomIcon" value="modVehicleTurboCharger"/>
+            <property name="CustomIcon" value="modArmorStrength"/>
             <property name="Unlocks" value="modMaxDegradation"/>
             <effect_group tiered="false">
                 <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modMaxDegradation" operation="set" value="1"/>
@@ -4688,7 +4628,7 @@
         <item name="modSuperMaxDegradationSchematic">
             <property name="Extends" value="schematicNoQualityMaster"/>
             <property name="CreativeMode" value="Player"/>
-            <property name="CustomIcon" value="modVehicleTurboCharger"/>
+            <property name="CustomIcon" value="modArmorStrength"/>
             <property name="Unlocks" value="modSuperMaxDegradation"/>
             <effect_group tiered="false">
                 <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modSuperMaxDegradation" operation="set" value="1"/>
@@ -4699,10 +4639,21 @@
         <item name="modUltraMaxDegradationSchematic">
             <property name="Extends" value="schematicNoQualityMaster"/>
             <property name="CreativeMode" value="Player"/>
-            <property name="CustomIcon" value="modVehicleTurboCharger"/>
+            <property name="CustomIcon" value="modArmorStrength"/>
             <property name="Unlocks" value="modUltraMaxDegradation"/>
             <effect_group tiered="false">
                 <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modUltraMaxDegradation" operation="set" value="1"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+            </effect_group>
+        </item>
+
+        <item name="modBikecycleSpeedBoostSchematic">
+            <property name="Extends" value="schematicNoQualityMaster"/>
+            <property name="CreativeMode" value="Player"/>
+            <property name="CustomIcon" value="modVehicleTurboCharger"/>
+            <property name="Unlocks" value="modBikecycleSpeedBoost"/>
+            <effect_group tiered="false">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="modBikecycleSpeedBoost" operation="set" value="1"/>
                 <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
             </effect_group>
         </item>

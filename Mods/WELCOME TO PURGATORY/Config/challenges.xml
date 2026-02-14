@@ -236,11 +236,11 @@
 	</challenge-->
 
 	<!-- Workstations CRAFTING -->
-	<challenge name="placeAdvForge" title_key="challengePlaceAdvForge" icon="ui_game_symbol_forge" group="Advanced Workstations"
+	<!--challenge name="placeAdvForge" title_key="challengePlaceAdvForge" icon="ui_game_symbol_forge" group="Advanced Workstations"
 		short_description_key="challengePlaceAdvForgeShort" description_key="challengePlaceAdvForgeDesc"
 		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
 		<objective type="BlockPlace" block="AdvForge" count="1"/>
-	</challenge>
+	</challenge-->
 
 	<challenge name="placeBenchtopLathe" title_key="challengePlaceBenchtopLathe" icon="ui_game_symbol_BenchtopLathe" group="Advanced Workstations"
 		short_description_key="challengePlaceBenchtopLatheShort" description_key="challengePlaceBenchtopLatheDesc"

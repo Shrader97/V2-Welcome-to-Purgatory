@@ -16,8 +16,6 @@
 		<drop event="Harvest" name="foodSnail" count="2" tag="allHarvest,perkJunkMiner"/>
 	</append>
 
-
-
 	<append xpath="/blocks">
 
 			<!-- *** Steel_SPIKES -->
@@ -1700,8 +1698,8 @@
 			<property name="BuffsWhenWalkedOn" value="Cooledfloor"/>
 		</block>
 
-		<block name="AdvForge">
-			<!-- Class -->
+		<!--block name="AdvForge">
+-
 			<property name="Class" value="Forge"/>
 			<property class="Workstation">
 				<property name="CraftingAreaRecipes" value="Advforge"/>
@@ -1709,12 +1707,12 @@
 				<property name="ToolNames" value="1,2,3"/>
 			</property>
 			<property name="UnlockedBy" value="craftingWorkstations"/>
-			<!-- UI_Info -->
+-
 			<property name="CreativeMode" value="Player"/>
 			<property name="DescriptionKey" value="forgeDesc"/>
 			<property name="WorkstationIcon" value="ui_game_symbol_forge"/>
 			<property name="Stacknumber" value="1"/>
-			<!-- Visual -->
+-
 			<property name="Material" value="Mstone_scrap"/>
 			<property name="Shape" value="ModelEntity"/>
 			<property name="Model" value="#@modfolder:Resources/Workbences.unity3d?AdvForge"/>
@@ -1722,17 +1720,17 @@
 			<property name="ModelOffset" value="0,0,0"/>
 			<property name="ImposterDontBlock" value="true"/>
 			<property name="WaterFlow" value="permitted"/>
-			<!-- Placement -->
+-
 			<property name="Place" value="TowardsPlacerInverted"/>
 			<property name="OnlySimpleRotations" value="true"/>
 			<property name="Path" value="solid"/>
 			<property name="IsTerrainDecoration" value="true"/>
 			<property name="StabilitySupport" value="true"/>
-			<!-- Value -->
+-
 			<property name="Weight" value="0"/>
 			<property name="EconomicValue" value="1000"/>
-			<property name="TraderStageTemplate" value="midTier0"/><!-- forge -->
-			<!-- Interaction -->
+			<property name="TraderStageTemplate" value="midTier0"/>
+-
 			<property name="MaxDamage" value="800"/>
 			<property name="HeatMapStrength" value="6"/>
 			<property name="HeatMapTime" value="5000"/>
@@ -1752,7 +1750,7 @@
 			<drop event="Harvest" name="resourceLeather" count="5" tag="allHarvest"/>
 			<drop event="Destroy" count="0"/>
 			<drop event="Fall" name="terrDestroyedStone" count="1" prob="0.75" stick_chance="1"/>
-			<!-- Sorting -->
+
 			<property name="SortOrder1" value="B281"/>
 			<property name="SortOrder2" value="0200"/>
 			<property name="Group" value="Building,TCScience,advBuilding"/>
@@ -1760,7 +1758,7 @@
 			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
 			<property name="SoundPickup" value="forge_grab"/>
 			<property name="SoundPlace" value="forge_place"/>
-		</block>
+		</block-->
 
 		<block name="GunsmithBence">
 			<property name="Class" value="Workstation"/>
@@ -1784,7 +1782,7 @@
 			<property class="Workstation">
 				<property name="Modules" value="tools,output"/>
 				<property name="CraftingAreaRecipes" value="GunsmithBence"/>
-				<property name="ToolNames" value="1,2,3,4,5,6"/>
+				<property name="ToolNames" value="1,2,3"/>
 			</property>
 			<property name="WorkstationIcon" value="ui_game_symbol_gunsmithing"/>
 			<property name="CraftIcon" value="ui_game_symbol_gunsmithing"/>
