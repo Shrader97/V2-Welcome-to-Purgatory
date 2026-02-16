@@ -164,6 +164,138 @@
 			<property name="DescriptionKey" value="WeedStemDesc"/>
 		</item>
 
+		<!-- Splicing Chamber -->
+		
+		<item name="WeedStemChem-47">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem1Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stemak47"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+
+		<item name="WeedStemAkCake">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem1Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stemak47"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+
+		<item name="WeedStemSky47">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem1Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stemak47"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+
+		<item name="WeedStemAkHaze">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem1Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stemak47"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+
+		<item name="WeedStemFrostedFuel">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem1Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stemak47"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+
+		<item name="WeedStemDreamDawg">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem1Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stemak47"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+
+		<item name="WeedStemHazeDawg">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem1Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stemak47"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+
+		<item name="WeedStemPurpleDreamCake">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem1Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stemak47"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+
+		<item name="WeedStemBridalHaze">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem1Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stemak47"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+
+		<item name="WeedStemHazeDream">
+			<property name="HoldType" value="16"/>
+			<property name="Meshfile" value="#@modfolder:Resources/Weedmodels.unity3d?WeedStem1Prefab"/>
+			<property name="DropMeshfile" value="@Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="CustomIcon" value="stemak47"/>
+			<property name="Material" value="MresourceCrop"/>
+			<property name="Stacknumber" value="500"/> 
+			<property name="EconomicValue" value="30"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+			<property name="DescriptionKey" value="WeedStemDesc"/>
+		</item>
+
 		<!-- SUPER WEED -->
 		<item name="SuperWeed">
 			<property name="HoldType" value="23"/>

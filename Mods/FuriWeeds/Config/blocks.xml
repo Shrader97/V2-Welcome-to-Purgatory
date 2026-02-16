@@ -602,4 +602,169 @@
 
 	</append>
 
+	<append xpath="/blocks">
+
+			<!-- *** WORKBENCH -->
+		<block name="Bio Splicing Chamber">
+			<!-- Class -->
+			<property name="Class" value="Workstation"/>
+			<property class="Workstation">
+				<property name="Modules" value="output"/>
+				<property name="CraftingAreaRecipes" value="BioSplicingChamber"/>
+			</property>
+			<property name="UnlockedBy" value="craftingWorkstations"/>
+			<!-- UI_Info -->
+			<property name="CreativeMode" value="Player"/>
+			<property name="DescriptionKey" value="workbenchDesc"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="WorkstationIcon" value="ui_game_symbol_workbench"/>
+			<property name="Stacknumber" value="1"/>
+			<!-- Visual -->
+			<property name="Material" value="Mmetal"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="#@modfolder:Resources/spilcingchamber.unity3d?BioSplicingChamber"/>
+			<property name="ModelOffset" value="0,.5,0"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="ImposterDontBlock" value="true"/>
+			<property name="WaterFlow" value="permitted"/>
+			<!-- Placement -->
+			<property name="Place" value="TowardsPlacerInverted"/>
+			<property name="OnlySimpleRotations" value="true"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property name="StabilitySupport" value="false"/>
+			<!-- Value -->
+			<property name="Weight" value="0"/>
+			<property name="EconomicValue" value="2000"/>
+			<property name="TraderStageTemplate" value="midTier1"/><!-- workbench -->
+			<!-- Interaction -->
+			<property name="MaxDamage" value="2500"/>
+			<property name="HeatMapStrength" value="5"/>
+			<property name="HeatMapTime" value="100"/>
+			<property name="HeatMapFrequency" value="20"/>
+			<property name="OpenSound" value="open_workbench"/>
+			<property name="CloseSound" value="close_workbench"/>
+			<property name="TakeDelay" value="5"/>
+			<property class="RepairItems">
+				<property name="resourceForgedIron" value="25"/>
+				<property name="resourceMechanicalParts" value="20"/>
+				<property name="resourceWood" value="50"/>
+			</property>
+			<drop event="Harvest" name="resourceScrapIron" count="200" tag="allHarvest,perkJunkMiner"/>
+			<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest,lumberjackHarvest,perkJunkMiner"/>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceForgedIron" count="10" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceMechanicalParts" count="8" tag="salvageHarvest"/>
+			<drop event="Harvest" name="resourceWood" count="20" tag="salvageHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+			<!-- Sorting -->
+			<property name="SortOrder1" value="B281"/>
+			<property name="SortOrder2" value="0300"/>
+			<property name="Group" value="Building,TCScience,advBuilding"/>
+			<property name="Tags" value="workstationSkill,twitch_workstation"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_decor"/>
+			<property name="SoundPickup" value="workbench_grab"/>
+			<property name="SoundPlace" value="workbench_place"/>
+		</block>
+
+		<block name="PlantedChem-471">
+			<property name="Extends" value="cropsGrowingMaster" param1="Texture,CustomIcon,Mesh"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="UnlockedBy" value="craftingWeed"/>
+			<property name="Group" value="Food/Cooking"/>
+			<property name="CustomIcon" value="weedseeds"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Material" value="Mplants"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="Model" value="#@modfolder:Resources/FuriWeeds.unity3d?BlueDreamPrefab_plant1.prefab"/>
+			<property name="TintColor" value="#800080"/>
+			<property name="TintShaderProperties" value="_Color,_TintColor,_EmissiveColor"/>		
+			<property name="PlantGrowing.Next" value="PlantedChem-472"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="PlantGrowing.LightLevelGrow" value="4"/>
+			<property name="PlaceAsRandomRotation" value="true"/>
+			<drop event="Destroy" name="PlantedChem-471" count="1"/>
+		</block>
+
+		<block name="PlantedChem-472">
+			<property name="Extends" value="cropsGrowingMaster" param1="Texture,CustomIcon,Mesh"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="weedseeds"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Material" value="Mplants"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,1,1"/>
+			<property name="Model" value="#@modfolder:Resources/FuriWeeds.unity3d?BlueDreamPrefab_plant2.prefab"/>
+			<property name="TintColor" value="#800080"/>
+			<property name="TintShaderProperties" value="_Color,_TintColor,_EmissiveColor"/>
+			<property name="PlantGrowing.Next" value="PlantedChem-473HarvestPlayer"/>
+			<property name="PlantGrowing.GrowthRate" value="63"/>
+			<property name="PlantGrowing.LightLevelGrow" value="4"/>
+			<drop event="Destroy" name="PlantedChem-471" count="1"/>
+		</block>
+
+		<block name="PlantedChem-473Harvest">
+			<property name="Extends" value="cropsHarvestableMaster" param1="Texture,CustomIcon,Mesh"/>
+			<property name="CustomIcon" value="makonhada"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Material" value="Mplants"/>
+			<property name="Tags" value="cropHarvest"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="Model" value="#@modfolder:Resources/FuriWeeds.unity3d?BlueDreamPrefab_plant3.prefab"/>
+			<property name="TintColor" value="#800080"/>
+			<property name="TintShaderProperties" value="_Color,_TintColor,_EmissiveColor"/>
+			<drop event="Harvest" name="WeedStemBlueDream" count="1" tag="wildCropsHarvest"/>
+			<drop event="Harvest" name="WeedStemBlueDream" prob="0.5" count="1" tag="farmerBonusHarvest"/>
+		</block>
+
+		<block name="PlantedChem-47HarvestRandomHelper">
+			<property name="Extends" value="PlantedChem-473Harvest"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="makonhada"/>
+			<property name="CustomIconTint" value="ff8080"/>
+			<property name="DescriptionKey" value="plantedCropsRandomHelperGroupDesc"/>
+			<property name="DisplayInfo" value="Name"/>
+			<property name="FilterTags" value="foutdoor,fcrops,fdesign"/>
+		</block>
+
+		<block name="PlantedChem-473HarvestPlayer">
+			<property name="Extends" value="PlantedChem-473Harvest"/>
+			<property name="CreativeMode" value="Dev"/>
+			<drop event="Harvest" name="WeedStemChem-47" count="1" tag="cropHarvest"/>
+			<drop event="Harvest" name="WeedStemChem-47" prob="0.5" count="1" tag="bonusCropHarvest"/>
+			<drop event="Harvest" name="WeedStemChem-47" prob="0.5" count="1" tag="farmerBonusHarvest"/>
+			<property name="DowngradeBlock" value="PlantedChem-471"/>
+			<property name="CustomIcon" value="makonhada"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Tags" value="cropHarvest"/>
+			<property name="Material" value="Mplants"/>
+			<property name="ModelOffset" value="0,0,0"/>
+			<property name="MultiBlockDim" value="1,2,1"/>
+			<property name="Model" value="#@modfolder:Resources/FuriWeeds.unity3d?BlueDreamPrefab_plant3.prefab"/>
+			<property name="TintColor" value="#800080"/>
+			<property name="TintShaderProperties" value="_Color,_TintColor,_EmissiveColor"/>
+		</block>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</append>
+
 </configs>

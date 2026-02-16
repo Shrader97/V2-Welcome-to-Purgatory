@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+
+	<!-- UI: dokładnie jak vanilla (unlock_level = poziomy jakości dla danego itemu) -->
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']">
+		<display_entry item="gunBotT2flameTurretMK1" unlock_level="11,13,16,19,22,25"/>
+		<display_entry item="gunBotT2flameTurreMk2" unlock_level="51,55,60,65,70,75"/>
+		<display_entry item="gunBotT2flameTurretMk3" unlock_level="76,80,85,90,95,100"/>
+	</append>
+
+	<!-- Odblokowanie recept + jakość craftu (CraftingTier) -->
+	<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingRobotics']/effect_group">
+
+		<!-- MK1 (jak Junk Sledge) -->
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="11,100" value="1" tags="gunBotT2flameTurretMK1"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="13,16,19,22,25,100" value="1,2,3,4,5,5" tags="gunBotT2flameTurretMK1"/>
+
+		<!-- MK2 (jak Junk Turret) -->
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="51,100" value="1" tags="gunBotT2flameTurreMk2"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="55,60,65,70,75,100" value="1,2,3,4,5,5" tags="gunBotT2flameTurreMk2"/>
+
+		<!-- MK3 (jak Junk Drone) -->
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="76,100" value="1" tags="gunBotT2flameTurretMk3"/>
+		<passive_effect name="CraftingTier" operation="base_add" level="80,85,90,95,100" value="1,2,3,4,5" tags="gunBotT2flameTurretMk3"/>
+
+	</append>
+
+<!-- =========================================================
+     Flame Dart Trap MK1/MK2/MK3 (match vanilla dartTrap placement)
+     MK1 -> same tier as dartTrap (craftingTraps 25)
+     MK2 -> next tier (craftingTraps 50)
+     MK3 -> next tier (craftingTraps 75)
+     ========================================================= -->
+
+<!-- UI entries: put them under the same tiers as vanilla traps -->
+<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingTraps']/display_entry[@name_key='trapsT1']">
+	<unlock_entry item="flamethrowerTrapMk1" unlock_tier="1"/>
+</append>
+
+<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingTraps']/display_entry[@name_key='trapsT2']">
+	<unlock_entry item="flamethrowerTrapMk2" unlock_tier="1"/>
+</append>
+
+<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingTraps']/display_entry[@name_key='trapsT3']">
+	<unlock_entry item="flamethrowerTrapMk3" unlock_tier="1"/>
+</append>
+
+<!-- Unlock recipes -->
+<append xpath="/progression/crafting_skills/crafting_skill[@name='craftingTraps']/effect_group">
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="25,100" value="1" tags="flamethrowerTrapMk1"/>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,100" value="1" tags="flamethrowerTrapMk2"/>
+	<passive_effect name="RecipeTagUnlocked" operation="base_set" level="75,100" value="1" tags="flamethrowerTrapMk3"/>
+</append>
+
+</configs>

@@ -528,6 +528,21 @@
 
     <!-- Gun Smith Bence -->
 
+        <recipe name="meleeWpnBatonT3LazerBaton" count="1" craft_area="GunsmithBence" tags="learnable,perkElectrocutioner,workbenchCrafting">
+            <ingredient name="meleeWpnBatonT2StunBatonParts" count="1"/>
+            <ingredient name="resourceForgedTitanium" count="5"/>
+            <ingredient name="resourceDuctTape" count="2"/>
+            <ingredient name="resourceElectricParts" count="2"/>
+            <ingredient name="resourceLegendaryParts" count="0"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="meleeWpnBatonT2StunBatonParts,resourceForgedTitanium,resourceDuctTape,resourceElectricParts"/>
+                <passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="1" tags="resourceLegendaryParts"/>
+            </effect_group>
+        </recipe>
+
+
+
+
         <!-- Ruger -->
 		<recipe name="pistolGrip" count="1" craft_time="3600" craft_area="GunsmithBence" >
 			<ingredient name="resourceForgedSteel" count="5"/>

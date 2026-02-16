@@ -77,8 +77,20 @@
 		<item name="gunHandgunT3Revolver50cal" loot_prob_template="Low"/>
 	</append>
 
-	<append xpath="/lootcontainers/lootgroup[@name='shoes']">
-		<item name="modRunningShoesHP" loot_prob_template="med"/>
+	<append xpath="/lootcontainers/lootgroup[@name='skillMagazines']">
+		<item name="AmmoSkillMagazine"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupQuestRewardSkillMagazinesAll01']">
+		<item name="AmmoSkillMagazine" count="2"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupChallengeRewardSkillMagazinesAll01']">
+		<item name="AmmoSkillMagazine" count="2"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='weaponSkillMagazinesOnly']">
+		<item name="AmmoSkillMagazine"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='groupAllClothing']">

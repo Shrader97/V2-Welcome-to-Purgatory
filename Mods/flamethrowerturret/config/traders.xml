@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+
+	<!-- =========================================================
+	     1) groupRangedAll (tam gdzie Junk Sledge/Turret/Drone)
+	     ========================================================= -->
+
+	<!-- MK1 -> obok Junk Sledge -->
+	<insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='groupRangedAll']/item[@name='gunBotT1JunkSledge']">
+		<item name="gunBotT2flameTurretMK1" quality="1,5"/>
+	</insertAfter>
+
+	<!-- MK2 -> obok Junk Turret -->
+	<insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='groupRangedAll']/item[@name='gunBotT2JunkTurret']">
+		<item name="gunBotT2flameTurreMk2" quality="1,5"/>
+	</insertAfter>
+
+	<!-- MK3 -> obok Junk Drone -->
+	<insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='groupRangedAll']/item[@name='gunBotT3JunkDrone']">
+		<item name="gunBotT2flameTurretMk3" quality="1,5"/>
+	</insertAfter>
+
+
+	<!-- =========================================================
+	     2) traderRobotics (dedykowana grupa Robotics)
+	     ========================================================= -->
+
+	<!-- MK1 -> obok Junk Sledge -->
+	<insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='traderRobotics']/item[@name='gunBotT1JunkSledge']">
+		<item name="gunBotT2flameTurretMK1" quality="1,5"/>
+	</insertAfter>
+
+	<!-- MK2 -> obok Junk Turret -->
+	<insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='traderRobotics']/item[@name='gunBotT2JunkTurret']">
+		<item name="gunBotT2flameTurreMk2" quality="1,5"/>
+	</insertAfter>
+
+	<!-- MK3 -> obok Junk Drone -->
+	<insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='traderRobotics']/item[@name='gunBotT3JunkDrone']">
+		<item name="gunBotT2flameTurretMk3" quality="1,5"/>
+	</insertAfter>
+
+<!-- =========================================================
+     Flame Dart Traps (place next to vanilla dartTrap in traderElectrical)
+     ========================================================= -->
+
+<insertAfter xpath="/traders/trader_item_groups/trader_item_group[@name='traderElectrical']/item[@name='dartTrap']">
+	<item name="flamethrowerTrapMk1" count="1,2" prob="1.0"/>
+	<item name="flamethrowerTrapMk2" count="1,2" prob="1.0"/>
+	<item name="flamethrowerTrapMk3" count="1,2" prob="1.0"/>
+</insertAfter>
+
+</configs>

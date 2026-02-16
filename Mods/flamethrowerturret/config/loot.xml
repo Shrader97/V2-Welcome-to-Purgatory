@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+
+	<!-- MK1 -> ta sama grupa co Junk Sledge -->
+	<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT1_TurretsSyndrome']">
+		<item name="gunBotT2flameTurretMK1"/>
+	</append>
+
+	<!-- MK2 -> ta sama grupa co Junk Turret -->
+	<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_TurretsSyndrome']">
+		<item name="gunBotT2flameTurreMk2"/>
+	</append>
+
+	<!-- MK3 -> ta sama grupa co Junk Drone -->
+	<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_TurretsSyndrome']">
+		<item name="gunBotT2flameTurretMk3"/>
+	</append>
+
+</configs>

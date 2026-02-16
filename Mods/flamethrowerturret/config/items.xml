@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configs>
+	<append xpath="/items">
+        <item name="gunBotT2flameTurretMK1">
+        <property name="Tags" value="turretRanged,weapon,ranged,reloadPenalty,drumMagazine,attIntellect,perkTurrets,canHaveCosmetic,roboticsSkill,meleeIntellect"/>
+        <property name="DisplayType" value="rangedTurret"/>
+        <property name="HoldType" value="67"/>
+        <property name="Meshfile" value="@:Other/Items/Weapons/Ranged/JunkTurret/junkTurret_Prefab.prefab"/>
+        <property name="HandMeshfile" value="@:Other/Items/Weapons/Ranged/JunkTurret/junkTurretHeld_Prefab.prefab"/>
+        <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+        <property name="Material" value="MJunkTurretParts"/>
+        <property name="CustomIcon" value="flamethrowerturret"/>
+        <property name="TintColor" value="227, 127, 13"/>
+        <property name="DegradationBreaksAfter" value="false"/>
+        <property name="SoundJammed" value="weapon_jam"/>
+        <property name="Weight" value="4"/>
+        <property name="ScrapTimeOverride" value="10.0"/>
+        <property name="RepairTools" value="resourceRepairKit"/>
+        <property name="Group" value="Ammo/Weapons,Robotics"/>
+        <property name="Stacknumber" value="1"/>
+        <property name="EconomicValue" value="1500"/>
+        <property name="TraderStageTemplate" value="baseTier2"/>
+        <!--  gunBotT2JunkTurret  -->
+        <property name="SellableToTrader" value="true"/>
+        <property name="RequiredPower" value="15"/>
+        <property name="UnlockedBy" value="craftingRobotics"/>
+        <!--  gunBotT2JunkTurretSchematic,  -->
+        <property name="ShowQuality" value="true"/>
+        <property name="IgnoreKeystoneSound" value="true"/>
+        <property name="SoundUnholster" value="weapon_unholster"/>
+        <property name="SoundHolster" value="weapon_holster"/>
+        <property name="SoundPickup" value="robotic_turret_grab"/>
+        <property name="SoundPlace" value="robotic_turret_place"/>
+        <property class="Action0">
+        <property name="Class" value="Ranged"/>
+        <property name="Delay" value=".8"/>
+        <property name="Magazine_size" value="800"/>
+        <!--  obsolete if rounds per minute exists  -->
+        <!--  <property name="Range" value="40"/>  -->
+        <property name="Magazine_items" value="ammoGasCan"/>
+        <property name="Reload_time" value="3.9"/>
+        <property name="Sound_start" value="junkturret_fire"/>
+        <property name="Sound_loop" value="junkturret_fire"/>
+        <property name="Sound_repeat" value=""/>
+        <property name="Sound_end" value=""/>
+        <property name="Sound_empty" value="dryfire"/>
+        <property name="Sound_reload" value="chainsaw_reload"/>
+        <property name="AutoReload" value="false"/>
+        </property>
+        <property class="Action1">
+        <property name="Class" value="SpawnTurret"/>
+        <property name="Turret" value="flameTurretGunMK1"/>
+        <property name="PreviewSize" value="0.75,0.75,0.75"/>
+        <!-- <requirement name="ProgressionLevel" progression_name="perkTurrets" operation="GTE" value="3"/> -->
+        </property>
+        <effect_group name="gunBotT2JunkTurret">
+        <passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tier="1,6" tags="perkTurrets"/>
+        <!--  random effective rng  -->
+        <passive_effect name="EntityDamage" operation="perc_add" value="-.08,.08" tags="perkTurrets"/>
+        <!--  random EntityDmg  -->
+        <passive_effect name="EntityDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkTurrets"/>
+        <!--  tier bonus  -->
+        <!--  <passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tier="1,6" tags="perkTurrets"/>  -->
+        <!--  random DegMax  -->
+        <passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkTurrets"/>
+        <!--  random WeaponHandling  -->
+        <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.1,.1" tags="turretRanged"/>
+        <!--  random APM  -->
+        
+        <!--  random MagazineSize  -->
+        <passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkTurrets"/>
+        <!--  random WeaponHandling  -->
+        <passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkTurrets"/>
+        <passive_effect name="MagazineSize" operation="base_set" value="800" tags="turretRanged"/>
+        
+        <passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkTurrets"/>
+        <passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.13" tags="perkTurrets"/>
+        <passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="-.05" tags="perkTurrets"/>
+        <passive_effect name="SpreadMultiplierWalking" operation="perc_add" value=".15" tags="perkTurrets"/>
+        <passive_effect name="SpreadMultiplierRunning" operation="perc_add" value=".3" tags="perkTurrets"/>
+        <passive_effect name="KickDegreesVerticalMin" operation="base_set" value="3" tags="perkTurrets"/>
+        <passive_effect name="KickDegreesVerticalMax" operation="base_set" value="3" tags="perkTurrets"/>
+        <passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-2" tags="perkTurrets"/>
+        <passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="2" tags="perkTurrets"/>
+        <passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="0" tags="perkTurrets"/>
+        <passive_effect name="WeaponHandling" operation="base_set" value="1" tags="perkTurrets"/>
+        <passive_effect name="DegradationMax" operation="base_set" value="300,600" tier="1,6" tags="perkTurrets"/>
+        <passive_effect name="DegradationPerUse" operation="base_set" value="0.35" tags="perkTurrets"/>
+        <passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage"/>
+        <passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+        </effect_group>
+        </item>
+          <item name="gunBotT2flameTurreMk2">
+        <property name="Tags" value="turretRanged,weapon,ranged,reloadPenalty,drumMagazine,attIntellect,perkTurrets,canHaveCosmetic,roboticsSkill,meleeIntellect"/>
+        <property name="DisplayType" value="rangedTurret"/>
+        <property name="HoldType" value="67"/>
+        <property name="Meshfile" value="@:Other/Items/Weapons/Ranged/JunkTurret/junkTurret_Prefab.prefab"/>
+        <property name="HandMeshfile" value="@:Other/Items/Weapons/Ranged/JunkTurret/junkTurretHeld_Prefab.prefab"/>
+        <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+        <property name="Material" value="MJunkTurretParts"/>
+        <property name="TintColor" value="227, 127, 13"/>
+        <property name="DegradationBreaksAfter" value="false"/>
+        <property name="SoundJammed" value="weapon_jam"/>
+        <property name="Weight" value="4"/>
+        <property name="CustomIcon" value="flamethrowerturret"/>
+        <property name="ScrapTimeOverride" value="10.0"/>
+        <property name="RepairTools" value="resourceRepairKit"/>
+        <property name="Group" value="Ammo/Weapons,Robotics"/>
+        <property name="Stacknumber" value="1"/>
+        <property name="EconomicValue" value="3500"/>
+        <property name="TraderStageTemplate" value="baseTier2"/>
+        <!--  gunBotT2JunkTurret  -->
+        <property name="SellableToTrader" value="true"/>
+        <property name="RequiredPower" value="15"/>
+        <property name="UnlockedBy" value="craftingRobotics"/>
+        <!--  gunBotT2JunkTurretSchematic,  -->
+        <property name="ShowQuality" value="true"/>
+        <property name="IgnoreKeystoneSound" value="true"/>
+        <property name="SoundUnholster" value="weapon_unholster"/>
+        <property name="SoundHolster" value="weapon_holster"/>
+        <property name="SoundPickup" value="robotic_turret_grab"/>
+        <property name="SoundPlace" value="robotic_turret_place"/>
+        <property class="Action0">
+        <property name="Class" value="Ranged"/>
+        <property name="Delay" value=".8"/>
+        <property name="Magazine_size" value="1000"/>
+        <!--  obsolete if rounds per minute exists  -->
+        <!--  <property name="Range" value="40"/>  -->
+        <property name="Magazine_items" value="ammoGasCan"/>
+        <property name="Reload_time" value="3.9"/>
+        <property name="Sound_start" value="junkturret_fire"/>
+        <property name="Sound_loop" value="junkturret_fire"/>
+        <property name="Sound_repeat" value=""/>
+        <property name="Sound_end" value=""/>
+        <property name="Sound_empty" value="dryfire"/>
+        <property name="Sound_reload" value="chainsaw_reload"/>
+        <property name="AutoReload" value="false"/>
+        </property>
+        <property class="Action1">
+        <property name="Class" value="SpawnTurret"/>
+        <property name="Turret" value="flameTurretGunMk2"/>
+        <property name="PreviewSize" value="0.75,0.75,0.75"/>
+        <!-- <requirement name="ProgressionLevel" progression_name="perkTurrets" operation="GTE" value="3"/> -->
+        </property>
+        <effect_group name="gunBotT2JunkTurret">
+        <passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tier="1,6" tags="perkTurrets"/>
+        <!--  random effective rng  -->
+        <passive_effect name="EntityDamage" operation="perc_add" value="-.08,.08" tags="perkTurrets"/>
+        <!--  random EntityDmg  -->
+        <passive_effect name="EntityDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkTurrets"/>
+        <!--  tier bonus  -->
+        <!--  <passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tier="1,6" tags="perkTurrets"/>  -->
+        <!--  random DegMax  -->
+        <passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkTurrets"/>
+        <!--  random WeaponHandling  -->
+        <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.1,.1" tags="turretRanged"/>
+        <!--  random APM  -->
+        
+        <!--  random MagazineSize  -->
+        <passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkTurrets"/>
+        <!--  random WeaponHandling  -->
+        <passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkTurrets"/>
+        <passive_effect name="MagazineSize" operation="base_set" value="1000" tags="turretRanged"/>
+        
+        <passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkTurrets"/>
+        <passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.13" tags="perkTurrets"/>
+        <passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="-.05" tags="perkTurrets"/>
+        <passive_effect name="SpreadMultiplierWalking" operation="perc_add" value=".15" tags="perkTurrets"/>
+        <passive_effect name="SpreadMultiplierRunning" operation="perc_add" value=".3" tags="perkTurrets"/>
+        <passive_effect name="KickDegreesVerticalMin" operation="base_set" value="3" tags="perkTurrets"/>
+        <passive_effect name="KickDegreesVerticalMax" operation="base_set" value="3" tags="perkTurrets"/>
+        <passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-2" tags="perkTurrets"/>
+        <passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="2" tags="perkTurrets"/>
+        <passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="0" tags="perkTurrets"/>
+        <passive_effect name="WeaponHandling" operation="base_set" value="1" tags="perkTurrets"/>
+        <passive_effect name="DegradationMax" operation="base_set" value="300,600" tier="1,6" tags="perkTurrets"/>
+        <passive_effect name="DegradationPerUse" operation="base_set" value="0.35" tags="perkTurrets"/>
+        <passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage"/>
+        <passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+        </effect_group>
+        </item>
+          <item name="gunBotT2flameTurretMk3">
+        <property name="Tags" value="turretRanged,weapon,ranged,reloadPenalty,drumMagazine,attIntellect,perkTurrets,canHaveCosmetic,roboticsSkill,meleeIntellect"/>
+        <property name="DisplayType" value="rangedTurret"/>
+        <property name="HoldType" value="67"/>
+        <property name="Meshfile" value="@:Other/Items/Weapons/Ranged/JunkTurret/junkTurret_Prefab.prefab"/>
+        <property name="HandMeshfile" value="@:Other/Items/Weapons/Ranged/JunkTurret/junkTurretHeld_Prefab.prefab"/>
+        <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+        <property name="Material" value="MJunkTurretParts"/>
+        <property name="TintColor" value="227, 127, 13"/>
+        <property name="DegradationBreaksAfter" value="false"/>
+        <property name="SoundJammed" value="weapon_jam"/>
+        <property name="Weight" value="4"/>
+        <property name="CustomIcon" value="flamethrowerturret"/>
+        <property name="ScrapTimeOverride" value="10.0"/>
+        <property name="RepairTools" value="resourceRepairKit"/>
+        <property name="Group" value="Ammo/Weapons,Robotics"/>
+        <property name="Stacknumber" value="1"/>
+        <property name="EconomicValue" value="5000"/>
+        <property name="TraderStageTemplate" value="baseTier2"/>
+        <!--  gunBotT2JunkTurret  -->
+        <property name="SellableToTrader" value="true"/>
+        <property name="RequiredPower" value="15"/>
+        <property name="UnlockedBy" value="craftingRobotics"/>
+        <!--  gunBotT2JunkTurretSchematic,  -->
+        <property name="ShowQuality" value="true"/>
+        <property name="IgnoreKeystoneSound" value="true"/>
+        <property name="SoundUnholster" value="weapon_unholster"/>
+        <property name="SoundHolster" value="weapon_holster"/>
+        <property name="SoundPickup" value="robotic_turret_grab"/>
+        <property name="SoundPlace" value="robotic_turret_place"/>
+        <property class="Action0">
+        <property name="Class" value="Ranged"/>
+        <property name="Delay" value=".8"/>
+        <property name="Magazine_size" value="1500"/>
+        <!--  obsolete if rounds per minute exists  -->
+        <!--  <property name="Range" value="40"/>  -->
+        <property name="Magazine_items" value="ammoGasCan"/>
+        <property name="Reload_time" value="3.9"/>
+        <property name="Sound_start" value="junkturret_fire"/>
+        <property name="Sound_loop" value="junkturret_fire"/>
+        <property name="Sound_repeat" value=""/>
+        <property name="Sound_end" value=""/>
+        <property name="Sound_empty" value="dryfire"/>
+        <property name="Sound_reload" value="chainsaw_reload"/>
+        <property name="AutoReload" value="false"/>
+        </property>
+        <property class="Action1">
+        <property name="Class" value="SpawnTurret"/>
+        <property name="Turret" value="flameTurretGunMK3"/>
+        <property name="PreviewSize" value="0.75,0.75,0.75"/>
+        <!-- <requirement name="ProgressionLevel" progression_name="perkTurrets" operation="GTE" value="3"/> -->
+        </property>
+        <effect_group name="gunBotT2JunkTurret">
+        <passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tier="1,6" tags="perkTurrets"/>
+        <!--  random effective rng  -->
+        <passive_effect name="EntityDamage" operation="perc_add" value="-.08,.08" tags="perkTurrets"/>
+        <!--  random EntityDmg  -->
+        <passive_effect name="EntityDamage" operation="perc_add" value=".15,.75" tier="2,6" tags="perkTurrets"/>
+        <!--  tier bonus  -->
+        <!--  <passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tier="1,6" tags="perkTurrets"/>  -->
+        <!--  random DegMax  -->
+        <passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkTurrets"/>
+        <!--  random WeaponHandling  -->
+        <passive_effect name="RoundsPerMinute" operation="perc_add" value="-.1,.1" tags="turretRanged"/>
+        <!--  random APM  -->
+        
+        <!--  random MagazineSize  -->
+        <passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkTurrets"/>
+        <!--  random WeaponHandling  -->
+        <passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkTurrets"/>
+        <passive_effect name="MagazineSize" operation="base_set" value="1500" tags="turretRanged"/>
+        
+        <passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkTurrets"/>
+        <passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.13" tags="perkTurrets"/>
+        <passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="-.05" tags="perkTurrets"/>
+        <passive_effect name="SpreadMultiplierWalking" operation="perc_add" value=".15" tags="perkTurrets"/>
+        <passive_effect name="SpreadMultiplierRunning" operation="perc_add" value=".3" tags="perkTurrets"/>
+        <passive_effect name="KickDegreesVerticalMin" operation="base_set" value="3" tags="perkTurrets"/>
+        <passive_effect name="KickDegreesVerticalMax" operation="base_set" value="3" tags="perkTurrets"/>
+        <passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-2" tags="perkTurrets"/>
+        <passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="2" tags="perkTurrets"/>
+        <passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="0" tags="perkTurrets"/>
+        <passive_effect name="WeaponHandling" operation="base_set" value="1" tags="perkTurrets"/>
+        <passive_effect name="DegradationMax" operation="base_set" value="300,600" tier="1,6" tags="perkTurrets"/>
+        <passive_effect name="DegradationPerUse" operation="base_set" value="0.35" tags="perkTurrets"/>
+        <passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+        <passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage"/>
+        <passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+        </effect_group>
+        </item>
+	</append>
+</configs>
