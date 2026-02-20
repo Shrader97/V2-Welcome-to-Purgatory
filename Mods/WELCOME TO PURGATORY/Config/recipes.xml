@@ -28,12 +28,12 @@
 	<remove xpath="//recipe[@name='ammoShotgunBreachingSlug']"/>
 	<remove xpath="//recipe[@name='ammoBundleShotgunBreachingSlug']"/>
 
-	<remove xpath="//recipe[@name='thrownAmmoPipeBomb']"/>
+	<!--remove xpath="//recipe[@name='thrownAmmoPipeBomb']"/>
 	<remove xpath="//recipe[@name='thrownGrenadeContact']"/>
 	<remove xpath="//recipe[@name='thrownGrenade']"/>
 	<remove xpath="//recipe[@name='thrownTimedCharge']"/>
 	<remove xpath="//recipe[@name='thrownDynamite']"/>
-	<remove xpath="//recipe[@name='thrownAmmoMolotovCocktail']"/>
+	<remove xpath="//recipe[@name='thrownAmmoMolotovCocktail']"/-->
 
 	<remove	xpath="//recipe[(starts-with (@name, 'planted'))]"/>
 
@@ -540,10 +540,55 @@
             </effect_group>
         </recipe>
 
+        <!-- Sniper Rifle Parts -->
 
+		<recipe name="SniperStock" count="1" craft_time="3600" craft_area="GunsmithBence" >
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>
 
+		<recipe name="SniperMag" craft_time="3600" count="1" craft_area="GunsmithBence" >
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceMechanicalParts" count="10"/>
+			<ingredient name="resourceOil" count="2"/>
+		</recipe>
+
+		<recipe name="SniperBody" count="1" craft_time="3600" craft_area="GunsmithBence" >
+			<ingredient name="resourceForgedSteel" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceOil" count="1"/>
+		</recipe>
+
+		<recipe name="SniperBarrel" count="1" craft_time="3600" craft_area="BenchtopLathe" >
+			<ingredient name="resourceForgedSteel" count="3"/>
+			<ingredient name="resourceOil" count="3"/>
+		</recipe>
+
+		<recipe name="RifledSniperBarrel" craft_time="3600" count="1" craft_area="BenchtopLathe" >
+			<ingredient name="SniperBarrel" count="1"/>
+			<ingredient name="resourceOil" count="2"/>
+		</recipe>
+
+		<recipe name="gunRifleT4SniperRifle" count="1" craft_time="3600" craft_area="GunsmithBence" tags="learnable" >
+			<ingredient name="pistolGrip" count="2"/>
+            <ingredient name="SniperBody" count="1"/>
+            <ingredient name="RifledSniperBarrel" count="1"/>
+            <ingredient name="SniperMag" count="1"/>
+            <ingredient name="SniperStock" count="1"/>
+            <ingredient name="resourceSpring" count="1"/>
+            <ingredient name="resourceForgedSteel" count="1"/>
+			<ingredient name="resourceOil" count="2"/>
+            <ingredient name="resourceLegendaryParts" count="0"/>
+                <effect_group>
+                    <passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="2,10" tags="resourceSpring"/>
+                    <passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="5,25" tags="resourceForgedSteel"/>
+                    <passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="1" tags="resourceLegendaryParts"/>
+                </effect_group>
+		</recipe>
 
         <!-- Ruger -->
+
 		<recipe name="pistolGrip" count="1" craft_time="3600" craft_area="GunsmithBence" >
 			<ingredient name="resourceForgedSteel" count="5"/>
 			<ingredient name="resourceScrapPolymers" count="10"/>
@@ -594,7 +639,9 @@
                     <passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="1" tags="resourceLegendaryParts"/>
                 </effect_group>
 		</recipe>
+
         <!-- P90 Parts -->
+
 		<recipe name="P90Body" count="1" craft_time="3600" craft_area="GunsmithBence" >
 			<ingredient name="resourceForgedSteel" count="25"/>
 			<ingredient name="resourceScrapPolymers" count="10"/>
@@ -647,12 +694,6 @@
 			<ingredient name="resourceOil" count="1"/>
 		</recipe>
 
-		<recipe name="SpasBarrelGared" count="1" craft_time="3600" craft_area="GunsmithBence" >
-			<ingredient name="resourceForgedSteel" count="5"/>
-			<ingredient name="resourceMechanicalParts" count="10"/>
-			<ingredient name="resourceOil" count="2"/>
-		</recipe>
-
 		<recipe name="SpasBarrels" count="1" craft_time="360" craft_area="BenchtopLathe" >
 			<ingredient name="resourceForgedSteel" count="5"/>
 			<ingredient name="resourceOil" count="2"/>
@@ -671,10 +712,9 @@
 
 		<recipe name="gunShotgunT4Spas" count="1" craft_time="3600" craft_area="GunsmithBence" tags="learnable" >
 			<ingredient name="pistolGrip" count="2"/>
-            <ingredient name="P90Frame" count="1"/>
-            <ingredient name="P90RifledBarrel" count="1"/>
-            <ingredient name="P90Body" count="1"/>
-            <ingredient name="P90Mag" count="1"/>
+            <ingredient name="SpasPump" count="1"/>
+            <ingredient name="SpasBarrelsRifled" count="1"/>
+            <ingredient name="SpasBase" count="1"/>
             <ingredient name="resourceSpring" count="1"/>
             <ingredient name="resourceForgedSteel" count="1"/>
 			<ingredient name="resourceOil" count="2"/>
@@ -925,13 +965,13 @@
             </effect_group>
         </recipe>
 
-		<recipe name="HardenSledgehammerHandle" count="1" craft_time="3600" craft_area="BenchtopLathe" >
+		<recipe name="HardenSledgehammerHandle" count="1" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering" craft_tool="toolAnvil" >
 			<ingredient name="resourceForgedSteel" count="10"/>
             <ingredient name="resourceScrapPolymers" count="10"/>
 			<ingredient name="resourceOil" count="2"/>
 		</recipe>
 
-		<recipe name="meleeWpnSledgeT2HardenSledgehammer" count="1" craft_time="3600" craft_area="GunsmithBence" tags="learnable"  >
+		<recipe name="meleeWpnSledgeT2HardenSledgehammer" count="1" craft_time="360" craft_area="workbench" tags="learnable"  >
             <ingredient name="HardenSledgehammerHead" count="1"/>
             <ingredient name="HardenSledgehammerHandle" count="1"/>
             <ingredient name="resourceForgedSteel" count="1"/>
@@ -1009,7 +1049,7 @@
             <ingredient name="resourceSpring" count="1"/>
         </recipe>
 
-    <!-- explose -->
+    <!-- explose 
 
         <recipe name="thrownAmmoMolotovCocktail" count="1" craft_time="12">
             <ingredient name="resourceCloth" count="2"/>
@@ -1048,7 +1088,7 @@
             <ingredient name="resourceGunPowder" count="20"/>
             <ingredient name="resourceDuctTape" count="2"/>
             <ingredient name="resourcePaper" count="10"/>
-        </recipe>
+        </recipe>-->
 
     <!-- Mods -->
 

@@ -9,7 +9,7 @@
 			<crafting_category name="Med" icon="ui_game_symbol_med_caliber" display_name="medcaliber" />
 			<crafting_category name="Large" icon="ui_game_symbol_large_caliber" display_name="large_caliber" />
             <crafting_category name="Shotgun" icon="ui_game_symbol_shotgun_002" display_name="12g" />
-            <crafting_category name="Grenade" icon="ui_game_symbol_grenade_002" display_name="Grenade's" />
+            <!--crafting_category name="Grenade" icon="ui_game_symbol_grenade_002" display_name="Grenade's" /-->
         </crafting_category_list>
 
         <crafting_category_list display_type="BenchtopLathe">

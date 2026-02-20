@@ -68,8 +68,8 @@
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='modArmorT2']">
-		<item name="modCollegeJacket"/>
-		<item name="modRunningShoesHP"/>
+		<item name="modCollegeJacket" loot_prob_template="med"/>
+		<item name="modRunningShoesHP" loot_prob_template="med"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='groupToilet02']">
@@ -94,8 +94,8 @@
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='groupAllClothing']">
-		<item name="modRunningShoesHP" loot_prob_template="med"/>
-		<item name="modCollegeJacket" loot_prob_template="med"/>
+		<item name="modRunningShoesHP" loot_prob_template="low"/>
+		<item name="modCollegeJacket" loot_prob_template="low"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='seeds']">
@@ -123,25 +123,6 @@
 			<item name="resourceCod" count="1" prob="0.3"/>
 		</lootcontainer>
 	</append>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <append xpath="/lootcontainers">	
 
