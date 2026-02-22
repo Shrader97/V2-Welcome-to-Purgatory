@@ -90,8 +90,99 @@
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='weaponSkillMagazinesOnly']">
-		<item name="AmmoSkillMagazine"/>
+		<item name="AmmoSkillMagazine" count="2"/>
 	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupInfestedT1']">
+		<item name="AmmoSkillMagazine" count="2"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupInfestedT2']">
+		<item name="AmmoSkillMagazine" count="2"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupInfestedT3']">
+		<item name="AmmoSkillMagazine" count="2"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupInfestedT4']">
+		<item name="AmmoSkillMagazine" count="2"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupInfestedT5']">
+		<item name="AmmoSkillMagazine" count="2"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupDesks01']">
+		<item name="AmmoSkillMagazine" count="2" loot_prob_template="med"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupDesks02']">
+		<item name="AmmoSkillMagazine" count="2" loot_prob_template="med"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupLuggage02']">
+		<item name="AmmoSkillMagazine" count="2" loot_prob_template="med"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupNightstand02']">
+		<item name="AmmoSkillMagazine" count="2" loot_prob_template="med"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupLocker01']">
+		<item name="AmmoSkillMagazine" count="2" loot_prob_template="med"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupLocker02']">
+		<item name="AmmoSkillMagazine" count="2" loot_prob_template="med"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupHiddenStash01']">
+		<item name="AmmoSkillMagazine" count="2" loot_prob_template="med"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupAirDropT2Bundles']">
+		<item name="AmmoSkillMagazine" count="2" loot_prob_template="med"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupAirDropT1Bundles']">
+		<item name="AmmoSkillMagazine" count="2" loot_prob_template="med"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupAirDropT3Bundles']">
+		<item name="AmmoSkillMagazine" count="2" loot_prob_template="med"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupAirDropT4Bundles']">
+		<item name="AmmoSkillMagazine" count="2" loot_prob_template="med"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupHiddenStash01']">
+		<item name="AmmoSkillMagazine" count="2" loot_prob_template="med"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='twitch_tier0ammo']">
+		<item name="AmmoSkillMagazine" count="2" loot_prob_template="med"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='twitch_tier1ammo']">
+		<item name="AmmoSkillMagazine" count="2" loot_prob_template="med"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='twitch_tier2ammo']">
+		<item name="AmmoSkillMagazine" count="2" loot_prob_template="med"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='twitch_tier3ammo']">
+		<item name="AmmoSkillMagazine" count="2" loot_prob_template="med"/>
+	</append>
+
+
+
+
+
+
+
 
 	<append xpath="/lootcontainers/lootgroup[@name='groupAllClothing']">
 		<item name="modRunningShoesHP" loot_prob_template="low"/>
