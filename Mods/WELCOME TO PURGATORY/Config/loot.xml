@@ -161,6 +161,8 @@
 		<item name="AmmoSkillMagazine" count="2" loot_prob_template="med"/>
 	</append>
 
+
+
 	<append xpath="/lootcontainers/lootgroup[@name='twitch_tier0ammo']">
 		<item name="AmmoSkillMagazine" count="2" loot_prob_template="med"/>
 	</append>
@@ -176,6 +178,17 @@
 	<append xpath="/lootcontainers/lootgroup[@name='twitch_tier3ammo']">
 		<item name="AmmoSkillMagazine" count="2" loot_prob_template="med"/>
 	</append>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

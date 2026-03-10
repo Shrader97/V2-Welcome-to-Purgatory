@@ -5054,8 +5054,8 @@
             <property name="Tags" value="food"/>
             <property name="HoldType" value="31"/>
             <property name="DisplayType" value="foodWater"/>
-            <property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
-            <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+            <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
             <property name="Material" value="MfoodRawMeat"/>
             <property name="Stacknumber" value="5000"/> <!-- STK ALL -->
             <property name="EconomicBundleSize" value="5"/>
@@ -5087,8 +5087,8 @@
             <property name="Tags" value="food"/>
             <property name="HoldType" value="31"/>
             <property name="DisplayType" value="foodWater"/>
-            <property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
-            <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+            <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
             <property name="Material" value="MfoodRawMeat"/>
             <property name="Stacknumber" value="5000"/> <!-- STK ALL -->
             <property name="EconomicBundleSize" value="5"/>
@@ -5120,8 +5120,8 @@
             <property name="Tags" value="food"/>
             <property name="HoldType" value="31"/>
             <property name="DisplayType" value="foodWater"/>
-            <property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
-            <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+            <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
             <property name="Material" value="MfoodRawMeat"/>
             <property name="Stacknumber" value="5000"/> <!-- STK ALL -->
             <property name="EconomicBundleSize" value="5"/>
@@ -5153,8 +5153,8 @@
             <property name="Tags" value="food"/>
             <property name="HoldType" value="31"/>
             <property name="DisplayType" value="foodWater"/>
-            <property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
-            <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+            <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
             <property name="Material" value="MfoodRawMeat"/>
             <property name="Stacknumber" value="5000"/> <!-- STK ALL -->
             <property name="EconomicBundleSize" value="5"/>
@@ -5192,8 +5192,8 @@
             <property name="Tags" value="food"/>
             <property name="HoldType" value="31"/>
             <property name="DisplayType" value="foodWater"/>
-            <property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
-            <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+            <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
             <property name="Material" value="MfoodRawMeat"/>
             <property name="Stacknumber" value="5000"/> <!-- STK ALL -->
             <property name="EconomicBundleSize" value="5"/>
@@ -5231,8 +5231,8 @@
             <property name="Tags" value="food"/>
             <property name="HoldType" value="31"/>
             <property name="DisplayType" value="foodWater"/>
-            <property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
-            <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+            <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
             <property name="Material" value="MfoodRawMeat"/>
             <property name="Stacknumber" value="5000"/> <!-- STK ALL -->
             <property name="EconomicBundleSize" value="5"/>
@@ -5270,8 +5270,8 @@
             <property name="Tags" value="food"/>
             <property name="HoldType" value="31"/>
             <property name="DisplayType" value="foodWater"/>
-            <property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
-            <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+            <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
             <property name="Material" value="MfoodRawMeat"/>
             <property name="Stacknumber" value="5000"/> <!-- STK ALL -->
             <property name="EconomicBundleSize" value="5"/>
@@ -5309,8 +5309,8 @@
             <property name="Tags" value="food"/>
             <property name="HoldType" value="31"/>
             <property name="DisplayType" value="foodWater"/>
-            <property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
-            <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+            <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
             <property name="Material" value="MfoodRawMeat"/>
             <property name="Stacknumber" value="5000"/> <!-- STK ALL -->
             <property name="EconomicBundleSize" value="5"/>
@@ -5348,8 +5348,8 @@
             <property name="Tags" value="food"/>
             <property name="HoldType" value="31"/>
             <property name="DisplayType" value="foodWater"/>
-            <property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
-            <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+            <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
             <property name="Material" value="MfoodRawMeat"/>
             <property name="Stacknumber" value="5000"/> <!-- STK ALL -->
             <property name="EconomicBundleSize" value="5"/>
@@ -5389,8 +5389,8 @@
             <property name="Tags" value="food"/>
             <property name="HoldType" value="31"/>
             <property name="DisplayType" value="foodWater"/>
-            <property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
-            <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+            <property name="Meshfile" value="@:Other/Items/Food/parcelGenericPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
             <property name="Material" value="MfoodRawMeat"/>
             <property name="Stacknumber" value="5000"/> <!-- STK ALL -->
             <property name="EconomicBundleSize" value="5"/>
