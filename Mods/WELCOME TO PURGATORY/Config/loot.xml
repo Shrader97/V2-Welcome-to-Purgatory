@@ -49,6 +49,63 @@
         </lootgroup>
     </insertAfter>
 
+    <insertBefore xpath="lootcontainers/lootgroup[@name='groupArrowSmall']">
+		<lootgroup name="group57mmSmall">
+			<item name="Ammo57mmBullet" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="Ammo57mmBulletHP" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="Ammo57mmBulletAP" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group57mmMedium">
+			<item name="Ammo57mmBullet" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="Ammo57mmBulletHP" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="Ammo57mmBulletAP" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group57mmLarge">
+			<item name="Ammo57mmBullet" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="Ammo57mmBulletHP" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="Ammo57mmBulletAP" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group45ACPSmall">
+			<item name="ammo45ACPBulletBall" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="ammo45ACPBulletHP" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="ammo45ACPBulletAP" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group45ACPMedium">
+			<item name="ammo45ACPBulletBall" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="ammo45ACPBulletHP" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="ammo45ACPBulletAP" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group45ACPLarge">
+			<item name="ammo45ACPBulletBall" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="ammo45ACPBulletHP" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="ammo45ACPBulletAP" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group50CalSmall">
+			<item name="Ammo50CalBullet" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="Ammo50CalBulletHP" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="Ammo50CalBulletAP" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group50CalMedium">
+			<item name="Ammo50CalBullet" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="Ammo50CalBulletHP" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="Ammo50CalBulletAP" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group50CalLarge">
+			<item name="Ammo50CalBullet" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="Ammo50CalBulletHP" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="Ammo50CalBulletAP" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+    </insertBefore>
+
+
     <append xpath="lootcontainers/lootgroup[@name='groupShamwayShelves']">
         <item group="groupShradersShamwayShelves" count="2"/>
     </append>
@@ -179,23 +236,23 @@
 		<item name="AmmoSkillMagazine" count="2" loot_prob_template="med"/>
 	</append>
 
+	<append xpath="/lootcontainers/lootgroup[@name='groupAmmoSmall']">
+		<item group="group57mmSmall"/>
+		<item group="group45ACPSmall"/>
+		<item group="group50CalSmall"/>
+	</append>
 
+	<append xpath="/lootcontainers/lootgroup[@name='groupAmmoMedium']">
+		<item group="group57mmMedium"/>
+		<item group="group45ACPMedium"/>
+		<item group="group50CalMedium"/>
+	</append>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	<append xpath="/lootcontainers/lootgroup[@name='groupAmmoLarge']">
+		<item group="group57mmLarge"/>
+		<item group="group45ACPLarge"/>
+		<item group="group50CalLarge"/>
+	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='groupAllClothing']">
 		<item name="modRunningShoesHP" loot_prob_template="low"/>

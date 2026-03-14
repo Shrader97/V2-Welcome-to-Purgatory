@@ -2574,7 +2574,7 @@
             <property name="Meshfile" value="#@modfolder:Resources/P90.unity3d?T4P90"/>
             <property name="Material" value="MMachineGunParts"/>
             <property name="Weight" value="16"/>
-            <property name="RepairTools" value="repairKitWeapon"/>
+            <property name="RepairTools" value="resourceRepairKit"/>
             <property name="DegradationBreaksAfter" value="false"/>
             <property name="SoundJammed" value="weapon_jam"/>
             <property name="Attachments" value="meleeToolFlashlight02"/>
@@ -2667,7 +2667,7 @@
             <property name="Meshfile" value="#@modfolder:Resources/AR-47.unity3d?T4AR-57"/>
             <property name="Material" value="MMachineGunParts"/>
             <property name="Weight" value="16"/>
-            <property name="RepairTools" value="repairKitWeapon"/>
+            <property name="RepairTools" value="resourceRepairKit"/>
             <property name="DegradationBreaksAfter" value="false"/>
             <property name="SoundJammed" value="weapon_jam"/>
             <property name="Attachments" value="meleeToolFlashlight02"/>
@@ -2765,7 +2765,7 @@
             <property name="Meshfile" value="#@modfolder:Resources/Ruger-57.unity3d?T4Ruger-57"/>
             <property name="Material" value="MHandGunParts"/>
             <property name="Weight" value="8"/>
-            <property name="RepairTools" value="repairKitWeapon" />
+            <property name="RepairTools" value="resourceRepairKit" />
             <property name="DegradationBreaksAfter" value="false" />
             <property name="SoundJammed" value="weapon_jam" />
             <property name="Attachments" value="meleeToolFlashlight02" />
@@ -9439,8 +9439,6 @@
                 <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
             </effect_group>
         </item>
-
-
 
 
 
