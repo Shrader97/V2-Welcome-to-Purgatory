@@ -2780,7 +2780,7 @@
             <property name="RepairExpMultiplier" value="10.8"/>
             <property name="LightValue" value=".45"/>
             <property name="EconomicValue" value="2500"/>
-            <property name="TraderStageTemplate" value="baseTier6"/>
+            <property name="TraderStageTemplate" value="baseTier3"/>
             <property name="UnlockedBy" value="craftingHandguns"/>
             <property name="ShowQuality" value="true"/>
             <property name="SoundUnholster" value="weapon_unholster"/>
