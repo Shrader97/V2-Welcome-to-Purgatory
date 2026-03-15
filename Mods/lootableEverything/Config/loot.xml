@@ -173,9 +173,7 @@
 			<item  name="resourcePaper" count="25,50" loot_prob_template="high"/>
 		</lootcontainer>
 		
-		<lootcontainer name="1palletCans1" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
-			<item  name="resourceScrapIron" count="25,50" loot_prob_template="high"/>
-		</lootcontainer>
+
 
 		<lootcontainer name="1OSBWoodStack1" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
 			<item  name="resourceWood" count="20,30" loot_prob_template="high"/>

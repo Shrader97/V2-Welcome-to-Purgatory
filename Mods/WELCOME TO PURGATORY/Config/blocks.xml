@@ -2,6 +2,11 @@
 
 	<set xpath="blocks/block[@name='spawnTrader']/property[@name='SpawnClass']/@value">npcTraderJoel,npcTraderRekt,npcTraderHugh,npcTraderBob,npcTraderJen,npcTraderNoah,npcTraderBartender,npcTraderBouner,npcTraderCommanderInChief,npcTraderHomelessDude,npcTraderMechanic,npcTraderSecretary</set>
 
+	<append xpath="/blocks/block[@name='palletCans']">
+		<property name="Class" value="Loot"/>
+		<property name='LootList' value='1palletCans1'/>
+		<!--property name="DowngradeBlock" value="palletEmpty"/-->
+	</append>
 
 	<append xpath="/blocks/block[@name='trapSpikesIronDmg0']">
 		<property class="UpgradeBlock">

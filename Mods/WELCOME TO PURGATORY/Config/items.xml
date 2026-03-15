@@ -9295,6 +9295,37 @@
 			<property name="RepairAmount" value="400"/>
 		</item>
 
+        <item name="resourceScrapAluminum"> <!-- scrap material -->
+            <property name="HoldType" value="45"/>
+            <property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="MresourceScrapIron"/>
+            <property name="Weight" value="1"/>
+            <property name="Stacknumber" value="15000"/> <!-- STK resource -->
+            <property name="EconomicValue" value="10"/>
+            <property name="EconomicBundleSize" value="10"/>
+            <property name="Group" value="Resources"/>
+            <property name="RepairTime" value=".5"/>
+            <property name="RepairAmount" value="20"/>
+            <property name="CraftingIngredientTime" value=".2"/>
+            <property name="SoundPickup" value="scrapiron_grab"/>
+            <property name="SoundPlace" value="scrapiron_place"/>
+        </item>
+
+		<item name="resourceForgedAluminum">
+			<property name="HoldType" value="45"/>
+			<property name="CustomIcon" value="resourceForgedSteel"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MresourceTitanium"/>
+			<property name="Stacknumber" value="15000"/> <!-- STK resource -->
+			<property name="EconomicValue" value="50"/>
+			<property name="Group" value="Resources"/>
+			<property name="CraftingIngredientTime" value="15"/>
+			<property name="RepairTime" value="1"/>
+			<property name="RepairAmount" value="400"/>
+		</item>
+
     </append>
 
 	<append xpath="items">
