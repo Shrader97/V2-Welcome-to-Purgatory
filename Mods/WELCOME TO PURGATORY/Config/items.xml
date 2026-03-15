@@ -2587,7 +2587,7 @@
             <property name="RepairExpMultiplier" value="10.8"/>
             <property name="LightValue" value=".45"/>
             <property name="EconomicValue" value="3500"/>
-            <property name="TraderStageTemplate" value="baseTier8"/>
+            <property name="TraderStageTemplate" value="baseTier3"/>
             <property name="UnlockedBy" value="craftingHandguns"/>
             <property name="ShowQuality" value="true"/>
 
@@ -2680,7 +2680,7 @@
             <property name="RepairExpMultiplier" value="10.8"/>
             <property name="LightValue" value=".45"/>
             <property name="EconomicValue" value="3500"/>
-            <property name="TraderStageTemplate" value="baseTier8"/>
+            <property name="TraderStageTemplate" value="baseTier3"/>
             <property name="UnlockedBy" value="craftingMachineGuns"/>
             <property name="ShowQuality" value="true"/>
 
