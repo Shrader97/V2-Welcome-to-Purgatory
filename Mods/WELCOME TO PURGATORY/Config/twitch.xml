@@ -166,6 +166,23 @@
 			<property name="presets" value="casual,standard,hardcore" />
 		</action>
 
+		<action name="spawn_animalPainDoe">
+			<property name="command" value="#spawn_PainDoe" />
+			<property name="command_key" value="#spawn_PainDoe" />
+			<property name="title_key" value="spawn_PainDoe" />
+			<property name="category" value="Spawns" />
+			<property name="event_name" value="spawn_animalPainDoe" />
+			<property name="default_cost" value="65" />
+			<property name="is_positive" value="false" />
+			<property name="start_gamestage" value="45" />
+			<property name="description_key" value="spawn_PainDoe" />
+			<property name="add_cooldown" value="true" />
+			<property name="cooldown_add_amount" value="75" />
+			<property name="cooldown" value="120"/>
+			<property name="cooldown_blocked" value="true" />
+			<property name="waiting_blocked" value="true" />
+			<property name="presets" value="casual,standard,hardcore" />
+		</action>
 		
 		<action name="spawn_animalRageChicken">
 			<property name="command" value="#spawn_RageChicken" />
@@ -256,8 +273,6 @@
 			<property name="waiting_blocked" value="true" />
 			<property name="presets" value="casual,standard,hardcore" />
 		</action>
-
-			<!-- single spawns -->
 
 		<action name="spawn_jumpingbean_horde">
 			<property name="command" value="#spawn_jumpingbean_horde" />

@@ -1,5 +1,217 @@
 <configs>
 
+	<append xpath="gameevents">
+
+		<action_sequence name="spawn_TickleMeDemo" template="spawn_single">
+			<variable name="zombiename" value="zombieTickleMeDemo" />
+			<variable name="alertsound" value="zombiemalealert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_TickleMeDemo_horde" template="spawn_horde">
+			<variable name="zombiename" value="zombieTickleMeDemo" />
+			<variable name="spawncount" value="5" />
+			<variable name="alertsound" value="zombiemalealert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_Demo_family">
+			<property name="allow_user_trigger" value="true" />
+			<property name="category" value="twitch_actions" />
+
+			<action class="SpawnEntity">
+				<property name="entity_names" value="zombieTickleMeDemo" />
+				<property name="spawn_count" value="2" />
+			</action>
+
+			<action class="SpawnEntity">
+				<property name="entity_names" value="zombieDemolition" param1="zombiename" />
+				<property name="spawn_count" value="3" param1="spawncount" />
+			</action>
+		</action_sequence>
+
+		<action_sequence name="spawn_JumpingBean" template="spawn_single">
+			<variable name="zombiename" value="Jumping Bean" />
+			<variable name="alertsound" value="zombiemalealert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_JumpingBean_horde" template="spawn_horde">
+			<variable name="zombiename" value="Jumping Bean" />
+			<variable name="spawncount" value="5" />
+			<variable name="alertsound" value="zombiemalealert" />
+		</action_sequence>
+
+
+		<action_sequence name="spawn_animalCottonMouth" template="spawn_single">
+			<variable name="zombiename" value="spawn_animalCottonMouth" />
+			<variable name="alertsound" value="vulturealert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_animalCottonMouth_horde" template="spawn_horde">
+			<variable name="zombiename" value="spawn_animalCottonMouth" />
+			<variable name="spawncount" value="5" />
+			<variable name="alertsound" value="zombiemalealert" />
+		</action_sequence>
+
+
+		<action_sequence name="spawn_animalExplodingZombieDog" template="spawn_single">
+			<variable name="zombiename" value="animalExplodingZombieDog" />
+			<variable name="alertsound" value="zombiemalealert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_animalExplodingZombieDog_horde" template="spawn_horde">
+			<variable name="zombiename" value="animalExplodingZombieDog" />
+			<variable name="spawncount" value="5" />
+			<variable name="alertsound" value="vulturealert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_animalExplodingDireWolf" template="spawn_single">
+			<variable name="zombiename" value="animalExplodingDireWolf" />
+			<variable name="alertsound" value="zombiemalealert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_animalExplodingDireWolf_horde" template="spawn_horde">
+			<variable name="zombiename" value="animalExplodingDireWolf" />
+			<variable name="spawncount" value="5" />
+			<variable name="alertsound" value="vulturealert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_Puppy_family">
+			<property name="allow_user_trigger" value="true" />
+			<property name="category" value="twitch_actions" />
+
+			<action class="SpawnEntity">
+				<property name="entity_names" value="animalExplodingZombieDog" />
+				<property name="spawn_count" value="3" />
+			</action>
+
+			<action class="SpawnEntity">
+				<property name="entity_names" value="animalExplodingDireWolf" param1="zombiename" />
+				<property name="spawn_count" value="2" param1="spawncount" />
+			</action>
+		</action_sequence>
+
+
+		<action_sequence name="spawn_animalFeralHouseCat" template="spawn_single">
+			<variable name="zombiename" value="spawn_animalFeralHouseCat" />
+			<variable name="alertsound" value="vulturealert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_animalFeralHouseCat_horde" template="spawn_horde">
+			<variable name="zombiename" value="animalFeralHouseCat" />
+			<variable name="spawncount" value="5" />
+			<variable name="alertsound" value="vulturealert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_Kitty_Family">
+			<property name="allow_user_trigger" value="true" />
+			<property name="category" value="twitch_actions" />
+
+			<action class="SpawnEntity">
+				<property name="entity_names" value="animalFeralHouseCat" />
+				<property name="spawn_count" value="3" />
+			</action>
+
+			<action class="SpawnEntity">
+				<property name="entity_names" value="animalMountainLion" param1="zombiename" />
+				<property name="spawn_count" value="2" param1="spawncount" />
+			</action>
+		</action_sequence>
+
+
+		<action_sequence name="spawn_animalMiniBossGrace" template="spawn_single">
+			<variable name="zombiename" value="spawn_animalMiniBossGrace" />
+			<variable name="alertsound" value="vulturealert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_animalMiniBossGrace_horde" template="spawn_horde">
+			<variable name="zombiename" value="animalMiniBossGrace" />
+			<variable name="spawncount" value="5" />
+			<variable name="alertsound" value="vulturealert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_Piggy_Family">
+			<property name="allow_user_trigger" value="true" />
+			<property name="category" value="twitch_actions" />
+
+			<action class="SpawnEntity">
+				<property name="entity_names" value="animalMiniBossGrace" />
+				<property name="spawn_count" value="3" />
+			</action>
+
+			<action class="SpawnEntity">
+				<property name="entity_names" value="animalBossGrace" param1="zombiename" />
+				<property name="spawn_count" value="2" param1="spawncount" />
+			</action>
+		</action_sequence>
+
+
+		<action_sequence name="spawn_animalPainDoe" template="spawn_single">
+			<variable name="zombiename" value="animalPainDoe" />
+			<variable name="alertsound" value="vulturealert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_animalPainDoe_horde" template="spawn_horde">
+			<variable name="zombiename" value="animalPainDoe" />
+			<variable name="spawncount" value="5" />
+			<variable name="alertsound" value="vulturealert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_animalPainStag" template="spawn_single">
+			<variable name="zombiename" value="animalPainStag" />
+			<variable name="alertsound" value="vulturealert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_animalPainStag_horde" template="spawn_horde">
+			<variable name="zombiename" value="animalPainStag" />
+			<variable name="spawncount" value="5" />
+			<variable name="alertsound" value="vulturealert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_Deer_Family">
+			<property name="allow_user_trigger" value="true" />
+			<property name="category" value="twitch_actions" />
+
+			<action class="SpawnEntity">
+				<property name="entity_names" value="animalPainStag" />
+				<property name="spawn_count" value="3" />
+			</action>
+
+			<action class="SpawnEntity">
+				<property name="entity_names" value="animalPainDoe" param1="zombiename" />
+				<property name="spawn_count" value="3" param1="spawncount" />
+			</action>
+		</action_sequence>
+
+		<action_sequence name="spawn_animalBattleChicken" template="spawn_single">
+			<variable name="zombiename" value="animalBattleChicken" />
+			<variable name="alertsound" value="vulturealert" />
+		</action_sequence>
+
+		<action_sequence name="spawn_animalBattleChicken_horde" template="spawn_horde">
+			<variable name="zombiename" value="animalBattleChicken" />
+			<variable name="spawncount" value="5" />
+			<variable name="alertsound" value="vulturealert" />
+		</action_sequence>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</append>
+
     <append xpath="/gameevents">
 
         <action_sequence name="reward_hornet_zombie_slayer">

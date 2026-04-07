@@ -1,6 +1,5 @@
 <configs>
 
-
 	<set xpath="/windows/window[@name='craftingInfoPanel']">
 		<panel name="header" height="43" depth="1" backgroundspritename="ui_game_panel_header">
 			<sprite depth="2" name="windowIcon" style="icon32px" pos="4,-5" sprite="{itemgroupicon}"/>
@@ -329,6 +328,23 @@
 
         </window>
 
+        <window name="windowToolsPreciousMetalForge" width="228" height="121" panel="Right" cursor_area="true" >
+        <!--#$-IGS END.-$#-->
+            <panel style="header.panel">
+                <sprite style="header.icon" sprite="ui_game_symbol_wrench"/>
+                <label style="header.name" text="TOOLS" text_key="xuiTools" />
+            </panel>
+
+            <rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+
+                <grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true"
+                required_tools="toolBellows,toolAnvil,toolForgeCrucible" required_tools_only="true">
+                    <item_stack controller="RequiredItemStack" name="0"/>
+                </grid>
+            </rect>
+
+        </window>
+
 		<window name="windowToolsStove" width="228" height="121" panel="Right"  cursor_area="true">
 			<panel style="header.panel" >			
 				<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
@@ -394,12 +410,36 @@
 			</rect>
 		</window>
 
+		<window name="windowToolsCowStable" width="228" height="121" panel="Right" cursor_area="true" >
+		<!--#$-IGS END.-$#-->
+			<panel style="header.panel">
+				<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+				<label style="header.name" text="TOOLS" text_key="xuiTools" />
+			</panel>
+
+			<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+
+				<grid name="inventory" rows="1" cols="3" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="birthshears,scalpel,cornfeed" required_tools_only="true">
+					<item_stack controller="RequiredItemStack" name="0"/>
+				</grid>
+			</rect>
+		</window>
+
+		<window name="windowToolsChickenCoop" width="228" height="121" panel="Right" cursor_area="true" >
+		<!--#$-IGS END.-$#-->
+			<panel style="header.panel">
+				<sprite style="header.icon" sprite="ui_game_symbol_cookware"/>
+				<label style="header.name" text="TOOLS" text_key="xuiTools" />
+			</panel>
+
+			<rect name="content" depth="0" pos="0,-46" height="75" disablefallthrough="true">
+
+				<grid name="inventory" rows="1" cols="1" pos="3,-3" cell_width="75" cell_height="75" controller="WorkstationToolGrid" repeat_content="true" required_tools="cornfeed" required_tools_only="true">
+					<item_stack controller="RequiredItemStack" name="0"/>
+				</grid>
+			</rect>
+		</window>
 
     </append>
-
-
-
-
-
-
+	
 </configs>

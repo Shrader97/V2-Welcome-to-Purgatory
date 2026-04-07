@@ -48,8 +48,117 @@
             <item name="Zombie Snackz"  count="1" loot_prob_template="low"/>
         </lootgroup>
     </insertAfter>
-
+groupCupboard
     <insertBefore xpath="lootcontainers/lootgroup[@name='groupArrowSmall']">
+
+		<lootgroup name="group40mmSmall">
+			<item name="40mmGForceAmmo" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="40mmGAmmo" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="40mmGHEAmmo" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group40mmMedium">
+			<item name="40mmGForceAmmo" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="40mmGAmmo" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="40mmGHEAmmo" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group40mmLarge">
+			<item name="40mmGForceAmmo" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="40mmGAmmo" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="40mmGHEAmmo" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group556mmSmall">
+			<item name="Ammo556mmBullet" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="Ammo556mmBulletHP" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="Ammo556mmBulletAP" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group556mmMedium">
+			<item name="Ammo556mmBullet" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="Ammo556mmBulletHP" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="Ammo556mmBulletAP" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group556mmLarge">
+			<item name="Ammo556mmBullet" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="Ammo556mmBulletHP" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="Ammo556mmBulletAP" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group10mmSmall">
+			<item name="ammo10mmBulletBall" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="ammo10mmBulletHP" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="ammo10mmBulletAP" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group10mmMedium">
+			<item name="ammo10mmBulletBall" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="ammo10mmBulletHP" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="ammo10mmBulletAP" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group10mmLarge">
+			<item name="ammo10mmBulletBall" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="ammo10mmBulletHP" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="ammo10mmBulletAP" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group20gSmall">
+			<item name="ammo20gShotgunShell" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="ammo20gShotgunSlug" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="ammo20gShotgunBreachingSlug" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group20gMedium">
+			<item name="ammo20gShotgunShell" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="ammo20gShotgunSlug" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="ammo20gShotgunBreachingSlug" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group20gLarge">
+			<item name="ammo20gShotgunShell" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="ammo20gShotgunSlug" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="ammo20gShotgunBreachingSlug" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group45LongColtSmall">
+			<item name="ammo45LongColtBulletBall" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="ammo45LongColtBulletHP" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="ammo45LongColtBulletAP" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group45LongColtMedium">
+			<item name="ammo45LongColtBulletBall" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="ammo45LongColtBulletHP" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="ammo45LongColtBulletAP" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group45LongColtLarge">
+			<item name="ammo45LongColtBulletBall" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="ammo45LongColtBulletHP" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="ammo45LongColtBulletAP" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group22LCSmall">
+			<item name="ammo22LCBulletBall" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="ammo22LCBulletHP" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="ammo22LCBulletAP" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group22LCMedium">
+			<item name="ammo22LCBulletBall" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="ammo22LCBulletHP" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="ammo22LCBulletAP" count="10,20" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
+		<lootgroup name="group22LCLarge">
+			<item name="ammo22LCBulletBall" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
+			<item name="ammo22LCBulletHP" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
+			<item name="ammo22LCBulletAP" count="25,35" loot_stage_count_mod="0.01" loot_prob_template="ProbT2Cap"/>
+		</lootgroup>
+
 		<lootgroup name="group57mmSmall">
 			<item name="Ammo57mmBullet" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT0"/>
 			<item name="Ammo57mmBulletHP" count="6,8" loot_stage_count_mod="0.01" loot_prob_template="ProbT1"/>
@@ -106,22 +215,6 @@
     </insertBefore>
 
 
-
-
-	<append xpath="/lootcontainers">
-
-		<lootcontainer name="1palletCans1" count="1" size="2,2" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="qualBaseTemplate" destroy_on_close="true">	
-			<item  name="resourceScrapAluminum" count="250,500" loot_prob_template="high"/>
-		</lootcontainer>
-
-	</append>
-
-
-
-
-
-
-
     <append xpath="lootcontainers/lootgroup[@name='groupShamwayShelves']">
         <item group="groupShradersShamwayShelves" count="2"/>
     </append>
@@ -141,8 +234,8 @@
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='modArmorT2']">
-		<item name="modCollegeJacket" loot_prob_template="med"/>
-		<item name="modRunningShoesHP" loot_prob_template="med"/>
+		<item name="modCollegeJacket" loot_prob_template="low"/>
+		<item name="modRunningShoesHP" loot_prob_template="low"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='groupToilet02']">
@@ -152,38 +245,73 @@
 
 	<append xpath="/lootcontainers/lootgroup[@name='skillMagazines']">
 		<item name="AmmoSkillMagazine"/>
+		<item name="MedHandgunSkillMagazine"/>
+		<item name="20gShotgunSkillMagazine"/>
+		<item name="HeavyMachineGunSkillMagazine"/>
+		<item name="HeavyRiflesGunSkillMagazine"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='groupQuestRewardSkillMagazinesAll01']">
 		<item name="AmmoSkillMagazine" count="2"/>
+		<item name="JewelrySkillMagazine" count="2"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='groupChallengeRewardSkillMagazinesAll01']">
 		<item name="AmmoSkillMagazine" count="2"/>
+		<item name="JewelrySkillMagazine" count="2"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='weaponSkillMagazinesOnly']">
 		<item name="AmmoSkillMagazine" count="2"/>
+		<item name="MedHandgunSkillMagazine" count="2"/>
+		<item name="20gShotgunSkillMagazine" count="2"/>
+		<item name="HeavyMachineGunSkillMagazine" count="2"/>
+		<item name="HeavyRiflesGunSkillMagazine" count="2"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='groupInfestedT1']">
 		<item name="AmmoSkillMagazine" count="2"/>
+		<item name="JewelrySkillMagazine" count="2"/>
+		<item name="MedHandgunSkillMagazine" count="2"/>
+		<item name="20gShotgunSkillMagazine" count="2"/>
+		<item name="HeavyMachineGunSkillMagazine" count="2"/>
+		<item name="HeavyRiflesGunSkillMagazine" count="2"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='groupInfestedT2']">
 		<item name="AmmoSkillMagazine" count="2"/>
+		<item name="JewelrySkillMagazine" count="2"/>
+		<item name="MedHandgunSkillMagazine" count="2"/>
+		<item name="20gShotgunSkillMagazine" count="2"/>
+		<item name="HeavyMachineGunSkillMagazine" count="2"/>
+		<item name="HeavyRiflesGunSkillMagazine" count="2"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='groupInfestedT3']">
 		<item name="AmmoSkillMagazine" count="2"/>
+		<item name="JewelrySkillMagazine" count="2"/>
+		<item name="MedHandgunSkillMagazine" count="2"/>
+		<item name="20gShotgunSkillMagazine" count="2"/>
+		<item name="HeavyMachineGunSkillMagazine" count="2"/>
+		<item name="HeavyRiflesGunSkillMagazine" count="2"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='groupInfestedT4']">
 		<item name="AmmoSkillMagazine" count="2"/>
+		<item name="JewelrySkillMagazine" count="2"/>
+		<item name="MedHandgunSkillMagazine" count="2"/>
+		<item name="20gShotgunSkillMagazine" count="2"/>
+		<item name="HeavyMachineGunSkillMagazine" count="2"/>
+		<item name="HeavyRiflesGunSkillMagazine" count="2"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='groupInfestedT5']">
 		<item name="AmmoSkillMagazine" count="2"/>
+		<item name="JewelrySkillMagazine" count="2"/>
+		<item name="MedHandgunSkillMagazine" count="2"/>
+		<item name="20gShotgunSkillMagazine" count="2"/>
+		<item name="HeavyMachineGunSkillMagazine" count="2"/>
+		<item name="HeavyRiflesGunSkillMagazine" count="2"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='groupDesks01']">
@@ -256,18 +384,33 @@
 		<item group="group57mmSmall"/>
 		<item group="group45ACPSmall"/>
 		<item group="group50CalSmall"/>
+		<item group="group40mmSmall"/>
+		<item group="group20gSmall"/>
+		<item group="group45LongColtSmall"/>
+		<item group="group22LCSmall"/>
+		<item group="group556mmSmall"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='groupAmmoMedium']">
 		<item group="group57mmMedium"/>
 		<item group="group45ACPMedium"/>
 		<item group="group50CalMedium"/>
+		<item group="group40mmMedium"/>
+		<item group="group20gMedium"/>
+		<item group="group45LongColtMedium"/>
+		<item group="group22LCMedium"/>
+		<item group="group556mmMedium"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='groupAmmoLarge']">
 		<item group="group57mmLarge"/>
 		<item group="group45ACPLarge"/>
 		<item group="group50CalLarge"/>
+		<item group="group40mmLarge"/>
+		<item group="group20gLarge"/>
+		<item group="group45LongColtLarge"/>
+		<item group="group22LCLarge"/>
+		<item group="group556mmLarge"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='groupAllClothing']">
@@ -289,6 +432,23 @@
 		<item name="plantedTomato1"/>
 		<item name="plantedWheat1"/>
 	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupCupboard']">
+		<item name="Yeast" count="0,1" loot_prob_template="med"/>
+		<item name="Flour" count="0,1" loot_prob_template="med"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupFoodTrashUncommon']">
+		<item name="drinkBowlEmpty" count="0,1" loot_prob_template="med"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupFoodTrashCommon']">
+		<item name="drinkBowlEmpty" count="0,1" loot_prob_template="med"/>
+	</append>
+
+
+
+
 
     <append xpath="/lootcontainers">	
 		<lootcontainer name="cntFishTrap" count="3,10" size="3,3" destroy_on_close="true" sound_open="bucketplace_water" sound_close="silencefiller" loot_quality_template="qualBaseTemplate">

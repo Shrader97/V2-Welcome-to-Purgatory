@@ -240,13 +240,13 @@
 		short_description_key="challengePlaceAdvForgeShort" description_key="challengePlaceAdvForgeDesc"
 		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
 		<objective type="BlockPlace" block="AdvForge" count="1"/>
-	</challenge-->
+	</challenge>
 
 	<challenge name="placeBenchtopLathe" title_key="challengePlaceBenchtopLathe" icon="ui_game_symbol_BenchtopLathe" group="Advanced Workstations"
 		short_description_key="challengePlaceBenchtopLatheShort" description_key="challengePlaceBenchtopLatheDesc"
 		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
 		<objective type="BlockPlace" block="BenchtopLathe" count="1"/>
-	</challenge>
+	</challenge-->
 
 	<challenge name="craftForgedTitanium" title_key="challengeCraftForgedTitanium" icon="ui_game_symbol_hammer" group="Advanced Workstations"
 		short_description_key="challengeCraftForgedTitaniumShort" description_key="challengeCraftForgedTitaniumDesc"

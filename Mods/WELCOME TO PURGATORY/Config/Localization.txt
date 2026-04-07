@@ -217,7 +217,35 @@ heatedfloorDesc,"The heat warms you up and drys you off.  \n This is used in the
 Cooledfloor,Coolded Floor
 ColdfloorDesc,"The cold air cools you.  \n This is used in the Desert Biome to keep you cool."
 
+PreciousMetalForge,Precious Metal Forge
+resourceIronBar,Iron Bar
+resourceGoldBar,Gold Bar
+resourceSilverBar,Silver Bar
+resourcePlatinumBar,Platinum Bar
+resourceCopperBar,Copper Bar
 
+
+resourceScrapAluminum,Forged Aluminum
+
+
+
+zombieChargedBehemoth,"Charged Behemoth"
+
+zombieInfernalBehemoth,"Infernal Behemoth"
+
+zombieArmoredBehemoth,"Armored Behemoth"
+
+
+gunT0GrenadeLauncher,"Pipe Grenade Launcher"
+gunT1GrenadeLauncher,"Double Barrel Grenade Launcher"
+gunT2GrenadeLauncher,"Pump Grenade Launcher"
+gunT3GrenadeLauncher,"Muli Grenade Launcher"
+resourceGrenadeTip,"Grenade Tip"
+resourceGrenadeCasing,"Grenade Casing"
+40mmGAmmo,"40mm Grenade (Ammo)"
+40mmGHEAmmo,"40mm HE Grenade (Ammo)"
+
+CowStable001,Cow Stable
 
 
 FishingBait,"Bait"
@@ -526,6 +554,31 @@ Ammo50CalBullet,50 CAL
 Ammo50CalBulletHP,HP 50 CAL
 Ammo50CalBulletAP,AP 50 CAL
 ammoShotgunShellFlechette,Flechette Shotgun Shell
+Ammo556mmBullet,556mm Ammo
+Ammo556mmBulletHP,HP 556mm Ammo
+Ammo556mmBulletAP,AP 556mm Ammo
+ammo10mmBulletBall,10mm Ammo
+ammo10mmBulletHP,HP 10mm Ammo
+ammo10mmBulletAP,AP 10mm Ammo
+ammo20gShotgunShell,20g Shotgun Shell
+ammo20gShotgunSlug,20g Shotgun Slug 
+ammo20gShotgunBreachingSlug,20g Shotgun Breaching Slug
+ammo45LongColtBulletBall,45 Long Colt Ammo
+ammo45LongColtBulletHP,HP 45 Long Colt Ammo
+ammo45LongColtBulletAP,AP 45 Long Colt Ammo
+ammo22LCBulletBall,22LC Ammo
+ammo22LCBulletHP,HP 22LC Ammo
+ammo22LCBulletAP,AP 22LC Ammp
+
+
+
+
+
+
+
+
+
+
 
 ammoBundle45ACPBullet,Box of 45 ACP
 ammoBundle45ACPBulletHP,Box of HP 45 ACP
@@ -537,8 +590,21 @@ ammoBundle50CalBullet,Box of 50 CAL
 ammoBundle50CalBulletHP,Box of HP 50 CAL
 ammoBundle50CalBulletAP,Box of AP 50 CAL
 ammoBundleShotgunShellFlechette,Box of Flechette Shotgun Shell
-
-
+ammoBundle556mmBullet,Box of 556mm
+ammoBundle556mmBulletHP,Box of 556mm HP
+ammoBundle556mmBulletAP,Box of 556mm AP
+ammoBundle10mmBullet,Box of 10mm 
+ammoBundle10mmBulletHP,Box of 10mm HP
+ammoBundle10mmBulletAP,Box of 10mm AP
+ammoBundle20gShotgunShell,Box of 20g Shotgun Shell
+ammoBundle20ShotgunBreachingSlug,Box of 20g Breaching Shell
+ammoBundle20gShotgunSlug,Box of 20g Shotgun Slug
+ammoBundle45LongColtBulletBall,Box of 45 Long Colt
+ammoBundle45LongColtBulletHP,Box of 45 Long Colt HP
+ammoBundle45LongColtBulletAP,Box of 45 Long Colt AP
+ammoBundle22LCBulletBall,Box of 22LC
+ammoBundle22LCBulletHP,Box of 22LC HP
+ammoBundle22LCBulletAP,Box of 22LC AP
 
 perkEnforcerAPAmmoDesc,Gain 20% more experience while using a 44 Magnum.,
 perkEnforcerAPAmmoLongDesc,Gain 20% more experience while using a 44 Magnum.,
@@ -916,7 +982,6 @@ modBikecycleSpeedBoostDesc,"Increases bicycle speed by gear ratio."
 
 
 
-
 resourceForgedTitanium,"Forged Titanium"
 
 StainLessSteelPolish,"StainLess Steel Polish"
@@ -924,19 +989,19 @@ StainLessSteelPolish,"StainLess Steel Polish"
 BenchtopLathe,"Benchtop Lathe"
 
 
+birthshears,Birth Shears
+scalpel,Scalpel
+cornfeed,Corn Feed
+animalBabyCow,Baby Cow
+animalMilkCow,Cow Milk
 
-
-
-
-
-
-
-
-
-
-
-
-
+craftingMedHandgunsName,"Med Handguns"
+crafting12gShotgunsName,"12G Shotguns"
+craftingHeavyRiflesName,"Heavy Rifles"
+craftingHeavyMachineGunsName,"Heavy MachineGuns"
+CraftingAmmoDesc,"Ammo"
+CraftingJewelryName,"Jewely"
+crafting20gShotgunsName,"20g Shotguns"
 
 
 

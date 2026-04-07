@@ -8,7 +8,7 @@
             <crafting_category name="Small" icon="ui_game_symbol_small_caliber" display_name="smallcaliber" />
 			<crafting_category name="Med" icon="ui_game_symbol_med_caliber" display_name="medcaliber" />
 			<crafting_category name="Large" icon="ui_game_symbol_large_caliber" display_name="large_caliber" />
-            <crafting_category name="Shotgun" icon="ui_game_symbol_shotgun_002" display_name="12g" />
+            <crafting_category name="Shotgun" icon="ui_game_symbol_shotgun_002" display_name="Shotgun" />
             <!--crafting_category name="Grenade" icon="ui_game_symbol_grenade_002" display_name="Grenade's" /-->
         </crafting_category_list>
 
@@ -43,6 +43,35 @@
 			<crafting_category name="Science" icon="ui_game_symbol_science" display_name="lblCategoryScience" />	
 		</crafting_category_list>
 
+		<crafting_category_list display_type="PreciousMetalForge">
+			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+		</crafting_category_list>
+
+
+
+
+		<crafting_category_list display_type="CowStable001">
+			<crafting_category name="Animals" icon="ui_game_symbol_resource" display_name="Baby Animals" />
+			<crafting_category name="By-Products" icon="ui_game_symbol_resource" display_name="Baby Animals" />
+		</crafting_category_list>
+
+		<crafting_category_list display_type="ChickenCoop001">
+			<crafting_category name="Animals" icon="ui_game_symbol_resource" display_name="Baby Animals" />
+			<crafting_category name="By-Products" icon="ui_game_symbol_resource" display_name="Baby Animals" />
+		</crafting_category_list>
+
+		<crafting_category_list display_type="PigStable001">
+			<crafting_category name="Animals" icon="ui_game_symbol_resource" display_name="Baby Animals" />
+		</crafting_category_list>
+
+		<crafting_category_list display_type="GoatStable001">
+			<crafting_category name="Animals" icon="ui_game_symbol_resource" display_name="Baby Animals" />
+		</crafting_category_list>
+
+		<crafting_category_list display_type="SheepStable001">
+			<crafting_category name="Animals" icon="ui_game_symbol_resource" display_name="Baby Animals" />
+			<crafting_category name="By-Products" icon="ui_game_symbol_resource" display_name="Baby Animals" />
+		</crafting_category_list>
 
 
 
