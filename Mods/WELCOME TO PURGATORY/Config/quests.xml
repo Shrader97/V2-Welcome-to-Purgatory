@@ -124,11 +124,38 @@
 
     </append>
 
+	<append xpath="/quests">
+	
+		<!-- Generic Skill Point Quest-->
+		<quest id="quest_genericskillpoints">
+			<property name="name_key" value="quest_genericskillpoints" />
+			<property name="subtitle_key" value="quest_genericskillpoints_subtitle" />
+			<property name="description_key" value="quest_genericskillpoints_description" />
+			<property name="icon" value="ui_game_symbol_tailoring" />
+			<property name="category_key" value="challenge" />
+			<property name="offer_key" value="quest_genericskillpoints_offer" />
+			<property name="repeatable" value="true" />
+			<property name="difficulty" value="veryeasy" />
+			<property name="shareable" value="false" />
+
+			<reward type="SkillPoints" value="1" /> 
+		</quest>
+
+		<quest id="quest_Multigenericskillpoints">
+			<property name="name_key" value="quest_Multigenericskillpoints" />
+			<property name="subtitle_key" value="quest_Multigenericskillpoints_subtitle" />
+			<property name="description_key" value="quest_Multigenericskillpoints_description" />
+			<property name="icon" value="ui_game_symbol_tailoring" />
+			<property name="category_key" value="challenge" />
+			<property name="offer_key" value="quest_Multigenericskillpoints_offer" />
+			<property name="repeatable" value="true" />
+			<property name="difficulty" value="veryeasy" />
+			<property name="shareable" value="false" />
+
+			<reward type="SkillPoints" value="25" /> 
+		</quest>
 
 
-
-
-
-
+	</append>
 
 </configs>

@@ -10,6 +10,27 @@ zombieBootyWarrior,"Booty Warrior"
 animalCannibalRabbit,Rabbit
 animalCannibalChicken,Chicken
 
+resourceSkillMagazineScrap,Skill Magazine Scrap
+resourceSkillMagazineScrapDesc,"Skill Magazine Scrap can assembled into a skill magazine."
+writingDesk,Writing Desk
+writingDeskDesc,"Who doesn't love a stylish desk in the home? Can be used to create skill and class books for less resources."
+
+quest_genericskillpoints,Skill Point Book
+quest_genericskillpoints_offer,"This quest is a workaround to grant you +1 generic skill point, instead of a point for a particular skill. It will auto-complete on acceptance."
+quest_genericskillpoints_subtitle,Gain A Skill Point
+quest_genericskillpoints_description,"This quest is a workaround to grant you +1 generic skill point, instead of a point for a particular skill. It will auto-complete on acceptance."
+
+quest_Multigenericskillpoints,Skill Point Book
+quest_Multigenericskillpoints_offer,"This quest is a workaround to grant you +1 generic skill point, instead of a point for a particular skill. It will auto-complete on acceptance."
+quest_Multigenericskillpoints_subtitle,Gain A Skill Point
+quest_Multigenericskillpoints_description,"This quest is a workaround to grant you +1 generic skill point, instead of a point for a particular skill. It will auto-complete on acceptance."
+
+skillGenericBook,Generic Skill Notes
+skillGenericDesc,A pretty rare book full of general knowledge and useful information (+1 skill point to assign).
+
+skillMultiGenericBook,Generic Skill Notes
+skillMultiGenericDesc,A pretty rare book full of general knowledge and useful information (+25 skill point to assign).
+
 resourceCopperPlate,"Copper Plate"
 
 resourceLeadPlate,"Lead Plate"

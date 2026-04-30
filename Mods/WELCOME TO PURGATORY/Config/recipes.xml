@@ -1090,8 +1090,16 @@
 
         <recipe name="meleeWpnBladeT0BoneDagger" count="1" tags="perkDeepCuts,craftingBlades,packMuleCrafting" >
             <ingredient name="resourceBone" count="5"/>
+            <ingredient name="resourceWood" count="4"/>
+            <ingredient name="resourceLeather" count="2"/>
+            <ingredient name="resourceDuctTape" count="2"/>
+            <ingredient name="resourceLegendaryParts" count="0"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceForgedIron,resourceWood,resourceLeather,resourceDuctTape"/>
+                <passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="1" tags="resourceLegendaryParts"/>
+            </effect_group>
         </recipe>
-
+        
         <recipe name="meleeWpnBladeT1RustyKatana" count="1" tags="learnable,perkDeepCuts,packMuleCrafting">
             <ingredient name="resourceForgedIron" count="8"/>
             <ingredient name="resourceWood" count="4"/>

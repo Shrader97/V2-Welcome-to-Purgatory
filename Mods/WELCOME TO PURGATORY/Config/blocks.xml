@@ -2161,6 +2161,34 @@
 			<property name="SortOrder1" value="70i0"/>
 		</block>
 
+		<block name="writingDesk">
+			<property name="CustomIcon" value="cntCollapsedWorkbenchEmpty" />
+			<property name="DescriptionKey" value="writingDeskDesc"/>
+			<property name="Class" value="Workstation"/>
+			<property name="Material" value="Mmetal_hard"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Model" value="Entities/Crafting/woodWorkBenchCollapsedEmptyPrefab"/>
+			<property name="MultiBlockDim" value="2,2,1"/>
+			<property name="Path" value="solid"/>
+			<property name="ImposterExchange" value="imposterBlock" param1="81"/>
+			<property name="IsTerrainDecoration" value="true"/>
+			<property class="Workstation">
+				<property name="Modules" value="tools,output"/>
+				<property name="CraftingAreaRecipes" value="writingDesk"/>
+			</property>
+			<property name="WorkstationIcon" value="ui_game_symbol_workbench" />
+			<property name="CraftIcon" value="ui_game_symbol_workbench"/>
+			<property name="DescriptionKey" value="writingDeskDesc"/>
+			<property class="RepairItems"> <property name="resourceWood" value="15"/> </property>
+			<drop event="Destroy" name="resourceWood" count="2,6" />
+			<property name="TakeDelay" value="15"/>
+			<property name="Group" value="Basics,Building"/>
+			<property name="EconomicValue" value="750"/>
+			<property name="FilterTags" value="MC_playerBlocks,SC_decor,fdecor,fother,ffurniture"/>
+			<property name="Stacknumber" value="1"/>
+		</block>
+
 	<!-- Electricle -->
 
 		<block name="solarbankT2">
