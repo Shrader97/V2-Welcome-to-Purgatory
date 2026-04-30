@@ -202,7 +202,7 @@
             </effect_group>
         </item_modifier>
 
-       <item_modifier name="modMeleeBurningFist" installable_tags="perkBrawler" modifier_tags="fire" blocked_tags="noMods" type="attachment">
+        <item_modifier name="modMeleeBurningFist" installable_tags="perkBrawler" modifier_tags="fire" blocked_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
             <property name="CustomIcon" value="modMeleeClubBurningShaft"/>
             <property name="TraderStageTemplate" value="modsTier2"/>
@@ -466,6 +466,53 @@
                 <passive_effect name="StaminaChangeOT" operation="perc_add" value=".2" tags="running"/><display_value name="dStaminaRegen" value=".2"/>
 				<passive_effect name="VehicleMotorTorquePer" operation="perc_add" value=".20"/>
 				<passive_effect name="VehicleVelocityMaxPer" operation="perc_add" value=".29"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modGhillieSuitHood" installable_tags="armorHead" blocked_tags="clothing" modifier_tags="rare" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="UnlockedBy" value="perkSniperComplete"/> <!-- BOOK_PERK -->
+            <property name="CustomIcon" value="apparelGhillieSuitHood"/>
+            <property name="DisplayType" value="clothingGhillieHood"/>
+            <property name="DescriptionKey" value="apparelGhillieSuitGroupDesc"/>
+            <effect_group tiered="false">
+                <passive_effect name="HypothermalResist" operation="base_add" value="1"/>
+                <passive_effect name="HyperthermalResist" operation="base_add" value="1,3.5"/>
+                <passive_effect name="LightMultiplier" operation="perc_add" value="-.07"><requirement name="!IsIndoors"/></passive_effect>
+                <passive_effect name="LightMultiplier" operation="perc_add" value="-.05"><requirement name="IsIndoors"/></passive_effect>
+                <display_value name="dLightMultiplier" value="-.07"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modGhillieSuitPants" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="rare" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="UnlockedBy" value="perkSniperComplete"/> <!-- BOOK_PERK -->
+            <property name="CustomIcon" value="apparelGhillieSuitPants"/>
+            <property name="DisplayType" value="clothingGhillie"/>
+            <property name="DescriptionKey" value="apparelGhillieSuitGroupDesc"/>
+            <effect_group tiered="false">
+                <passive_effect name="HypothermalResist" operation="base_add" value="1"/>
+                <passive_effect name="HyperthermalResist" operation="base_add" value="1,3.5"/>
+                <passive_effect name="LightMultiplier" operation="perc_add" value="-.07"><requirement name="!IsIndoors"/></passive_effect>
+                <passive_effect name="LightMultiplier" operation="perc_add" value="-.05"><requirement name="IsIndoors"/></passive_effect>
+                <display_value name="dLightMultiplier" value="-.07"/>
+                <passive_effect name="NoiseMultiplier" operation="perc_add" value="-.05"/><display_value name="dNoiseMultiplier" value="-.05"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modGhillieSuitJacket" installable_tags="armorChest" blocked_tags="clothing" modifier_tags="rare" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="UnlockedBy" value="perkSniperComplete"/> <!-- BOOK_PERK -->
+            <property name="CustomIcon" value="apparelGhillieSuitJacket"/>
+            <property name="DisplayType" value="clothingGhillie"/>
+            <property name="DescriptionKey" value="apparelGhillieSuitGroupDesc"/>
+            <effect_group tiered="false">
+                <passive_effect name="HypothermalResist" operation="base_add" value="1"/>
+                <passive_effect name="HyperthermalResist" operation="base_add" value="1,5"/>
+                <passive_effect name="LightMultiplier" operation="perc_add" value="-.07"><requirement name="!IsIndoors"/></passive_effect>
+                <passive_effect name="LightMultiplier" operation="perc_add" value="-.05"><requirement name="IsIndoors"/></passive_effect>
+                <display_value name="dLightMultiplier" value="-.07"/>
+                <passive_effect name="NoiseMultiplier" operation="perc_add" value="-.05"/><display_value name="dNoiseMultiplier" value="-.05"/>
             </effect_group>
         </item_modifier>
 

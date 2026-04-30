@@ -276,6 +276,197 @@
 
     <append xpath="/recipes">
 
+		<recipe name="resourceSkillMagazineScrap" count="5">
+			<ingredient name="resourceGlue" count="5"/>
+			<ingredient name="foodCropBlueberries" count="15"/>
+			<ingredient name="resourcePaper" count="5"/>
+		</recipe>
+
+		<recipe name="resourceSkillMagazineScrap" count="50"  craft_area="chemistryStation" >
+			<ingredient name="resourceGlue" count="5"/>
+			<ingredient name="foodCropBlueberries" count="20"/>
+			<ingredient name="resourcePaper" count="50"/>
+		</recipe>
+
+		<recipe name="writingDesk" count="1" craft_area="workbench">
+			<ingredient name="resourceWood" count="20"/>
+			<ingredient name="resourceNail" count="10"/>
+		</recipe>
+
+        <recipe name="flagPoleAmerican" count="1" craft_time="15" craft_area="workbench" tags="workbenchCrafting">
+            <ingredient name="resourcePaint" count="10"/>
+            <ingredient name="resourceScrapIron" count="10"/>
+            <ingredient name="resourceWood" count="100"/>
+            <ingredient name="resourceCloth" count="100"/>
+        </recipe>
+
+		<recipe name="drinkCanMegaCrush" count="1" craft_area="workbench" craft_time="60">
+			<ingredient name="drinkJarCoffee" count="1"/>
+			<ingredient name="drugPainkillers" count="2"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="150"/>
+		</recipe>
+		
+		<recipe name="drinkCanMegaCrush" count="1" craft_time="90">
+			<ingredient name="drinkJarCoffee" count="2"/>
+			<ingredient name="drugPainkillers" count="3"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="250"/>
+		</recipe>
+		
+		<recipe name="drinkCanMegaCrush" count="1" craft_time="30" craft_area="chemistryStation" tags="chemStationCrafting,Chemicals">
+			<ingredient name="drinkJarCoffee" count="1"/>
+			<ingredient name="drugPainkillers" count="1"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="75"/>
+		</recipe>
+
+        <recipe name="drugPainkillers" count="1" craft_time="60" craft_area="campfire" tags="campfire">
+            <property name="Group" value="Medicine"/>
+            <ingredient name="drinkJarBoiledWater" count="5"/>
+			<ingredient name="resourceCropGoldenrodPlant" count="20"/>
+			<ingredient name="resourceCropChrysanthemumPlant" count="20"/>
+			<ingredient name="foodCropBlueberries" count="10"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="150"/>
+			
+        </recipe>
+			
+		<recipe name="drugPainkillers" count="1" craft_time="90">
+            <property name="Group" value="Medicine"/>
+            <ingredient name="drinkJarBoiledWater" count="10"/>
+			<ingredient name="resourceCropGoldenrodPlant" count="30"/>
+			<ingredient name="resourceCropChrysanthemumPlant" count="30"/>
+			<ingredient name="foodCropBlueberries" count="20"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="200"/>
+			
+		</recipe>
+		
+		<recipe name="drugPainkillers" count="1" craft_time="30" craft_area="chemistryStation" tags="chemStationCrafting">
+            <property name="Group" value="Medicine"/>
+            <ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="resourceCropGoldenrodPlant" count="10"/>
+			<ingredient name="resourceCropChrysanthemumPlant" count="10"/>
+			<ingredient name="foodCropBlueberries" count="5"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="100"/>
+        </recipe>
+
+		<recipe name="woodenBear" count="1" craft_area="workbench" craft_time="2">
+			<ingredient name="resourceWood" count="150"/>
+			<ingredient name="resourceNail" count="25"/>
+		</recipe>
+		
+		<recipe name="woodenBear" count="1" craft_time="5">
+			<ingredient name="resourceWood" count="300"/>
+			<ingredient name="resourceNail" count="25"/>
+		</recipe>
+		
+		<recipe name="woodenBear" count="1" craft_time="1" craft_area="chemistryStation" tags="chemStationCrafting">
+			<ingredient name="resourceWood" count="75"/>
+			<ingredient name="resourceNail" count="25"/>
+		</recipe>
+
+		<recipe name="medicalBloodBag" count="1" craft_time="5" craft_area="chemistryStation" tags="chemStationCrafting">
+			<ingredient name="foodRawMeat" count="1"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+		</recipe>
+		
+		<recipe name="medicalBloodBag" count="1" craft_area="campfire" craft_time="30" tags="Campfire">
+			<ingredient name="foodRawMeat" count="1"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="resourceScrapIron" count="10"/>
+		</recipe>
+		
+		<recipe name="medicalBloodBag" count="1" craft_time="60">
+			<ingredient name="foodRawMeat" count="1"/>
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+		</recipe>
+		
+		<recipe name="drugVitamins" count="1" craft_time="5" craft_area="chemistryStation" tags="chemStationCrafting">
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceScrapIron" count="25"/>
+			<ingredient name="resourceCrushedSand" count="50"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="100"/>
+		</recipe>
+		
+		<recipe name="drugVitamins" count="1" craft_area="campfire" craft_time="30" tags="Campfire">
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceScrapIron" count="25"/>
+			<ingredient name="resourceCrushedSand" count="50"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="100"/>
+		</recipe>
+		
+		<recipe name="drugVitamins" count="1" craft_time="60">
+			<ingredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceScrapIron" count="25"/>
+			<ingredient name="resourceCrushedSand" count="50"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="100"/>
+		</recipe>
+
+		<recipe name="resourceLegendaryParts" count="1" craft_area="workbench" craft_time="60">
+			<ingredient name="resourceForgedSteel" count="10"/>
+			<ingredient name="resourceForgedIron" count="20"/>
+			<ingredient name="resourceMechanicalParts" count="10"/>
+			<ingredient name="resourceOil" count="10"/>
+			<ingredient name="resourceRawDiamond" count="2"/>
+		</recipe>
+		
+		<recipe name="resourceLegendaryParts" count="1" craft_time="90">
+			<ingredient name="resourceForgedSteel" count="20"/>
+			<ingredient name="resourceForgedIron" count="30"/>
+			<ingredient name="resourceMechanicalParts" count="20"/>
+			<ingredient name="resourceOil" count="20"/>
+			<ingredient name="resourceRawDiamond" count="5"/>
+		</recipe>
+		
+		<recipe name="resourceLegendaryParts" count="1" craft_time="30" craft_area="chemistryStation" tags="chemStationCrafting">
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceForgedIron" count="10"/>
+			<ingredient name="resourceMechanicalParts" count="5"/>
+			<ingredient name="resourceOil" count="5"/>
+			<ingredient name="resourceRawDiamond" count="1"/>
+		</recipe>
+
+        <recipe name="apparelGhillieSuitHood" count="1" tags="learnable">
+            <ingredient name="resourceYuccaFibers" count="50"/>
+            <ingredient name="resourceSewingKit" count="1"/>
+        </recipe>
+
+        <recipe name="apparelGhillieSuitJacket" count="1" tags="learnable">
+            <ingredient name="resourceYuccaFibers" count="50"/>
+            <ingredient name="resourceSewingKit" count="1"/>
+        </recipe>
+
+        <recipe name="apparelGhillieSuitPants" count="1" tags="learnable">
+            <ingredient name="resourceYuccaFibers" count="50"/>
+            <ingredient name="resourceSewingKit" count="1"/>
+        </recipe>
+
+		<recipe name="skillGenericBook" count="1" >
+			<ingredient name="resourceSkillMagazineScrap" count="100"/>
+		</recipe> 
+
+		<recipe name="skillGenericBook" count="1" craft_area="writingDesk">
+			<ingredient name="resourceSkillMagazineScrap" count="50"/>
+		</recipe> 
+
+		<recipe name="skillMultiGenericBook" count="1" craft_area="writingDesk">
+			<ingredient name="resourceSkillMagazineScrap" count="200"/>
+			<ingredient name="resourceInk" count="1"/>
+		</recipe>
+
+		<recipe name="skillMultiGenericBook" count="1" craft_area="writingDesk">
+			<ingredient name="resourceSkillMagazineScrap" count="100"/>
+			<ingredient name="resourceInk" count="2"/>
+		</recipe>
+
+		<recipe name="resourceInk" count="1" craft_area="chemistryStation">
+			<ingredient name="resourceCoal" count="250"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceAcid" count="1"/>
+		</recipe>
+
 		<recipe name="StartFarm" count="1">
 			<ingredient name="classStarter" count="1"  tags="Farm,term,inus,flowhud"/>
 		</recipe>

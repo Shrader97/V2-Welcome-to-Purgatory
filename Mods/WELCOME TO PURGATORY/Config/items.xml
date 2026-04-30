@@ -268,7 +268,7 @@
     <append xpath="/items">
 
 		<item name="MSchematicParts">
-            <property name="CustomIcon" value="resourcePaper" />
+            <property name="CustomIcon" value="cntCollapsedWorkbenchEmpty" />
 			<property name="DescriptionKey" value="MSchematicPartsDesc"/>
 			<property name="HoldType" value="21"/>
 			<property name="Tags" value="junk"/>
