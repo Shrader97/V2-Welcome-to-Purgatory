@@ -273,8 +273,8 @@
 	<csv xpath="//crafting_skill[@name='craftingWorkstations']//unlock_entry[contains(@item, 'toolApiaryExtractor')]/@item" op="add">WorkingAirConditioner</csv>
     <csv xpath="//crafting_skill[@name='craftingWorkstations']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'toolApiaryExtractor')]/@tags" op="add">WorkingAirConditioner</csv>
 
-	<csv xpath="//crafting_skill[@name='craftingWorkstations']//unlock_entry[contains(@item, 'cementMixer')]/@item" op="add">tooltailstock,toolChuck,toolToolPost,toolbenchvise,toolToolBox,toolTools,toolBook,toolDrill,toolHammer</csv>
-    <csv xpath="//crafting_skill[@name='craftingWorkstations']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'cementMixer')]/@tags" op="add">tooltailstock,toolChuck,toolToolPost,toolbenchvise,toolToolBox,toolTools,toolBook,toolDrill,toolHammer</csv>
+	<csv xpath="//crafting_skill[@name='craftingWorkstations']//unlock_entry[contains(@item, 'cementMixer')]/@item" op="add">toolBook,toolDrill,toolHammer</csv>
+    <csv xpath="//crafting_skill[@name='craftingWorkstations']//passive_effect[@name='RecipeTagUnlocked' and contains(@tags, 'cementMixer')]/@tags" op="add">toolBook,toolDrill,toolHammer</csv>
     
     <remove xpath="//crafting_skill[@name='craftingBlades']"/>
 
@@ -520,8 +520,9 @@
                 <unlock_entry item="resourceGunPowderBundle" unlock_tier="2"/>
                 <unlock_entry item="thrownTimedCharge" unlock_tier="3"/>
             </display_entry>
-                    <display_entry icon="ammoRocketFrag" name_key="explosivesT4" has_quality="false" unlock_level="45" >
+            <display_entry icon="ammoRocketFrag" name_key="explosivesT4-1,explosivesT4-2" has_quality="false" unlock_level="45,50" >
                 <unlock_entry item="resourceRocketTip,resourceRocketCasing,ammoRocketFrag,ammoRocketHE" unlock_tier="1"/>
+                <unlock_entry item="thrownAdvGrenadeContact,thrownAdvGrenade" unlock_tier="2"/>
             </display_entry>
             <display_entry icon="gunExplosivesT3RocketLauncher" name_key="explosivesT5" has_quality="true" unlock_level="50,60,70,80,90,100" >
                 <unlock_entry item="gunExplosivesT3RocketLauncher" unlock_tier="1"/>
@@ -541,6 +542,7 @@
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="35,100" value="1" tags="thrownTimedCharge"/>
 
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="45,100" value="1" tags="resourceRocketTip,resourceRocketCasing,ammoRocketFrag,ammoRocketHE"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,100" value="1" tags="thrownAdvGrenadeContact,thrownAdvGrenade"/>
 
                 <passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,100" value="1" tags="gunExplosivesT3RocketLauncher"/>
 

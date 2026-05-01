@@ -2168,7 +2168,7 @@
 			<property name="Material" value="Mmetal_hard"/>
 			<property name="StabilitySupport" value="true"/>
 			<property name="Shape" value="ModelEntity"/>
-			<property name="Model" value="Entities/Crafting/woodWorkBenchCollapsedEmptyPrefab"/>
+			<property name="Model" value="@:Entities/Crafting/woodWorkBenchCollapsedEmptyPrefab.prefab"/>
 			<property name="MultiBlockDim" value="2,2,1"/>
 			<property name="Path" value="solid"/>
 			<property name="ImposterExchange" value="imposterBlock" param1="81"/>

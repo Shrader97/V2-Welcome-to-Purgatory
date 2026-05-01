@@ -1001,7 +1001,8 @@ modUltraMaxDegradation,"Ultra Max Degradation"
 modBikecycleSpeedBoost,"Bicycle Speed Boost"
 modBikecycleSpeedBoostDesc,"Increases bicycle speed by gear ratio."
 
-
+CaptainPoetatoRentMoneyFundDesc,"Mr. Poetato Rent Money From the Tourist"
+CaptainPoetatoRentMoneyFund,"Captain Poetato's Rent Money"
 
 resourceForgedTitanium,"Forged Titanium"
 

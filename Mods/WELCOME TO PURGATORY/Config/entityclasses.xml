@@ -3416,6 +3416,7 @@
 	<append xpath="/entity_classes/entity_class[@name='zombieFatHawaiian']">
 		<property name="LootListOnDeath" value="zombieFatHawaiian"/>
 		<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+		<drop event="Harvest" name="CaptainPoetatoRentMoney" prob=".5" count="1" tag="allHarvest" tool_category="Butcher"/>
 		<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
 		<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
 		<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
@@ -3429,6 +3430,7 @@
 	<append xpath="/entity_classes/entity_class[@name='zombieFatHawaiianFeral']">
 		<property name="LootListOnDeath" value="zombieFatHawaiianFeral"/> 
 		<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+		<drop event="Harvest" name="CaptainPoetatoRentMoney" prob=".75" count="1"  tag="allHarvest" tool_category="Butcher"/>
 		<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
 		<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
 		<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
@@ -3442,6 +3444,7 @@
 	<append xpath="/entity_classes/entity_class[@name='zombieFatHawaiianRadiated']">
 		<property name="LootListOnDeath" value="zombieFatHawaiianRadiated"/> 
 		<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+		<drop event="Harvest" name="CaptainPoetatoRentMoney" prob="1" count="1" tag="allHarvest" tool_category="Butcher"/>
 		<drop event="Harvest" name="medicalIrradiatedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
 		<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
 		<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
@@ -3455,6 +3458,7 @@
 	<append xpath="/entity_classes/entity_class[@name='zombieFatHawaiianInfernal']">
 		<property name="LootListOnDeath" value="zombieFatHawaiianRadiated"/> 
 		<drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+		<drop event="Harvest" name="CaptainPoetatoRentMoney" prob="1" count="1" tag="allHarvest" tool_category="Butcher"/>
 		<drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
 		<drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
 		<drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>

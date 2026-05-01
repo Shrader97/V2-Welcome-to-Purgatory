@@ -293,6 +293,48 @@
 			<ingredient name="resourceNail" count="10"/>
 		</recipe>
 
+		<recipe name="qt_taylor" count="1" craft_area="writingDesk">
+            <property name="Group" value="map"/>
+			<ingredient name="MSchematicParts" count="25"/>
+			<ingredient name="resourceInk" count="1"/>
+		</recipe>
+
+		<recipe name="qt_nickole" count="1" craft_area="writingDesk">
+            <property name="Group" value="map"/>
+			<ingredient name="MSchematicParts" count="25"/>
+			<ingredient name="resourceInk" count="1"/>
+		</recipe>
+
+		<recipe name="qt_stephan" count="1" craft_area="writingDesk">
+            <property name="Group" value="map"/>
+			<ingredient name="MSchematicParts" count="25"/>
+			<ingredient name="resourceInk" count="1"/>
+		</recipe>
+
+		<recipe name="qt_jennifer" count="1" craft_area="writingDesk">
+            <property name="Group" value="map"/>
+			<ingredient name="MSchematicParts" count="25"/>
+			<ingredient name="resourceInk" count="1"/>
+		</recipe>
+
+		<recipe name="qt_claude" count="1" craft_area="writingDesk">
+            <property name="Group" value="map"/>
+			<ingredient name="MSchematicParts" count="25"/>
+			<ingredient name="resourceInk" count="1"/>
+		</recipe>
+
+		<recipe name="qt_sarah" count="1" craft_area="writingDesk">
+            <property name="Group" value="map"/>
+			<ingredient name="MSchematicParts" count="25"/>
+			<ingredient name="resourceInk" count="1"/>
+		</recipe>
+
+		<recipe name="qt_raphael" count="1" craft_area="writingDesk">
+            <property name="Group" value="map"/>
+			<ingredient name="MSchematicParts" count="25"/>
+			<ingredient name="resourceInk" count="1"/>
+		</recipe>
+
         <recipe name="flagPoleAmerican" count="1" craft_time="15" craft_area="workbench" tags="workbenchCrafting">
             <ingredient name="resourcePaint" count="10"/>
             <ingredient name="resourceScrapIron" count="10"/>
@@ -300,7 +342,7 @@
             <ingredient name="resourceCloth" count="100"/>
         </recipe>
 
-		<recipe name="drinkCanMegaCrush" count="1" craft_area="workbench" craft_time="60">
+		<recipe name="drinkCanMegaCrush" count="5" craft_area="workbench" craft_time="60">
 			<ingredient name="drinkJarCoffee" count="1"/>
 			<ingredient name="drugPainkillers" count="2"/>
 			<ingredient name="resourcePotassiumNitratePowder" count="150"/>
@@ -312,19 +354,19 @@
 			<ingredient name="resourcePotassiumNitratePowder" count="250"/>
 		</recipe>
 		
-		<recipe name="drinkCanMegaCrush" count="1" craft_time="30" craft_area="chemistryStation" tags="chemStationCrafting,Chemicals">
+		<recipe name="drinkCanMegaCrush" count="10" craft_time="30" craft_area="chemistryStation" tags="chemStationCrafting,Chemicals">
 			<ingredient name="drinkJarCoffee" count="1"/>
 			<ingredient name="drugPainkillers" count="1"/>
 			<ingredient name="resourcePotassiumNitratePowder" count="75"/>
 		</recipe>
 
-        <recipe name="drugPainkillers" count="1" craft_time="60" craft_area="campfire" tags="campfire">
+        <recipe name="drugPainkillers" count="5" craft_time="60" craft_area="campfire" tags="campfire">
             <property name="Group" value="Medicine"/>
             <ingredient name="drinkJarBoiledWater" count="5"/>
 			<ingredient name="resourceCropGoldenrodPlant" count="20"/>
 			<ingredient name="resourceCropChrysanthemumPlant" count="20"/>
 			<ingredient name="foodCropBlueberries" count="10"/>
-			<ingredient name="resourcePotassiumNitratePowder" count="150"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="15"/>
 			
         </recipe>
 			
@@ -334,17 +376,16 @@
 			<ingredient name="resourceCropGoldenrodPlant" count="30"/>
 			<ingredient name="resourceCropChrysanthemumPlant" count="30"/>
 			<ingredient name="foodCropBlueberries" count="20"/>
-			<ingredient name="resourcePotassiumNitratePowder" count="200"/>
-			
+			<ingredient name="resourcePotassiumNitratePowder" count="20"/>
 		</recipe>
 		
-		<recipe name="drugPainkillers" count="1" craft_time="30" craft_area="chemistryStation" tags="chemStationCrafting">
+		<recipe name="drugPainkillers" count="10" craft_time="30" craft_area="chemistryStation" tags="chemStationCrafting">
             <property name="Group" value="Medicine"/>
             <ingredient name="drinkJarBoiledWater" count="1"/>
 			<ingredient name="resourceCropGoldenrodPlant" count="10"/>
 			<ingredient name="resourceCropChrysanthemumPlant" count="10"/>
 			<ingredient name="foodCropBlueberries" count="5"/>
-			<ingredient name="resourcePotassiumNitratePowder" count="100"/>
+			<ingredient name="resourcePotassiumNitratePowder" count="10"/>
         </recipe>
 
 		<recipe name="woodenBear" count="1" craft_area="workbench" craft_time="2">
@@ -362,13 +403,13 @@
 			<ingredient name="resourceNail" count="25"/>
 		</recipe>
 
-		<recipe name="medicalBloodBag" count="1" craft_time="5" craft_area="chemistryStation" tags="chemStationCrafting">
+		<recipe name="medicalBloodBag" count="10" craft_time="5" craft_area="chemistryStation" tags="chemStationCrafting">
 			<ingredient name="foodRawMeat" count="1"/>
 			<ingredient name="drinkJarBoiledWater" count="1"/>
 			<ingredient name="resourceScrapPolymers" count="10"/>
 		</recipe>
 		
-		<recipe name="medicalBloodBag" count="1" craft_area="campfire" craft_time="30" tags="Campfire">
+		<recipe name="medicalBloodBag" count="5" craft_area="campfire" craft_time="30" tags="Campfire">
 			<ingredient name="foodRawMeat" count="1"/>
 			<ingredient name="drinkJarBoiledWater" count="1"/>
 			<ingredient name="resourceScrapIron" count="10"/>
@@ -380,7 +421,7 @@
 			<ingredient name="resourceScrapPolymers" count="10"/>
 		</recipe>
 		
-		<recipe name="drugVitamins" count="1" craft_time="5" craft_area="chemistryStation" tags="chemStationCrafting">
+		<recipe name="drugVitamins" count="10" craft_time="5" craft_area="chemistryStation" tags="chemStationCrafting">
 			<ingredient name="drinkJarBoiledWater" count="1"/>
 			<ingredient name="resourceScrapPolymers" count="10"/>
 			<ingredient name="resourceScrapIron" count="25"/>
@@ -388,7 +429,7 @@
 			<ingredient name="resourcePotassiumNitratePowder" count="100"/>
 		</recipe>
 		
-		<recipe name="drugVitamins" count="1" craft_area="campfire" craft_time="30" tags="Campfire">
+		<recipe name="drugVitamins" count="5" craft_area="campfire" craft_time="30" tags="Campfire">
 			<ingredient name="drinkJarBoiledWater" count="1"/>
 			<ingredient name="resourceScrapPolymers" count="10"/>
 			<ingredient name="resourceScrapIron" count="25"/>
@@ -486,6 +527,7 @@
 		<recipe name="StartBrawler" count="1">
 			<ingredient name="classStarter" count="1"/>
 		</recipe>
+        
         
     <!-- by Deathfromace -->
 		<recipe name="Heatedfloor" count="1" craft_time="5" craft_area="workbench">
@@ -1481,7 +1523,7 @@
 
     <!-- work bench tools -->
 
-        <recipe name="tooltailstock" count="1" craft_time="20" craft_area="workbench" tags="learnable,workbenchCrafting">
+        <!--recipe name="tooltailstock" count="1" craft_time="20" craft_area="workbench" tags="learnable,workbenchCrafting">
             <ingredient name="resourceMechanicalParts" count="2"/>
             <ingredient name="resourceForgedSteel" count="14"/>
             <ingredient name="resourceForgedIron" count="4"/>
@@ -1521,7 +1563,7 @@
             <ingredient name="resourceForgedSteel" count="14"/>
             <ingredient name="resourceForgedIron" count="4"/>
             <ingredient name="resourceSpring" count="1"/>
-        </recipe>
+        </recipe-->
 
         <recipe name="toolBook" count="1" craft_time="20" craft_area="workbench" tags="learnable,workbenchCrafting">
             <ingredient name="resourceNail" count="2"/>
@@ -1938,6 +1980,12 @@
 			<ingredient name="drinkCanMegaCrush" count="1"/>
 		</recipe>
 		
+		<recipe name="Energy Tablet" count="10" craft_time="25" craft_area="chemistryStation" tags="learnable,perkMasterChef,chemStationCrafting">
+			<ingredient name="Sugar Extract" count="5"/>
+			<ingredient name="resourceCropCoffeeBeans" count="5"/>
+			<ingredient name="drinkCanMegaCrush" count="5"/>
+		</recipe>
+
 		<recipe name="Sponge Cake" count="1" craft_time="50" craft_area="campfire" tags="learnable,perkMasterChef" craft_tool="toolCookingPot">
 			<ingredient name="foodCornMeal" count="2"/>
 			<ingredient name="resourceAnimalFat" count="2"/>
@@ -2095,7 +2143,7 @@
             </effect_group>
         </recipe>
 
-        <recipe name="foodCookedHamburger" count="1" craft_area="workbench" tags="perkMasterChef">
+        <recipe name="foodCookedHamburger" count="1" craft_area="WorkingStove" tags="perkMasterChef">
             <ingredient name="foodRawHamburger" count="1"/>
             <effect_group>
                 <passive_effect name="CraftingIngredientCount" level="1,2,3" operation="base_add" value="-1,-3,-5" tags="foodGroundBeef"/>
@@ -2201,7 +2249,7 @@
         </recipe>
 
         <recipe name="drugFortBites" count="1" craft_area="chemistryStation" tags="learnable,chemStationCrafting">
-            <ingredient name="medicalBloodBag" count="5"/>
+            <ingredient name="medicalBloodBag" count="1"/>
             <ingredient name="drinkJarGrainAlcohol" count="1"/>
             <ingredient name="foodRottingFlesh" count="20"/>
             <ingredient name="drugVitamins" count="1"/>
