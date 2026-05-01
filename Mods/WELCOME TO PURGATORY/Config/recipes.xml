@@ -276,13 +276,13 @@
 
     <append xpath="/recipes">
 
-		<recipe name="resourceSkillMagazineScrap" count="5">
+		<recipe name="MSchematicParts" count="5">
 			<ingredient name="resourceGlue" count="5"/>
 			<ingredient name="foodCropBlueberries" count="15"/>
 			<ingredient name="resourcePaper" count="5"/>
 		</recipe>
 
-		<recipe name="resourceSkillMagazineScrap" count="50"  craft_area="chemistryStation" >
+		<recipe name="MSchematicParts" count="50"  craft_area="chemistryStation" >
 			<ingredient name="resourceGlue" count="5"/>
 			<ingredient name="foodCropBlueberries" count="20"/>
 			<ingredient name="resourcePaper" count="50"/>
@@ -428,36 +428,36 @@
 			<ingredient name="resourceRawDiamond" count="1"/>
 		</recipe>
 
-        <recipe name="apparelGhillieSuitHood" count="1" tags="learnable">
+        <recipe name="modGhillieSuitHood" count="1" tags="learnable">
             <ingredient name="resourceYuccaFibers" count="50"/>
             <ingredient name="resourceSewingKit" count="1"/>
         </recipe>
 
-        <recipe name="apparelGhillieSuitJacket" count="1" tags="learnable">
+        <recipe name="modGhillieSuitJacket" count="1" tags="learnable">
             <ingredient name="resourceYuccaFibers" count="50"/>
             <ingredient name="resourceSewingKit" count="1"/>
         </recipe>
 
-        <recipe name="apparelGhillieSuitPants" count="1" tags="learnable">
+        <recipe name="modGhillieSuitPants" count="1" tags="learnable">
             <ingredient name="resourceYuccaFibers" count="50"/>
             <ingredient name="resourceSewingKit" count="1"/>
         </recipe>
 
 		<recipe name="skillGenericBook" count="1" >
-			<ingredient name="resourceSkillMagazineScrap" count="100"/>
+			<ingredient name="MSchematicParts" count="100"/>
 		</recipe> 
 
 		<recipe name="skillGenericBook" count="1" craft_area="writingDesk">
-			<ingredient name="resourceSkillMagazineScrap" count="50"/>
+			<ingredient name="MSchematicParts" count="50"/>
 		</recipe> 
 
 		<recipe name="skillMultiGenericBook" count="1" craft_area="writingDesk">
-			<ingredient name="resourceSkillMagazineScrap" count="200"/>
+			<ingredient name="MSchematicParts" count="200"/>
 			<ingredient name="resourceInk" count="1"/>
 		</recipe>
 
 		<recipe name="skillMultiGenericBook" count="1" craft_area="writingDesk">
-			<ingredient name="resourceSkillMagazineScrap" count="100"/>
+			<ingredient name="MSchematicParts" count="100"/>
 			<ingredient name="resourceInk" count="2"/>
 		</recipe>
 
