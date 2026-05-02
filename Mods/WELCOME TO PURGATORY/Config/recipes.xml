@@ -35,6 +35,9 @@
 	<remove xpath="//recipe[@name='thrownDynamite']"/>
 	<remove xpath="//recipe[@name='thrownAmmoMolotovCocktail']"/-->
 
+    <remove xpath="//recipe[@name='ammoGasCanBundle']"/>
+
+
 	<remove	xpath="//recipe[(starts-with (@name, 'planted'))]"/>
 
     <setattribute xpath="recipes/recipe[@name='toolAnvil']/ingredient[@name='unit_iron']" name="name">resourceScrapIron</setattribute> 
@@ -480,9 +483,50 @@
         </recipe>
 
         <recipe name="modGhillieSuitPants" count="1" tags="learnable">
-            <ingredient name="resourceYuccaFibers" count="50"/>
+            <ingredient name="resourceYuccaFibers" count="1"/>
             <ingredient name="resourceSewingKit" count="1"/>
         </recipe>
+
+        <recipe name="modUltraCollegeJacket" count="1" tags="learnable">
+            <ingredient name="modSuperCollegeJacket" count="1"/>
+            <ingredient name="resourceSewingKit" count="1"/>
+            <ingredient name="resourceForgedSteel" count="10"/>
+        </recipe>
+
+        <recipe name="modSuperCollegeJacket" count="1" tags="learnable">
+            <ingredient name="modCollegeJacket" count="1"/>
+            <ingredient name="resourceSewingKit" count="1"/>
+            <ingredient name="resourceForgedTitanium" count="5"/>
+        </recipe>
+
+        <recipe name="modUltraRunningShoesHP" count="1" tags="learnable">
+            <ingredient name="modSuperRunningShoesHP" count="1"/>
+            <ingredient name="resourceSewingKit" count="1"/>
+            <ingredient name="resourceSpring" count="10"/>
+            <ingredient name="resourceForgedTitanium" count="5"/>
+        </recipe>
+
+        <recipe name="modSuperRunningShoesHP" count="1" tags="learnable">
+            <ingredient name="modRunningShoesHP" count="1"/>
+            <ingredient name="resourceSewingKit" count="1"/>
+            <ingredient name="resourceSpring" count="10"/>
+            <ingredient name="resourceForgedSteel" count="10"/>
+        </recipe>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		<recipe name="skillGenericBook" count="1" >
 			<ingredient name="MSchematicParts" count="100"/>
@@ -502,11 +546,24 @@
 			<ingredient name="resourceInk" count="2"/>
 		</recipe>
 
+		<recipe name="resourceInk" count="10" craft_area="chemistryStation">
+			<ingredient name="resourceCoal" count="300"/>
+			<ingredient name="resourceScrapPolymers" count="30"/>
+			<ingredient name="resourceAcid" count="3"/>
+		</recipe>
+
 		<recipe name="resourceInk" count="1" craft_area="chemistryStation">
 			<ingredient name="resourceCoal" count="250"/>
 			<ingredient name="resourceScrapPolymers" count="10"/>
 			<ingredient name="resourceAcid" count="1"/>
 		</recipe>
+
+		<recipe name="resourceInk" count="1" craft_area="smallchemistryStation">
+			<ingredient name="resourceCoal" count="300"/>
+			<ingredient name="resourceScrapPolymers" count="10"/>
+			<ingredient name="resourceAcid" count="1"/>
+		</recipe>
+
 
 		<recipe name="StartFarm" count="1">
 			<ingredient name="classStarter" count="1"  tags="Farm,term,inus,flowhud"/>
@@ -1153,18 +1210,18 @@
         </recipe>
 
         <recipe name="resourceGrenadeCasing" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering,learnable">
-            <ingredient name="unit_iron" count="50"/>
-            <ingredient name="unit_clay" count="30"/>
+            <ingredient name="resourceScrapIron" count="50"/>
+            <ingredient name="resourceClayLump" count="30"/>
             <effect_group>
-                <passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="unit_clay,unit_iron"/>
+                <passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="resourceClayLump,resourceScrapIron"/>
             </effect_group>
         </recipe>
 
         <recipe name="resourceGrenadeTip" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering,learnable">
-            <ingredient name="unit_lead" count="50"/>
-            <ingredient name="unit_clay" count="30"/>
+            <ingredient name="resourceScrapLead" count="50"/>
+            <ingredient name="resourceClayLump" count="30"/>
             <effect_group>
-                <passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="unit_clay,unit_lead"/>
+                <passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="resourceClayLump,resourceScrapLead"/>
             </effect_group>
         </recipe>
 
@@ -2264,6 +2321,96 @@
             <ingredient name="foodCornMeal" count="3"/>
             <ingredient name="drinkJarBoiledWater" count="1"/>
         </recipe>
+
+        <recipe name="resourceScrapPolymers" count="100" craft_area="chemistryStation" craft_time="5" tags="chemStationCrafting">
+            <property name="Group" value="Chemicals"/>
+            <ingredient name="resourceOilShale" count="10"/>
+        </recipe>
+		
+	    <recipe name="resourceAcid" count="6" craft_time="30" craft_area="chemistryStation" tags="chemStationCrafting">
+			<ingredient name="carBattery" count="1"/>
+            <ingredient name="drinkJarEmpty" count="6"/>
+		</recipe>
+
+        <recipe name="ammoGasCanBundle" count="1" craft_time="625" craft_area="chemistryStation" tags="learnable,chemStationCrafting,perkGreaseMonkey">
+            <ingredient name="resourceOilShale" count="2000"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="0,1,2,3,4,5" operation="base_add" value="0,-100,-250,-500,-750,-1000" tags="resourceOilShale"/>
+            </effect_group>
+        </recipe>
+
+    <!-- Mini Chemistry Station -->
+
+		<recipe name="resourceAcid" count="3" craft_time="30" craft_area="smallchemistryStation" tags="chemStationCrafting">
+			<ingredient name="carBattery" count="1"/>
+            <ingredient name="drinkJarEmpty" count="3"/>
+		</recipe>
+
+        <recipe name="resourceScrapPolymers" count="100" craft_area="smallchemistryStation" craft_time="5" tags="chemStationCrafting">
+            <property name="Group" value="Chemicals"/>
+            <ingredient name="resourceOilShale" count="10"/>
+        </recipe>
+
+		<recipe name="MSchematicParts" count="20"  craft_area="smallchemistryStation" >
+			<ingredient name="resourceGlue" count="5"/>
+			<ingredient name="foodCropBlueberries" count="15"/>
+			<ingredient name="resourcePaper" count="20"/>
+		</recipe>
+
+		<recipe name="resourceScrapPolymers" count="100" craft_area="campfire" craft_time="10" tags="campfire">
+            <property name="Group" value="Chemicals"/>
+            <ingredient name="resourceOilShale" count="20"/>
+        </recipe>
+
+        <recipe name="resourceGunPowder" count="1" craft_area="smallchemistryStation" tags="chemStationCrafting">
+            <ingredient name="resourceCoal" count="1"/>
+            <ingredient name="resourcePotassiumNitratePowder" count="1"/>
+        </recipe>
+
+        <recipe name="resourceGunPowderBundle" count="1" craft_time="1800" craft_area="smallchemistryStation" tags="learnable,chemStationCrafting,perkDemolitionsExpert">
+            <ingredient name="resourceCoal" count="900"/>
+            <ingredient name="resourcePotassiumNitratePowder" count="900"/>
+        </recipe>
+
+        <recipe name="resourceOil" count="1" craft_area="smallchemistryStation" tags="perkGreaseMonkey,learnable,chemStationCrafting">
+            <ingredient name="resourceOilShale" count="26"/>
+        </recipe>
+
+        <recipe name="ammoGasCan" count="2" craft_time="0.25" craft_area="smallchemistryStation" tags="learnable,chemStationCrafting">
+            <ingredient name="resourceOilShale" count="1"/>
+        </recipe>
+
+        <recipe name="ammoGasCanBundle" count="1" craft_time="625" craft_area="smallchemistryStation" tags="learnable,chemStationCrafting,perkGreaseMonkey">
+            <ingredient name="resourceOilShale" count="2500"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="0,1,2,3,4,5" operation="base_add" value="0,-100,-250,-500,-750,-1000" tags="resourceOilShale"/>
+            </effect_group>
+        </recipe>
+
+        <recipe name="toolSmallBeaker" count="1" material_based="true" craft_area="forge" is_trackable="false" craft_tool="toolAnvil">
+            <ingredient name="resourceCrushedSand" count="25"/>
+            <ingredient name="resourceRockSmall" count="10"/>
+            <ingredient name="resourceScrapLead" count="20"/>
+            <ingredient name="resourceScrapIron" count="20"/>
+            <ingredient name="resourceClayLump" count="20"/>
+        </recipe>
+
+        <recipe name="smallchemistryStation" count="1" craft_area="workbench" tags="workbenchCrafting">
+            <ingredient name="toolSmallBeaker" count="1"/>
+            <ingredient name="resourceForgedIron" count="20"/>
+            <ingredient name="resourceMetalPipe" count="10"/>
+            <ingredient name="resourceAcid" count="1"/>
+        </recipe>
+
+
+
+
+
+
+
+
+
+
 
     <!-- canned goods -->
         <!-- campfire -->

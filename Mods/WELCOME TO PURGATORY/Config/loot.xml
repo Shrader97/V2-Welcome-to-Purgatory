@@ -314,6 +314,67 @@ groupCupboard
 		<item name="HeavyRiflesGunSkillMagazine" count="2"/>
 	</append>
 
+    <append xpath="/lootcontainers/lootgroup[@name='groupToilet01']" >
+        <item name="MSchematicParts" count="1,3"/>
+    </append>
+
+    <append xpath="/lootcontainers/lootgroup[@name='groupToilet']" >
+        <item name="MSchematicParts" count="1,3"/>
+    </append>
+
+    <append xpath="/lootcontainers/lootgroup[@name='groupSavageCountryBooks']" >
+        <item name="MSchematicParts" count="1,3"/>
+    </append>
+
+    <append xpath="/lootcontainers/lootgroup[@name='groupMedicalCommon']" >
+        <item name="MSchematicParts" count="1,3"/>
+    </append>
+
+    <append xpath="/lootcontainers/lootgroup[@name='groupFastFoodGarbage']" >
+        <item name="MSchematicParts" count="1,3"/>
+    </append>
+
+    <append xpath="/lootcontainers/lootgroup[@name='groupDumpster01']" >
+        <item name="MSchematicParts" count="1,3"/>
+    </append>
+
+    <append xpath="/lootcontainers/lootgroup[@name='groupFootlocker']" >
+        <item name="MSchematicParts" count="1,3"/>
+    </append> 
+
+    <append xpath="/lootcontainers/lootgroup[@name='groupChemistryStationLoot03']" >
+        <item name="toolSmallBeaker" count="1"/>
+    </append>
+
+    <append xpath="/lootcontainers/lootgroup[@name='airdropMedicine']" >
+        <item name="toolSmallBeaker" count="1"/>
+    </append>
+
+    <append xpath="/lootcontainers/lootgroup[@name='groupPopNPillsCrate03']" >
+        <item name="toolSmallBeaker" count="1"/>
+    </append>
+
+    <append xpath="/lootcontainers/lootgroup[@name='groupLootChestBonusItems']" >
+        <item name="toolSmallBeaker" count="1"/>
+    </append>
+
+    <append xpath="/lootcontainers/lootgroup[@name='groupChem01']" >
+        <item name="toolSmallBeaker" count="1"/>
+    </append>
+
+    <append xpath="/lootcontainers/lootgroup[@name='groupCookingTools']" >
+        <item name="toolSmallBeaker" count="1"/>
+    </append>
+
+    <append xpath="/lootcontainers/lootgroup[@name='groupQuestMedical']" >
+        <item name="toolSmallBeaker" count="1" loot_prob_template="QuestT1Prob"/>
+
+        <item name="toolSmallBeaker" count="1" loot_prob_template="QuestT2Prob"/>
+        
+        <item name="toolSmallBeaker" count="1" loot_prob_template="QuestT3Prob"/>
+    </append>
+
+
 	<append xpath="/lootcontainers/lootgroup[@name='groupDesks01']">
 		<item name="AmmoSkillMagazine" count="2" loot_prob_template="med"/>
 	</append>

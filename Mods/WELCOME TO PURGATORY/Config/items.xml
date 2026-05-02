@@ -253,6 +253,14 @@
 		</effect_group>
 	</append>
 
+	<append xpath="//item[@name='toolBeaker']">
+    	<property name="DisplayType" value="toolBeaker"/>
+	    <effect_group tiered="false">
+                <passive_effect name="CraftingTime" operation="perc_add" value="-.333"/>
+                <display_value name="dCraftingTime" value=".5"/>
+        </effect_group>
+	</append>	
+
     <append xpath="/items/item[@name='resourceSewingKit']/effect_group">
         <triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="player#painlg" play_in_head="false">
             <requirement name="NotHasBuff" buff="buffBeer" />
@@ -10777,6 +10785,7 @@
             <property name="EconomicValue" value="32"/>
             <property name="DescriptionKey" value="medicalFirstAidBandageDesc"/>
             <property name="Stacknumber" value="250"/>
+            <property name="UnlockedBy" value="craftingMedical"/>
 
 			<effect_group tiered="false">
 				<!-- used on self -->
@@ -10870,6 +10879,7 @@
             <property name="Group" value="Science,Medical"/>
             <property name="EconomicValue" value="72"/>
             <property name="Stacknumber" value="250"/>
+            <property name="UnlockedBy" value="craftingMedical"/>
 
             <property class="Action0">
                 <!-- <requirement name="StatCompare" stat="health" operation="lte" value="50"/> -->

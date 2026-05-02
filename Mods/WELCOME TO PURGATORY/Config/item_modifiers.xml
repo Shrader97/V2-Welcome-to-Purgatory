@@ -452,6 +452,36 @@
             </effect_group>
         </item_modifier>
 
+        <item_modifier name="modSuperCollegeJacket" installable_tags="armorChest" blocked_tags="clothing" modifier_tags="rare" type="attachment"> <!-- collegeJacket -->
+            <property name="CustomIcon" value="apparelCoatJacketLetterZU"/>
+            <property name="Stacknumber" value="1"/>
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DescriptionKey" value="apparelCoatJacketLetterZUDesc"/>
+            <property name="DisplayType" value="clothingJacketLetter"/>
+            <effect_group tiered="false">
+                <passive_effect name="HypothermalResist" operation="base_add" value="11.7,15.5"/>
+                <passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
+                <passive_effect name="RunSpeed" operation="perc_add" value=".2"/><display_value name="dRunSpeed" value=".1"/>
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_add" value=".20"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_add" value=".29"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modUltraCollegeJacket" installable_tags="armorChest" blocked_tags="clothing" modifier_tags="rare" type="attachment"> <!-- collegeJacket -->
+            <property name="CustomIcon" value="apparelCoatJacketLetterZU"/>
+            <property name="Stacknumber" value="1"/>
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DescriptionKey" value="apparelCoatJacketLetterZUDesc"/>
+            <property name="DisplayType" value="clothingJacketLetter"/>
+            <effect_group tiered="false">
+                <passive_effect name="HypothermalResist" operation="base_add" value="11.7,15.5"/>
+                <passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
+                <passive_effect name="RunSpeed" operation="perc_add" value=".3"/><display_value name="dRunSpeed" value=".1"/>
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_add" value=".20"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_add" value=".29"/>
+            </effect_group>
+        </item_modifier>
+
         <item_modifier name="modRunningShoesHP" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="rare" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
             <property name="DescriptionKey" value="apparelRunningShoesHPDesc"/>
@@ -468,6 +498,52 @@
 				<passive_effect name="VehicleVelocityMaxPer" operation="perc_add" value=".29"/>
             </effect_group>
         </item_modifier>
+
+        <item_modifier name="modSuperRunningShoesHP" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="rare" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DescriptionKey" value="apparelRunningShoesHPDesc"/>
+            <property name="CustomIcon" value="apparelRunningShoesRegular"/>
+            <property name="CustomIconTint" value="86,255,109"/>
+            <property name="DisplayType" value="clothingRunningShoes"/>
+            <property name="Stacknumber" value="1"/>
+            <property name="EconomicValue" value="200"/>
+            <effect_group tiered="false">
+                <passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
+                <passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_add" value=".5" tags="running"/><display_value name="dStaminaRegen" value=".5"/>
+                <passive_effect name="RunSpeed" operation="perc_add" value=".1"/><display_value name="dRunSpeed" value=".1"/>
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_add" value=".20"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_add" value=".29"/>
+            </effect_group>
+        </item_modifier>
+
+        <item_modifier name="modUltraRunningShoesHP" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="rare" type="attachment">
+            <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
+            <property name="DescriptionKey" value="apparelRunningShoesHPDesc"/>
+            <property name="CustomIcon" value="apparelRunningShoesRegular"/>
+            <property name="CustomIconTint" value="86,255,109"/>
+            <property name="DisplayType" value="clothingRunningShoes"/>
+            <property name="Stacknumber" value="1"/>
+            <property name="EconomicValue" value="200"/>
+            <effect_group tiered="false">
+                <passive_effect name="HypothermalResist" operation="base_add" value="1.8,4.2"/>
+                <passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
+                <passive_effect name="StaminaChangeOT" operation="perc_add" value="75" tags="running"/><display_value name="dStaminaRegen" value=".75"/>
+                <passive_effect name="RunSpeed" operation="perc_add" value=".2"/><display_value name="dRunSpeed" value=".2"/>
+				<passive_effect name="VehicleMotorTorquePer" operation="perc_add" value=".20"/>
+				<passive_effect name="VehicleVelocityMaxPer" operation="perc_add" value=".29"/>
+            </effect_group>
+        </item_modifier>
+
+
+
+
+
+
+
+
+
+
 
         <item_modifier name="modGhillieSuitHood" installable_tags="armorHead" blocked_tags="clothing" modifier_tags="rare" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>

@@ -155,11 +155,15 @@
 			<display_entry name="dRunSpeed" title_key="statRunSpeed" display_type="Percent" display_leading_plus="true"/>
 		</item_display_info>
 
-		 <item_display_info display_type="clothingRunningShoes" display_group="groupAttire" > 
-			 <display_entry name="HypothermalResist" display_type="Decimal1" title_key="statHypothermalResist"/> 
-			 <display_entry name="HyperthermalResist" display_type="Decimal1" title_key="statHyperthermalResist"/> 
-			 <display_entry name="dStaminaRegen" title_key="statStaminaRegenRunning" display_type="Percent" display_leading_plus="true"/> 
-		 </item_display_info>
+		<item_display_info display_type="clothingRunningShoes" display_group="groupAttire" > 
+			<display_entry name="HypothermalResist" display_type="Decimal1" title_key="statHypothermalResist"/> 
+			<display_entry name="HyperthermalResist" display_type="Decimal1" title_key="statHyperthermalResist"/> 
+			<display_entry name="dStaminaRegen" title_key="statStaminaRegenRunning" display_type="Percent" display_leading_plus="true"/> 
+		</item_display_info>
+
+		<item_display_info display_type="toolBeaker" display_group="workstationTools">
+			<display_entry name="dCraftingTime" title_key="statCraftingTimeForge" display_type="Percent" display_leading_plus="true" negative_preferred="false"/>
+		</item_display_info>
 
 
 

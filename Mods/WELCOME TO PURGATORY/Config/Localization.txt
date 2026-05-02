@@ -975,7 +975,19 @@ meleeWpnBatonT3LazerBaton,"Loveshack's Lazer Baton"
 modCollegeJacket,"College Jacket Mod"
 apparelCoatJacketLetterZUDesc,"Feel like a pro athlete in this college jacket. Run 10% faster."
 
+modSuperCollegeJacket,"Super College Jacket Mod"
+apparelCoatJacketLetterZUDesc,"Feel like a pro athlete in this college jacket. Run 10% faster."
+
+modUltraCollegeJacket,"Ultra College Jacket Mod"
+apparelCoatJacketLetterZUDesc,"Feel like a pro athlete in this college jacket. Run 10% faster."
+
 modRunningShoesHP,"High Performance Running Shoes Mod"
+apparelRunningShoesHPDesc,"You don't have to be the fastest, you just have to not be the slowest."
+
+modSuperRunningShoesHP,"Super High Performance Running Shoes Mod"
+apparelRunningShoesHPDesc,"You don't have to be the fastest, you just have to not be the slowest."
+
+modUltraRunningShoesHP,"Ultra High Performance Running Shoes Mod"
 apparelRunningShoesHPDesc,"You don't have to be the fastest, you just have to not be the slowest."
 
 modArrowReload,"Arrow Reload"
