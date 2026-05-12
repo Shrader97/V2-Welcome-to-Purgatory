@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <!-- Add the burnt zombie to the "Kill Burnt Forest Biome Zombies" challenge -->
+    <csv xpath="//challenge[@name='burntSurvivalKillZombie']/objective[@type='Kill']/@entity_names" delim="," op="add">zombieBurntKhz,zombieBurntFeralKhz,zombieBurntRadiatedKhz,zombieBurntChargedKhz,zombieBurntInfernalKhz</csv>
+    <!-- Add the female lumberjack zombie to the "Kill Lumberjack Zombies" challenge -->
+    <csv xpath="//challenge[@name='killLumberjack']/objective[@type='Kill']/@entity_names" delim="," op="add">zombieFemaleLumberjackKhz,zombieFemaleLumberjackFeralKhz,zombieFemaleLumberjackRadiatedKhz,zombieFemaleLumberjackInfernalKhz</csv>
+    <!-- Add the female cop zombie to the "Kill Cop Zombies" challenge -->
+    <csv xpath="//challenge[@name='killCop']/objective[@type='Kill']/@entity_names" delim="," op="add">zombiePolicewomanKhz,zombiePolicewomanFeralKhz,zombiePolicewomanRadiatedKhz,zombiePolicewomanInfernalKhz</csv>
+</config>

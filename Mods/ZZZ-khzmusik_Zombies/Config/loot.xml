@@ -1,0 +1,329 @@
+<configs>
+
+    <append xpath="/lootcontainers">	
+
+<!-- zombieArlene -->
+		<lootcontainer name="zombieFemaleKhz" count="0,2" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item group="perkBooks" loot_prob_template="low"/>
+			<item group="groupSavageCountryCrate02" loot_prob_template="med" force_prob="true"/>
+			<item group="groupDumpsterFood" loot_prob_template="high"/>
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item name="foodRottingFlesh" count="1,2" loot_prob_template="high"/>
+			<item name="resourceCloth" count="1,2"/>
+			<item group="groupFoodTrashUncommon" loot_prob_template="high"/>
+		</lootcontainer>
+		
+<!-- zombieArleneFeral -->
+		<lootcontainer name="zombieFemaleFeralKhz" count="1,2" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item group="groupDumpsterFood" loot_prob_template="high"/>
+			<item name="oldCash"  count="5,10" loot_prob_template="high"/>
+			<item name="resourceRepairKit" count="1" loot_prob_template="low"/>
+			<item name="foodRottingFlesh" count="1,2" loot_prob_template="med"/>
+			<item name="resourceLockPick"  count="1,2" loot_prob_template="veryLow" force_prob="true"/> 
+			<item group="groupFoodTrashUncommon" loot_prob_template="high"/>
+		</lootcontainer>
+		
+<!-- zombieArleneRadiated -->
+		<lootcontainer name="zombieFemaleRadiatedKhz" count="1,3" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item group="groupDumpsterFood" loot_prob_template="high"/>
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item name="resourceRepairKit" count="1" loot_prob_template="med"/>
+			<item name="casinoCoin"  count="5,10" loot_prob_template="high"/>
+			<item name="resourceLegendaryParts" count="1" loot_prob_template="veryLowDelayed"/>
+		</lootcontainer>
+		
+<!-- zombiePartygirl -->
+		<lootcontainer name="zombieCowgirlKhz" count="0,2" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item name="casinoCoin"  count="5,10" loot_prob_template="high"/>
+			<item name="foodRottingFlesh" count="1,3" loot_prob_template="high"/>
+		</lootcontainer>
+		
+<!-- zombiePartygirlFeral -->
+		<lootcontainer name="zombieCowgirlFeralKhz" count="1,2" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item name="casinoCoin"  count="5,50" loot_prob_template="high"/>
+			<item name="foodRottingFlesh" count="1,3" loot_prob_template="med"/>
+			<item name="resourceLockPick"  count="1,3" loot_prob_template="veryLow" force_prob="true"/> 
+		</lootcontainer>
+		
+<!-- zombiePartygirlRadiated -->
+		<lootcontainer name="zombieCowgirlRadiatedKhz" count="1,3" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item name="casinoCoin"  count="5,50" loot_prob_template="high"/>
+			<item name="resourceLockPick"  count="1,3" loot_prob_template="high"/> 
+			<item name="resourceLegendaryParts" count="1" loot_prob_template="veryLowDelayed"/>
+		</lootcontainer>
+		
+<!-- zombieNurse -->
+		<lootcontainer name="zombieMaleScrubsKhz" count="0,2" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item group="groupMedicalPileSmall" loot_prob_template="low"/>
+			<item group="groupMedicalCommon" loot_prob_template="low"/>
+			<item name="medicalFirstAidBandage" count="1,2" loot_prob_template="high"/>
+		</lootcontainer>
+		
+<!-- zombieNurseFeral -->
+		<lootcontainer name="zombieMaleScrubsFeralKhz" count="1,2" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item group="groupMedicalPileSmall" prob="0.6"/>
+			<item group="groupMedicalCommon" count="1"/>
+			<item name="medicalFirstAidBandage" count="1,2" loot_prob_template="high"/>
+			<item name="medicalFirstAidKit" count="1" loot_prob_template="low"/>
+			<item group="groupMedicalUncommon" loot_prob_template="med"/>
+			<item name="medicalFirstAidBandage" count="1,2" loot_prob_template="high"/>
+		</lootcontainer>
+		
+<!-- zombieNurseRadiated -->
+		<lootcontainer name="zombieMaleScrubsRadiatedKhz" count="1,2" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item group="groupMedicalPileSmall" prob="0.6"/>
+			<item group="groupMedicalCommon" count="1"/>
+			<item name="medicalFirstAidBandage" count="1,2" loot_prob_template="high"/>
+			<item name="medicalFirstAidKit" count="1" loot_prob_template="low"/>
+			<item group="groupMedicalUncommon" loot_prob_template="med"/>
+			<item group="groupMedicalRare" loot_prob_template="veryLow"/>
+			<item group="groupPopNPillsCrate"/>
+		</lootcontainer>
+		
+<!-- zombieBusinessMan -->
+		<lootcontainer name="zombieBusinessmanKhz" count="0,2" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item name="casinoCoin"  count="2,5" loot_prob_template="low"/>
+			<item name="resourceLockPick"  count="1,3" loot_prob_template="low"/>
+		</lootcontainer>
+		
+<!-- zombieBusinessManFeral -->
+		<lootcontainer name="zombieBusinessmanFeralKhz" count="1,2" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item name="casinoCoin"  count="2,5" loot_prob_template="low"/>
+			<item name="resourceLockPick"  count="1,3" loot_prob_template="low"/>
+			<item group="groupAmmoSmall" loot_prob_template="high"/>
+		</lootcontainer>
+		
+<!-- zombieBusinessManRadiated -->
+		<lootcontainer name="zombieBusinessmanRadiatedKhz" count="1,2" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item name="casinoCoin"  count="2,5" loot_prob_template="low"/>
+			<item name="resourceLockPick"  count="1,3" loot_prob_template="low"/>
+			<item name="modArmorCigar" count="0,1" loot_prob_template="veryLow"/>
+		</lootcontainer>
+		
+<!-- zombieBurnt -->
+		<lootcontainer name="zombieBurntKhz" count="0,2" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item name="foodRottingFlesh" count="1,3" loot_prob_template="high"/>
+			<item name="resourceBone" count="1,3" loot_prob_template="med"/>
+			<item name="resourceCoal" count="1,2" loot_prob_template="med"/>
+		</lootcontainer>
+		
+<!-- zombieBurntFeral -->
+		<lootcontainer name="zombieBurntFeralKhz" count="2,4" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item name="foodRottingFlesh" count="1,3" loot_prob_template="high"/>
+			<item name="resourceBone" count="1,3" loot_prob_template="med"/>
+			<item name="resourceCoal" count="1,2" loot_prob_template="med"/>
+		</lootcontainer>
+		
+<!-- zombieBurntRadiated -->
+		<lootcontainer name="zombieBurntRadiatedKhz" count="2,4" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item name="foodRottingFlesh" count="1,3" loot_prob_template="high"/>
+			<item name="resourceBone" count="1,3" loot_prob_template="med"/>
+			<item name="resourceCoal" count="1,2" loot_prob_template="med"/>
+			<item group="weaponParts" loot_prob_template="medHigh"/>
+		</lootcontainer>
+
+<!-- zombieDarlene -->
+		<lootcontainer name="zombieFemaleOfficeKhz" count="0,2" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item group="perkBooks" loot_prob_template="low"/>
+			<item group="groupSavageCountryCrate02" loot_prob_template="med" force_prob="true"/>
+			<item group="groupDumpsterFood" loot_prob_template="high"/>
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item name="foodRottingFlesh" count="1,3" loot_prob_template="high"/>
+			<item name="resourceLockPick"  count="1,3" loot_prob_template="veryLow"/>
+		</lootcontainer>
+		
+<!-- zombieDarleneFeral -->
+		<lootcontainer name="zombieFemaleOfficeFeralKhz" count="1,2" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item group="groupDumpsterFood" loot_prob_template="high"/>
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item name="resourceRepairKit" count="1" loot_prob_template="low"/>
+			<item name="foodRottingFlesh" count="1,3" loot_prob_template="med"/>
+			<item name="resourceLockPick"  count="1,3" loot_prob_template="veryLow" force_prob="true"/> 
+		</lootcontainer>
+		
+<!-- zombieDarleneRadiated -->
+		<lootcontainer name="zombieFemaleOfficeRadiatedKhz" count="1,2" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item group="groupDumpsterFood" loot_prob_template="high"/>
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item name="resourceRepairKit" count="1" loot_prob_template="med"/>
+			<item name="resourceArmorCraftingKit" count="1" loot_prob_template="high"/>
+			<item name="foodRottingFlesh" count="1,3" loot_prob_template="med"/>
+			<item name="resourceLockPick"  count="1,3" loot_prob_template="veryLow" force_prob="true"/> 
+			<item name="resourceLegendaryParts" count="1" loot_prob_template="veryLowDelayed"/>
+		</lootcontainer>
+		
+<!-- zombieYo -->
+		<lootcontainer name="zombieMaleKhz" count="0,2" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item group="perkBooks" loot_prob_template="low"/>
+			<item group="groupSavageCountryCrate02" loot_prob_template="med" force_prob="true"/>
+			<item group="groupDumpsterFood" loot_prob_template="high"/>
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item name="foodRottingFlesh" count="1,3" loot_prob_template="high"/>
+			<item name="resourceLockPick"  count="1,3" loot_prob_template="veryLow"/>
+		</lootcontainer>
+		
+<!-- zombieYoFeral -->
+		<lootcontainer name="zombieMaleFeralKhz" count="1,2" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item group="groupDumpsterFood" loot_prob_template="high"/>
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item name="resourceRepairKit" count="1" loot_prob_template="low"/>
+			<item name="foodRottingFlesh" count="1,3" loot_prob_template="med"/>
+			<item name="resourceLockPick"  count="1,3" loot_prob_template="veryLow"/> 
+		</lootcontainer>
+		
+<!-- zombieYoRadiated -->
+		<lootcontainer name="zombieMaleRadiatedKhz" count="1,2" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item group="groupDumpsterFood" loot_prob_template="high"/>
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item name="resourceRepairKit" count="1" loot_prob_template="med"/>
+			<item name="resourceArmorCraftingKit" count="1" loot_prob_template="high"/>
+			<item name="foodRottingFlesh" count="1,3" loot_prob_template="med"/>
+			<item name="resourceLockPick"  count="1,3" loot_prob_template="veryLow"/> 
+			<item name="resourceLegendaryParts" count="1" loot_prob_template="veryLowDelayed"/>
+		</lootcontainer>
+		
+<!-- zombieUtilityWorker -->
+		<lootcontainer name="zombieFirefighterKhz" count="0,2" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item group="groupUtilityItems" loot_prob_template="Low"/>
+			<item group="groupElectricalDevices" loot_prob_template="low"/>
+			<item name="resourceLockPick"  count="1,3" loot_prob_template="veryLow"/> 
+			<item group="groupArmorParts" loot_prob_template="low"/>
+		</lootcontainer>
+		
+<!-- zombieUtilityWorkerFeral -->
+		<lootcontainer name="zombieFirefighterFeralKhz" count="1,2" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item name="meleeToolRepairT1ClawHammer" count="1" loot_prob_template="med"/>
+			<item name="meleeToolSalvageT1Wrench" count="1" loot_prob_template="med"/>
+			<item group="groupCraftingUncommon" loot_prob_template="med"/>
+			<item group="groupBuildingUncommon" loot_prob_template="med"/>
+			<item group="groupToolsTiered" loot_prob_template="low"/>
+			<item name="resourceLockPick"  count="1,3" loot_prob_template="veryLow" force_prob="true"/> 
+			<item group="groupArmorParts" loot_prob_template="low"/>
+			<item name="meleeToolWireTool" count="1,1" loot_prob_template="veryLow"/>
+		</lootcontainer>
+		
+<!-- zombieUtilityWorkerRadiated-->
+		<lootcontainer name="zombieFirefighterRadiatedKhz" count="1,2" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item group="groupWorkingStiffsCrate" loot_prob_template="high"/>
+			<item group="groupCraftingRare" loot_prob_template="med"/>
+			<item group="groupBuildingRare" loot_prob_template="med"/>
+			<item group="groupWorkingStiffsBooks" loot_prob_template="medLow"/>
+			<item group="workstationToolsScaled" loot_prob_template="low"/>
+			<item name="resourceLockPick"  count="1,3" loot_prob_template="veryLow" force_prob="true"/> 
+			<item name="resourceLegendaryParts" count="1" loot_prob_template="veryLowDelayed"/>
+			<item group="groupArmorParts" loot_prob_template="low"/>
+			<item name="meleeToolSalvageT1Wrench" count="1,1" loot_prob_template="veryLow"/>
+		</lootcontainer>
+		
+<!-- zombieFatCop -->
+		<lootcontainer name="zombiePolicewomanKhz" count="1,4" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item name="gunHandgunT1Pistol" count="0,1" loot_prob_template="veryLowDelayed" force_prob="true"/>
+			<item name="ammo9mmBulletBall" count="3,4" loot_prob_template="low"/>
+			<item name="casinoCoin"  count="2,5" loot_prob_template="low"/>
+			<item name="resourceLockPick"  count="1,3" loot_prob_template="low"/>
+			<item group="groupAmmoSmall" count="1"/>
+			<item group="groupSmallAmmoLowHigh" loot_prob_template="low" force_prob="true"/>
+			<item group="groupWeaponsMedMedLow" loot_prob_template="low" force_prob="true"/>
+			
+		</lootcontainer>
+		
+<!-- zombieFatCopFeral -->
+		<lootcontainer name="zombiePolicewomanFeralKhz" count="1,4" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item name="gunHandgunT1Pistol" count="0,1" loot_prob_template="veryLow" force_prob="true"/>  
+			<item name="casinoCoin"  count="2,5" loot_prob_template="low"/>
+			<item name="resourceLockPick"  count="1,3" loot_prob_template="low"/>
+			<item group="groupAmmoMedium01" count="1"/>
+			<item group="groupSmallAmmoMedMed" loot_prob_template="high" force_prob="true"/>
+			<item group="groupSmallAmmoLowHigh" loot_prob_template="med" force_prob="true"/>
+			<item group="groupWeaponsMedMedMed" loot_prob_template="low" force_prob="true"/>
+		</lootcontainer>
+		
+<!-- zombieFatCopRadiated -->
+		<lootcontainer name="zombiePolicewomanRadiatedKhz" count="1,4" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item name="gunHandgunT1Pistol" count="0,1" loot_prob_template="low" force_prob="true"/> 
+			<item name="casinoCoin"  count="2,5" loot_prob_template="low"/>
+			<item name="resourceLockPick"  count="1,3" loot_prob_template="low"/>
+			<item group="groupAmmoLarge" count="2"/>
+			<item group="groupAmmoResourcesLarge" count="2"/>
+			<item group="groupAmmoMediumNoArrow" loot_prob_template="med" force_prob="true"/>
+			<item group="groupAmmoSmallNoArrow" loot_prob_template="low" force_prob="true"/>
+			<item group="groupWeaponsLowMedHigh" loot_prob_template="med" force_prob="true"/>
+			<item group="groupWeaponsLowMedHigh" loot_prob_template="low" force_prob="true"/>
+			<item name="gunHandgunT2Magnum44" count="0,1" loot_prob_template="low" force_prob="true"/> 
+		</lootcontainer>
+		
+<!-- zombieSoldier -->
+		<lootcontainer name="zombieFemaleSoldierKhz" count="1,3" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item name="gunHandgunT1Pistol" count="0,1" loot_prob_template="veryLowDelayed" force_prob="true"/>
+			<item group="groupArmorModsScaled" loot_prob_template="low"/>
+			<item name="meleeWpnBladeT1HuntingKnife" count="1" loot_prob_template="veryLowDelayed" force_prob="true"/> 
+			<item group="groupAmmoSmall" loot_prob_template="med"/>
+			<item group="weaponSkillMagazinesOnly" loot_prob_template="med"/>
+			<item group="groupMilitaryBooks" loot_prob_template="med"/>
+			<item group="groupAmmoMedium" loot_prob_template="med"/>
+			<item name="gunShotgunT1DoubleBarrel" count="0,1" loot_prob_template="veryLowDelayed"/>
+			<item name="armorCommandoHelmet" count="0,1" loot_prob_template="veryLowDelayed"/>
+			<item name="armorCommandoOutfit" count="0,1" loot_prob_template="veryLowDelayed"/>
+			<item name="armorCommandoGloves" count="0,1" loot_prob_template="veryLowDelayed"/>
+			<item name="armorCommandoBoots" count="0,1" loot_prob_template="veryLowDelayed"/>
+		</lootcontainer>
+		
+<!-- zombieSoldierFeral -->
+		<lootcontainer name="zombieFemaleSoldierFeralKhz" count="1,4" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item name="gunHandgunT1Pistol" count="0,1" loot_prob_template="veryLow" force_prob="true"/>
+			<item group="groupArmorModsScaled" loot_prob_template="low"/>
+			<item name="meleeWpnBladeT1HuntingKnife" count="0,1" loot_prob_template="veryLow" force_prob="true"/>
+			<item group="groupAmmoSmall" loot_prob_template="med"/>
+			<item group="weaponSkillMagazinesOnly" loot_prob_template="medHigh"/>
+			<item group="groupMilitaryBooks" loot_prob_template="med"/>
+			<item group="groupAmmoMedium" loot_prob_template="med"/>
+			<item group="groupAmmoSmallNoArrow" loot_prob_template="low" force_prob="true"/>
+			<item name="gunShotgunT3AutoShotgun" count="0,1" loot_prob_template="veryLow"/>
+			<item name="armorCommandoHelmet" count="0,1" loot_prob_template="veryLow"/>
+			<item name="armorCommandoOutfit" count="0,1" loot_prob_template="veryLow"/>
+			<item name="armorCommandoGloves" count="0,1" loot_prob_template="veryLow"/>
+			<item name="armorCommandoBoots" count="0,1" loot_prob_template="veryLow"/>
+		</lootcontainer>
+		
+<!-- zombieSoldierRadiated -->
+		<lootcontainer name="zombieFemaleSoldierRadiatedKhz" count="1,5" size="6,3" sound_open="UseActions/open_corpse" sound_close="UseActions/close_corpse" loot_quality_template="qualBaseTemplate">
+			<item name="oldCash"  count="2,5" loot_prob_template="high"/>
+			<item name="gunHandgunT1Pistol" count="0,1" loot_prob_template="veryLow" force_prob="true"/>
+			<item group="groupArmorModsScaled" loot_prob_template="low"/>
+			<item name="meleeWpnBladeT1HuntingKnife" loot_prob_template="veryLow"/>
+			<item group="groupAmmoSmall" loot_prob_template="high"/>
+			<item group="weaponSkillMagazinesOnly" loot_prob_template="medHigh"/>
+			<item group="groupMilitaryBooks" loot_prob_template="med"/>
+			<item group="groupAmmoMedium" loot_prob_template="med"/>
+			<item group="groupTreasureMaps" loot_prob_template="med"/>
+			<item name="gunMGT1AK47" count="0,1" loot_prob_template="veryLow"/>
+			<item name="gunHandgunT3SMG5" count="0,1" loot_prob_template="veryLow"/>
+			<item name="armorCommandoHelmet" count="0,1" loot_prob_template="veryLow"/>
+			<item name="armorCommandoOutfit" count="0,1" loot_prob_template="veryLow"/>
+			<item name="armorCommandoGloves" count="0,1" loot_prob_template="veryLow"/>
+			<item name="armorCommandoBoots" count="0,1" loot_prob_template="veryLow"/>
+		</lootcontainer>
+		
+    </append>
+
+</configs>

@@ -15,17 +15,14 @@
 	<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/subbiome/layers/layer/resource[@blockname='terrOreLead']/@blockname">terrOreTantalum</set>
 	<set xpath="/worldgeneration/biomes/biome[@name='wasteland']/subbiome/decorations/decoration[@name='deco_lead_vein']/@name">deco_tantalum_vein</set>
 
+	<append xpath="worldgeneration/biomes//biome[@name='pine_forest']/subbiome[@noise='.0095, 0, .21']/decorations">
+		<decoration type="block" blockname="plantedShroom3Harvest" prob="0.001" rotatemax="7"/>
+	</append>
 
-
-
-
-
-
-
-
-
-
-
-
+	<append xpath="worldgeneration/biomes//biome[@name='wasteland']/subbiome[@noise='.033, 0, .3']/decorations">
+		<decoration type="block" blockname="plantedLactariusIndigo3Harvest" prob="0.001" rotatemax="7"/>
+		<decoration type="block" blockname="plantedOmphalotusIlludens3Harvest" prob="0.001" rotatemax="7"/>
+		<decoration type="block" blockname="plantedAleuriaAurantia3Harvest" prob="0.001" rotatemax="7"/>
+	</append>
 
 </configs> 

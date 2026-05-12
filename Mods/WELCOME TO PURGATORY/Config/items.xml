@@ -398,6 +398,64 @@
 			</property>
 		</item>
 
+		<item name="BigMamaPanties">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="BigMamaPanties"/>
+            <property name="ItemTypeIcon" value="bundle"/>
+			<property name="DescriptionKey" value="BigMamaPantiesDesc"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Stacknumber" value="1"/> <!-- STK ammobundle -->
+			<property name="Weight" value="0"/>
+			<property name="EconomicValue" value="900"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Resources"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="open_cash_register"/>
+				<property name="Create_item" value="resourcePaper"/>
+				<property name="Create_item_count" value="0"/>
+				<property name="Random_item" value="oldCash"/>
+				<property name="Random_item_count" value="50-1000"/>
+				<property name="Random_count" value="1"/>
+				<property name="Unique_random_only" value="true"/>
+			</property>
+		</item>
+
+		<item name="PartyGirlsPanties">
+			<property name="CreativeMode" value="Dev"/>
+			<property name="CustomIcon" value="PartyGirlsPanties"/>
+            <property name="ItemTypeIcon" value="bundle"/>
+			<property name="DescriptionKey" value="PartyGirlsPantiesDesc"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="@:Other/Items/Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Stacknumber" value="1"/> <!-- STK ammobundle -->
+			<property name="Weight" value="0"/>
+			<property name="EconomicValue" value="900"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="Group" value="Resources"/>
+			<property class="Action0">
+				<property name="Class" value="OpenBundle"/>
+				<property name="Delay" value="0"/>
+				<property name="Use_time" value="0"/>
+				<property name="Sound_start" value="open_cash_register"/>
+				<property name="Create_item" value="resourcePaper"/>
+				<property name="Create_item_count" value="0"/>
+				<property name="Random_item" value="oldCash"/>
+				<property name="Random_item_count" value="5-10000"/>
+				<property name="Random_count" value="1"/>
+				<property name="Unique_random_only" value="true"/>
+			</property>
+		</item>
+
+
+
     <!-- microwave stuff -->
 
         <item name="resourceGlueBundle">
@@ -1488,6 +1546,144 @@
                 <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
             </effect_group>
         </item>
+
+    <!-- mushrooms -->
+
+        <item name="foodCropAleuriaAurantia">
+            <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="foodRaw"/>
+            <property name="Meshfile" value="#@modfolder:Resources/Shrooms.unity3d?AleuriaAurantia.Prefab"/>
+            <property name="DropMeshfile" value="#@modfolder:Resources/Shrooms.unity3d?AleuriaAurantia.Prefab"/>
+            <property name="Material" value="MresourceCrop"/>
+            <property name="Stacknumber" value="250"/>
+            <property name="EconomicValue" value="10"/>
+            <!-- <property name="EconomicBundleSize" value="5"/> -->
+            <property name="CraftingIngredientTime" value="8"/>
+            <property name="SoundPickup" value="blueberries_grab"/>
+            <property name="SoundPlace" value="blueberries_place"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+            <effect_group tiered="false" name="Food Tier 0">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+            </effect_group>
+        </item>
+
+        <item name="foodCropOmphalotusIlludens">
+            <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="foodRaw"/>
+            <property name="Meshfile" value="#@modfolder:Resources/Shrooms.unity3d?LactariusIndigo.Prefab"/>
+            <property name="DropMeshfile" value="#@modfolder:Resources/Shrooms.unity3d?LactariusIndigo.Prefab"/>
+            <property name="Material" value="MresourceCrop"/>
+            <property name="Stacknumber" value="250"/>
+            <property name="EconomicValue" value="10"/>
+            <!-- <property name="EconomicBundleSize" value="5"/> -->
+            <property name="CraftingIngredientTime" value="8"/>
+            <property name="SoundPickup" value="blueberries_grab"/>
+            <property name="SoundPlace" value="blueberries_place"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+            <effect_group tiered="false" name="Food Tier 0">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+            </effect_group>
+        </item>
+
+        <item name="foodCropLactariusIndigo">
+            <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="foodRaw"/>
+            <property name="Meshfile" value="#@modfolder:Resources/Shrooms.unity3d?OmphalotusIlludens.Prefab"/>
+            <property name="DropMeshfile" value="#@modfolder:Resources/Shrooms.unity3d?OmphalotusIlludens.Prefab"/>
+            <property name="Material" value="MresourceCrop"/>
+            <property name="Stacknumber" value="250"/>
+            <property name="EconomicValue" value="10"/>
+            <!-- <property name="EconomicBundleSize" value="5"/> -->
+            <property name="CraftingIngredientTime" value="8"/>
+            <property name="SoundPickup" value="blueberries_grab"/>
+            <property name="SoundPlace" value="blueberries_place"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+            <effect_group tiered="false" name="Food Tier 0">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+            </effect_group>
+        </item>
+
+        <item name="foodCropShroom">
+            <property name="Tags" value="food,foodSkill,fitness"/>
+            <property name="HoldType" value="31"/>
+            <property name="DisplayType" value="foodRaw"/>
+            <property name="Meshfile" value="#@modfolder:Resources/Shrooms.unity3d?shroom.Prefab"/>
+            <property name="DropMeshfile" value="#@modfolder:Resources/Shrooms.unity3d?shroom.Prefab"/>
+            <property name="Material" value="MresourceCrop"/>
+            <property name="Stacknumber" value="250"/>
+            <property name="EconomicValue" value="10"/>
+            <!-- <property name="EconomicBundleSize" value="5"/> -->
+            <property name="CraftingIngredientTime" value="8"/>
+            <property name="SoundPickup" value="blueberries_grab"/>
+            <property name="SoundPlace" value="blueberries_place"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_eating"/>
+            </property>
+            <property name="Group" value="Food/Cooking,CFFood/Cooking"/>
+
+            <effect_group tiered="false" name="Food Tier 0">
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="2"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+            </effect_group>
+        </item>
+
+        <item name="resourceBehemothDNA">
+            <property name="Extends" value="resourceSilverNugget"/>
+            <property name="Tags" value="gems"/>
+            <property name="EconomicValue" value="1500"/>
+            <property name="CraftingIngredientTime" value="60"/>
+            <property name="Stacknumber" value="500"/> 
+            <property name="DescriptionKey" value="BehemothDNADesc"/>
+            <property name="SoundPickup" value="rottingflesh_grab"/>
+            <property name="SoundPlace" value="rottingflesh_place"/>
+        </item>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- New Explosives -->
 
@@ -6696,6 +6892,45 @@
                 <triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
             </effect_group>
         </item>
+        
+    <!-- Sulfur pills -->
+
+        <item name="drugAcidPills">
+            <property name="Tags" value="medical,medicalSkill,fitness"/>
+            <property name="HoldType" value="16"/>
+            <property name="Meshfile" value="@:Other/Items/Health/pillBottlePrefab.prefab"/>
+            <property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
+            <property name="Material" value="Morganic"/>
+            <property name="EconomicValue" value="240"/>
+            <property name="Stacknumber" value="10"/> <!-- STK loot -->
+            <property name="UnlockedBy" value="craftingMedical"/><!-- perkPhysician,drugAntibioticsSchematic, -->
+            <property name="DisplayType" value="cureInfection"/>
+            <property name="Group" value="Science,CFMedical,Medical,TCMedical"/>
+            <property name="SoundPickup" value="drug_antibiotics_grab"/>
+            <property name="SoundPlace" value="drug_antibiotics_place"/>
+            <property class="Action0">
+                <property name="Class" value="Eat"/>
+                <property name="Delay" value="1.0"/>
+                <property name="Sound_start" value="player_painkillers"/>
+            </property>
+            <effect_group tiered="false">
+                <display_value name="dCureInfection" value=".25"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffSulfurBurnAddCurePerc" operation="add" value="25"/>
+                <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffSulfurBurnAddCure"/>
+            </effect_group>
+        </item>
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- raw meat -->
 
@@ -11348,6 +11583,7 @@
             <property name="RepairAmount" value="20"/>
             <property name="CraftingIngredientTime" value=".2"/>
         </item-->
+
 
 
 

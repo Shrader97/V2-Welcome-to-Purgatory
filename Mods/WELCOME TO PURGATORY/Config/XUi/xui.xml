@@ -39,6 +39,15 @@
             <window name="windowNonPagingHeader" />
         </window_group>
 
+        <window_group name="workstation_AlchemyTable" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+            <window name="windowCraftingList"/>
+            <window name="craftingInfoPanel"/>
+            <window name="windowCraftingQueue"/>
+            <window name="windowToolsAlchemyTable" />
+            <window name="windowOutputtwelve" />
+            <window name="windowNonPagingHeader" />
+        </window_group>
+
 		<window_group name="workstation_PreciousMetalForge" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
 			<window name="windowCraftingList"/>
 			<window name="craftingInfoPanel"/>

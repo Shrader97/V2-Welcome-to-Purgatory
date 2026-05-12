@@ -1803,7 +1803,7 @@
             <ingredient name="foodCropMushrooms" count="5"/>
             <ingredient name="resourceClayLump" count="2"/>
                     <effect_group>
-                <passive_effect name="CraftingIngredientCount" level="1,2,3" operation="perc_add" value="-.3,-.5,-.5" tags="resourceClayLump, foodCropMushrooms"/>
+                <passive_effect name="CraftingIngredientCount" level="1,2,3" operation="perc_add" value="-.3,-.5,-.5" tags="resourceClayLump,foodCropMushrooms"/>
             </effect_group>
         </recipe>
 
@@ -1851,23 +1851,65 @@
 
         <recipe name="plantedStrawberry1" count="1" craft_time="1" tags="learnable, perkLivingOffTheLandCrafting">
             <ingredient name="foodCropStrawberry" count="5"/>	<effect_group>
-                <passive_effect name="CraftingIngredientCount" level="1,2,3" operation="perc_add" value="-.3,-.5,-.5" tags="foodCropStrawberry1"/>
+                <passive_effect name="CraftingIngredientCount" level="1,2,3" operation="perc_add" value="-.3,-.5,-.5" tags="foodCropStrawberry"/>
             </effect_group>
         </recipe>
 
         <recipe name="plantedTomato1" count="1" craft_time="1" tags="learnable, perkLivingOffTheLandCrafting">
             <ingredient name="foodCropTomato" count="5"/>
             <effect_group>
-                <passive_effect name="CraftingIngredientCount" level="1,2,3" operation="perc_add" value="-.3,-.5,-.5" tags="foodCropTomato1"/>
+                <passive_effect name="CraftingIngredientCount" level="1,2,3" operation="perc_add" value="-.3,-.5,-.5" tags="foodCropTomato"/>
             </effect_group>
         </recipe>
 
         <recipe name="plantedWheat1" count="1" craft_time="1" tags="learnable, perkLivingOffTheLandCrafting">
             <ingredient name="foodCropWheat" count="5"/>
             <effect_group>
-                <passive_effect name="CraftingIngredientCount" level="1,2,3" operation="perc_add" value="-.3,-.5,-.5" tags="foodCropWheat1"/>
+                <passive_effect name="CraftingIngredientCount" level="1,2,3" operation="perc_add" value="-.3,-.5,-.5" tags="foodCropWheat"/>
             </effect_group>
         </recipe>
+
+        <recipe name="plantedAleuriaAurantia1" count="1" craft_time="1" tags="learnable, perkLivingOffTheLandCrafting">
+            <ingredient name="foodCropAleuriaAurantia" count="5"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="1,2,3" operation="perc_add" value="-.3,-.5,-.5" tags="foodCropAleuriaAurantia"/>
+            </effect_group>
+        </recipe>
+
+        <recipe name="plantedOmphalotusIlludens1" count="1" craft_time="1" tags="learnable, perkLivingOffTheLandCrafting">
+            <ingredient name="foodCropOmphalotusIlludens" count="5"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="1,2,3" operation="perc_add" value="-.3,-.5,-.5" tags="foodCropOmphalotusIlludens"/>
+            </effect_group>
+        </recipe>
+
+        <recipe name="plantedLactariusIndigo1" count="1" craft_time="1" tags="learnable, perkLivingOffTheLandCrafting">
+            <ingredient name="foodCropLactariusIndigo" count="5"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="1,2,3" operation="perc_add" value="-.3,-.5,-.5" tags="foodCropLactariusIndigo"/>
+            </effect_group>
+        </recipe>
+
+        <recipe name="plantedShroom1" count="1" craft_time="1" tags="learnable, perkLivingOffTheLandCrafting">
+            <ingredient name="foodCropShroom" count="5"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="1,2,3" operation="perc_add" value="-.3,-.5,-.5" tags="foodCropShroom"/>
+            </effect_group>
+        </recipe>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3139,14 +3181,6 @@
                 <passive_effect name="CraftingIngredientCount" level="0,1,2,3" operation="perc_add" value="0,-.3,-.6,-.9" tags="Feed"/>
             </effect_group>
 		</recipe>
-
-
-
-
-
-
-
-
 
 
 

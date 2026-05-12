@@ -52,6 +52,15 @@
 			<crafting_category name="Map" icon="ui_game_symbol_map" display_name="Treasure Map" />
 		</crafting_category_list>
 
+        <crafting_category_list display_type="AlchemyTable">
+            <crafting_category name="Lesser" icon="ui_game_symbol_lesser" display_name="LesserPotion" />
+			<crafting_category name="Normal" icon="ui_game_symbol_normal" display_name="NormalPotion" />
+			<crafting_category name="Greater" icon="ui_game_symbol_greater" display_name="GreaterPotion" />
+            <crafting_category name="Resistance" icon="ui_game_symbol_resistance_2" display_name="ResistancePotion" />
+            <crafting_category name="Duel" icon="ui_game_symbol_duel_potion" display_name="DuelPotion" />
+            <!--crafting_category name="Elixir" icon="ui_game_symbol_elixir" display_name="Elixir" /-->
+            <!--crafting_category name="Dust" icon="ui_game_symbol_gemstone_dust" display_name="GemStoneDust" /-->
+        </crafting_category_list>
 
 
 		<crafting_category_list display_type="CowStable001">

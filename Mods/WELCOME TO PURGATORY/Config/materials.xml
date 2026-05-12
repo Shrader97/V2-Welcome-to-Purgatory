@@ -27,6 +27,13 @@
             <property name="Experience" value="3"/>
         </material>
 
+
+        <material id="MresourceMineral">
+            <property name="damage_category" value="stone"/>
+            <property name="surface_category" value="stone"/>
+            <property name="Experience" value="6"/>
+        </material>
+
     </append>
 
     <append xpath="/materials">

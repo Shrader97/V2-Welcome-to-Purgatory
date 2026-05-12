@@ -1,0 +1,1983 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+    <append xpath="/entity_classes">
+        <!-- KHz zombie burnt: mostly the same as vanilla burnt -->
+        <entity_class name="zombieBurntKhz" extends="zombieBurnt">
+            <property name="Tags" value="entity,male,zombie,walker,burnt,melee" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieBurnt_KHz" />
+            <property name="Faction" value="undead" />
+            <property name="PhysicsBody" value="mixamoZombieKHz" />
+            <property name="RootMotion" value="true" />
+            <property name="HasRagdoll" value="true" />
+            <property name="Mass" value="120" />
+            <property name="SoundRandom" value="zombieburnta21roam" />
+            <property name="SoundAlert" value="zombieburnta21alert" />
+            <property name="SoundAttack" value="zombieburnta21attack" />
+            <property name="SoundHurt" value="zombieburnta21pain" />
+            <property name="SoundDeath" value="zombieburnta21death" />
+            <property name="SoundSense" value="zombieburnta21sense" />
+            <!-- SoundFootstepModifier is no longer supported in 2.x - replaced by SoundStepType -->
+            <!-- <property name="SoundFootstepModifier" value="zombieburnta21footstep" /> -->
+            <property name="SoundStepType" value="barestep" />
+
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <!--
+                We need to totally reset the dismemberment or else the game will freeze!
+                (And, no, we can't use the values from zombieTemplateMale for whatever reason.)
+            -->
+            <property name="LootListOnDeath" value="zombieBurntKhz"/>
+            <property name="DismemberTag_L_HeadGore" />
+            <property name="DismemberTag_L_LeftLowerArmGore" />
+            <property name="DismemberTag_L_LeftUpperArmGore" />
+            <property name="DismemberTag_L_LeftUpperLegGore" />
+            <property name="DismemberTag_L_RightLowerArmGore" />
+            <property name="DismemberTag_L_RightUpperArmGore" />
+            <property name="DismemberTag_L_RightUpperLegGore" />
+            <property name="DismemberTag_L_LeftLowerLegGore" />
+            <property name="DismemberTag_L_RightLowerLegGore" />
+        </entity_class>
+
+        <entity_class name="zombieBurntFeralKhz" extends="zombieBurntKhz">
+            <property name="Tags" value="entity,male,zombie,walker,burnt,melee,feral" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieBurntFeral_KHz" />
+            <property name="Faction" value="undead" />
+            <property name="PhysicsBody" value="mixamoZombieKHz" />
+            <property name="RootMotion" value="true" />
+            <property name="HasRagdoll" value="true" />
+            <property name="Mass" value="120" />
+
+            <!-- Attach particle effect to body -->
+            <effect_group name="Fire">
+                <triggered_effect trigger="onSelfFirstSpawn" action="AttachParticleEffectToEntity" particle="p_burning_barrel" local_offset="0,-1,0" parent_transform="Hips" />
+                <triggered_effect trigger="onSelfRespawn" action="AttachParticleEffectToEntity" particle="p_burning_barrel" local_offset="0,-1,0" parent_transform="Hips" />
+                <triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel" />
+            </effect_group>
+
+            <!-- Gameplay zombieBurntFeral -->
+            <property name="DismemberMultiplierHead" value=".7" />
+            <property name="DismemberMultiplierArms" value=".7" />
+            <property name="DismemberMultiplierLegs" value=".7" /> <!-- Feral -->
+            <property name="PainResistPerHit" value=".7" /> <!-- Feral -->
+            <property name="MoveSpeedAggro" value="0.6, 1.45" /> <!-- slim, feral -->
+            <property name="JumpMaxDistance" value="4.6, 5" />
+            <property name="HandItem" value="meleeHandZombieBurningFeral" />
+            <property name="ExperienceGain" value="750" /> <!-- XP grunt feral -->
+            <property name="LootDropProb" value=".03" /> <!-- Feral -->
+            
+            <property name="LootListOnDeath" value="zombieBurntFeralKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthSlimFeral" />
+                <triggered_effect trigger="onSelfFirstSpawn" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_fire_left" parent_transform="LeftHand" />
+                <triggered_effect trigger="onSelfFirstSpawn" action="AttachParticleEffectToEntity" particle="p_twitch_zombie_fire_right" parent_transform="RightHand" />
+                <triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_twitch_zombie_fire_left" />
+                <triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_twitch_zombie_fire_right" />
+
+                <!-- Immune to fire attacks -->
+                <passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffBurningEnvironment,buffBurningElement,buffBurningFlamingArrow,buffBurningMolotov,buffIsOnFire" />
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="zombieBurntRadiatedKhz" extends="zombieBurntFeralKhz">
+            <property name="Tags" value="entity,male,zombie,walker,burnt,melee,feral,radiated" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieBurnt_KHz" />
+            <property name="MatColor" value="radiated" />
+            <property name="Faction" value="undead" />
+            <property name="PhysicsBody" value="mixamoZombieKHz" />
+            <property name="RootMotion" value="true" />
+            <property name="HasRagdoll" value="true" />
+            <property name="Mass" value="120" />
+
+            <!-- Remove particle effect from body that was attached in Feral -->
+            <effect_group name="NoFire">
+                <triggered_effect trigger="onSelfFirstSpawn" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel" />
+                <triggered_effect trigger="onSelfRespawn" action="RemoveParticleEffectFromEntity" particle="p_burning_barrel" />
+            </effect_group>
+
+            <!-- Gameplay zombieBurntRadiated -->
+            <property name="DismemberMultiplierHead" value=".4" />
+            <property name="DismemberMultiplierArms" value=".4" />
+            <property name="DismemberMultiplierLegs" value=".4" /> <!-- Radiated -->
+            <property name="PainResistPerHit" value=".9" /> <!-- Radiated -->
+            <property name="ExperienceGain" value="1200" /> <!-- XP Slim Radiated -->
+
+            <property name="LootListOnDeath" value="zombieBurntRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalIrradiatedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthSlimRadiated" />
+                <triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4" />
+                <triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen" />
+            </effect_group>
+        </entity_class>
+
+        <!-- New for 2.x -->
+        <entity_class name="zombieBurntChargedKhz" extends="zombieBurntRadiatedKhz">
+            <property name="Tags" value="entity,zombie,walker,burnt,feral,charged" />
+            <property name="MatColor" value="charged" />
+            <property name="ExperienceGain" value="1400" /><!-- XP Slim Charged -->
+            <property name="HandItem" value="meleeHandZombieBurningCharged" />
+            <property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern" />
+            <property name="LootDropProb" value=".1" /> <!-- Charged -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+
+            <property name="LootListOnDeath" value="zombieBurntRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalIrradiatedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthSlimCharged" />
+            </effect_group>
+        </entity_class>
+
+        <!-- New for 2.x -->
+        <entity_class name="zombieBurntInfernalKhz" extends="zombieBurntRadiatedKhz">
+            <property name="Tags" value="entity,zombie,walker,burnt,feral,infernal" />
+            <property name="MatColor" value="infernal" />
+            <property name="ExperienceGain" value="1600" /><!-- XP Slim Infernal -->
+            <property name="HandItem" value="meleeHandZombieBurningInfernal" />
+            <property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern" />
+            <property name="LootDropProb" value=".1" /> <!-- Infernal -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+
+            <property name="LootListOnDeath" value="zombieBurntRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalIrradiatedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthSlimInfernal" />
+                <passive_effect name="BuffResistance" operation="base_set" value=".75" tags="buffInjuryKnockdown01,buffInjuryKnockdown02" />
+            </effect_group>
+        </entity_class>
+
+
+        <!-- Zombie businessman KHz: similar to a "grunt" male (Boe) but with a stronger melee attack -->
+        <entity_class name="zombieBusinessmanKhz" extends="zombieTemplateMale">
+            <property name="UserSpawnType" value="Menu" />
+            <property name="Tags" value="entity,male,zombie,walker,melee" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieBusinessman_KHz" />
+            <!-- New for 2.x -->
+            <property name="AltMats" value="#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieBusinessmanBrown.mat,#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieBusinessmanNavy.mat" />
+            <property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam" />
+            <property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert" />
+            <property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense" />
+            <property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain" />
+            <property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death" />
+            <property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack" />
+            <property name="Faction" value="undead" />
+            <property name="PhysicsBody" value="mixamoZombieKHz" />
+            <property name="RootMotion" value="true" />
+            <property name="HandItem" value="meleeHandZombieStrong" />
+            <property name="HasRagdoll" value="true" />
+            <property name="Mass" value="230" />
+            <property name="WalkType" value="7" />
+
+            <property name="LootListOnDeath" value="zombieBusinessmanKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+        </entity_class>
+
+        <entity_class name="zombieBusinessmanFeralKhz" extends="zombieBusinessmanKhz">
+            <property name="Tags" value="entity,male,zombie,walker,melee,feral" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieBusinessmanFeral_KHz" />
+
+            <!-- Gameplay Feral -->
+            <property name="DismemberMultiplierHead" value=".7" />
+            <property name="DismemberMultiplierArms" value=".7" />
+            <property name="DismemberMultiplierLegs" value=".7" />
+            <property name="PainResistPerHit" value=".7" />
+            <property name="MoveSpeedAggro" value="0.45, 1.3" />
+            <property name="JumpMaxDistance" value="1.8, 2.5" />
+            <property name="HandItem" value="meleeHandZombieStrongFeral" />
+            <property name="ExperienceGain" value="800" />
+            <property name="LootDropProb" value=".03" /> 
+
+            <property name="LootListOnDeath" value="zombieBusinessmanFeralKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthNormalFeral" />
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="zombieBusinessmanRadiatedKhz" extends="zombieBusinessmanFeralKhz">
+            <property name="Tags" value="entity,male,zombie,walker,melee,feral,radiated" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieBusinessman_KHz" />
+            <property name="MatColor" value="radiated" />
+
+            <!-- Gameplay Radiated -->
+            <property name="DismemberMultiplierHead" value=".4" />
+            <property name="DismemberMultiplierArms" value=".4" />
+            <property name="DismemberMultiplierLegs" value=".4" />
+            <property name="PainResistPerHit" value=".9" />
+            <property name="ExperienceGain" value="1300" />
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+
+            <property name="LootListOnDeath" value="zombieBusinessmanRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalIrradiatedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthNormalRadiated" />
+                <triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4.5" />
+                <triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen" />
+            </effect_group>
+        </entity_class>
+
+        <!-- New for 2.x -->
+        <entity_class name="zombieBusinessmanChargedKhz" extends="zombieBusinessmanRadiatedKhz">
+            <property name="Tags" value="entity,male,zombie,walker,melee,feral,charged" />
+            <property name="MatColor" value="charged" />
+            <property name="ExperienceGain" value="1400" /> <!-- XP Normal Charged -->
+            <property name="HandItem" value="meleeHandZombieCharged" />
+            <property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern" />
+            <property name="LootDropProb" value=".1" /> <!-- Charged -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+
+            <property name="LootListOnDeath" value="zombieBusinessmanRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalIrradiatedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthNormalCharged" />
+            </effect_group>
+        </entity_class>
+
+        <!-- New for 2.x -->
+        <entity_class name="zombieBusinessmanInfernalKhz" extends="zombieBusinessmanRadiatedKhz">
+            <property name="Tags" value="entity,male,zombie,walker,melee,feral,infernal" />
+            <property name="MatColor" value="infernal" />
+            <property name="ExperienceGain" value="1600" /> <!-- XP Normal Infernal -->
+            <property name="HandItem" value="meleeHandZombieInfernal" />
+            <property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern" />
+            <property name="LootDropProb" value=".1" /> <!-- Infernal -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+
+            <property name="LootListOnDeath" value="zombieBusinessmanRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalIrradiatedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthNormalInfernal" />
+                <passive_effect name="BuffResistance" operation="base_set" value=".75" tags="buffInjuryKnockdown01,buffInjuryKnockdown02" />
+            </effect_group>
+        </entity_class>
+
+        <!-- Zombie businesswoman KHz: similar to Fat Momma but with a strong (not cop) melee attack -->
+        <entity_class name="zombieBusinesswomanKhz" extends="zombieTemplateMale">
+            <property name="UserSpawnType" value="Menu" />
+            <property name="Tags" value="entity,female,zombie,walker,melee" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombieBusinesswoman_KHz" />
+            <property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam" />
+            <property name="SoundAlert" value="Enemies/Base_Zombie_Female2/zombiefemale2alert" />
+            <property name="SoundAttack" value="Enemies/Base_Zombie_Female2/zombiefemale2attack" />
+            <property name="SoundHurt" value="Enemies/Base_Zombie_Female2/zombiefemale2pain" />
+            <property name="SoundDeath" value="Enemies/Base_Zombie_Female2/zombiefemale2death" />
+            <property name="SoundSense" value="Enemies/Base_Zombie_Female2/zombiefemale2sense" />
+            <!-- SoundFootstepModifier is no longer supported in 2.x - replaced by SoundStepType -->
+            <!-- <property name="SoundFootstepModifier" value="Animals/Bear/bear_footstep" /> -->
+            <property name="SoundStepType" value="largestep" />
+            <property name="Faction" value="undead" />
+            <property name="PhysicsBody" value="mixamoZombieKHz" />
+            <property name="RootMotion" value="true" />
+            <property name="HasRagdoll" value="true" />
+            <property name="Mass" value="230" />
+            <property name="WalkType" value="1" />
+            <property name="DanceType" value="2" />
+
+            <property name="LootListOnDeath" value="zombieBusinessmanKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <!-- Gameplay -->
+            <property name="MoveSpeedAggro" value="0.2, 1.2" />
+            <property name="MoveSpeedPattern" value="2, 1, 1, 1.1, 1, .6, 1, .4" /> <!-- Delay, scale -->
+            <property name="JumpMaxDistance" value=".8, 1.1" />
+            <property name="HandItem" value="meleeHandZombieStrong" />
+            <property name="ExperienceGain" value="750" /> <!-- XP strong -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthStrong" />
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="zombieBusinesswomanFeralKhz" extends="zombieBusinesswomanKhz">
+            <property name="Tags" value="entity,female,zombie,walker,melee,feral" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombieBusinesswomanFeral_KHz" />
+
+            <!-- Gameplay Feral -->
+            <property name="DismemberMultiplierHead" value=".7" />
+            <property name="DismemberMultiplierArms" value=".7" />
+            <property name="DismemberMultiplierLegs" value=".7" />
+            <property name="PainResistPerHit" value=".7" />
+            <property name="MoveSpeedAggro" value="0.45, 1.3" />
+            <property name="JumpMaxDistance" value="1.8, 2.5" />
+            <property name="HandItem" value="meleeHandZombieStrongFeral" />
+            <property name="ExperienceGain" value="1200" />
+            <property name="LootDropProb" value=".03" />
+
+            <property name="LootListOnDeath" value="zombieBusinessmanFeralKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthStrongFeral" />
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="zombieBusinesswomanRadiatedKhz" extends="zombieBusinesswomanFeralKhz">
+            <property name="Tags" value="entity,female,zombie,walker,melee,feral,radiated" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombieBusinesswoman_KHz" />
+            <property name="MatColor" value="radiated" />
+
+            <!-- Gameplay Radiated -->
+            <property name="DismemberMultiplierHead" value=".4" />
+            <property name="DismemberMultiplierArms" value=".4" />
+            <property name="DismemberMultiplierLegs" value=".4" /> <!-- Radiated -->
+            <property name="PainResistPerHit" value=".9" /> <!-- Radiated -->
+            <property name="ExperienceGain" value="1500" /> <!-- XP Strong Radiated -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+
+            <property name="LootListOnDeath" value="zombieBusinessmanRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalIrradiatedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthStrongRadiated" />
+                <triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="9" />
+                <triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen" />
+            </effect_group>
+        </entity_class>
+
+        <!-- New for 2.x -->
+        <entity_class name="zombieBusinesswomanChargedKhz" extends="zombieBusinesswomanRadiatedKhz">
+            <property name="Tags" value="entity,female,zombie,walker,melee,feral,charged" />
+            <property name="MatColor" value="charged" />
+            <property name="ExperienceGain" value="1400" /> <!-- XP Strong Charged -->
+            <property name="HandItem" value="meleeHandZombieCharged" />
+            <property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern" />
+            <property name="LootDropProb" value=".1" /> <!-- Charged -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+
+            <property name="LootListOnDeath" value="zombieBusinessmanRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalIrradiatedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthStrongCharged" />
+            </effect_group>
+        </entity_class>
+
+        <!-- New for 2.x -->
+        <entity_class name="zombieBusinesswomanInfernalKhz" extends="zombieBusinesswomanRadiatedKhz">
+            <property name="Tags" value="entity,female,zombie,walker,melee,feral,infernal" />
+            <property name="MatColor" value="infernal" />
+            <property name="ExperienceGain" value="1600" /> <!-- XP Strong Infernal -->
+            <property name="HandItem" value="meleeHandZombieInfernal" />
+            <property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern" />
+            <property name="LootDropProb" value=".1" /> <!-- Infernal -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+
+            <property name="LootListOnDeath" value="zombieBusinessmanRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalIrradiatedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthStrongInfernal" />
+                <passive_effect name="BuffResistance" operation="base_set" value=".75" tags="buffInjuryKnockdown01,buffInjuryKnockdown02" />
+            </effect_group>
+        </entity_class>
+
+        <!-- Zombie cowgirl KHz: "grunt" female (Party Girl) -->
+        <entity_class name="zombieCowgirlKhz" extends="zombieTemplateSlimFemale">
+            <property name="UserSpawnType" value="Menu" />
+            <property name="Tags" value="entity,female,zombie,walker,melee" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombieCowgirl_KHz" />
+            <property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam" />
+            <property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert" />
+            <property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemaleattack" />
+            <property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalepain" />
+            <property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath" />
+            <property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense" />
+            <property name="Faction" value="undead" />
+            <property name="PhysicsBody" value="mixamoZombieKHz" />
+            <property name="RootMotion" value="true" />
+            <property name="HasRagdoll" value="true" />
+            <property name="DanceType" value="2" />
+            <property name="Mass" value="130" />
+            <property name="WalkType" value="7" />
+
+            <property name="LootListOnDeath" value="zombieCowgirlKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <!-- Gameplay -->
+            <property name="MoveSpeedAggro" value="0.3, 1.35" /> <!-- Slim -->
+        </entity_class>
+
+        <entity_class name="zombieCowgirlFeralKhz" extends="zombieCowgirlKhz">
+            <property name="Tags" value="entity,male,zombie,walker,melee,feral" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombieCowgirlFeral_KHz" />
+
+            <!-- Gameplay Feral -->
+            <property name="DismemberMultiplierHead" value=".7" />
+            <property name="DismemberMultiplierArms" value=".7" />
+            <property name="DismemberMultiplierLegs" value=".7" /> <!-- Feral -->
+            <property name="PainResistPerHit" value=".7" /> <!-- Feral -->
+            <property name="MoveSpeedAggro" value="0.6, 1.45" /> <!-- Slim Feral -->
+            <property name="JumpMaxDistance" value="4.6, 5" />
+            <property name="HandItem" value="meleeHandZombieShortFeral" />
+            <property name="ExperienceGain" value="750" /> <!-- XP Slim Feral -->
+            <property name="LootDropProb" value=".05" /> <!-- Feral -->
+
+            <property name="LootListOnDeath" value="zombieCowgirlFeralKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthSlimFeral" />
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="zombieCowgirlRadiatedKhz" extends="zombieCowgirlFeralKhz">
+            <property name="Tags" value="entity,male,zombie,walker,melee,feral,radiated" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombieCowgirl_KHz" />
+            <property name="MatColor" value="radiated" />
+
+            <!-- Gameplay Radiated -->
+            <property name="DismemberMultiplierHead" value=".4" />
+            <property name="DismemberMultiplierArms" value=".4" />
+            <property name="DismemberMultiplierLegs" value=".4" /> <!-- Radiated -->
+            <property name="PainResistPerHit" value=".9" /> <!-- Radiated -->
+            <property name="ExperienceGain" value="1200" /> <!-- XP Slim Radiated -->
+
+            <property name="LootListOnDeath" value="zombieCowgirlRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalIrradiatedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthSlimRadiated" />
+                <triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4" />
+                <triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen" />
+            </effect_group>
+        </entity_class>
+
+        <!-- New for 2.x - Note: no infernal version (Party Girl has no infernal version either) -->
+        <entity_class name="zombieCowgirlChargedKhz" extends="zombieCowgirlRadiatedKhz">
+            <property name="Tags" value="entity,male,zombie,walker,melee,feral,charged" />
+            <property name="MatColor" value="charged" />
+            <property name="ExperienceGain" value="1400" /> <!-- XP Slim Charged -->
+            <property name="HandItem" value="meleeHandZombieCharged" />
+            <property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern" />
+            <property name="LootDropProb" value=".1" /> <!-- Charged -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+
+            <property name="LootListOnDeath" value="zombieCowgirlRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthSlimCharged" />
+            </effect_group>
+        </entity_class>
+
+        <!-- Zombie female KHz: "grunt" female (Nurse) -->
+        <entity_class name="zombieFemaleKhz" extends="zombieTemplateShort">
+            <property name="UserSpawnType" value="Menu" />
+            <property name="Tags" value="entity,female,zombie,walker,melee" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombieFemale_KHz.prefab" />
+            <property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam" />
+            <property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert" />
+            <property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemaleattack" />
+            <property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalepain" />
+            <property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath" />
+            <property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense" />
+            <property name="Faction" value="undead" />
+            <property name="PhysicsBody" value="mixamoZombieKHz" />
+            <property name="RootMotion" value="true" />
+            <property name="HasRagdoll" value="true" />
+            <property name="Mass" value="130" />
+            <property name="AIPathCostScale" value=".5, .65" />
+            <property name="DanceType" value="2" />
+
+            <property name="LootListOnDeath" value="zombieFemaleKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <!-- Gameplay zombieNurse -->
+            <property name="MoveSpeedAggro" value="0.3, 1.35" />
+        </entity_class>
+
+        <entity_class name="zombieFemaleFeralKhz" extends="zombieFemaleKhz">
+            <property name="Tags" value="entity,male,zombie,walker,melee,feral" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombieFemaleFeral_KHz.prefab" />
+
+            <!-- Gameplay Feral -->
+            <property name="DismemberMultiplierHead" value=".7" />
+            <property name="DismemberMultiplierArms" value=".7" />
+            <property name="DismemberMultiplierLegs" value=".7" /><!-- Feral -->
+            <property name="PainResistPerHit" value=".7" /><!-- Feral -->
+            <property name="MoveSpeedAggro" value="0.6, 1.45" /> <!-- Slim Feral -->
+            <property name="JumpMaxDistance" value="4.6, 5" />
+            <property name="HandItem" value="meleeHandZombieShortFeral" />
+            <property name="ExperienceGain" value="750" /><!-- XP Slim Feral -->
+            <property name="LootDropProb" value=".05" /> <!-- Feral -->
+
+            <property name="LootListOnDeath" value="zombieFemaleFeralKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthSlimFeral" />
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="zombieFemaleRadiatedKhz" extends="zombieFemaleFeralKhz">
+            <property name="Tags" value="entity,male,zombie,walker,melee,feral,radiated" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombieFemale_KHz" />
+            <property name="MatColor" value="radiated" />
+
+            <!-- Gameplay Radiated -->
+            <property name="DismemberMultiplierHead" value=".4" />
+            <property name="DismemberMultiplierArms" value=".4" />
+            <property name="DismemberMultiplierLegs" value=".4" /><!-- Radiated -->
+            <property name="PainResistPerHit" value=".9" /><!-- Radiated -->
+            <property name="ExperienceGain" value="1200" /><!-- XP Slim Radiated -->
+
+            <property name="LootListOnDeath" value="zombieFemaleFeralKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalIrradiatedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthSlimRadiated" />
+                <triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4" />
+                <triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen" />
+            </effect_group>
+        </entity_class>
+
+        <!-- New for 2.x - Note: no infernal version (Nurse has no infernal version either) -->
+        <entity_class name="zombieFemaleChargedKhz" extends="zombieFemaleRadiatedKhz">
+            <property name="MatColor" value="charged" />
+            <property name="Tags" value="entity,zombie,walker,feral,charged" />
+            <property name="ExperienceGain" value="1400" /><!-- XP Slim Charged -->
+            <property name="HandItem" value="meleeHandZombieCharged" />
+            <property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern" />
+            <property name="LootDropProb" value=".1" /> <!-- Charged -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+
+            <property name="LootListOnDeath" value="zombieFemaleFeralKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalIrradiatedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthSlimCharged" />
+            </effect_group>
+        </entity_class>
+
+        <!-- Zombie female lumberjack KHz: similar to Big Momma but with a strong (not cop) hand, like the lumberjack -->
+        <entity_class name="zombieFemaleLumberjackKhz" extends="zombieTemplateMale">
+            <property name="UserSpawnType" value="Menu" />
+            <property name="Tags" value="entity,female,zombie,walker" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombieFemaleLumberjack_KHz" />
+            <property name="SoundRandom" value="zombiefemalelumberjack_roam" />
+            <property name="SoundAlert" value="zombiefemalelumberjack_alert" />
+            <property name="SoundAttack" value="zombiefemalelumberjack_attack" />
+            <property name="SoundHurt" value="zombiefemalelumberjack_pain" />
+            <property name="SoundDeath" value="zombiefemalelumberjack_death" />
+            <property name="SoundSense" value="zombiefemalelumberjack_sense" />
+            <!-- SoundFootstepModifier is no longer supported in 2.x - replaced by SoundStepType -->
+            <!-- <property name="SoundFootstepModifier" value="zombiefemalelumberjack_footstep" /> -->
+            <property name="SoundStepType" value="largestep" />
+            <property name="Faction" value="undead" />
+            <property name="PhysicsBody" value="mixamoZombieKHz" />
+            <property name="RootMotion" value="true" />
+            <property name="HandItem" value="meleeHandZombieStrong" />
+            <property name="HasRagdoll" value="true" />
+            <property name="Mass" value="230" />
+            <property name="WalkType" value="2" />
+            <property name="DanceType" value="2" />
+
+            <property name="LootListOnDeath" value="zombieFirefighterKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <!-- Gameplay -->
+            <!-- "MoveSpeed" and "MoveSpeedAggro" values chosen to minimize that weird knee-bendy animation glitch -->
+            <property name="MoveSpeed" value="0.065" />
+            <property name="MoveSpeedAggro" value=".4, 1.3" />
+            <property name="JumpMaxDistance" value=".8, 1.1" />
+            <property name="HandItem" value="meleeHandZombieStrong" />
+            <property name="ExperienceGain" value="750" /> <!-- XP strong -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthStrong" />
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="zombieFemaleLumberjackFeralKhz" extends="zombieFemaleLumberjackKhz">
+            <property name="Tags" value="entity,female,zombie,walker,melee,feral" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombieFemaleLumberjackFeral_KHz" />
+
+            <!-- Gameplay Feral -->
+            <property name="DismemberMultiplierHead" value=".7" />
+            <property name="DismemberMultiplierArms" value=".7" />
+            <property name="DismemberMultiplierLegs" value=".7" />
+            <property name="PainResistPerHit" value=".7" />
+            <property name="MoveSpeedAggro" value="0.45, 1.3" /> <!-- strong, feral -->
+            <property name="JumpMaxDistance" value="1.8, 2.5" />
+            <property name="HandItem" value="meleeHandZombieStrongFeral" />
+            <property name="ExperienceGain" value="1200" /> <!-- XP strong feral -->
+            <property name="LootDropProb" value=".03" />
+
+            <property name="LootListOnDeath" value="zombieFirefighterFeralKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthStrongFeral" />
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="zombieFemaleLumberjackRadiatedKhz" extends="zombieFemaleLumberjackFeralKhz">
+            <property name="Tags" value="entity,female,zombie,walker,melee,feral,radiated" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombieFemaleLumberjack_KHz" />
+            <property name="MatColor" value="radiated" />
+
+            <!-- Gameplay Radiated -->
+            <property name="DismemberMultiplierHead" value=".4" />
+            <property name="DismemberMultiplierArms" value=".4" />
+            <property name="DismemberMultiplierLegs" value=".4" />
+            <property name="PainResistPerHit" value=".9" />
+            <property name="ExperienceGain" value="1500" /> <!-- XP strong radiated -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+
+            <property name="LootListOnDeath" value="zombieFirefighterRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthStrongRadiated" />
+                <triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="9" />
+                <triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen" />
+            </effect_group>
+        </entity_class>
+
+        <!-- New for 2.x - Note: no charged version (Big Momma and Lumberjack have no charged versions either) -->
+        <entity_class name="zombieFemaleLumberjackInfernalKhz" extends="zombieFemaleLumberjackRadiatedKhz">
+            <property name="Tags" value="entity,female,zombie,walker,melee,feral,infernal" />
+            <property name="MatColor" value="infernal" />
+            <property name="ExperienceGain" value="1600" /><!-- XP Strong Infernal -->
+            <property name="HandItem" value="meleeHandZombieInfernal" />
+            <property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern" />
+            <property name="LootDropProb" value=".1" /> <!-- Infernal -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+
+            <property name="LootListOnDeath" value="zombieFirefighterRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthStrongInfernal" />
+                <passive_effect name="BuffResistance" operation="base_set" value=".75" tags="buffInjuryKnockdown01,buffInjuryKnockdown02" />
+            </effect_group>
+        </entity_class>
+
+        <!-- Zombe female office worker KHz: "grunt" female (Darlene) -->
+        <entity_class name="zombieFemaleOfficeKhz" extends="zombieTemplateMale">
+            <property name="UserSpawnType" value="Menu" />
+            <property name="Tags" value="entity,female,zombie,walker,melee" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombieFemaleOffice_KHz" />
+            <property name="SoundRandom" value="zombiefemale2roam" />
+            <property name="SoundAlert" value="zombiefemale2alert" />
+            <property name="SoundAttack" value="zombiefemale2attack" />
+            <property name="SoundHurt" value="zombiefemale2pain" />
+            <property name="SoundDeath" value="zombiefemale2death" />
+            <property name="SoundSense" value="zombiefemale2sense" />
+            <property name="SoundStepType" value="barestep" />
+            <property name="Faction" value="undead" />
+            <property name="PhysicsBody" value="mixamoZombieKHz" />
+            <property name="WalkType" value="3" />
+            <property name="RootMotion" value="true" />
+            <property name="HasRagdoll" value="true" />
+            <property name="Mass" value="130" />
+            <property name="DanceType" value="2" />
+
+            <property name="LootListOnDeath" value="zombieFemaleOfficeKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <!-- Gameplay -->
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthNormal" />
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="zombieFemaleOfficeFeralKhz" extends="zombieFemaleOfficeKhz">
+            <property name="Tags" value="entity,female,zombie,walker,melee,feral" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombieFemaleOfficeFeral_KHz" />
+
+            <!-- Gameplay Feral -->
+            <property name="DismemberMultiplierHead" value=".7" />
+            <property name="DismemberMultiplierArms" value=".7" />
+            <property name="DismemberMultiplierLegs" value=".7" />
+            <property name="PainResistPerHit" value=".7" />
+            <property name="MoveSpeedAggro" value=".5, 1.35" />
+            <property name="HandItem" value="meleeHandZombieFeral" />
+            <property name="ExperienceGain" value="750" />
+            <property name="LootDropProb" value=".05" />
+
+            <property name="LootListOnDeath" value="zombieFemaleOfficeFeralKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthNormalFeral" />
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="zombieFemaleOfficeRadiatedKhz" extends="zombieFemaleOfficeFeralKhz">
+            <property name="Tags" value="entity,female,zombie,walker,melee,feral,radiated" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombieFemaleOffice_KHz" />
+            <property name="MatColor" value="radiated" />
+
+            <!-- Gameplay Radiated -->
+            <property name="DismemberMultiplierHead" value=".4" />
+            <property name="DismemberMultiplierArms" value=".4" />
+            <property name="DismemberMultiplierLegs" value=".4" />
+            <property name="PainResistPerHit" value=".9" />
+            <property name="ExperienceGain" value="1200" />
+
+            <property name="LootListOnDeath" value="zombieFemaleOfficeRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalIrradiatedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthNormalRadiated" />
+                <triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4" />
+                <triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen" />
+            </effect_group>
+        </entity_class>
+
+        <!-- New for 2.x -->
+        <entity_class name="zombieFemaleOfficeChargedKhz" extends="zombieFemaleOfficeRadiatedKhz">
+            <property name="Tags" value="entity,female,zombie,walker,melee,feral,charged" />
+            <property name="MatColor" value="charged" />
+            <property name="ExperienceGain" value="1400" /><!-- XP Normal Charged -->
+            <property name="HandItem" value="meleeHandZombieCharged" />
+            <property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern" />
+            <property name="LootDropProb" value=".1" /> <!-- Charged -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+
+            <property name="LootListOnDeath" value="zombieFemaleOfficeRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalIrradiatedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthNormalCharged" />
+            </effect_group>
+        </entity_class>
+
+        <!-- New for 2.x -->
+        <entity_class name="zombieFemaleOfficeInfernalKhz" extends="zombieFemaleOfficeRadiatedKhz">
+            <property name="Tags" value="entity,female,zombie,walker,melee,feral,infernal" />
+            <property name="MatColor" value="infernal" />
+            <property name="ExperienceGain" value="1600" /><!-- XP Normal Infernal -->
+            <property name="HandItem" value="meleeHandZombieInfernal" />
+            <property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern" />
+            <property name="LootDropProb" value=".1" /> <!-- Infernal -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+
+            <property name="LootListOnDeath" value="zombieFemaleOfficeRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalIrradiatedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthNormalInfernal" />
+                <passive_effect name="BuffResistance" operation="base_set" value=".75" tags="buffInjuryKnockdown01,buffInjuryKnockdown02" />
+            </effect_group>
+        </entity_class>
+
+        <!-- Zombie firefighter KHz: utility worker -->
+        <entity_class name="zombieFirefighterKhz" extends="zombieTemplateMale">
+            <property name="UserSpawnType" value="Menu" />
+            <property name="Tags" value="entity,male,zombie,walker,melee" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieFirefighter_KHz" />
+            <property name="AltMats" value="#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieFirefighter2.mat,#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieFirefighter3.mat" />
+            <property name="SoundRandom" value="zombiemale2roam" />
+            <property name="SoundAlert" value="zombiemale2alert" />
+            <property name="SoundAttack" value="zombiemale2attack" />
+            <property name="SoundHurt" value="zombiemale2pain" />
+            <property name="SoundDeath" value="zombiemale2death" />
+            <property name="SoundSense" value="zombiemale2sense" />
+            <property name="Faction" value="undead" />
+            <property name="PhysicsBody" value="mixamoZombieKHz" />
+            <property name="RootMotion" value="true" />
+            <property name="HasRagdoll" value="true" />
+            <property name="Mass" value="170" />
+            <property name="WalkType" value="1" />
+            <property name="AINoiseSeekDist" value="4" />
+            <property name="AIPathCostScale" value=".9, 1" />
+
+            <property name="LootListOnDeath" value="zombieFirefighterKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <!-- Gameplay -->
+            <property name="HandItem" value="meleeHandZombieWorker" />
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthNormal" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="20" />
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="zombieFirefighterFeralKhz" extends="zombieFirefighterKhz">
+            <property name="UserSpawnType" value="Menu" />
+            <property name="Tags" value="entity,male,zombie,walker,melee,feral" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieFirefighterFeral_KHz" />
+
+            <!-- Gameplay -->
+            <property name="DismemberMultiplierHead" value=".7" />
+            <property name="DismemberMultiplierArms" value=".7" />
+            <property name="DismemberMultiplierLegs" value=".7" />
+            <property name="PainResistPerHit" value=".7" />
+            <property name="MoveSpeedAggro" value=".5, 1.35" />
+            <property name="HandItem" value="meleeHandZombieWorkerFeral" />
+            <property name="ExperienceGain" value="750" />
+            <property name="LootDropProb" value=".03" />
+
+            <property name="LootListOnDeath" value="zombieFirefighterFeralKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthNormalFeral" />
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="zombieFirefighterRadiatedKhz" extends="zombieFirefighterFeralKhz">
+            <property name="Tags" value="entity,male,zombie,walker,melee,feral,radiated" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieFirefighter_KHz" />
+            <property name="MatColor" value="radiated" />
+
+            <!-- Gameplay -->
+            <property name="DismemberMultiplierHead" value=".4" />
+            <property name="DismemberMultiplierArms" value=".4" />
+            <property name="DismemberMultiplierLegs" value=".4" /> <!-- Radiated -->
+            <property name="PainResistPerHit" value=".9" /> <!-- Radiated -->
+            <property name="ExperienceGain" value="1200" /> <!-- XP Utility Worker Radiated -->
+
+            <property name="LootListOnDeath" value="zombieFirefighterRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalIrradiatedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthUtilityWorkerRadiated" />
+                <passive_effect name="EntityDamage" operation="perc_add" value="1" />
+                <passive_effect name="HealthChangeOT" operation="base_set" value="1.4" />
+            </effect_group>
+        </entity_class>
+
+        <!-- New for 2.x -->
+        <entity_class name="zombieFirefighterChargedKhz" extends="zombieFirefighterRadiatedKhz">
+            <property name="Tags" value="entity,male,zombie,walker,melee,feral,charged" />
+            <property name="MatColor" value="charged" />
+            <property name="ExperienceGain" value="1400" /><!-- XP Utility Worker Charged -->
+            <property name="HandItem" value="meleeHandZombieCharged" />
+            <property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern" />
+            <property name="LootDropProb" value=".1" /> <!-- Charged -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+
+            <property name="LootListOnDeath" value="zombieFirefighterRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalIrradiatedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthUtilityWorkerCharged" />
+            </effect_group>
+        </entity_class>
+
+        <!-- New for 2.x -->
+        <entity_class name="zombieFirefighterInfernalKhz" extends="zombieFirefighterRadiatedKhz">
+            <property name="Tags" value="entity,male,zombie,walker,melee,feral,infernal" />
+            <property name="MatColor" value="infernal" />
+            <property name="ExperienceGain" value="1600" /><!-- XP Utility Worker Infernal -->
+            <property name="HandItem" value="meleeHandZombieInfernal" />
+            <property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern" />
+            <property name="LootDropProb" value=".1" /> <!-- Infernal -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+
+            <property name="LootListOnDeath" value="zombieFirefighterRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalIrradiatedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthUtilityWorkerInfernal" />
+                <passive_effect name="BuffResistance" operation="base_set" value=".75" tags="buffInjuryKnockdown01,buffInjuryKnockdown02" />
+            </effect_group>
+        </entity_class>
+
+        <!-- Zombie male KHz: "grunt" male (Joe) -->
+        <entity_class name="zombieMaleKhz" extends="zombieTemplateMale">
+            <property name="UserSpawnType" value="Menu" />
+            <property name="Tags" value="entity,male,zombie,walker,melee" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieMale_KHz" />
+            <property name="Faction" value="undead" />
+            <property name="PhysicsBody" value="mixamoZombieKHz" />
+            <property name="RootMotion" value="true" />
+            <property name="HasRagdoll" value="true" />
+            <property name="Mass" value="170" />
+            <property name="WalkType" value="5" />
+
+            <property name="LootListOnDeath" value="zombieMaleKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <!-- Gameplay -->
+            <property name="HandItem" value="meleeHandZombieShort" />
+            <property name="MoveSpeedAggro" value="0.3, 1.35" /> <!-- Slim -->
+        </entity_class>
+
+        <entity_class name="zombieMaleFeralKhz" extends="zombieMaleKhz">
+            <property name="Tags" value="entity,male,zombie,walker,melee,feral" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieMaleFeral_KHz" />
+
+            <!-- Gameplay Feral -->
+            <property name="DismemberMultiplierHead" value=".7" />
+            <property name="DismemberMultiplierArms" value=".7" />
+            <property name="DismemberMultiplierLegs" value=".7" /><!-- Feral -->
+            <property name="PainResistPerHit" value=".7" /><!-- Feral -->
+            <property name="MoveSpeedAggro" value="0.6, 1.45" /> <!-- Slim Feral -->
+            <property name="JumpMaxDistance" value="4.6, 5" />
+            <property name="HandItem" value="meleeHandZombieShortFeral" />
+            <property name="ExperienceGain" value="750" /><!-- XP Slim Feral -->
+            <property name="LootDropProb" value=".05" /> <!-- Feral -->
+
+            <property name="LootListOnDeath" value="zombieMaleFeralKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthSlimFeral" />
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="zombieMaleRadiatedKhz" extends="zombieMaleFeralKhz">
+            <property name="Tags" value="entity,male,zombie,walker,melee,feral,radiated" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieMale_KHz" />
+            <property name="MatColor" value="radiated" />
+
+            <!-- Gameplay Radiated -->
+            <property name="DismemberMultiplierHead" value=".4" />
+            <property name="DismemberMultiplierArms" value=".4" />
+            <property name="DismemberMultiplierLegs" value=".4" /><!-- Radiated -->
+            <property name="PainResistPerHit" value=".9" /><!-- Radiated -->
+            <property name="ExperienceGain" value="1200" /><!-- XP Slim Radiated -->
+
+            <property name="LootListOnDeath" value="zombieMaleRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthSlimRadiated" />
+                <triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4" />
+                <triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen" />
+            </effect_group>
+        </entity_class>
+
+        <!-- New for 2.x - Note: no infernal version (Joe has no infernal version either) -->
+        <entity_class name="zombieMaleChargedKhz" extends="zombieMaleRadiatedKhz">
+            <property name="Tags" value="entity,male,zombie,walker,melee,feral,charged" />
+            <property name="MatColor" value="charged" />
+            <property name="ExperienceGain" value="1400" /><!-- XP Slim Charged -->
+            <property name="HandItem" value="meleeHandZombieCharged" />
+            <property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern" />
+            <property name="LootDropProb" value=".1" /> <!-- Charged -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+
+            <property name="LootListOnDeath" value="zombieMaleRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+        
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthSlimCharged" />
+            </effect_group>
+        </entity_class>
+
+        <!-- Zombie policewoman: Fat Momma, but will spit like a cop -->
+        <entity_class name="zombiePolicewomanKhz" extends="zombieTemplateMale">
+            <property name="UserSpawnType" value="Menu" />
+            <property name="Class" value="EntityZombieCop" />
+            <property name="Tags" value="entity,female,zombie,zombieCop,walker" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombiePolicewoman_KHz" />
+            <property name="AltMats" value="#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombiePolicewoman2.mat,#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombiePolicewomanTrooper.mat" />
+            <property name="WalkType" value="1" />
+            <property name="Mass" value="230" />
+            <property name="PhysicsBody" value="mixamoZombieKHz" />
+            <property name="RightHandJointName" value="Jaw" />
+
+            <property name="PushFactor" value="20" />
+            <property name="RootMotion" value="true" />
+            <property name="HasRagdoll" value="true" />
+            <property name="DanceType" value="2" />
+
+            <!-- Taken from Fat Cop - for RangedAttackTarget -->
+            <property name="AITask" value="
+                BreakBlock|
+                ApproachDistraction|
+                RangedAttackTarget itemType=1;cooldown=4;duration=5|
+                ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal|
+                ApproachSpot|
+                Look|
+                Wander|
+                " />
+
+            <property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam" />
+            <property name="SoundAlert" value="Enemies/Base_Zombie_Female2/zombiefemale2alert" />
+            <property name="SoundAttack" value="Enemies/Base_Zombie_Female2/zombiefemale2attack" />
+            <property name="SoundHurt" value="Enemies/Base_Zombie_Female2/zombiefemale2pain" />
+            <property name="SoundDeath" value="Enemies/Base_Zombie_Female2/zombiefemale2death" />
+            <property name="SoundSense" value="Enemies/Base_Zombie_Female2/zombiefemale2sense" />
+            <!-- SoundFootstepModifier is no longer supported in 2.x - replaced by SoundStepType -->
+            <!-- <property name="SoundFootstepModifier" value="Animals/Bear/bear_footstep" /> -->
+            <property name="SoundStepType" value="largestep" />
+
+            <!-- Gameplay -->
+            <property name="MoveSpeedAggro" value="0.2, 1.2" />
+            <property name="JumpMaxDistance" value=".8, 1.1" />
+            <property name="HandItem" value="meleeHandZombiePolicewoman" />
+            <property name="ExperienceGain" value="750" />
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+            <property name="ExplodeHealthThreshold" value="0" />
+            
+            <property name="LootListOnDeath" value="zombiePolicewomanKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthStrong" />
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="zombiePolicewomanFeralKhz" extends="zombiePolicewomanKhz">
+            <property name="Tags" value="entity,female,zombie,zombieCop,walker,melee,feral" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombiePolicewomanFeral_KHz" />
+
+            <!-- Gameplay Feral -->
+            <property name="DismemberMultiplierHead" value=".7" />
+            <property name="DismemberMultiplierArms" value=".7" />
+            <property name="DismemberMultiplierLegs" value=".7" /> <!-- Feral -->
+            <property name="PainResistPerHit" value=".7" /> <!-- Feral -->
+            <property name="MoveSpeedAggro" value="0.45, 1.3" /> <!-- Strong Feral -->
+            <property name="JumpMaxDistance" value="1.8, 2.5" />
+            <property name="HandItem" value="meleeHandZombieCopFeral" />
+            <property name="ExperienceGain" value="1200" /> <!-- XP Strong Feral -->
+            <property name="LootDropProb" value=".05" /> <!-- Feral -->
+                        
+            <property name="LootListOnDeath" value="zombiePolicewomanFeralKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+            
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthStrongFeral" />
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="zombiePolicewomanRadiatedKhz" extends="zombiePolicewomanFeralKhz">
+            <property name="Tags" value="entity,female,zombie,zombieCop,walker,melee,feral,radiated" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombiePolicewoman_KHz" />
+            <property name="MatColor" value="radiated" />
+
+            <!-- Gameplay Radiated -->
+            <property name="DismemberMultiplierHead" value=".4" />
+            <property name="DismemberMultiplierArms" value=".4" />
+            <property name="DismemberMultiplierLegs" value=".4" /><!-- Radiated -->
+            <property name="PainResistPerHit" value=".9" /><!-- Radiated -->
+            <property name="HandItem" value="meleeHandZombieCopRadiated" />
+            <property name="ExperienceGain" value="1500" /><!-- XP Strong radiated -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+                        
+            <property name="LootListOnDeath" value="zombiePolicewomanRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalIrradiatedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthStrongRadiated" />
+                <triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="9" />
+                <triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen" />
+            </effect_group>
+        </entity_class>
+
+        <!-- New for 2.x - Note: no charged version (Fat Cop has no charged version either) -->
+        <entity_class name="zombiePolicewomanInfernalKhz" extends="zombiePolicewomanRadiatedKhz">
+            <property name="Tags" value="entity,female,zombie,zombieCop,walker,melee,feral,infernal" />
+            <property name="MatColor" value="infernal" />
+            <property name="ExperienceGain" value="1600" /><!-- XP Strong Infernal -->
+            <property name="PainResistPerHit" value="3, .5, .5" /><!-- normal, at low health, health% -->
+            <property name="Explosion.BlockDamage" value="1000" />
+            <property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern" />
+            <property name="LootDropProb" value=".1" /> <!-- Infernal -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+                        
+            <property name="LootListOnDeath" value="zombiePolicewomanRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalIrradiatedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthStrongInfernal" />
+                <passive_effect name="BuffResistance" operation="base_set" value=".75" tags="buffInjuryKnockdown01,buffInjuryKnockdown02" />
+            </effect_group>
+        </entity_class>
+
+        <!-- Zombie male scrubs KHz: "grunt" male (Joe) but spawns with Lab and Nurse -->
+        <entity_class name="zombieMaleScrubsKhz" extends="zombieTemplateMale">
+            <property name="UserSpawnType" value="Menu" />
+            <property name="Tags" value="entity,male,zombie,walker,melee" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieMaleScrubs_KHz" />
+            <property name="AltMats" value="#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieMaleScrubsTeal.mat,#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieMaleScrubsWhite.mat" />
+            <property name="Faction" value="undead" />
+            <property name="PhysicsBody" value="mixamoZombieKHz" />
+            <property name="RootMotion" value="true" />
+            <property name="HasRagdoll" value="true" />
+            <property name="Mass" value="170" />
+            <property name="WalkType" value="5" />
+                        
+            <property name="LootListOnDeath" value="zombieMaleScrubsKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+
+
+            <!-- Gameplay -->
+            <property name="HandItem" value="meleeHandZombieShort" />
+            <property name="MoveSpeedAggro" value="0.3, 1.35" /> <!-- Slim -->
+            <property name="LootDropProb" value=".05" /> <!-- Nurse -->
+            <property name="LootDropEntityClass" value="EntityLootContainerNurse" />
+        </entity_class>
+
+        <entity_class name="zombieMaleScrubsFeralKhz" extends="zombieMaleScrubsKhz">
+            <property name="Tags" value="entity,male,zombie,walker,melee,feral" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieMaleScrubsFeral_KHz" />
+
+            <!-- Gameplay Feral -->
+            <property name="DismemberMultiplierHead" value=".7" />
+            <property name="DismemberMultiplierArms" value=".7" />
+            <property name="DismemberMultiplierLegs" value=".7" /> <!-- Feral -->
+            <property name="PainResistPerHit" value=".7" /> <!-- Feral -->
+            <property name="MoveSpeedAggro" value="0.6, 1.45" /> <!-- Slim Feral -->
+            <property name="JumpMaxDistance" value="4.6, 5" />
+            <property name="HandItem" value="meleeHandZombieShortFeral" />
+            <property name="ExperienceGain" value="750" /> <!-- XP Slim Feral -->
+            <property name="LootDropProb" value=".05" /> <!-- Feral -->
+                        
+            <property name="LootListOnDeath" value="zombieMaleScrubsFeralKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthSlimFeral" />
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="zombieMaleScrubsRadiatedKhz" extends="zombieMaleScrubsFeralKhz">
+            <property name="Tags" value="entity,male,zombie,walker,melee,feral,radiated" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieMaleScrubs_KHz" />
+            <property name="MatColor" value="radiated" />
+
+            <!-- Gameplay Radiated -->
+            <property name="DismemberMultiplierHead" value=".4" />
+            <property name="DismemberMultiplierArms" value=".4" />
+            <property name="DismemberMultiplierLegs" value=".4" />
+            <property name="PainResistPerHit" value=".9" />
+            <property name="ExperienceGain" value="1200" />
+                        
+            <property name="LootListOnDeath" value="zombieMaleScrubsRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="1000" />
+                <triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="4" />
+                <triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen" />
+            </effect_group>
+        </entity_class>
+
+        <!-- New for 2.0 - Note: no infernal version (Lab and Nurse have no infernal versions either) -->
+        <entity_class name="zombieMaleScrubsChargedKhz" extends="zombieMaleScrubsRadiatedKhz">
+            <property name="Tags" value="entity,male,zombie,walker,melee,feral,charged" />
+            <property name="MatColor" value="charged" />
+            <property name="ExperienceGain" value="1400" /><!-- XP Slim Charged -->
+            <property name="HandItem" value="meleeHandZombieCharged" />
+            <property name="MoveSpeedPattern" value="^chargedMoveSpeedPattern" />
+            <property name="LootDropProb" value=".1" /> <!-- Charged -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+                        
+            <property name="LootListOnDeath" value="zombieMaleScrubsRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthSlimCharged" />
+            </effect_group>
+        </entity_class>
+
+        <!-- Zombie female soldier KHz: zombie soldier -->
+        <entity_class name="zombieFemaleSoldierKhz" extends="zombieTemplateMale">
+            <property name="UserSpawnType" value="Menu" />
+            <property name="Tags" value="entity,female,zombie,walker,melee,zombieSoldier" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombieFemaleSoldier_KHz" />
+            <property name="AltMats" value="#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombieFemaleSoldierDPM.mat,#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombieFemaleSoldierUCP.mat" />
+            <property name="Faction" value="undead" />
+            <property name="PhysicsBody" value="mixamoZombieKHz" />
+            <property name="RootMotion" value="true" />
+            <property name="HasRagdoll" value="true" />
+            <property name="Mass" value="230" />
+            <property name="WalkType" value="2" />
+            <property name="AIPathCostScale" value=".35, .55" />
+                        
+            <property name="LootListOnDeath" value="zombieFemaleSoldierKhz"/>
+            <property name="SoundRandom" value="zombiefemale2roam" />
+            <property name="SoundAlert" value="zombiefemale2alert" />
+            <property name="SoundAttack" value="zombiefemale2attack" />
+            <property name="SoundHurt" value="zombiefemale2pain" />
+            <property name="SoundDeath" value="zombiefemale2death" />
+            <property name="SoundSense" value="zombiefemale2sense" />
+            <!-- SoundFootstepModifier is no longer supported in 2.x - replaced by SoundStepType -->
+            <!-- <property name="SoundFootstepModifier" value="Animals/Bear/bear_footstep" /> -->
+            <property name="SoundStepType" value="largestep" />
+            
+            <property name="LootDropProb" value=".05" /> <!-- Lab -->
+            <property name="LootDropEntityClass" value="EntityLootContainerSoldier" />
+
+            <!-- Gameplay zombieSoldier -->
+            <!-- "MoveSpeed" and "MoveSpeedAggro" values chosen to minimize that weird knee-bendy animation glitch -->
+            <property name="MoveSpeed" value="0.06" />
+            <property name="MoveSpeedAggro" value=".6, 1.3" />
+            <property name="HandItem" value="meleeHandZombieWorker" />
+            <property name="ExperienceGain" value="750" /> <!-- XP Fit -->
+
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthFit" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="zombieFemaleSoldierFeralKhz" extends="zombieFemaleSoldierKhz">
+            <property name="Tags" value="entity,female,zombie,walker,melee,zombieSoldier,feral" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombieFemaleSoldierFeral_KHz" />
+
+            <!-- Gameplay zombieSoldierFeral -->
+            <property name="DismemberMultiplierHead" value=".7" />
+            <property name="DismemberMultiplierArms" value=".7" />
+            <property name="DismemberMultiplierLegs" value=".7" /> <!-- Feral -->
+            <property name="PainResistPerHit" value=".7" /> <!-- Feral -->
+            <property name="MoveSpeedAggro" value="0.6, 1.45" /> <!-- Fit Feral -->
+            <property name="JumpMaxDistance" value="4.6, 5" />
+            <property name="HandItem" value="meleeHandZombieWorkerFeral" />
+            <property name="ExperienceGain" value="1200" /> <!-- XP Fit Feral -->
+            <property name="LootDropProb" value=".05" /> <!-- Feral -->
+                        
+            <property name="LootListOnDeath" value="zombieFemaleSoldierFeralKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthFitFeral" />
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="zombieFemaleSoldierRadiatedKhz" extends="zombieFemaleSoldierFeralKhz">
+            <property name="Tags" value="entity,female,zombie,walker,melee,zombieSoldier,feral,radiated" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieFemales_KHz.unity3d?ZombieFemaleSoldier_KHz" />
+            <property name="MatColor" value="radiated" />
+
+            <!-- Gameplay zombieSoldierRadiated -->
+            <property name="DismemberMultiplierHead" value=".4" />
+            <property name="DismemberMultiplierArms" value=".4" />
+            <property name="DismemberMultiplierLegs" value=".4" /><!-- Radiated -->
+            <property name="PainResistPerHit" value=".9" /><!-- Radiated -->
+            <property name="ExperienceGain" value="1500" /><!-- XP Fit Radiated -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+                        
+            <property name="LootListOnDeath" value="zombieFemaleSoldierRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalIrradiatedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthFitRadiated" />
+                <triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="6" />
+                <triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen" />
+            </effect_group>
+        </entity_class>
+
+        <!-- New for 2.x - Note: no charged version (Zombie Soldier has no charged version either) -->
+        <entity_class name="zombieFemaleSoldierInfernalKhz" extends="zombieFemaleSoldierRadiatedKhz">
+            <property name="Tags" value="entity,female,zombie,walker,melee,zombieSoldier,feral,infernal" />
+            <property name="MatColor" value="infernal" />
+            <property name="ExperienceGain" value="1600" /><!-- XP Fit Infernal -->
+            <property name="HandItem" value="meleeHandZombieInfernal" />
+            <property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern" />
+            <property name="LootDropProb" value=".1" /> <!-- Infernal -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+                        
+            <property name="LootListOnDeath" value="zombieFemaleSoldierRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalIrradiatedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthFitInfernal" />
+                <passive_effect name="BuffResistance" operation="base_set" value=".75" tags="buffInjuryKnockdown01,buffInjuryKnockdown02" />
+            </effect_group>
+        </entity_class>
+
+        <!-- Zombie male soldier KHz: zombie soldier -->
+        <entity_class name="zombieMaleSoldierKhz" extends="zombieTemplateMale">
+            <property name="UserSpawnType" value="Menu" />
+            <property name="Tags" value="entity,male,zombie,walker,melee,zombieSoldier" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieMaleSoldier_KHz" />
+            <property name="AltMats" value="#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieMaleSoldierDPM.mat,#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieMaleSoldierUCP.mat" />
+            <property name="Faction" value="undead" />
+            <property name="PhysicsBody" value="mixamoZombieKHz" />
+            <property name="RootMotion" value="true" />
+            <property name="HasRagdoll" value="true" />
+            <property name="Mass" value="230" />
+            <property name="WalkType" value="2" />
+            <property name="AIPathCostScale" value=".35, .55" />
+            
+            <property name="SoundRandom" value="zombiemale2roam" />
+            <property name="SoundAlert" value="zombiemale2alert" />
+            <property name="SoundAttack" value="zombiemale2attack" />
+            <property name="SoundHurt" value="zombiemale2pain" />
+            <property name="SoundDeath" value="zombiemale2death" />
+            <property name="SoundSense" value="zombiemale2sense" />
+            <property name="SoundStepType" value="largestep" />
+            
+            <property name="LootDropProb" value=".05" /> <!-- Lab -->
+            <property name="LootDropEntityClass" value="EntityLootContainerSoldier" />
+
+            <!-- Gameplay zombieSoldier -->
+            <!-- "MoveSpeed" and "MoveSpeedAggro" values chosen to minimize that weird knee-bendy animation glitch -->
+            <property name="MoveSpeed" value="0.065" />
+            <property name="MoveSpeedAggro" value=".4, 1.3" />
+            <property name="HandItem" value="meleeHandZombieWorker" />
+            <property name="ExperienceGain" value="750" /><!-- XP Fit -->
+                                    
+            <property name="LootListOnDeath" value="zombieFemaleSoldierKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthFit" />
+                <passive_effect name="PhysicalDamageResist" operation="base_set" value="50" />
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="zombieMaleSoldierFeralKhz" extends="zombieMaleSoldierKhz">
+            <property name="Tags" value="entity,male,zombie,walker,melee,zombieSoldier,feral" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieMaleSoldierFeral_KHz" />
+
+            <!-- Gameplay zombieSoldierFeral -->
+            <property name="DismemberMultiplierHead" value=".7" />
+            <property name="DismemberMultiplierArms" value=".7" />
+            <property name="DismemberMultiplierLegs" value=".7" /><!-- Feral -->
+            <property name="PainResistPerHit" value=".7" /><!-- Feral -->
+            <property name="MoveSpeedAggro" value="0.6, 1.45" /> <!-- Fit Feral -->
+            <property name="JumpMaxDistance" value="4.6, 5" />
+            <property name="HandItem" value="meleeHandZombieWorkerFeral" />
+            <property name="ExperienceGain" value="1200" /><!-- XP Fit Feral -->
+            <property name="LootDropProb" value=".05" /> <!-- Feral -->
+                                                
+            <property name="LootListOnDeath" value="zombieFemaleSoldierFeralKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthFitFeral" />
+            </effect_group>
+        </entity_class>
+
+        <entity_class name="zombieMaleSoldierRadiatedKhz" extends="zombieMaleSoldierFeralKhz">
+            <property name="Tags" value="entity,male,zombie,walker,melee,zombieSoldier,feral,radiated" />
+            <property name="Mesh" value="#@modfolder:Resources/ZombieMales_KHz.unity3d?ZombieMaleSoldier_KHz" />
+            <property name="MatColor" value="radiated" />
+
+            <!-- Gameplay zombieSoldierRadiated -->
+            <property name="DismemberMultiplierHead" value=".4" />
+            <property name="DismemberMultiplierArms" value=".4" />
+            <property name="DismemberMultiplierLegs" value=".4" /><!-- Radiated -->
+            <property name="PainResistPerHit" value=".9" /><!-- Radiated -->
+            <property name="ExperienceGain" value="1500" /><!-- XP Fit Radiated -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+                                                            
+            <property name="LootListOnDeath" value="zombieFemaleSoldierRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthFitRadiated" />
+                <triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="6" />
+                <triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen" />
+            </effect_group>
+        </entity_class>
+
+        <!-- New for 2.x - Note: no charged version (Zombie Soldier has no charged version either) -->
+        <entity_class name="zombieMaleSoldierInfernalKhz" extends="zombieMaleSoldierRadiatedKhz">
+            <property name="Tags" value="entity,male,zombie,walker,melee,zombieSoldier,feral,infernal" />
+            <property name="MatColor" value="infernal" />
+            <property name="ExperienceGain" value="1600" /><!-- XP Fit Infernal -->
+            <property name="HandItem" value="meleeHandZombieInfernal" />
+            <property name="MoveSpeedPattern" value="^infernalMoveSpeedPattern" />
+            <property name="LootDropProb" value=".1" /> <!-- Infernal -->
+            <property name="LootDropEntityClass" value="EntityLootContainerStrong" />
+                                                                   
+            <property name="LootListOnDeath" value="zombieFemaleSoldierRadiatedKhz"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="medicalInfectedBloodBag" count="1" tag="allHarvest" tool_category="Butcher"/>
+            <drop event="Harvest" name="foodRottingFlesh" count="1,3" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourceAnimalFat" count="1,2" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePotassiumNitratePowder" count="4,8" tag="butcherHarvest"/>
+            <drop event="Harvest" name="resourcePacemaker" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceDefibrillator" prob=".1" count="1" tag="JewelsoftheWastelandLuckyStrikeHarvest"/>
+            <drop event="Harvest" name="resourceZombieHeart" prob=".1" count="1" tag="JewelsoftheWastelandHeartExtractionHarvest"/>
+            <drop event="Destroy" name="resourceBone" count="5,10" tag="butcherHarvest"/> 
+
+            <effect_group name="Base Effects">
+                <passive_effect name="HealthMax" operation="base_set" value="^healthFitInfernal" />
+                <passive_effect name="BuffResistance" operation="base_set" value=".75" tags="buffInjuryKnockdown01,buffInjuryKnockdown02" />
+            </effect_group>
+        </entity_class>
+    </append>
+    
+    <!-- If 2.6+ is installed, use the new experience property templates -->
+    <conditional>
+        <if cond="game_version() &gt;= version(1,2,6)">
+            <set xpath="//entity_class[@name='zombieBurntFeralKhz']/property[@name='ExperienceGain']/@value">^xpSlimFeral03</set>
+            <set xpath="//entity_class[@name='zombieBurntRadiatedKhz']/property[@name='ExperienceGain']/@value">^xpSlimRadiated03</set>
+            <set xpath="//entity_class[@name='zombieBurntChargedKhz']/property[@name='ExperienceGain']/@value">^xpSlimCharged02</set>
+            <set xpath="//entity_class[@name='zombieBurntInfernalKhz']/property[@name='ExperienceGain']/@value">^xpSlimInfernal01</set>
+
+            <set xpath="//entity_class[@name='zombieBusinessmanFeralKhz']/property[@name='ExperienceGain']/@value">^xpNormalFeral02</set>
+            <set xpath="//entity_class[@name='zombieBusinessmanRadiatedKhz']/property[@name='ExperienceGain']/@value">^xpNormalRadiated02</set>
+            <set xpath="//entity_class[@name='zombieBusinessmanChargedKhz']/property[@name='ExperienceGain']/@value">^xpNormalCharged02</set>
+            <set xpath="//entity_class[@name='zombieBusinessmanInfernalKhz']/property[@name='ExperienceGain']/@value">^xpNormalInfernal02</set>
+
+            <set xpath="//entity_class[@name='zombieBusinesswomanKhz']/property[@name='ExperienceGain']/@value">^xpNormal02</set>
+            <set xpath="//entity_class[@name='zombieBusinesswomanFeralKhz']/property[@name='ExperienceGain']/@value">^xpNormalFeral02</set>
+            <set xpath="//entity_class[@name='zombieBusinesswomanRadiatedKhz']/property[@name='ExperienceGain']/@value">^xpNormalRadiated02</set>
+            <set xpath="//entity_class[@name='zombieBusinesswomanChargedKhz']/property[@name='ExperienceGain']/@value">^xpNormalCharged02</set>
+            <set xpath="//entity_class[@name='zombieBusinesswomanInfernalKhz']/property[@name='ExperienceGain']/@value">^xpNormalInfernal02</set>
+
+            <set xpath="//entity_class[@name='zombieCowgirlFeralKhz']/property[@name='ExperienceGain']/@value">^xpSlimFeral01</set>
+            <set xpath="//entity_class[@name='zombieCowgirlRadiatedKhz']/property[@name='ExperienceGain']/@value">^xpSlimRadiated01</set>
+            <set xpath="//entity_class[@name='zombieCowgirlChargedKhz']/property[@name='ExperienceGain']/@value">^xpSlimCharged01</set>
+
+            <set xpath="//entity_class[@name='zombieFemaleFeralKhz']/property[@name='ExperienceGain']/@value">^xpSlimFeral01</set>
+            <set xpath="//entity_class[@name='zombieFemaleRadiatedKhz']/property[@name='ExperienceGain']/@value">^xpSlimRadiated01</set>
+            <set xpath="//entity_class[@name='zombieFemaleChargedKhz']/property[@name='ExperienceGain']/@value">^xpSlimCharged01</set>
+
+            <set xpath="//entity_class[@name='zombieFemaleLumberjackKhz']/property[@name='ExperienceGain']/@value">^xpStrong00</set>
+            <set xpath="//entity_class[@name='zombieFemaleLumberjackFeralKhz']/property[@name='ExperienceGain']/@value">^xpStrongFeral00</set>
+            <set xpath="//entity_class[@name='zombieFemaleLumberjackRadiatedKhz']/property[@name='ExperienceGain']/@value">^xpStrongRadiated01</set>
+            <set xpath="//entity_class[@name='zombieFemaleLumberjackInfernalKhz']/property[@name='ExperienceGain']/@value">^xpStrongInfernal01</set>
+
+            <set xpath="//entity_class[@name='zombieFemaleOfficeFeralKhz']/property[@name='ExperienceGain']/@value">^xpNormalFeral01</set>
+            <set xpath="//entity_class[@name='zombieFemaleOfficeRadiatedKhz']/property[@name='ExperienceGain']/@value">^xpNormalRadiated01</set>
+            <set xpath="//entity_class[@name='zombieFemaleOfficeChargedKhz']/property[@name='ExperienceGain']/@value">^xpNormalCharged01</set>
+            <set xpath="//entity_class[@name='zombieFemaleOfficeInfernalKhz']/property[@name='ExperienceGain']/@value">^xpNormalInfernal01</set>
+
+            <set xpath="//entity_class[@name='zombieFirefighterFeralKhz']/property[@name='ExperienceGain']/@value">^xpNormalFeral02</set>
+            <set xpath="//entity_class[@name='zombieFirefighterRadiatedKhz']/property[@name='ExperienceGain']/@value">^xpNormalRadiated02</set>
+            <set xpath="//entity_class[@name='zombieFirefighterChargedKhz']/property[@name='ExperienceGain']/@value">^xpNormalCharged02</set>
+            <set xpath="//entity_class[@name='zombieFirefighterInfernalKhz']/property[@name='ExperienceGain']/@value">^xpNormalInfernal02</set>
+
+            <set xpath="//entity_class[@name='zombieMaleFeralKhz']/property[@name='ExperienceGain']/@value">^xpNormalFeral01</set>
+            <set xpath="//entity_class[@name='zombieMaleRadiatedKhz']/property[@name='ExperienceGain']/@value">^xpNormalRadiated01</set>
+            <set xpath="//entity_class[@name='zombieMaleChargedKhz']/property[@name='ExperienceGain']/@value">^xpNormalCharged01</set>
+
+            <set xpath="//entity_class[@name='zombiePolicewomanKhz']/property[@name='ExperienceGain']/@value">^xpStrong02</set>
+            <set xpath="//entity_class[@name='zombiePolicewomanFeralKhz']/property[@name='ExperienceGain']/@value">^xpStrongFeral02</set>
+            <set xpath="//entity_class[@name='zombiePolicewomanRadiatedKhz']/property[@name='ExperienceGain']/@value">^xpStrongRadiated02</set>
+            <set xpath="//entity_class[@name='zombiePolicewomanInfernalKhz']/property[@name='ExperienceGain']/@value">^xpStrongInfernal02</set>
+
+            <set xpath="//entity_class[@name='zombieMaleScrubsFeralKhz']/property[@name='ExperienceGain']/@value">^xpSlimFeral01</set>
+            <set xpath="//entity_class[@name='zombieMaleScrubsRadiatedKhz']/property[@name='ExperienceGain']/@value">^xpSlimRadiated01</set>
+            <set xpath="//entity_class[@name='zombieMaleScrubsChargedKhz']/property[@name='ExperienceGain']/@value">^xpSlimCharged01</set>
+
+            <set xpath="//entity_class[@name='zombieFemaleSoldierKhz']/property[@name='ExperienceGain']/@value">^xpNormal03</set>
+            <set xpath="//entity_class[@name='zombieFemaleSoldierFeralKhz']/property[@name='ExperienceGain']/@value">^xpNormalFeral03</set>
+            <set xpath="//entity_class[@name='zombieFemaleSoldierRadiatedKhz']/property[@name='ExperienceGain']/@value">^xpNormalRadiated03</set>
+            <set xpath="//entity_class[@name='zombieFemaleSoldierInfernalKhz']/property[@name='ExperienceGain']/@value">^xpNormalInfernal03</set>
+
+            <set xpath="//entity_class[@name='zombieMaleSoldierKhz']/property[@name='ExperienceGain']/@value">^xpNormal03</set>
+            <set xpath="//entity_class[@name='zombieMaleSoldierFeralKhz']/property[@name='ExperienceGain']/@value">^xpNormalFeral03</set>
+            <set xpath="//entity_class[@name='zombieMaleSoldierRadiatedKhz']/property[@name='ExperienceGain']/@value">^xpNormalRadiated03</set>
+            <set xpath="//entity_class[@name='zombieMaleSoldierInfernalKhz']/property[@name='ExperienceGain']/@value">^xpNormalInfernal03</set>
+        </if>
+    </conditional>
+
+    <!--
+        NPC Core adds EntityNPC to the AITask and AITarget properties of the vanilla templates.
+        But NPC Core loads before this mod, so it can't affect the policewoman zombie.
+        So if NPC Core is installed, change the policewoman's AITask to match.
+    -->
+    <conditional>
+        <if cond="mod_loaded('0-XNPCCore')">
+            <set xpath="//entity_class[@name='zombiePolicewomanKhz']/property[@name='AITask']/@value">
+                BreakBlock|
+                ApproachDistraction|
+                RangedAttackTarget itemType=1;cooldown=4;duration=5|
+                ApproachAndAttackTarget class=EntityPlayer,0,EntityBandit,0,EntityEnemyAnimal,0,EntityAnimal,0,EntityNPC,0|
+                ApproachSpot|
+                Look|
+                Wander|
+            </set>
+        </if>
+    </conditional>
+
+    <!-- Compatibility patch with Elemental Zombies Always -->
+    <conditional>
+        <if cond="mod_loaded('ElementalZombies')">
+            <append xpath="/entity_classes/entity_class[@name='zombieBurntRadiatedKhz']">
+                <property name="HandItem" value="meleeHandZombieBurningRadiated" />
+            </append>
+            <append xpath="/entity_classes/entity_class[@name='zombieBusinessmanRadiatedKhz']">
+                <property name="HandItem" value="meleeHandZombieStrongRadiated" />
+            </append>
+            <append xpath="/entity_classes/entity_class[@name='zombieBusinesswomanRadiatedKhz']">
+                <property name="HandItem" value="meleeHandZombieStrongRadiated" />
+            </append>
+            <append xpath="/entity_classes/entity_class[@name='zombieCowgirlRadiatedKhz']">
+                <property name="HandItem" value="meleeHandZombieShortRadiated" />
+            </append>
+            <append xpath="/entity_classes/entity_class[@name='zombieFemaleRadiatedKhz']">
+                <property name="HandItem" value="meleeHandZombieShortRadiated" />
+            </append>
+            <append xpath="/entity_classes/entity_class[@name='zombieFemaleLumberjackRadiatedKhz']">
+                <property name="HandItem" value="meleeHandZombieStrongRadiated" />
+            </append>
+            <append xpath="/entity_classes/entity_class[@name='zombieFemaleOfficeRadiatedKhz']">
+                <property name="HandItem" value="meleeHandZombieRadiated" />
+            </append>
+            <append xpath="/entity_classes/entity_class[@name='zombieFirefighterRadiatedKhz']">
+                <property name="HandItem" value="meleeHandZombieWorkerRadiated" />
+            </append>
+            <append xpath="/entity_classes/entity_class[@name='zombieMaleRadiatedKhz']">
+                <property name="HandItem" value="meleeHandZombieShortRadiated" />
+            </append>
+            <append xpath="/entity_classes/entity_class[@name='zombiePolicewomanRadiatedKhz']">
+                <property name="HandItem" value="meleeHandZombieCopRadiated" />
+            </append>
+            <append xpath="/entity_classes/entity_class[@name='zombieMaleScrubsRadiatedKhz']">
+                <property name="HandItem" value="meleeHandZombieShortRadiated" />
+            </append>
+            <append xpath="/entity_classes/entity_class[@name='zombieFemaleSoldierRadiatedKhz']">
+                <property name="HandItem" value="meleeHandZombieWorkerRadiated" />
+            </append>
+            <append xpath="/entity_classes/entity_class[@name='zombieMaleSoldierRadiatedKhz']">
+                <property name="HandItem" value="meleeHandZombieWorkerRadiated" />
+            </append>
+        </if>
+    </conditional>
+</configs>

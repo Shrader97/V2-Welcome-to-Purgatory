@@ -692,7 +692,7 @@
             </effect_group>
         </crafting_skill>
 
-        <crafting_skill name="craftingSeeds" min_level="1" max_level="40" parent="attCrafting" name_key="craftingSeedsName" desc_key="craftingSeedsDesc" long_desc_key="craftingSeedsLongDesc" icon="ui_game_symbol_crops">
+        <crafting_skill name="craftingSeeds" min_level="1" max_level="50" parent="attCrafting" name_key="craftingSeedsName" desc_key="craftingSeedsDesc" long_desc_key="craftingSeedsLongDesc" icon="ui_game_symbol_crops">
 
             <display_entry icon="plantedCotton1,plantedGoldenrod1,plantedCoffee1,plantedYucca1,plantedAloe1" name_key="seedsT1-1,seedsT1-2,seedsT1-3,seedsT1-4,seedsT1-5" has_quality="false" unlock_level="2,4,6,8,10" >
                 <unlock_entry item="plantedCotton1" unlock_tier="1"/>
@@ -722,31 +722,44 @@
                 <unlock_entry item="plantedOnion1" unlock_tier="4"/>
                 <unlock_entry item="plantedWheat1" unlock_tier="5"/>
             </display_entry>
+            <display_entry icon="plantedAleuriaAurantia1,plantedOmphalotusIlludens1,plantedLactariusIndigo1,plantedShroom1" name_key="seedsT5-1,seedsT5-2,seedsT5-3,seedsT5-4" has_quality="false" unlock_level="42,45,47,50" >
+                <unlock_entry item="plantedAleuriaAurantia1" unlock_tier="1"/>
+                <unlock_entry item="plantedOmphalotusIlludens1" unlock_tier="2"/>
+                <unlock_entry item="plantedLactariusIndigo1" unlock_tier="3"/>
+                <unlock_entry item="plantedShroom1" unlock_tier="4"/>
+            </display_entry>
+
 
             <effect_group>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,100" value="1" tags="plantedCotton1"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,100" value="1" tags="plantedGoldenrod1,plantedChrysanthemum1"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,100" value="1" tags="plantedCoffee1"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="8,100" value="1" tags="plantedYucca1"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,100" value="1" tags="plantedAloe1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,50" value="1" tags="plantedCotton1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,50" value="1" tags="plantedGoldenrod1,plantedChrysanthemum1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="6,50" value="1" tags="plantedCoffee1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="8,50" value="1" tags="plantedYucca1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="10,50" value="1" tags="plantedAloe1"/>
 
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="12,100" value="1" tags="plantedBlueberry1,plantedHop1"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="14,100" value="1" tags="plantedPumpkin1"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="16,100" value="1" tags="plantedMushroom1"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="18,100" value="1" tags="plantedCorn1"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,100" value="1" tags="plantedPotato1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="12,50" value="1" tags="plantedBlueberry1,plantedHop1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="14,50" value="1" tags="plantedPumpkin1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="16,50" value="1" tags="plantedMushroom1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="18,50" value="1" tags="plantedCorn1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="20,50" value="1" tags="plantedPotato1"/>
 
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="22,100" value="1" tags="plantedBellPepper1,plantedTomato1"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="24,100" value="1" tags="plantedCabbage1"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="26,100" value="1" tags="plantedCantaloupe1"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="28,100" value="1" tags="plantedChiliPepper1"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,100" value="1" tags="plantedEggplant1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="22,50" value="1" tags="plantedBellPepper1,plantedTomato1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="24,50" value="1" tags="plantedCabbage1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="26,50" value="1" tags="plantedCantaloupe1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="28,50" value="1" tags="plantedChiliPepper1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="30,50" value="1" tags="plantedEggplant1"/>
 
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="32,100" value="1" tags="plantedGrapes1,plantedGarlic1"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="34,100" value="1" tags="plantedLeek1"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="36,100" value="1" tags="plantedStrawberry1"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="38,100" value="1" tags="plantedOnion1"/>
-                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,100" value="1" tags="plantedWheat1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="32,50" value="1" tags="plantedGrapes1,plantedGarlic1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="34,50" value="1" tags="plantedLeek1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="36,50" value="1" tags="plantedStrawberry1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="38,50" value="1" tags="plantedOnion1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="40,50" value="1" tags="plantedWheat1"/>
+
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="42,50" value="1" tags="plantedAleuriaAurantia1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="45,50" value="1" tags="plantedOmphalotusIlludens1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="47,50" value="1" tags="plantedLactariusIndigo1"/>
+                <passive_effect name="RecipeTagUnlocked" operation="base_set" level="50,50" value="1" tags="plantedShroom1"/>
+
             </effect_group>
         </crafting_skill>
 

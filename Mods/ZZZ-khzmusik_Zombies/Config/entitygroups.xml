@@ -1,0 +1,855 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configs>
+    <!-- zombieBurntKhz spawns with burnt zombies -->
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurnt, .2')]/text()" delim="\n" op="add">zombieBurntKhz, .2</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurnt, .4')]/text()" delim="\n" op="add">zombieBurntKhz, .4</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurnt, .5')]/text()" delim="\n" op="add">zombieBurntKhz, .5</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurnt, .7')]/text()" delim="\n" op="add">zombieBurntKhz, .7</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurnt, .8')]/text()" delim="\n" op="add">zombieBurntKhz, .8</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurnt&#xA;')]/text()" delim="\n" op="add">zombieBurntKhz</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurnt, 2')]/text()" delim="\n" op="add">zombieBurntKhz, 2</csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurntFeral, .1')]/text()" delim="\n" op="add">zombieBurntFeralKhz, .1</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurntFeral, .2')]/text()" delim="\n" op="add">zombieBurntFeralKhz, .2</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurntFeral, .3')]/text()" delim="\n" op="add">zombieBurntFeralKhz, .3</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurntFeral, .4')]/text()" delim="\n" op="add">zombieBurntFeralKhz, .4</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurntFeral, .5')]/text()" delim="\n" op="add">zombieBurntFeralKhz, .5</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurntFeral&#xA;')]/text()" delim="\n" op="add">zombieBurntFeralKhz</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurntFeral, 2')]/text()" delim="\n" op="add">zombieBurntFeralKhz, 2</csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurntRadiated, .05')]/text()" delim="\n" op="add">zombieBurntRadiatedKhz, .05</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurntRadiated, .1')]/text()" delim="\n" op="add">zombieBurntRadiatedKhz, .1</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurntRadiated, .2')]/text()" delim="\n" op="add">zombieBurntRadiatedKhz, .2</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurntRadiated, .4')]/text()" delim="\n" op="add">zombieBurntRadiatedKhz, .4</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurntRadiated, .5')]/text()" delim="\n" op="add">zombieBurntRadiatedKhz, .5</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurntRadiated, .7')]/text()" delim="\n" op="add">zombieBurntRadiatedKhz, .7</csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurntCharged, .25')]/text()" delim="\n" op="add">zombieBurntChargedKhz, .25</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurntCharged, .5')]/text()" delim="\n" op="add">zombieBurntChargedKhz, .5</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurntCharged&#xA;')]/text()" delim="\n" op="add">zombieBurntChargedKhz</csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurntInfernal, .05')]/text()" delim="\n" op="add">zombieBurntInfernalKhz, .05</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurntInfernal, .25')]/text()" delim="\n" op="add">zombieBurntInfernalKhz, .25</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurntInfernal, .5')]/text()" delim="\n" op="add">zombieBurntInfernalKhz, .5</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBurntInfernal&#xA;')]/text()" delim="\n" op="add">zombieBurntInfernalKhz</csv>
+
+    <!-- Add to the individual zombieBurnt entity groups, at half probability -->
+    <csv xpath="//entitygroup[@name='zombieBurnt']/text()" delim="\n" op="add">zombieBurntKhz, .5</csv>
+    <csv xpath="//entitygroup[@name='zombieBurntFeral']/text()" delim="\n" op="add">zombieBurntFeralKhz, .5</csv>
+    <csv xpath="//entitygroup[@name='zombieBurntRadiated']/text()" delim="\n" op="add">zombieBurntRadiatedKhz, .5</csv>
+    <csv xpath="//entitygroup[@name='zombieBurntCharged']/text()" delim="\n" op="add">zombieBurntChargedKhz, .5</csv>
+    <csv xpath="//entitygroup[@name='zombieBurntInfernal']/text()" delim="\n" op="add">zombieBurntInfernalKhz, .5</csv>
+
+    <!--
+        zombieBusinessmanKhz, zombieBusinesswomanKhz, and zombieFemaleOfficeKhz spawn with zombieBusinessMan
+        I am reducing their probabilities so they total to the zombieBusinessMan probability.
+    -->
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessMan, .05')]/text()" delim="\n" op="add">
+        zombieBusinessmanKhz, .02
+        zombieBusinesswomanKhz, .02
+        zombieFemaleOfficeKhz, .02
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessMan, .06')]/text()" delim="\n" op="add">
+        zombieBusinessmanKhz, .02
+        zombieBusinesswomanKhz, .02
+        zombieFemaleOfficeKhz, .02
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessMan, .07')]/text()" delim="\n" op="add">
+        zombieBusinessmanKhz, .02
+        zombieBusinesswomanKhz, .02
+        zombieFemaleOfficeKhz, .02
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessMan, .08')]/text()" delim="\n" op="add">
+        zombieBusinessmanKhz, .03
+        zombieBusinesswomanKhz, .03
+        zombieFemaleOfficeKhz, .03
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessMan, .09')]/text()" delim="\n" op="add">
+        zombieBusinessmanKhz, .03
+        zombieBusinesswomanKhz, .03
+        zombieFemaleOfficeKhz, .03
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessMan, .1')]/text()" delim="\n" op="add">
+        zombieBusinessmanKhz, .03
+        zombieBusinesswomanKhz, .03
+        zombieFemaleOfficeKhz, .03
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessMan, .25')]/text()" delim="\n" op="add">
+        zombieBusinessmanKhz, .08
+        zombieBusinesswomanKhz, .08
+        zombieFemaleOfficeKhz, .08
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessMan, .3')]/text()" delim="\n" op="add">
+        zombieBusinessmanKhz, .1
+        zombieBusinesswomanKhz, .1
+        zombieFemaleOfficeKhz, .1
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessMan, .4')]/text()" delim="\n" op="add">
+        zombieBusinessmanKhz, .13
+        zombieBusinesswomanKhz, .13
+        zombieFemaleOfficeKhz, .13
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessMan, .55')]/text()" delim="\n" op="add">
+        zombieBusinessmanKhz, .18
+        zombieBusinesswomanKhz, .18
+        zombieFemaleOfficeKhz, .18
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessMan, .6')]/text()" delim="\n" op="add">
+        zombieBusinessmanKhz, .2
+        zombieBusinesswomanKhz, .2
+        zombieFemaleOfficeKhz, .2
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessMan, .7')]/text()" delim="\n" op="add">
+        zombieBusinessmanKhz, .23
+        zombieBusinesswomanKhz, .23
+        zombieFemaleOfficeKhz, .23
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessMan, .85')]/text()" delim="\n" op="add">
+        zombieBusinessmanKhz, .28
+        zombieBusinesswomanKhz, .28
+        zombieFemaleOfficeKhz, .28
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessMan&#xA;')]/text()" delim="\n" op="add">
+        zombieBusinessmanKhz, .33
+        zombieBusinesswomanKhz, .33
+        zombieFemaleOfficeKhz, .33
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessMan, 1.5')]/text()" delim="\n" op="add">
+        zombieBusinessmanKhz, .5
+        zombieBusinesswomanKhz, .5
+        zombieFemaleOfficeKhz, .5
+    </csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManFeral, .02')]/text()" delim="\n" op="add">
+        zombieBusinessmanFeralKhz, .01
+        zombieBusinesswomanFeralKhz, .01
+        zombieFemaleOfficeFeralKhz, .01
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManFeral, .04')]/text()" delim="\n" op="add">
+        zombieBusinessmanFeralKhz, .01
+        zombieBusinesswomanFeralKhz, .01
+        zombieFemaleOfficeFeralKhz, .01
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManFeral, .05')]/text()" delim="\n" op="add">
+        zombieBusinessmanFeralKhz, .02
+        zombieBusinesswomanFeralKhz, .02
+        zombieFemaleOfficeFeralKhz, .02
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManFeral, .06')]/text()" delim="\n" op="add">
+        zombieBusinessmanFeralKhz, .02
+        zombieBusinesswomanFeralKhz, .02
+        zombieFemaleOfficeFeralKhz, .02
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManFeral, .08')]/text()" delim="\n" op="add">
+        zombieBusinessmanFeralKhz, .03
+        zombieBusinesswomanFeralKhz, .03
+        zombieFemaleOfficeFeralKhz, .03
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManFeral, .1')]/text()" delim="\n" op="add">
+        zombieBusinessmanFeralKhz, .03
+        zombieBusinesswomanFeralKhz, .03
+        zombieFemaleOfficeFeralKhz, .03
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManFeral, .2')]/text()" delim="\n" op="add">
+        zombieBusinessmanFeralKhz, .07
+        zombieBusinesswomanFeralKhz, .07
+        zombieFemaleOfficeFeralKhz, .07
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManFeral, .3')]/text()" delim="\n" op="add">
+        zombieBusinessmanFeralKhz, .1
+        zombieBusinesswomanFeralKhz, .1
+        zombieFemaleOfficeFeralKhz, .1
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManFeral, .4')]/text()" delim="\n" op="add">
+        zombieBusinessmanFeralKhz, .14
+        zombieBusinesswomanFeralKhz, .14
+        zombieFemaleOfficeFeralKhz, .14
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManFeral, .5')]/text()" delim="\n" op="add">
+        zombieBusinessmanFeralKhz, .17
+        zombieBusinesswomanFeralKhz, .17
+        zombieFemaleOfficeFeralKhz, .17
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManFeral, .6')]/text()" delim="\n" op="add">
+        zombieBusinessmanFeralKhz, .2
+        zombieBusinesswomanFeralKhz, .2
+        zombieFemaleOfficeFeralKhz, .2
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManFeral, .75')]/text()" delim="\n" op="add">
+        zombieBusinessmanFeralKhz, .25
+        zombieBusinesswomanFeralKhz, .25
+        zombieFemaleOfficeFeralKhz, .25
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManFeral, .8')]/text()" delim="\n" op="add">
+        zombieBusinessmanFeralKhz, .27
+        zombieBusinesswomanFeralKhz, .27
+        zombieFemaleOfficeFeralKhz, .27
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManFeral&#xA;')]/text()" delim="\n" op="add">
+        zombieBusinessmanFeralKhz, .33
+        zombieBusinesswomanFeralKhz, .33
+        zombieFemaleOfficeFeralKhz, .33
+    </csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManRadiated, .15')]/text()" delim="\n" op="add">
+        zombieBusinessmanRadiatedKhz, .03
+        zombieBusinesswomanRadiatedKhz, .03
+        zombieFemaleOfficeRadiatedKhz, .03
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManRadiated, .2')]/text()" delim="\n" op="add">
+        zombieBusinessmanRadiatedKhz, .07
+        zombieBusinesswomanRadiatedKhz, .07
+        zombieFemaleOfficeRadiatedKhz, .07
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManRadiated, .3')]/text()" delim="\n" op="add">
+        zombieBusinessmanRadiatedKhz, .1
+        zombieBusinesswomanRadiatedKhz, .1
+        zombieFemaleOfficeRadiatedKhz, .1
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManRadiated, .4')]/text()" delim="\n" op="add">
+        zombieBusinessmanRadiatedKhz, .14
+        zombieBusinesswomanRadiatedKhz, .14
+        zombieFemaleOfficeRadiatedKhz, .14
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManRadiated, .5')]/text()" delim="\n" op="add">
+        zombieBusinessmanRadiatedKhz, .17
+        zombieBusinesswomanRadiatedKhz, .17
+        zombieFemaleOfficeRadiatedKhz, .17
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManRadiated, .7')]/text()" delim="\n" op="add">
+        zombieBusinessmanRadiatedKhz, .23
+        zombieBusinesswomanRadiatedKhz, .23
+        zombieFemaleOfficeRadiatedKhz, .23
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManRadiated&#xA;')]/text()" delim="\n" op="add">
+        zombieBusinessmanRadiatedKhz, .33
+        zombieBusinesswomanRadiatedKhz, .33
+        zombieFemaleOfficeRadiatedKhz, .33
+    </csv>
+    
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManCharged, .05')]/text()" delim="\n" op="add">
+        zombieBusinessmanChargedKhz, .02
+        zombieBusinesswomanChargedKhz, .02
+        zombieFemaleOfficeChargedKhz, .02
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManCharged, .25')]/text()" delim="\n" op="add">
+        zombieBusinessmanChargedKhz, .08
+        zombieBusinesswomanChargedKhz, .08
+        zombieFemaleOfficeChargedKhz, .08
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManCharged, .4')]/text()" delim="\n" op="add">
+        zombieBusinessmanChargedKhz, .14
+        zombieBusinesswomanChargedKhz, .14
+        zombieFemaleOfficeChargedKhz, .14
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManCharged, .5')]/text()" delim="\n" op="add">
+        zombieBusinessmanChargedKhz, .17
+        zombieBusinesswomanChargedKhz, .17
+        zombieFemaleOfficeChargedKhz, .17
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManCharged&#xA;')]/text()" delim="\n" op="add">
+        zombieBusinessmanChargedKhz, .33
+        zombieBusinesswomanChargedKhz, .33
+        zombieFemaleOfficeChargedKhz, .33
+    </csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManInfernal, .05')]/text()" delim="\n" op="add">
+        zombieBusinessmanInfernalKhz, .02
+        zombieBusinesswomanInfernalKhz, .02
+        zombieFemaleOfficeInfernalKhz, .02
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManInfernal, .15')]/text()" delim="\n" op="add">
+        zombieBusinessmanInfernalKhz, .05
+        zombieBusinesswomanInfernalKhz, .05
+        zombieFemaleOfficeInfernalKhz, .05
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManInfernal, .2')]/text()" delim="\n" op="add">
+        zombieBusinessmanInfernalKhz, .07
+        zombieBusinesswomanInfernalKhz, .07
+        zombieFemaleOfficeInfernalKhz, .07
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManInfernal, .5')]/text()" delim="\n" op="add">
+        zombieBusinessmanInfernalKhz, .17
+        zombieBusinesswomanInfernalKhz, .17
+        zombieFemaleOfficeInfernalKhz, .17
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManInfernal&#xA;')]/text()" delim="\n" op="add">
+        zombieBusinessmanInfernalKhz, .33
+        zombieBusinesswomanInfernalKhz, .33
+        zombieFemaleOfficeInfernalKhz, .33
+    </csv>
+
+    <!-- Add to the individual zombieBusinessMan entity groups, at half probability (total) -->
+    <csv xpath="//entitygroup[@name='zombieBusinessMan']/text()" delim="\n" op="add">
+        zombieBusinessmanKhz, .17
+        zombieBusinesswomanKhz, .17
+        zombieFemaleOfficeKhz, .17
+    </csv>
+    <csv xpath="//entitygroup[@name='zombieBusinessManFeral']/text()" delim="\n" op="add">
+        zombieBusinessmanFeralKhz, .17
+        zombieBusinesswomanFeralKhz, .17
+        zombieFemaleOfficeFeralKhz, .17
+    </csv>
+    <csv xpath="//entitygroup[@name='zombieBusinessManRadiated']/text()" delim="\n" op="add">
+        zombieBusinessmanRadiatedKhz, .17
+        zombieBusinesswomanRadiatedKhz, .17
+        zombieFemaleOfficeRadiatedKhz, .17
+    </csv>
+    <csv xpath="//entitygroup[@name='zombieBusinessManCharged']/text()" delim="\n" op="add">
+        zombieBusinessmanChargedKhz, .17
+        zombieBusinesswomanChargedKhz, .17
+        zombieFemaleOfficeChargedKhz, .17
+    </csv>
+    <csv xpath="//entitygroup[@name='zombieBusinessManInfernal']/text()" delim="\n" op="add">
+        zombieBusinessmanInfernalKhz, .17
+        zombieBusinesswomanInfernalKhz, .17
+        zombieFemaleOfficeInfernalKhz, .17
+    </csv>
+
+    <!-- zombieCowgirlKhz spawns with zombiePartyGirl now that zombieOldTimer left her for a younger version -->
+    <csv xpath="//entitygroup[contains(text(), 'zombiePartyGirl, .25')]/text()" delim="\n" op="add">zombieCowgirlKhz, .25</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombiePartyGirl, .3')]/text()" delim="\n" op="add">zombieCowgirlKhz, .3</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombiePartyGirl, .4')]/text()" delim="\n" op="add">zombieCowgirlKhz, .4</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombiePartyGirl, .55')]/text()" delim="\n" op="add">zombieCowgirlKhz, .55</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombiePartyGirl, .7')]/text()" delim="\n" op="add">zombieCowgirlKhz, .7</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombiePartyGirl, .85')]/text()" delim="\n" op="add">zombieCowgirlKhz, .85</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombiePartyGirl, .95')]/text()" delim="\n" op="add">zombieCowgirlKhz, .95</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombiePartyGirl&#xA;')]/text()" delim="\n" op="add">zombieCowgirlKhz</csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombiePartyGirlFeral, .1')]/text()" delim="\n" op="add">zombieCowgirlFeralKhz, .1</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombiePartyGirlFeral, .2')]/text()" delim="\n" op="add">zombieCowgirlFeralKhz, .2</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombiePartyGirlFeral, .3')]/text()" delim="\n" op="add">zombieCowgirlFeralKhz, .3</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombiePartyGirlFeral, .4')]/text()" delim="\n" op="add">zombieCowgirlFeralKhz, .4</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombiePartyGirlFeral, .5')]/text()" delim="\n" op="add">zombieCowgirlFeralKhz, .5</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombiePartyGirlFeral, .6')]/text()" delim="\n" op="add">zombieCowgirlFeralKhz, .6</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombiePartyGirlFeral, .8')]/text()" delim="\n" op="add">zombieCowgirlFeralKhz, .8</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombiePartyGirlFeral, .96')]/text()" delim="\n" op="add">zombieCowgirlFeralKhz, .96</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombiePartyGirlFeral&#xA;')]/text()" delim="\n" op="add">zombieCowgirlFeralKhz</csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombiePartyGirlRadiated, .5')]/text()" delim="\n" op="add">zombieCowgirlRadiatedKhz, .5</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombiePartyGirlRadiated, .7')]/text()" delim="\n" op="add">zombieCowgirlRadiatedKhz, .7</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombiePartyGirlRadiated&#xA;')]/text()" delim="\n" op="add">zombieCowgirlRadiatedKhz</csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombiePartyGirlCharged, .1')]/text()" delim="\n" op="add">zombieCowgirlChargedKhz, .1</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombiePartyGirlCharged, .25')]/text()" delim="\n" op="add">zombieCowgirlChargedKhz, .25</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombiePartyGirlCharged, .5')]/text()" delim="\n" op="add">zombieCowgirlChargedKhz, .5</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombiePartyGirlCharged&#xA;')]/text()" delim="\n" op="add">zombieCowgirlChargedKhz</csv>
+
+    <!-- zombieFemaleKhz spawns with zombieArlene -->
+    <csv xpath="//entitygroup[contains(text(), 'zombieArlene, .01')]/text()" delim="\n" op="add">zombieFemaleKhz, .01</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArlene, .062')]/text()" delim="\n" op="add">zombieFemaleKhz, .062</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArlene, .064')]/text()" delim="\n" op="add">zombieFemaleKhz, .064</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArlene, .07')]/text()" delim="\n" op="add">zombieFemaleKhz, .07</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArlene, .081')]/text()" delim="\n" op="add">zombieFemaleKhz, .081</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArlene, .25')]/text()" delim="\n" op="add">zombieFemaleKhz, .25</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArlene, .4')]/text()" delim="\n" op="add">zombieFemaleKhz, .4</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArlene, .55')]/text()" delim="\n" op="add">zombieFemaleKhz, .55</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArlene, .7')]/text()" delim="\n" op="add">zombieFemaleKhz, .7</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArlene, .85')]/text()" delim="\n" op="add">zombieFemaleKhz, .85</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArlene&#xA;')]/text()" delim="\n" op="add">zombieFemaleKhz</csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieArleneFeral, .1')]/text()" delim="\n" op="add">zombieFemaleFeralKhz, .1</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArleneFeral, .2')]/text()" delim="\n" op="add">zombieFemaleFeralKhz, .2</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArleneFeral, .3')]/text()" delim="\n" op="add">zombieFemaleFeralKhz, .3</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArleneFeral, .4')]/text()" delim="\n" op="add">zombieFemaleFeralKhz, .4</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArleneFeral, .5')]/text()" delim="\n" op="add">zombieFemaleFeralKhz, .5</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArleneFeral, .6')]/text()" delim="\n" op="add">zombieFemaleFeralKhz, .6</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArleneFeral, .7')]/text()" delim="\n" op="add">zombieFemaleFeralKhz, .7</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArleneFeral, .8')]/text()" delim="\n" op="add">zombieFemaleFeralKhz, .8</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArleneFeral, .9')]/text()" delim="\n" op="add">zombieFemaleFeralKhz, .9</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArleneFeral&#xA;')]/text()" delim="\n" op="add">zombieFemaleFeralKhz</csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieArleneRadiated, .15')]/text()" delim="\n" op="add">zombieFemaleRadiatedKhz, .15</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArleneRadiated, .2')]/text()" delim="\n" op="add">zombieFemaleRadiatedKhz, .2</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArleneRadiated, .3')]/text()" delim="\n" op="add">zombieFemaleRadiatedKhz, .3</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArleneRadiated, .4')]/text()" delim="\n" op="add">zombieFemaleRadiatedKhz, .4</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArleneRadiated, .5')]/text()" delim="\n" op="add">zombieFemaleRadiatedKhz, .5</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArleneRadiated, .66')]/text()" delim="\n" op="add">zombieFemaleRadiatedKhz, .66</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArleneRadiated, .7')]/text()" delim="\n" op="add">zombieFemaleRadiatedKhz, .7</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArleneRadiated, .88')]/text()" delim="\n" op="add">zombieFemaleRadiatedKhz, .88</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArleneRadiated&#xA;')]/text()" delim="\n" op="add">zombieFemaleRadiatedKhz</csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieArleneCharged, .05')]/text()" delim="\n" op="add">zombieFemaleChargedKhz, .05</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArleneCharged, .1')]/text()" delim="\n" op="add">zombieFemaleChargedKhz, .1</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArleneCharged, .25')]/text()" delim="\n" op="add">zombieFemaleChargedKhz, .25</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArleneCharged, .5')]/text()" delim="\n" op="add">zombieFemaleChargedKhz, .5</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieArleneCharged&#xA;')]/text()" delim="\n" op="add">zombieFemaleChargedKhz</csv>
+
+    <!-- zombieFemaleLumberjackKhz spawns with zombieLumberjack -->
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjack, .2')]/text()" delim="\n" op="add">zombieFemaleLumberjackKhz, .2</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjack, .3')]/text()" delim="\n" op="add">zombieFemaleLumberjackKhz, .3</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjack, .4')]/text()" delim="\n" op="add">zombieFemaleLumberjackKhz, .4</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjack, .5')]/text()" delim="\n" op="add">zombieFemaleLumberjackKhz, .5</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjack, .6')]/text()" delim="\n" op="add">zombieFemaleLumberjackKhz, .6</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjack, .7')]/text()" delim="\n" op="add">zombieFemaleLumberjackKhz, .7</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjack, .8')]/text()" delim="\n" op="add">zombieFemaleLumberjackKhz, .8</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjack, .9')]/text()" delim="\n" op="add">zombieFemaleLumberjackKhz, .9</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjack&#xA;')]/text()" delim="\n" op="add">zombieFemaleLumberjackKhz</csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackFeral, .05')]/text()" delim="\n" op="add">zombieFemaleLumberjackFeralKhz, .05</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackFeral, .1')]/text()" delim="\n" op="add">zombieFemaleLumberjackFeralKhz, .1</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackFeral, .2')]/text()" delim="\n" op="add">zombieFemaleLumberjackFeralKhz, .2</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackFeral,.25')]/text()" delim="\n" op="add">zombieFemaleLumberjackFeralKhz, .25</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackFeral, .3')]/text()" delim="\n" op="add">zombieFemaleLumberjackFeralKhz, .3</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackFeral, .4')]/text()" delim="\n" op="add">zombieFemaleLumberjackFeralKhz, .4</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackFeral, .5')]/text()" delim="\n" op="add">zombieFemaleLumberjackFeralKhz, .5</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackFeral, .6')]/text()" delim="\n" op="add">zombieFemaleLumberjackFeralKhz, .6</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackFeral, .7')]/text()" delim="\n" op="add">zombieFemaleLumberjackFeralKhz, .7</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackFeral, .8')]/text()" delim="\n" op="add">zombieFemaleLumberjackFeralKhz, .8</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackFeral&#xA;')]/text()" delim="\n" op="add">zombieFemaleLumberjackFeralKhz</csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackRadiated, .07')]/text()" delim="\n" op="add">zombieFemaleLumberjackRadiatedKhz, .07</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackRadiated, .1')]/text()" delim="\n" op="add">zombieFemaleLumberjackRadiatedKhz, .1</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackRadiated, .2')]/text()" delim="\n" op="add">zombieFemaleLumberjackRadiatedKhz, .2</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackRadiated, .3')]/text()" delim="\n" op="add">zombieFemaleLumberjackRadiatedKhz, .3</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackRadiated, .4')]/text()" delim="\n" op="add">zombieFemaleLumberjackRadiatedKhz, .4</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackRadiated, .6')]/text()" delim="\n" op="add">zombieFemaleLumberjackRadiatedKhz, .6</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackRadiated, .7')]/text()" delim="\n" op="add">zombieFemaleLumberjackRadiatedKhz, .7</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackRadiated, .8')]/text()" delim="\n" op="add">zombieFemaleLumberjackRadiatedKhz, .8</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackRadiated&#xA;')]/text()" delim="\n" op="add">zombieFemaleLumberjackRadiatedKhz</csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackInfernal, .05')]/text()" delim="\n" op="add">zombieFemaleLumberjackInfernalKhz, .05</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackInfernal, .1')]/text()" delim="\n" op="add">zombieFemaleLumberjackInfernalKhz, .1</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackInfernal, .25')]/text()" delim="\n" op="add">zombieFemaleLumberjackInfernalKhz, .25</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackInfernal, .5')]/text()" delim="\n" op="add">zombieFemaleLumberjackInfernalKhz, .5</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieLumberjackInfernal&#xA;')]/text()" delim="\n" op="add">zombieFemaleLumberjackInfernalKhz</csv>
+
+    <!-- Add to the individual zombieLumberjack entity groups, at half probability -->
+    <csv xpath="//entitygroup[@name='zombieLumberjack']/text()" delim="\n" op="add">zombieFemaleLumberjackKhz, .5</csv>
+    <csv xpath="//entitygroup[@name='zombieLumberjackFeral']/text()" delim="\n" op="add">zombieFemaleLumberjackFeralKhz, .5</csv>
+    <csv xpath="//entitygroup[@name='zombieLumberjackRadiated']/text()" delim="\n" op="add">zombieFemaleLumberjackRadiatedKhz, .5</csv>
+    <csv xpath="//entitygroup[@name='zombieLumberjackInfernal']/text()" delim="\n" op="add">zombieFemaleLumberjackInfernalKhz, .5</csv>
+
+    <!-- zombieFirefighterKhz spawns with zombieUtilityWorker but at 1/4 probabilities -->
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorker, .05')]/text()" delim="\n" op="add">zombieFirefighterKhz, .0125</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorker, .1')]/text()" delim="\n" op="add">zombieFirefighterKhz, .025</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorker, .2')]/text()" delim="\n" op="add">zombieFirefighterKhz, .05</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorker, .3')]/text()" delim="\n" op="add">zombieFirefighterKhz, .075</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorker, .4')]/text()" delim="\n" op="add">zombieFirefighterKhz, .1</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorker&#xA;')]/text()" delim="\n" op="add">zombieFirefighterKhz, .25</csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerFeral, .04')]/text()" delim="\n" op="add">zombieFirefighterFeralKhz, .01</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerFeral, .05')]/text()" delim="\n" op="add">zombieFirefighterFeralKhz, .0125</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerFeral, .08')]/text()" delim="\n" op="add">zombieFirefighterFeralKhz, .02</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerFeral, .1')]/text()" delim="\n" op="add">zombieFirefighterFeralKhz, .025</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerFeral, .2')]/text()" delim="\n" op="add">zombieFirefighterFeralKhz, .05</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerFeral, .3')]/text()" delim="\n" op="add">zombieFirefighterFeralKhz, .075</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerFeral, .4')]/text()" delim="\n" op="add">zombieFirefighterFeralKhz, .1</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerFeral, .5')]/text()" delim="\n" op="add">zombieFirefighterFeralKhz, .125</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerFeral, .6')]/text()" delim="\n" op="add">zombieFirefighterFeralKhz, .15</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerFeral, .8')]/text()" delim="\n" op="add">zombieFirefighterFeralKhz, .2</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerFeral&#xA;')]/text()" delim="\n" op="add">zombieFirefighterFeralKhz, .25</csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerRadiated, .05')]/text()" delim="\n" op="add">zombieFirefighterRadiatedKhz, .0125</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerRadiated, .1')]/text()" delim="\n" op="add">zombieFirefighterRadiatedKhz, .025</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerRadiated, .2')]/text()" delim="\n" op="add">zombieFirefighterRadiatedKhz, .05</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerRadiated, .3')]/text()" delim="\n" op="add">zombieFirefighterRadiatedKhz, .075</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerRadiated, .4')]/text()" delim="\n" op="add">zombieFirefighterRadiatedKhz, .1</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerRadiated, .7')]/text()" delim="\n" op="add">zombieFirefighterRadiatedKhz, .175</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerRadiated&#xA;')]/text()" delim="\n" op="add">zombieFirefighterRadiatedKhz, .25</csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerCharged, .05')]/text()" delim="\n" op="add">zombieFirefighterChargedKhz, .0125</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerCharged, .1')]/text()" delim="\n" op="add">zombieFirefighterChargedKhz, .025</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerCharged, .25')]/text()" delim="\n" op="add">zombieFirefighterChargedKhz, .0625</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerCharged, .4')]/text()" delim="\n" op="add">zombieFirefighterChargedKhz, .1</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerCharged, .5')]/text()" delim="\n" op="add">zombieFirefighterChargedKhz, .125</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerCharged&#xA;')]/text()" delim="\n" op="add">zombieFirefighterChargedKhz, .25</csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerInfernal, .05')]/text()" delim="\n" op="add">zombieFirefighterInfernalKhz, .0125</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerInfernal, .1')]/text()" delim="\n" op="add">zombieFirefighterInfernalKhz, .025</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerInfernal, .2')]/text()" delim="\n" op="add">zombieFirefighterInfernalKhz, .05</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerInfernal, .5')]/text()" delim="\n" op="add">zombieFirefighterInfernalKhz, .125</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieUtilityWorkerInfernal&#xA;')]/text()" delim="\n" op="add">zombieFirefighterInfernalKhz, .25</csv>
+
+    <!-- zombieFirefighterKhz should also spawn into some of the same groups as zombieBurnt but at half probabilities -->
+    <csv xpath="//entitygroup[@name='ZombiesBurntForest']/text()" delim="\n" op="add">
+        zombieFirefighterKhz, .5
+        zombieFirefighterFeralKhz, .05
+    </csv>
+    <csv xpath="//entitygroup[@name='ZombiesBurntForestNight']/text()" delim="\n" op="add">
+        zombieFirefighterKhz, .5
+        zombieFirefighterFeralKhz, .1
+    </csv>
+    <csv xpath="//entitygroup[@name='ZombiesAllWasteland']/text()" delim="\n" op="add">
+        zombieFirefighterKhz, .5
+    </csv>
+    <csv xpath="//entitygroup[@name='ZombiesWastelandNight']/text()" delim="\n" op="add">
+        zombieFirefighterFeralKhz
+    </csv>
+    <csv xpath="//entitygroup[@name='ZombiesWastelandDowntown']/text()" delim="\n" op="add">
+        zombieFirefighterKhz
+        zombieFirefighterFeralKhz, .5
+    </csv>
+    
+    <csv xpath="//entitygroup[@name='ZombieBurntGroup']/text()" delim="\n" op="add">
+        zombieFirefighterKhz, .5
+    </csv>
+    <csv xpath="//entitygroup[@name='zombieBurntGroupGS1']/text()" delim="\n" op="add">
+        zombieFirefighterKhz, .5
+    </csv>
+    <csv xpath="//entitygroup[@name='zombieBurntGroupGS50']/text()" delim="\n" op="add">
+        zombieFirefighterKhz, .425
+        zombieFirefighterFeralKhz, .05
+    </csv>
+    <csv xpath="//entitygroup[@name='zombieBurntGroupGS100']/text()" delim="\n" op="add">
+        zombieFirefighterKhz, .35
+        zombieFirefighterFeralKhz, .1
+        zombieFirefighterRadiatedKhz, .025
+    </csv>
+    <csv xpath="//entitygroup[@name='zombieBurntGroupGS200']/text()" delim="\n" op="add">
+        zombieFirefighterKhz, .275
+        zombieFirefighterFeralKhz, .15
+        zombieFirefighterRadiatedKhz, .05
+    </csv>
+    <csv xpath="//entitygroup[@name='zombieBurntGroupGS400']/text()" delim="\n" op="add">
+        zombieFirefighterKhz, .2
+        zombieFirefighterFeralKhz, .2
+        zombieFirefighterRadiatedKhz, .1
+    </csv>
+    <csv xpath="//entitygroup[@name='zombieBurntGroupGS800']/text()" delim="\n" op="add">
+        zombieFirefighterKhz, .125
+        zombieFirefighterFeralKhz, .25
+        zombieFirefighterRadiatedKhz, .2
+    </csv>
+
+    <!-- zombieMaleKhz spawns with zombieJoe -->
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoe, .01')]/text()" delim="\n" op="add">zombieMaleKhz, .01</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoe, .05')]/text()" delim="\n" op="add">zombieMaleKhz, .05</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoe, .07')]/text()" delim="\n" op="add">zombieMaleKhz, .07</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoe, .08')]/text()" delim="\n" op="add">zombieMaleKhz, .08</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoe, .1')]/text()" delim="\n" op="add">zombieMaleKhz, .1</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoe, .25')]/text()" delim="\n" op="add">zombieMaleKhz, .25</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoe, .4')]/text()" delim="\n" op="add">zombieMaleKhz, .4</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoe, .55')]/text()" delim="\n" op="add">zombieMaleKhz, .55</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoe, .7')]/text()" delim="\n" op="add">zombieMaleKhz, .7</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoe, .85')]/text()" delim="\n" op="add">zombieMaleKhz, .85</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoe&#xA;')]/text()" delim="\n" op="add">zombieMaleKhz</csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoeFeral, .1')]/text()" delim="\n" op="add">zombieMaleFeralKhz, .1</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoeFeral, .2')]/text()" delim="\n" op="add">zombieMaleFeralKhz, .2</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoeFeral, .3')]/text()" delim="\n" op="add">zombieMaleFeralKhz, .3</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoeFeral, .4')]/text()" delim="\n" op="add">zombieMaleFeralKhz, .4</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoeFeral, .5')]/text()" delim="\n" op="add">zombieMaleFeralKhz, .5</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoeFeral, .8')]/text()" delim="\n" op="add">zombieMaleFeralKhz, .8</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoeFeral&#xA;')]/text()" delim="\n" op="add">zombieMaleFeralKhz</csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoeRadiated, .15')]/text()" delim="\n" op="add">zombieMaleRadiatedKhz, .15</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoeRadiated, .24')]/text()" delim="\n" op="add">zombieMaleRadiatedKhz, .24</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoeRadiated, .3')]/text()" delim="\n" op="add">zombieMaleRadiatedKhz, .3</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoeRadiated, .45')]/text()" delim="\n" op="add">zombieMaleRadiatedKhz, .45</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoeRadiated, .5')]/text()" delim="\n" op="add">zombieMaleRadiatedKhz, .5</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoeRadiated, .6')]/text()" delim="\n" op="add">zombieMaleRadiatedKhz, .6</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoeRadiated, .7')]/text()" delim="\n" op="add">zombieMaleRadiatedKhz, .7</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoeRadiated, .93')]/text()" delim="\n" op="add">zombieMaleRadiatedKhz, .93</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoeRadiated&#xA;')]/text()" delim="\n" op="add">zombieMaleRadiatedKhz</csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoeCharged, .1')]/text()" delim="\n" op="add">zombieMaleChargedKhz, .1</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoeCharged, .25')]/text()" delim="\n" op="add">zombieMaleChargedKhz, .25</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoeCharged, .5')]/text()" delim="\n" op="add">zombieMaleChargedKhz, .5</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieJoeCharged&#xA;')]/text()" delim="\n" op="add">zombieMaleChargedKhz</csv>
+
+    <!-- zombiePolicewomanKhz spawns with zombieFatCop -->
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCop, .08')]/text()" delim="\n" op="add">zombiePolicewomanKhz, .08</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCop, .2')]/text()" delim="\n" op="add">zombiePolicewomanKhz, .2</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCop, .38')]/text()" delim="\n" op="add">zombiePolicewomanKhz, .38</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCop, .4')]/text()" delim="\n" op="add">zombiePolicewomanKhz, .4</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCop, .5')]/text()" delim="\n" op="add">zombiePolicewomanKhz, .5</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCop, .6')]/text()" delim="\n" op="add">zombiePolicewomanKhz, .6</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCop, .7')]/text()" delim="\n" op="add">zombiePolicewomanKhz, .7</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCop, .8')]/text()" delim="\n" op="add">zombiePolicewomanKhz, .8</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCop&#xA;')]/text()" delim="\n" op="add">zombiePolicewomanKhz</csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCopFeral, .05')]/text()" delim="\n" op="add">zombiePolicewomanFeralKhz, .05</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCopFeral, .1')]/text()" delim="\n" op="add">zombiePolicewomanFeralKhz, .1</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCopFeral, .2')]/text()" delim="\n" op="add">zombiePolicewomanFeralKhz, .2</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCopFeral, .3')]/text()" delim="\n" op="add">zombiePolicewomanFeralKhz, .3</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCopFeral, .4')]/text()" delim="\n" op="add">zombiePolicewomanFeralKhz, .4</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCopFeral, .5')]/text()" delim="\n" op="add">zombiePolicewomanFeralKhz, .5</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCopFeral, .7')]/text()" delim="\n" op="add">zombiePolicewomanFeralKhz, .7</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCopFeral, .8')]/text()" delim="\n" op="add">zombiePolicewomanFeralKhz, .8</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCopFeral&#xA;')]/text()" delim="\n" op="add">zombiePolicewomanFeralKhz</csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCopRadiated, .05')]/text()" delim="\n" op="add">zombiePolicewomanRadiatedKhz, .05</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCopRadiated, .1')]/text()" delim="\n" op="add">zombiePolicewomanRadiatedKhz, .1</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCopRadiated, .2')]/text()" delim="\n" op="add">zombiePolicewomanRadiatedKhz, .2</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCopRadiated, .4')]/text()" delim="\n" op="add">zombiePolicewomanRadiatedKhz, .4</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCopRadiated, .5')]/text()" delim="\n" op="add">zombiePolicewomanRadiatedKhz, .5</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCopRadiated, .66')]/text()" delim="\n" op="add">zombiePolicewomanRadiatedKhz, .66</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCopRadiated, .7')]/text()" delim="\n" op="add">zombiePolicewomanRadiatedKhz, .7</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCopRadiated, .8')]/text()" delim="\n" op="add">zombiePolicewomanRadiatedKhz, .8</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCopRadiated&#xA;')]/text()" delim="\n" op="add">zombiePolicewomanRadiatedKhz</csv>
+    
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCopInfernal, .05')]/text()" delim="\n" op="add">zombiePolicewomanInfernalKhz, .05</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCopInfernal, .1')]/text()" delim="\n" op="add">zombiePolicewomanInfernalKhz, .1</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCopInfernal, .25')]/text()" delim="\n" op="add">zombiePolicewomanInfernalKhz, .25</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCopInfernal, .5')]/text()" delim="\n" op="add">zombiePolicewomanInfernalKhz, .5</csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieFatCopInfernal&#xA;')]/text()" delim="\n" op="add">zombiePolicewomanInfernalKhz</csv>
+
+    <!-- zombieMaleScrubsKhz spawns with zombieNurse and zombieLab but only in POIs -->
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurse, .01')]/text()" delim="\n" op="add">zombieMaleScrubsKhz, .01</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurse, .025')]/text()" delim="\n" op="add">zombieMaleScrubsKhz, .025</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurse, .09')]/text()" delim="\n" op="add">zombieMaleScrubsKhz, .09</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurse, .1')]/text()" delim="\n" op="add">zombieMaleScrubsKhz, .1</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurse, .625')]/text()" delim="\n" op="add">zombieMaleScrubsKhz, .625</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurse&#xA;')]/text()" delim="\n" op="add">zombieMaleScrubsKhz</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurse, 1.375')]/text()" delim="\n" op="add">zombieMaleScrubsKhz, 1.375</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurse, 1.75')]/text()" delim="\n" op="add">zombieMaleScrubsKhz, 1.75</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurse, 2.125')]/text()" delim="\n" op="add">zombieMaleScrubsKhz, 2.125</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurse, 2.5')]/text()" delim="\n" op="add">zombieMaleScrubsKhz, 2.5</csv>
+
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurseFeral, .005')]/text()" delim="\n" op="add">zombieMaleScrubsFeralKhz, .005</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurseFeral, .05')]/text()" delim="\n" op="add">zombieMaleScrubsFeralKhz, .05</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurseFeral, .25')]/text()" delim="\n" op="add">zombieMaleScrubsFeralKhz, .25</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurseFeral, .4')]/text()" delim="\n" op="add">zombieMaleScrubsFeralKhz, .4</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurseFeral, .5')]/text()" delim="\n" op="add">zombieMaleScrubsFeralKhz, .5</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurseFeral, .65')]/text()" delim="\n" op="add">zombieMaleScrubsFeralKhz, .65</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurseFeral, .75')]/text()" delim="\n" op="add">zombieMaleScrubsFeralKhz, .75</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurseFeral, .8')]/text()" delim="\n" op="add">zombieMaleScrubsFeralKhz, .8</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurseFeral&#xA;')]/text()" delim="\n" op="add">zombieMaleScrubsFeralKhz</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurseFeral, 1.25')]/text()" delim="\n" op="add">zombieMaleScrubsFeralKhz, 1.25</csv>
+
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurseRadiated, .005')]/text()" delim="\n" op="add">zombieMaleScrubsRadiatedKhz, .005</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurseRadiated, .05')]/text()" delim="\n" op="add">zombieMaleScrubsRadiatedKhz, .05</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurseRadiated, .15')]/text()" delim="\n" op="add">zombieMaleScrubsRadiatedKhz, .15</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurseRadiated, .2')]/text()" delim="\n" op="add">zombieMaleScrubsRadiatedKhz, .2</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurseRadiated, .3')]/text()" delim="\n" op="add">zombieMaleScrubsRadiatedKhz, .3</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurseRadiated, .45')]/text()" delim="\n" op="add">zombieMaleScrubsRadiatedKhz, .45</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurseRadiated&#xA;')]/text()" delim="\n" op="add">zombieMaleScrubsRadiatedKhz</csv>
+
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurseCharged, .15')]/text()" delim="\n" op="add">zombieMaleScrubsChargedKhz, .15</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurseCharged, .25')]/text()" delim="\n" op="add">zombieMaleScrubsChargedKhz, .25</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurseCharged, .85')]/text()" delim="\n" op="add">zombieMaleScrubsChargedKhz, .85</csv>
+    <csv xpath="//entitygroup[contains(@name, 'Group') and contains(text(), 'zombieNurseCharged&#xA;')]/text()" delim="\n" op="add">zombieMaleScrubsChargedKhz</csv>
+
+    <!-- Add to the zombieLabWorker gamestage groups, at half probability -->
+    <csv xpath="//entitygroup[@name='zombieLabWorkerGroupGS1']/text()" delim="\n" op="add">zombieMaleScrubsKhz, .5</csv>
+    <csv xpath="//entitygroup[@name='zombieLabWorkerGroupGS50']/text()" delim="\n" op="add">
+        zombieMaleScrubsKhz, .425
+        zombieMaleScrubsFeralKhz, .05
+    </csv>
+    <csv xpath="//entitygroup[@name='zombieLabWorkerGroupGS100']/text()" delim="\n" op="add">
+        zombieMaleScrubsKhz, .35
+        zombieMaleScrubsFeralKhz, .1
+    </csv>
+    <csv xpath="//entitygroup[@name='zombieLabWorkerGroupGS200']/text()" delim="\n" op="add">
+        zombieMaleScrubsKhz, .3
+        zombieMaleScrubsFeralKhz, .15
+        zombieMaleScrubsRadiatedKhz, .08
+    </csv>
+    <csv xpath="//entitygroup[@name='zombieLabWorkerGroupGS400']/text()" delim="\n" op="add">
+        zombieMaleScrubsKhz, .2
+        zombieMaleScrubsFeralKhz, .2
+        zombieMaleScrubsRadiatedKhz, .15
+    </csv>
+    <csv xpath="//entitygroup[@name='zombieLabWorkerGroupGS800']/text()" delim="\n" op="add">
+        zombieMaleScrubsKhz, .125
+        zombieMaleScrubsFeralKhz, .25
+        zombieMaleScrubsRadiatedKhz, .225
+    </csv>
+
+    <!-- Add to the individual zombieNurse entity groups, at half probability -->
+    <csv xpath="//entitygroup[@name='zombieNurse']/text()" delim="\n" op="add">zombieMaleScrubsKhz, .5</csv>
+    <csv xpath="//entitygroup[@name='zombieNurseFeral']/text()" delim="\n" op="add">zombieMaleScrubsFeralKhz, .5</csv>
+    <csv xpath="//entitygroup[@name='zombieNurseRadiated']/text()" delim="\n" op="add">zombieMaleScrubsRadiatedKhz, .5</csv>
+    <csv xpath="//entitygroup[@name='zombieNurseCharged']/text()" delim="\n" op="add">zombieMaleScrubsChargedKhz, .5</csv>
+
+    <!-- Add to sleeper hordes (spawn in POIs but don't have "Group" in the name) -->
+    <csv xpath="//entitygroup[contains(@name, 'sleeperHorde') and contains(text(), 'zombieNurse&#xA;')]/text()" delim="\n" op="add">zombieMaleScrubsKhz</csv>
+    <csv xpath="//entitygroup[contains(@name, 'sleeperHorde') and contains(text(), 'zombieNurseFeral&#xA;')]/text()" delim="\n" op="add">zombieMaleScrubsFeralKhz</csv>
+    <csv xpath="//entitygroup[contains(@name, 'sleeperHorde') and contains(text(), 'zombieNurseRadiated, .45')]/text()" delim="\n" op="add">zombieMaleScrubsRadiatedKhz, .45</csv>
+    <csv xpath="//entitygroup[contains(@name, 'sleeperHorde') and contains(text(), 'zombieNurseRadiated&#xA;')]/text()" delim="\n" op="add">zombieMaleScrubsRadiatedKhz</csv>
+    <csv xpath="//entitygroup[contains(@name, 'sleeperHorde') and contains(text(), 'zombieNurseCharged, .25')]/text()" delim="\n" op="add">zombieMaleScrubsChargedKhz, .25</csv>
+    <csv xpath="//entitygroup[contains(@name, 'sleeperHorde') and contains(text(), 'zombieNurseCharged, .5')]/text()" delim="\n" op="add">zombieMaleScrubsChargedKhz, .5</csv>
+    <csv xpath="//entitygroup[contains(@name, 'sleeperHorde') and contains(text(), 'zombieNurseCharged&#xA;')]/text()" delim="\n" op="add">zombieMaleScrubsChargedKhz</csv>
+
+    <!-- zombieFemaleSoldierKhz and zombieMaleSoldierKhz spawn with zombieSoldier -->
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldier, .26')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierKhz, .13
+        zombieMaleSoldierKhz, .13
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldier, .4')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierKhz, .2
+        zombieMaleSoldierKhz, .2
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldier, .5')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierKhz, .25
+        zombieMaleSoldierKhz, .25
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldier, .65')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierKhz, .325
+        zombieMaleSoldierKhz, .325
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldier, .7')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierKhz, .35
+        zombieMaleSoldierKhz, .35
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldier, .8')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierKhz, .4
+        zombieMaleSoldierKhz, .4
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldier, .9')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierKhz, .45
+        zombieMaleSoldierKhz, .45
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldier&#xA;')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierKhz, .5
+        zombieMaleSoldierKhz, .5
+    </csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierFeral, .05')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierFeralKhz, .025
+        zombieMaleSoldierFeralKhz, .025
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierFeral, .1')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierFeralKhz, .05
+        zombieMaleSoldierFeralKhz, .05
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierFeral, .2')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierFeralKhz, .1
+        zombieMaleSoldierFeralKhz, .1
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierFeral, .3')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierFeralKhz, .15
+        zombieMaleSoldierFeralKhz, .15
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierFeral, .4')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierFeralKhz, .2
+        zombieMaleSoldierFeralKhz, .2
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierFeral, .5')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierFeralKhz, .25
+        zombieMaleSoldierFeralKhz, .25
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierFeral, .6')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierFeralKhz, .3
+        zombieMaleSoldierFeralKhz, .3
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierFeral, .7')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierFeralKhz, .35
+        zombieMaleSoldierFeralKhz, .35
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierFeral, .8')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierFeralKhz, .4
+        zombieMaleSoldierFeralKhz, .4
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierFeral&#xA;')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierFeralKhz, .5
+        zombieMaleSoldierFeralKhz, .5
+    </csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierRadiated, .15')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierRadiatedKhz, .075
+        zombieMaleSoldierRadiatedKhz, .075
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierRadiated, .2')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierRadiatedKhz, .1
+        zombieMaleSoldierRadiatedKhz, .1
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierRadiated, .3')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierRadiatedKhz, .15
+        zombieMaleSoldierRadiatedKhz, .15
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierRadiated, .45')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierRadiatedKhz, .225
+        zombieMaleSoldierRadiatedKhz, .225
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierRadiated, .5')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierRadiatedKhz, .25
+        zombieMaleSoldierRadiatedKhz, .25
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierRadiated, .66')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierRadiatedKhz, .33
+        zombieMaleSoldierRadiatedKhz, .33
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierRadiated, .7')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierRadiatedKhz, .35
+        zombieMaleSoldierRadiatedKhz, .35
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierRadiated, .88')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierRadiatedKhz, .44
+        zombieMaleSoldierRadiatedKhz, .44
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierRadiated, .96')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierRadiatedKhz, .48
+        zombieMaleSoldierRadiatedKhz, .48
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierRadiated&#xA;')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierRadiatedKhz, .5
+        zombieMaleSoldierRadiatedKhz, .5
+    </csv>
+
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierInfernal, .05')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierInfernalKhz, .025
+        zombieMaleSoldierInfernalKhz, .025
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierInfernal, .25')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierInfernalKhz, .125
+        zombieMaleSoldierInfernalKhz, .125
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierInfernal, .5')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierInfernalKhz, .25
+        zombieMaleSoldierInfernalKhz, .25
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierInfernal, .85')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierInfernalKhz, .425
+        zombieMaleSoldierInfernalKhz, .425
+    </csv>
+    <csv xpath="//entitygroup[contains(text(), 'zombieSoldierInfernal&#xA;')]/text()" delim="\n" op="add">
+        zombieFemaleSoldierInfernalKhz, .5
+        zombieMaleSoldierInfernalKhz, .5
+    </csv>
+
+    <!-- Add to the individual zombieSoldier entity groups -->
+    <csv xpath="//entitygroup[@name='zombieSoldier']/text()" delim="\n" op="add">
+        zombieFemaleSoldierKhz, .5
+        zombieMaleSoldierKhz, .5
+    </csv>
+    <csv xpath="//entitygroup[@name='zombieSoldierFeral']/text()" delim="\n" op="add">
+        zombieFemaleSoldierFeralKhz, .5
+        zombieMaleSoldierFeralKhz, .5
+    </csv>
+    <csv xpath="//entitygroup[@name='zombieSoldierRadiated']/text()" delim="\n" op="add">
+        zombieFemaleSoldierRadiatedKhz, .5
+        zombieMaleSoldierRadiatedKhz, .5
+    </csv>
+    <csv xpath="//entitygroup[@name='zombieSoldierInfernal']/text()" delim="\n" op="add">
+        zombieFemaleSoldierInfernalKhz, .5
+        zombieMaleSoldierInfernalKhz, .5
+    </csv>
+
+    <!--
+        There were changes to the vanilla entitygroups.xml file between 2.0 and later 2.x versions.
+        The code below is here to take those changes into account.
+    -->
+    <!-- Changed in 2.1+ -->
+    <conditional>
+        <!-- Note: The first number is the game type (0 = alpha, 1 = post-alpha), NOT the major version -->
+        <if cond="game_version() &gt;= version(1,2,1)">
+            <csv xpath="//entitygroup[contains(text(), 'zombieBusinessManFeral, .9')]/text()" delim="\n" op="add">
+                zombieBusinessmanFeralKhz, .3
+                zombieBusinesswomanFeralKhz, .3
+                zombieFemaleOfficeFeralKhz, .3
+            </csv>
+            <csv xpath="//entitygroup[contains(@name, 'sleeperHorde') and contains(text(), 'zombieNurseFeral, .92')]/text()" delim="\n" op="add">zombieMaleScrubsFeralKhz, .92</csv>
+        </if>
+        <else>
+            <csv xpath="//entitygroup[contains(text(), 'zombieLumberjack, .05')]/text()" delim="\n" op="add">zombieFemaleLumberjackKhz, .05</csv>
+        </else>
+    </conditional>
+    <!-- Changed in 2.6+ -->
+    <conditional>
+        <if cond="game_version() &lt; version(1,2,6)">
+            <csv xpath="//entitygroup[contains(text(), 'zombieBurnt, .07')]/text()" delim="\n" op="add">zombieBurntKhz, .07</csv>
+            <csv xpath="//entitygroup[@name='ZombiesWastelandNightNoBears']/text()" delim="\n" op="add">zombieFirefighterKhz, .5</csv>
+            <csv xpath="//entitygroup[@name='ZombiesWastelandNight2']/text()" delim="\n" op="add">zombieFirefighterKhz, .035</csv>
+            <csv xpath="//entitygroup[@name='ZombiesWastelandNight2NoBears']/text()" delim="\n" op="add">zombieFirefighterKhz, .035</csv>
+            <csv xpath="//entitygroup[contains(text(), 'zombieFatCop, .05')]/text()" delim="\n" op="add">zombiePolicewomanKhz, .05</csv>
+            <csv xpath="//entitygroup[contains(text(), 'zombieFatCop, .15')]/text()" delim="\n" op="add">zombiePolicewomanKhz, .15</csv>
+            <csv xpath="//entitygroup[contains(text(), 'zombieFatCopFeral, 2')]/text()" delim="\n" op="add">zombiePolicewomanFeralKhz</csv>
+            <csv xpath="//entitygroup[contains(text(), 'zombieSoldierFeral, 2')]/text()" delim="\n" op="add">
+                zombieFemaleSoldierFeralKhz
+                zombieMaleSoldierFeralKhz
+            </csv>
+        </if>
+    </conditional>
+</configs>

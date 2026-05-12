@@ -701,6 +701,13 @@ seedsT4-3,Tier 4: Strawberry,
 seedsT4-4,Tier 4: Onion,
 seedsT4-5,Tier 4: Wheat,
 
+seedsT5-1,Tier 5: Aleuria Aurantia,
+seedsT5-2,Tier 5: Omphalotus Illudens,
+seedsT5-3,Tier 5: Lactarius Indigo,
+seedsT5-4,Tier 5: Shrooms,
+
+resourceBehemothDNA,"Behemoth DNA"
+BehemothDNADesc,"DNA of a Behemoth. it is for alchemy."
 
 antivenom,"Anti-venom"
 antivenomDesc,"Use this to instantly remove the effects of venom.\n\nCan be crafted at the campfire, in a cooking pot, or use a beaker to save on ingredients."
@@ -843,6 +850,30 @@ plantedWheat3Harvest,
 plantedWheat3HarvestPlayer,
 plantedWheat3HarvestDesc,"Wheat"
 
+
+plantedAleuriaAurantia1,"Aleuria Aurantia (Spores)"
+plantedAleuriaAurantia2,"Aleuria Aurantia (Growing)"
+plantedAleuriaAurantia3Harvest,"Aleuria Aurantia"
+plantedAleuriaAurantia3HarvestPlayer,"Aleuria Aurantia"
+foodCropAleuriaAurantia,"Aleuria Aurantia"
+
+plantedOmphalotusIlludens1,"Omphalotus Illudens (Spores)"
+plantedOmphalotusIlludens2,"Omphalotus Illudens (Growing)"
+plantedOmphalotusIlludens3Harvest,"Omphalotus Illudens"
+plantedOmphalotusIlludens3HarvestPlayer,"Omphalotus Illudens"
+foodCropOmphalotusIlludens,"Omphalotus Illudens"
+
+plantedLactariusIndigo1,"Lactatrius Indigo (Sporess)"
+plantedLactariusIndigo2,"Lactatrius Indigo (Growing)"
+plantedLactariusIndigo3Harvest,"Lactatrius Indigo"
+plantedLactariusIndigo3HarvestPlayer,"Lactatrius Indigo"
+foodCropLactariusIndigo,"Lactarius Indigo"
+
+plantedShroom1,"Shrooms (Spores)"
+plantedShroom2,"Shrooms (Growing)"
+plantedShroom3Harvest,"Shrooms"
+plantedShroom3HarvestPlayer,"Shrooms"
+foodCropShroom,"Shroom"
 
 challengeKillExplodingZombieDog,Kill Exploding Zombie Dogs.
 challengeKillExplodingZombieDogShort,Kill some Exploding Zombie Dogs.
@@ -1015,6 +1046,12 @@ modBikecycleSpeedBoostDesc,"Increases bicycle speed by gear ratio."
 
 CaptainPoetatoRentMoneyFundDesc,"Mr. Poetato Rent Money From the Tourist"
 CaptainPoetatoRentMoneyFund,"Captain Poetato's Rent Money"
+
+BigMamaPanties,"Big Mama Panties"
+BigMamaPantiesDesc,"Looks like something is in them. lets find out."
+
+PartyGirlsPanties,"Party Girls Panties"
+PartyGirlsPantiesDesc,"Looks like something is in them. lets find out."
 
 resourceForgedTitanium,"Forged Titanium"
 

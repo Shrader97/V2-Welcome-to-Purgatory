@@ -1,31 +1,5 @@
 <configs>
 
-
-
-
-    <append xpath="/buffs">
-
-        <!-- *** zombieBuffStatusCheck01 -->
-        <!-- TRIGGERED_BY: Entity Class = zombieTemplateMale -->
-        <!-- Attaches or removes fire particles from entities -->
-        <buff name="zombieBuffStatusCheck01" name_key="beers" description_key="drunkDesc" tooltip_key="drunkTooltip" icon="ui_game_symbol_beer">
-            <stack_type value="ignore"/>
-            <update_rate value="1"/>
-
-            <effect_group>
-                <!-- Remove particle effect if not on fire, this is a backup removal for remote clients -->
-                <triggered_effect trigger="onSelfBuffUpdate" action="RemoveParticleEffectFromEntity" particle="p_onFire">
-                    <requirement name="!HasBuff" buff="buffIsOnFire"/>
-                </triggered_effect>
-
-                <triggered_effect trigger="onSelfBuffUpdate" action="AttachParticleEffectToEntity" particle="p_onFire" shape_mesh="true">
-                    <requirement name="HasBuff" buff="buffIsOnFire"/>
-                </triggered_effect>
-            </effect_group>
-        </buff>
-
-    </append>
-
 	<append xpath="/buffs/buff[@name='buffStatusCheck01']">
 		<effect_group name="buffFishTrapWater">
 			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffFishTrapEmptyWater">
@@ -1127,6 +1101,883 @@
 				<triggered_effect trigger="onSelfBuffStart" action="SetTransformActive" active="false"  parent_transform="Head" transform_path="body_mesh"/>
 			</effect_group>
 		</buff>
+
+		<buff name="buffHealthPotion" name_key="buffHealthPotionName" description_key="buffHealthPotionDesc" icon="ui_game_symbol_add">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value=".buffHealthPotionDisplay"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffHealthPotionDuration" operation="subtract" value="@$MetabolismDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffHealthPotionDisplay" operation="set" value="@$buffHealthPotionDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffHealthPotionDisplay" operation="divide" value="@$MetabolismDuration"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="$buffHealthPotionDuration" operation="LTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffHealthPotionDuration" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffHealthPotion"/>
+			</effect_group>
+
+			<effect_group>
+				<requirement name="NotHasBuff" buff="buffFortitudeElixir" />
+				<passive_effect name="HealthMax" operation="base_add" value="@$buffMaxHealthAmount"/>
+			</effect_group>
+
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffHealthPotionDuration" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffHealthPotionDisplay" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffHealthPotionHealed" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffMaxHealthAmount" operation="set" value="0"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="$buffHealthPotionHealed" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="add" value="@$buffHealthAmount"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffHealthPotionHealed" operation="set" value="1"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffStaminaPotion" name_key="buffStaminaPotionName" description_key="buffStaminaPotionDesc" icon="ui_game_symbol_agility">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value=".buffStaminaPotionDisplay"/>
+			<display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffStaminaPotionDuration" operation="subtract" value="@$MetabolismDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffStaminaPotionDisplay" operation="set" value="@$buffStaminaPotionDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".buffStaminaPotionDisplay" operation="divide" value="@$MetabolismDuration"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="$buffStaminaPotionDuration" operation="LTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffStaminaPotionDuration" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffStaminaPotion"/>
+			</effect_group>
+
+			<effect_group>
+				<requirement name="NotHasBuff" buff="buffFortitudeElixir" />
+				<passive_effect name="StaminaMax" operation="base_add" value="@$buffMaxStaminaAmount"/>
+			</effect_group>
+
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffPerkAbilityUpdate"/>
+
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffStaminaPotionDuration" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".buffStaminaPotionDisplay" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffStaminaPotionHealed" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffMaxStaminaAmount" operation="set" value="0"/>
+			</effect_group>
+			<effect_group>
+				<requirement name="CVarCompare" cvar="$buffStaminaPotionHealed" operation="Equals" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffStaminaPotionHealed" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Stamina" operation="add" value="@$buffStaminaAmount"/>
+			</effect_group>
+		</buff>
+
+        <buff name="Invisibility" name_key="Potion of Invisibility" description_key="InvisibilityDesc" tooltip_key="Invisibility_Tooltip" icon="ui_game_symbol_sight" icon_color="255,215,0">
+        <stack_type value="replace"/>
+        <duration value="120"/>
+        <display_value value=".InvisibilityDisplay"/><display_value_format value="time"/>
+            <requirements compare_type="or">
+                <requirement name="NotHasBuff" buff="InvisibilityCooldown"/>
+            </requirements>
+            
+            <effect_group>
+                <passive_effect name="LightMultiplier" operation="perc_add" value="-5"><requirement name="!IsIndoors"/></passive_effect>
+                <passive_effect name="LightMultiplier" operation="perc_add" value="-5"><requirement name="IsIndoors"/></passive_effect>
+				<passive_effect name="NoiseMultiplier" operation="perc_add" value="-5"/>
+				<passive_effect name="CrouchSpeed" operation="perc_add" value="1"/>
+				<passive_effect name="EnemySearchDuration" operation="perc_add" value="5"/>
+            </effect_group>
+            
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="InvisibilityCooldown"/>
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".InvisibilityDisplay" operation="set" value="120"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".InvisibilityDisplay" operation="subtract" value="5"/>
+                <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".InvisibilityDisplay" operation="set" value="0"/>
+            </effect_group>
+        </buff>
+
+
+        <buff name="Invisibility2" name_key="Potion of Invisibility" description_key="InvisibilityDesc" tooltip_key="Invisibility_Tooltip" icon="ui_game_symbol_sight" icon_color="255,215,0">
+        <stack_type value="replace"/>
+        <duration value="240"/>
+        <display_value value=".InvisibilityDisplay"/><display_value_format value="time"/>
+            <requirements compare_type="or">
+                <requirement name="NotHasBuff" buff="InvisibilityCooldown"/>
+            </requirements>
+            
+            <effect_group>
+                <passive_effect name="LightMultiplier" operation="perc_add" value="-5"><requirement name="!IsIndoors"/></passive_effect>
+                <passive_effect name="LightMultiplier" operation="perc_add" value="-5"><requirement name="IsIndoors"/></passive_effect>
+				<passive_effect name="NoiseMultiplier" operation="perc_add" value="-5"/>
+				<passive_effect name="CrouchSpeed" operation="perc_add" value="1"/>
+				<passive_effect name="EnemySearchDuration" operation="perc_add" value="5"/>
+            </effect_group>
+            
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="InvisibilityCooldown"/>
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".InvisibilityDisplay" operation="set" value="120"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".InvisibilityDisplay" operation="subtract" value="5"/>
+                <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".InvisibilityDisplay" operation="set" value="0"/>
+            </effect_group>
+        </buff>
+
+        <buff name="Invisibility3" name_key="Potion of Invisibility" description_key="InvisibilityDesc" tooltip_key="Invisibility_Tooltip" icon="ui_game_symbol_sight" icon_color="255,215,0">
+        <stack_type value="replace"/>
+        <duration value="480"/>
+        <display_value value=".InvisibilityDisplay"/><display_value_format value="time"/>
+            <requirements compare_type="or">
+                <requirement name="NotHasBuff" buff="InvisibilityCooldown"/>
+            </requirements>
+            
+            <effect_group>
+                <passive_effect name="LightMultiplier" operation="perc_add" value="-5"><requirement name="!IsIndoors"/></passive_effect>
+                <passive_effect name="LightMultiplier" operation="perc_add" value="-5"><requirement name="IsIndoors"/></passive_effect>
+				<passive_effect name="NoiseMultiplier" operation="perc_add" value="-5"/>
+				<passive_effect name="CrouchSpeed" operation="perc_add" value="1"/>
+				<passive_effect name="EnemySearchDuration" operation="perc_add" value="5"/>
+            </effect_group>
+            
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="InvisibilityCooldown"/>
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".InvisibilityDisplay" operation="set" value="120"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".InvisibilityDisplay" operation="subtract" value="5"/>
+                <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".InvisibilityDisplay" operation="set" value="0"/>
+            </effect_group>
+        </buff>
+
+        <buff name="Invisibility4" name_key="Potion of Invisibility" description_key="InvisibilityDesc" tooltip_key="Invisibility_Tooltip" icon="ui_game_symbol_sight" icon_color="255,215,0">
+        <stack_type value="replace"/>
+        <duration value="900"/>
+        <display_value value=".InvisibilityDisplay"/><display_value_format value="time"/>
+            <requirements compare_type="or">
+                <requirement name="NotHasBuff" buff="InvisibilityCooldown"/>
+            </requirements>
+            
+            <effect_group>
+                <passive_effect name="LightMultiplier" operation="perc_add" value="-5"><requirement name="!IsIndoors"/></passive_effect>
+                <passive_effect name="LightMultiplier" operation="perc_add" value="-5"><requirement name="IsIndoors"/></passive_effect>
+				<passive_effect name="NoiseMultiplier" operation="perc_add" value="-5"/>
+				<passive_effect name="CrouchSpeed" operation="perc_add" value="1"/>
+				<passive_effect name="EnemySearchDuration" operation="perc_add" value="5"/>
+            </effect_group>
+            
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="InvisibilityCooldown"/>
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".InvisibilityDisplay" operation="set" value="120"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".InvisibilityDisplay" operation="subtract" value="5"/>
+                <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".InvisibilityDisplay" operation="set" value="0"/>
+            </effect_group>
+        </buff>
+
+        <buff name="Speed" name_key="Potion of Speed" description_key="SpeedDesc" tooltip_key="Speed_Tooltip" icon="ui_game_symbol_run" icon_color="255,215,0">
+        <stack_type value="replace"/>
+        <duration value="120"/>
+        <display_value value=".SpeedDisplay"/><display_value_format value="time"/>
+            <requirements compare_type="or">
+                <requirement name="NotHasBuff" buff="SpeedCooldown"/>
+            </requirements>
+            
+            <effect_group>
+				<passive_effect name="WalkSpeed" operation="perc_add" value="1"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value="1"/>
+				<passive_effect name="CrouchSpeed" operation="perc_add" value="1"/>
+            </effect_group>
+            
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="SpeedCooldown"/>
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".SpeedDisplay" operation="set" value="120"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".SpeedDisplay" operation="subtract" value="5"/>
+                <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".SpeedDisplay" operation="set" value="0"/>
+            </effect_group>
+        </buff>
+
+
+        <buff name="Speed2" name_key="Potion of Speed" description_key="SpeedDesc" tooltip_key="Speed_Tooltip" icon="ui_game_symbol_run" icon_color="255,215,0">
+        <stack_type value="replace"/>
+        <duration value="240"/>
+        <display_value value=".SpeedDisplay"/><display_value_format value="time"/>
+            <requirements compare_type="or">
+                <requirement name="NotHasBuff" buff="SpeedCooldown"/>
+            </requirements>
+            
+            
+            <effect_group>
+				<passive_effect name="WalkSpeed" operation="perc_add" value="1.5"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value="1.5"/>
+				<passive_effect name="CrouchSpeed" operation="perc_add" value="1.5"/>
+            </effect_group>
+            
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="SpeedCooldown"/>
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".SpeedDisplay" operation="set" value="120"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".SpeedDisplay" operation="subtract" value="5"/>
+                <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".SpeedDisplay" operation="set" value="0"/>
+            </effect_group>
+        </buff>
+
+        <buff name="Speed3" name_key="Potion of Speed" description_key="SpeedDesc" tooltip_key="Speed_Tooltip" icon="ui_game_symbol_run" icon_color="255,215,0">
+        <stack_type value="replace"/>
+        <duration value="480"/>
+        <display_value value=".SpeedDisplay"/><display_value_format value="time"/>
+            <requirements compare_type="or">
+                <requirement name="NotHasBuff" buff="SpeedCooldown"/>
+            </requirements>
+            
+            <effect_group>
+				<passive_effect name="WalkSpeed" operation="perc_add" value="2"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value="2"/>
+				<passive_effect name="CrouchSpeed" operation="perc_add" value="2"/>
+            </effect_group>
+            
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="SpeedCooldown"/>
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".SpeedDisplay" operation="set" value="120"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".SpeedDisplay" operation="subtract" value="5"/>
+                <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".SpeedDisplay" operation="set" value="0"/>
+            </effect_group>
+        </buff>
+		
+        <buff name="Jump" name_key="Potion of Jump" description_key="JumpDesc" tooltip_key="Jump_Tooltip" icon="ui_game_symbol_muscle" icon_color="255,215,0">
+        <stack_type value="replace"/>
+        <duration value="120"/>
+        <display_value value=".JumpDisplay"/><display_value_format value="time"/>
+            <requirements compare_type="or">
+                <requirement name="NotHasBuff" buff="JumpCooldown"/>
+            </requirements>
+            
+            <effect_group>
+				<passive_effect name="JumpStrength" operation="perc_add" value="1"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.25" tags="jumping"/>
+            </effect_group>
+            
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="JumpCooldown"/>
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".JumpDisplay" operation="set" value="120"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".JumpDisplay" operation="subtract" value="5"/>
+                <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".JumpDisplay" operation="set" value="0"/>
+            </effect_group>
+        </buff>
+
+
+        <buff name="Jump2" name_key="Potion of Jump" description_key="JumpDesc" tooltip_key="Jump_Tooltip" icon="ui_game_symbol_muscle" icon_color="255,215,0">
+        <stack_type value="replace"/>
+        <duration value="240"/>
+        <display_value value=".JumpDisplay"/><display_value_format value="time"/>
+            <requirements compare_type="or">
+                <requirement name="NotHasBuff" buff="JumpCooldown"/>
+            </requirements>
+            
+            
+            <effect_group>
+				<passive_effect name="JumpStrength" operation="perc_add" value="1.5"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.5" tags="jumping"/>
+            </effect_group>
+            
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="JumpCooldown"/>
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".JumpDisplay" operation="set" value="120"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".JumpDisplay" operation="subtract" value="5"/>
+                <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".JumpDisplay" operation="set" value="0"/>
+            </effect_group>
+        </buff>
+
+        <buff name="Jump3" name_key="Potion of Jump" description_key="JumpDesc" tooltip_key="Jump_Tooltip" icon="ui_game_symbol_muscle" icon_color="255,215,0">
+        <stack_type value="replace"/>
+        <duration value="480"/>
+        <display_value value=".JumpDisplay"/><display_value_format value="time"/>
+            <requirements compare_type="or">
+                <requirement name="NotHasBuff" buff="JumpCooldown"/>
+            </requirements>
+            
+            <effect_group>
+				<passive_effect name="JumpStrength" operation="perc_add" value="2"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.75" tags="jumping"/>
+            </effect_group>
+            
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="JumpCooldown"/>
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".JumpDisplay" operation="set" value="120"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".JumpDisplay" operation="subtract" value="5"/>
+                <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".JumpDisplay" operation="set" value="0"/>
+            </effect_group>
+        </buff>
+
+        <buff name="FireResistance" name_key="Potion of Fire Resistance" description_key="FireResistanceDesc" tooltip_key="FireResistance_Tooltip" icon="ui_game_symbol_water" icon_color="0,255,0">
+        <stack_type value="replace"/>
+        <duration value="480"/>
+        <display_value value=".FireResistanceDisplay"/><display_value_format value="time"/>
+            <requirements compare_type="or">
+                <requirement name="NotHasBuff" buff="FireResistanceCooldown"/>
+            </requirements>
+            
+            <effect_group>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffBurningFlamingArrow,buffBurningMolotov,buffBurningEnvironmentHack,buffBurningEnvironment,buffBurningElement"/>
+            </effect_group>
+            
+            
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="FireResistanceCooldown"/>
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".FireResistanceDisplay" operation="set" value="120"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".FireResistanceDisplay" operation="subtract" value="5"/>
+                <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".FireResistanceDisplay" operation="set" value="0"/>
+            </effect_group>
+        </buff>
+
+        <!--buff name="Luck" name_key="Potion of Luck" description_key="LuckDesc" tooltip_key="Luck_Tooltip" icon="ui_game_symbol_candy_eye_candy" icon_color="0,255,0">
+        <stack_type value="replace"/>
+        <duration value="480"/>
+        <display_value value=".LuckDisplay"/><display_value_format value="time"/>
+            <requirements compare_type="or">
+                <requirement name="NotHasBuff" buff="LuckCooldown"/>
+            </requirements>
+
+			<effect_group>
+                <passive_effect name="LootGamestage" operation="base_add" value="50"/>
+                <passive_effect name="TreasureRadius" operation="base_add" value="-5"/>
+			</effect_group>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="LuckCooldown"/>
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".LuckDisplay" operation="set" value="120"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".LuckDisplay" operation="subtract" value="5"/>
+                <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".LuckDisplay" operation="set" value="0"/>
+            </effect_group>
+        </buff-->
+
+        <buff name="ShockResistance" name_key="Potion of Shock Resistance" description_key="ShockResistanceDesc" tooltip_key="ShockResistance_Tooltip" icon="ui_game_symbol_electric_power" icon_color="0,255,0">
+        <stack_type value="replace"/>
+        <duration value="480"/>
+        <display_value value=".ShockResistanceDisplay"/><display_value_format value="time"/>
+            <requirements compare_type="or">
+                <requirement name="NotHasBuff" buff="ShockResistanceCooldown"/>
+            </requirements>
+            
+            <effect_group>
+                <passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffShocked"/>
+            </effect_group>
+            
+            
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="ShockResistanceCooldown"/>
+                <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".ShockResistanceDisplay" operation="set" value="120"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".ShockResistanceDisplay" operation="subtract" value="5"/>
+                <triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".ShockResistanceDisplay" operation="set" value="0"/>
+            </effect_group>
+        </buff>
+
+        <buff name="buffMadBrawler" name_key="buffMadBrawlerName" description_key="buffMadBrawlerDesc" tooltip_key="buffMadBrawlerTooltip" icon="ui_game_symbol_beer">
+            <stack_type value="replace"/>
+            <duration value="600"/>
+
+            <effect_group>
+                <passive_effect name="EntityDamage" operation="perc_add" value="3">
+                    <requirement name="HoldingItemHasTags" tags="perkBrawler"/>
+                </passive_effect>
+
+                <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.4"> <!-- buffBeer -->
+                    <requirement name="!HasBuff" buff="buffHealWaterMax"/>
+                </passive_effect>
+
+                <passive_effect name="StaminaChangeOT" operation="perc_add" value="0.25"> <!-- buffBeer -->
+                    <requirement name="HasBuff" buff="buffHealWaterMax"/>
+                </passive_effect>
+            </effect_group>
+
+            <effect_group>
+                <passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryStunned00,buffInjuryStunned01,buffInjuryStunned01Shotgun,buffInjuryStunned02,buffInjuryStunned02Shotgun,buffInjuryStunned03,buffInjuryStunned03Shotgun"/>
+            </effect_group>
+        </buff>
+
+        <buff name="buffregen" name_key="buffregen" description_key="buffregen" icon="ui_game_symbol_twitch_regen" icon_color="175,175,255">
+            <stack_type value="replace"/>
+            <duration value="600"/>
+            <display_value value="duration"/>
+
+            <effect_group>
+                <!-- Blinks the display -->
+                <passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="buffregen"/>
+                <triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffregen"/>
+            </effect_group>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="add" value="20"/>
+            </effect_group>
+        </buff>
+
+        <buff name="buffgod" name_key="buffgod" description_key="buffgod" icon="ui_game_symbol_twitch_regen" icon_color="175,175,255">
+            <stack_type value="replace"/>
+            <duration value="600"/>
+            <display_value value="duration"/>
+
+            <effect_group>
+                <passive_effect name="GeneralDamageResist" operation="base_add" value="1"/>
+                <passive_effect name="CarryCapacity" operation="base_set" value="45"/>
+                <passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="cold,heat,electrical"/>
+                <passive_effect name="PhysicalDamageResist" operation="base_add" value="200"/>
+                <passive_effect name="PhysicalDamageResist" operation="base_add" value="200" tags="coredamageresist"/>
+                <passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="heat,electrical"/>
+            </effect_group>
+        </buff>
+
+        <buff name="buffLeech" name_key="Buff_Leech" description_key="Buff_LeechDesc" icon="ui_game_symbol_twitch_leech" icon_color="136,8,8">
+            <stack_type value="replace"/>
+            <duration value="30"/>
+            <display_value value="duration"/>
+
+            <effect_group>
+                <!-- Blinks the display -->
+                <passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="buffLeech"/>
+                <triggered_effect trigger="onSelfEnteredGame" action="RemoveBuff" buff="buffLeech"/>
+
+                <triggered_effect trigger="onSelfBuffFinish" action="PlaySound" sound="twitch_good_buff_ended" play_in_head="true"/>
+            </effect_group>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="buffLeechHeal"/>
+                <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="buffLeechSound"/>
+            </effect_group>
+        </buff>
+
+        <buff name="buffLeechHeal" hidden="true">
+            <stack_type value="replace"/>
+            <duration value="1"/>
+
+            <effect_group>
+                <!-- Blinks the display -->
+                <passive_effect name="BuffBlink" operation="base_set" value="2" tags="buffLeech"/>
+                <triggered_effect trigger="onSelfBuffStart" action="AddHealth" health="5"/>
+                <triggered_effect trigger="onSelfBuffUpdate" action="AddHealth" health="5"/>
+                <passive_effect name="FoodLossPerHealthPointGained" operation="base_set" value="0"/>
+            </effect_group>
+        </buff>
+
+        <buff name="buffLeechSound" hidden="true">
+            <stack_type value="ignore"/>
+            <duration value="2"/>
+
+            <effect_group>
+                <triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="player_blooddraw"/>
+            </effect_group>
+        </buff>
+
+		<buff name="CharismaPotion" name_key="Elixir of Charisma" description_key="CharismaPotion_AMDesc" tooltip_key="CharismaPotionTooltip" icon="ui_game_symbol_candy_sugar_butts" tags="drug">
+			<stack_type value="ignore"/>
+			<duration value="600"/>
+			<display_value value=".CharismaPotionDisplay"/><display_value_format value="time"/>
+				<requirements compare_type="or">
+					<requirement name="NotHasBuff" buff="CharismaPotionCooldown"/>
+				</requirements>
+			
+				<effect_group>
+					<passive_effect name="BarteringBuying" operation="base_add" value=".20"/>
+					<passive_effect name="BarteringSelling" operation="base_add" value=".20"/>
+					
+					<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="CharismaPotionCooldown"/>
+					<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".CharismaPotionDisplay" operation="set" value="600"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".CharismaPotionDisplay" operation="subtract" value="1"/>
+					<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".CharismaPotionDisplay" operation="set" value="0"/>
+				</effect_group>
+		</buff>
+
+		<buff name="XPPotion" name_key="Elixir of Knowledge" description_key="XPPotion_AMDesc" tooltip_key="XPPotionTooltip" icon="ui_game_symbol_beer" tags="drug">
+			<stack_type value="replace"/>
+			<duration value="0"/>
+			<display_value value=".XPPotionDisplay"/><display_value_format value="time"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$XPPotionDisplayDuration" operation="subtract" value="@$MetabolismDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".XPPotionDisplay" operation="set" value="@$XPPotionDisplayDuration"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".XPPotionDisplay" operation="divide" value="@$MetabolismDuration"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="XPPotion">
+					<requirement name="CVarCompare" cvar="$XPPotionDisplayDuration" operation="LTE" value="0"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".XPPotionDisplay" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$XPPotionDisplayDuration" operation="set" value="0"/>
+			</effect_group>
+			<effect_group>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value="1"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffSulfurBurnCatch" name_key="buff Infection Catch" hidden="true">
+			<damage_type value="Bashing"/>
+			<stack_type value="ignore"/>
+			<duration value=".1"/>
+
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="infectionCounter" operation="set" value="25">
+					<requirement name="!HasBuff" buff="buffSulfurBurnMain"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="infectionCounter" operation="add" value="250">
+					<requirement name="HasBuff" buff="buffSulfurBurnMain"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffSulfurBurnMain"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffSulfurBurnMain" name_key="buff Infection Main" hidden="true" icon="ui_game_symbol_infection">
+			<damage_type value="Infection"/>
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<update_rate value="1"/>
+			<tags value="deathpenalty_injured"/>
+
+			<!-- Infection is fully %-based. infectionCounter is a float % value. Infection kills the player when it reaches 100%, cures when it reaches 0%. -->
+			<effect_group>
+				<!-- $infectionMaxDuration defined in buffStatusCheck01 (7 hours) -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$infectionMaxDuration" operation="set" value="25200">
+					<requirement name="CVarCompare" cvar="$infectionMaxDuration" operation="Equals" value="0"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$infectionStage2Duration" operation="set" value="14"/> <!-- % of the full buff duration -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$infectionStage3Duration" operation="set" value="57"/> <!-- % of the full buff duration -->
+
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$infectionDisplayDivisor" operation="set" value="@$infectionMaxDuration"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$infectionDisplayDivisor" operation="divide" value="100"/>
+					<!-- .infectionDisplayPerc = infectionCounter / $infectionDisplayDivisor -->
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$infectionStage2Duration" operation="multiply" value="@$infectionDisplayDivisor"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$infectionStage3Duration" operation="multiply" value="@$infectionDisplayDivisor"/>
+
+				<!-- cleanup -->
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar="infectionCounter,.infectionDisplayPerc,$infectionDisplayDivisor,$infectionCureCounter,$infectionStage2Duration,$infectionStage3Duration"/>
+			</effect_group>
+
+			<effect_group name="main loop">
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="infectionCounter" operation="add" value="1.25"/>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".dummy" operation="set" value="@$critHitNaturalHealingRate"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".dummy" operation="divide" value="4"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="infectionCounter" operation="subtract" value="@.dummy"/>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="infectionCounter" operation="add" value="-3">
+					<requirement name="CVarCompare" cvar="$infectionCureCounter" operation="GT" value="0"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveCVar" cvar="infectionCounter">
+					<requirement name="CVarCompare" cvar="infectionCounter" operation="LT" value="0"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$infectionCureCounter" operation="add" value="-2">
+					<requirement name="CVarCompare" cvar="$infectionCureCounter" operation="GT" value="0"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveCVar" cvar="$infectionCureCounter">
+					<requirement name="CVarCompare" cvar="$infectionCureCounter" operation="LT" value="0"/>
+				</triggered_effect>
+				
+				<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="infectionCounterRespawn" operation="set" value="@infectionCounter"/>
+			</effect_group>
+
+			<effect_group name="shut down">
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffSulfurBurnMain">
+					<requirement name="CVarCompare" cvar="infectionCounter" operation="LTE" value="0"/>
+					<requirement name="CVarCompare" cvar="$infectionCureCounter" operation="LTE" value="0"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="buffSulfurBurnCureDisplay"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="buffSulfurBurn01Untreated"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="buffSulfurBurn01GetBetter"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="buffSulfurBurn02Untreated"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="buffSulfurBurn02GetBetter"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="buffSulfurBurn03Untreated"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveBuff" buff="buffSulfurBurn03GetBetter"/>
+
+				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="buffSulfurBurnImmunity">
+					<requirement name="ProgressionLevel" progression_name="perkFortitudeMastery" operation="GTE" value="2"/>
+				</triggered_effect>
+			</effect_group>
+
+			<effect_group name="display % values">
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".infectionDisplayPerc" operation="set" value="@infectionCounter"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".infectionDisplayPerc" operation="divide" value="@$infectionDisplayDivisor"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".infectionCureDisplayPerc" operation="set" value="@$infectionCureCounter"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".infectionCureDisplayPerc" operation="divide" value="@$infectionDisplayDivisor"/>
+			</effect_group>
+
+			<effect_group name="signaling buffs">
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffSulfurBurnCureDisplay">
+					<requirement name="!HasBuff" buff="buffSulfurBurnCureDisplay"/>
+					<requirement name="CVarCompare" cvar="$infectionCureCounter" operation="GT" value="0"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffSulfurBurn01Untreated">
+					<requirement name="!HasBuff" buff="buffSulfurBurn01Untreated"/>
+					<requirement name="CVarCompare" cvar="infectionCounter" operation="GT" value="0"/>
+					<requirement name="CVarCompare" cvar="infectionCounter" operation="LT" value="@$infectionStage2Duration"/>
+					<requirement name="CVarCompare" cvar="$infectionCureCounter" operation="LTE" value="0"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffSulfurBurn01GetBetter">
+					<requirement name="!HasBuff" buff="buffSulfurBurn01GetBetter"/>
+					<requirement name="CVarCompare" cvar="infectionCounter" operation="GT" value="0"/>
+					<requirement name="CVarCompare" cvar="infectionCounter" operation="LT" value="@$infectionStage2Duration"/>
+					<requirement name="CVarCompare" cvar="$infectionCureCounter" operation="GT" value="0"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffSulfurBurn01GetBetter">
+					<requirement name="HasBuff" buff="buffSulfurBurn01GetBetter"/>
+					<requirement name="CVarCompare" cvar="infectionCounter" operation="LTE" value="0"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffSulfurBurn02Untreated">
+					<requirement name="!HasBuff" buff="buffSulfurBurn02Untreated"/>
+					<requirement name="CVarCompare" cvar="infectionCounter" operation="GTE" value="@$infectionStage2Duration"/>
+					<requirement name="CVarCompare" cvar="infectionCounter" operation="LT" value="@$infectionStage3Duration"/>
+					<requirement name="CVarCompare" cvar="$infectionCureCounter" operation="LTE" value="0"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffSulfurBurn02GetBetter">
+					<requirement name="!HasBuff" buff="buffSulfurBurn02GetBetter"/>
+					<requirement name="CVarCompare" cvar="infectionCounter" operation="GTE" value="@$infectionStage2Duration"/>
+					<requirement name="CVarCompare" cvar="infectionCounter" operation="LT" value="@$infectionStage3Duration"/>
+					<requirement name="CVarCompare" cvar="$infectionCureCounter" operation="GT" value="0"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffSulfurBurn03Untreated">
+					<requirement name="!HasBuff" buff="buffSulfurBurn03Untreated"/>
+					<requirement name="CVarCompare" cvar="infectionCounter" operation="GTE" value="@$infectionStage3Duration"/>
+					<requirement name="CVarCompare" cvar="infectionCounter" operation="LT" value="@$infectionMaxDuration"/>
+					<requirement name="CVarCompare" cvar="$infectionCureCounter" operation="LTE" value="0"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffSulfurBurn03GetBetter">
+					<requirement name="!HasBuff" buff="buffSulfurBurn03GetBetter"/>
+					<requirement name="CVarCompare" cvar="infectionCounter" operation="GTE" value="@$infectionStage3Duration"/>
+					<requirement name="CVarCompare" cvar="infectionCounter" operation="LT" value="@$infectionMaxDuration"/>
+					<requirement name="CVarCompare" cvar="$infectionCureCounter" operation="GT" value="0"/>
+				</triggered_effect>
+
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffSulfurBurn04">
+					<requirement name="CVarCompare" cvar="infectionCounter" operation="GTE" value="@$infectionMaxDuration"/>
+				</triggered_effect>
+			</effect_group>
+
+			<effect_group name="getting hit makes it worse">
+				<!-- When attacked again, make it last longer -->
+				<triggered_effect trigger="onOtherAttackedSelf" action="AddBuff" buff="buffSulfurBurnGetsWorse"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffSulfurBurnGetsWorse" name_key="buff Infection Gets Worse" icon="ui_game_symbol_brokenbone" icon_color="255,128,0" hidden="true">
+			<stack_type value="ignore"/>
+			<duration value="1.1"/>
+
+			<effect_group>
+				<!-- Blinks the display -->
+				<passive_effect name="BuffBlink" operation="base_add" value="2" tags="buffSulfurBurn01GetBetter,buffSulfurBurn01Untreated,buffSulfurBurn02GetBetter,buffSulfurBurn02Untreated,buffSulfurBurn03GetBetter,buffSulfurBurn03Untreated,buffSulfurBurn04"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffSulfurBurnAddCure" name_key="buff Infection Add Cure" hidden="true" icon="ui_game_symbol_pills">
+			<stack_type value="ignore"/>
+			<duration value=".1"/>
+
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffSulfurBurnAddCurePerc" operation="multiply" value="@$infectionMaxDuration"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffSulfurBurnAddCurePerc" operation="divide" value="100"/>
+
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$infectionCureCounter" operation="add" value="@$buffSulfurBurnAddCurePerc"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveCVar" cvar="$buffSulfurBurnAddCurePerc"/>
+
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$infectionCureCounter" operation="set" value="@$infectionMaxDuration">
+					<requirement name="CVarCompare" cvar="$infectionCureCounter" operation="GT" value="@$infectionMaxDuration"/>
+				</triggered_effect>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffSulfurBurnMain"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffSulfurBurnCureDisplay" name_key="buffSulfurBurnCureDisplayName" description_key="buffSulfurBurnCureDisplayDesc" showonhud="false" icon="ui_game_symbol_pills">
+			<duration value="0"/>
+			<update_rate value="1.7"/>
+			<display_value_key value="{0:0.0}%"/>
+			<display_value value=".infectionCureDisplayPerc"/>
+
+			<effect_group>
+				<requirement_group op="or">
+					<requirement name="CVarCompare" cvar="$infectionCureCounter" operation="LTE" value="0"/>
+					<requirement name="!HasBuff" buff="buffSulfurBurnMain"/>
+				</requirement_group>
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffSulfurBurnCureDisplay"/>
+					<triggered_effect trigger="onSelfBuffUpdate" action="RemoveCVar" cvar="$infectionCureCounter"/>
+			</effect_group>
+
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemoveCVar" cvar=".infectionCureDisplayPerc"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffSulfurBurn01Untreated" name_key="buffSulfurBurn01UntreatedName" description_key="buffSulfurBurn01UntreatedDesc" tooltip_key="buffSulfurBurn01UntreatedTooltip" icon="ui_game_symbol_infection" icon_color="255,128,0">
+			<damage_type value="Disease"/>
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<display_value_key value="{0:0.0}%"/>
+			<display_value value=".infectionDisplayPerc"/>
+			<tags value="deathpenalty_injured"/>
+
+			<effect_group>
+				<!-- Blinks the display -->
+				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="buffSulfurBurn01Untreated"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn01GetBetter"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn02Untreated"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn02GetBetter"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn03Untreated"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn03GetBetter"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffSulfurBurn01GetBetter" name_key="buffSulfurBurn01GetBetterName" description_key="buffSulfurBurn01GetBetterDesc" icon="ui_game_symbol_infection_better">
+			<damage_type value="Disease"/>
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<display_value_key value="{0:0.0}%"/>
+			<display_value value=".infectionDisplayPerc"/>
+			<tags value="deathpenalty_injured"/>
+
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn01Untreated"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn02Untreated"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn02GetBetter"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn03Untreated"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn03GetBetter"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffSulfurBurn02Untreated" name_key="buffSulfurBurn02UntreatedName" description_key="buffSulfurBurn02UntreatedDesc" icon="ui_game_symbol_infection" icon_color="255,0,0">
+			<damage_type value="Disease"/>
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<display_value_key value="{0:0.0}%"/>
+			<display_value value=".infectionDisplayPerc"/>
+			<tags value="deathpenalty_injured"/>
+
+			<effect_group>
+				<!-- Blinks the display -->
+				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="buffSulfurBurn02Untreated"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn01Untreated"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn01GetBetter"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn02GetBetter"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn03Untreated"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn03GetBetter"/>
+			</effect_group>
+
+			<effect_group>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.25"/> <!-- buffSulfurBurn02Untreated -->
+			</effect_group>
+		</buff>
+
+		<buff name="buffSulfurBurn02GetBetter" name_key="buffSulfurBurn02GetBetterName" description_key="buffSulfurBurn02GetBetterDesc" icon="ui_game_symbol_infection_better">
+			<damage_type value="Disease"/>
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<display_value_key value="{0:0.0}%"/>
+			<display_value value=".infectionDisplayPerc"/>
+			<tags value="deathpenalty_injured"/>
+
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn01Untreated"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn01GetBetter"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn02Untreated"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn03Untreated"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn03GetBetter"/>
+			</effect_group>
+
+			<effect_group>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.125"/> <!-- buffSulfurBurn02GetBetter -->
+			</effect_group>
+		</buff>
+
+		<buff name="buffSulfurBurn03Untreated" name_key="buffSulfurBurn03UntreatedName" description_key="buffSulfurBurn03UntreatedDesc" icon="ui_game_symbol_infection" icon_color="255,0,0" icon_blink="true">
+			<damage_type value="Disease"/>
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<display_value_key value="{0:0.0}%"/>
+			<display_value value=".infectionDisplayPerc"/>
+			<tags value="deathpenalty_injured"/>
+
+			<effect_group>
+				<!-- Blinks the display -->
+				<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="buffSulfurBurn03Untreated"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn01Untreated"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn01GetBetter"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn02Untreated"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn02GetBetter"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn03GetBetter"/>
+			</effect_group>
+
+			<effect_group>
+				<passive_effect name="AttributeLevel" operation="base_subtract" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RefreshPerks"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RefreshPerks"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.35"/> <!-- buffSulfurBurn03Untreated -->
+			</effect_group>
+		</buff>
+
+		<buff name="buffSulfurBurn03GetBetter" name_key="buffSulfurBurn03GetBetterName" description_key="buffSulfurBurn03GetBetterDesc" icon="ui_game_symbol_infection_better">
+			<damage_type value="Disease"/>
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<display_value_key value="{0:0.0}%"/>
+			<display_value value=".infectionDisplayPerc"/>
+			<tags value="deathpenalty_injured"/>
+
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn01Untreated"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn01GetBetter"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn02Untreated"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn02GetBetter"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffSulfurBurn03Untreated"/>
+			</effect_group>
+
+			<effect_group>
+				<passive_effect name="AttributeLevel" operation="base_subtract" value="1"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RefreshPerks"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RefreshPerks"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.17"/> <!-- buffSulfurBurn03GetBetter -->
+			</effect_group>
+		</buff>
+
+		<buff name="buffSulfurBurn04" tooltip_key="buffSulfurBurn04Tooltip" icon="ui_game_symbol_infection" icon_color="255,0,0">
+			<damage_type value="Infection"/>
+			<stack_type value="ignore"/>
+			<duration value=".1"/>
+
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="subtract" value="99999999"/>
+				<!-- Clear out counters -->
+				<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="infectionCounter" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfDied" action="RemoveCVar" cvar="infectionCounterRespawn"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffSulfurBurnImmunity" name_key="buffSulfurBurnImmunityName" description_key="buffSulfurBurnImmunityDesc" icon="ui_game_symbol_infection_immunity" icon_color="0,255,0">
+			<stack_type value="ignore"/>
+			<duration value="7208"/>
+			<display_value value="duration"/>
+			<display_value_format value="time"/>
+
+			<effect_group>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffSulfurBurnCatch"/>
+			</effect_group>
+		</buff>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     </append>
 
