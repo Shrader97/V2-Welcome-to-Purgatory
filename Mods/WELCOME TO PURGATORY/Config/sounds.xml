@@ -69,12 +69,22 @@
 		</SoundDataNode>
 
 		<SoundDataNode name="open_chickenstable"> <AudioSource name="@:Sounds/Prefabs/AudioSource_Interact.prefab"/>
-			<AudioClip ClipName="#@modfolder:Resources/husbandrysounds.unity3d?Chicken.Chicken"/>
+			<AudioClip ClipName="#@modfolder:Resources/husbandrysounds.unity3d?Chicken.mp3"/>
 			<Noise ID="1" noise="7" time="3" muffled_when_crouched="0.5"/>
 			<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/>
 		</SoundDataNode>
 
+		<SoundDataNode name="ClownLaugh2_throw"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire.prefab"/> <NetworkAudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/clownsound.unity3d?ClownLaugh2.mp3"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.001"/>
+		</SoundDataNode>
 
+		<SoundDataNode name="ClownLaugh_throw"> <AudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire.prefab"/> <NetworkAudioSource name="@:Sounds/Prefabs/AudioSource_WeaponFire_Network.prefab"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="#@modfolder:Resources/clownsound.unity3d?ClownLaugh.mp3"/>
+			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxRepeatRate value="0.001"/> 
+		</SoundDataNode>
 
 
 

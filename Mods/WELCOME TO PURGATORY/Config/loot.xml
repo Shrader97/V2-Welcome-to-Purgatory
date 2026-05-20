@@ -234,8 +234,13 @@ groupCupboard
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='modArmorT2']">
-		<item name="modCollegeJacket" loot_prob_template="low"/>
-		<item name="modRunningShoesHP" loot_prob_template="low"/>
+		<item name="modCollegeJacket" loot_prob_template="veryLowDelayed"/>
+		<item name="modRunningShoesHP" loot_prob_template="veryLowDelayed"/>
+		<item name="modArmorFireRetardantLiner" loot_prob_template="veryLowDelayed"/>
+	</append>
+
+	<append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralT2']">
+		<item name="modArmorFireRetardantLinerSchematic" loot_prob_template="veryLowDelayed"/>
 	</append>
 
 	<append xpath="/lootcontainers/lootgroup[@name='groupToilet02']">

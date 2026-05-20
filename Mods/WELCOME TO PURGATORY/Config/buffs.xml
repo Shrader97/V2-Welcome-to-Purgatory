@@ -1965,20 +1965,86 @@
 			</effect_group>
 		</buff>
 
+		<buff name="buffFireRetardantArmorLiner" name_key="modArmorFireRetardantLiner" description_key="modArmorFireRetardantLinerDesc" icon="ui_game_symbol_fire" icon_color="0,160,255" hidden="true" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<update_rate value=".25"/>
+
+			<effect_group>
+				<passive_effect name="BuffResistance" operation="base_add" value=".90" tags="buffBurningMolotov,buffBurningFlamingArrow,buffBurningElement,buffBurningEnvironment,buffBurningEnvironmentHack,buffHazardBurningElement"/>
+				<passive_effect name="ElementalDamageResist" operation="base_add" value="5" tags="heat"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="3"/>
+			</effect_group>
+		</buff>
+
+		<buff name="buffFireRetardantResistedDisplay" name_key="buffFireRetardantResistedDisplayName" description_key="buffFireRetardantResistedDisplayDesc" tooltip_key="buffFireRetardantResistedDisplayTooltip" icon="ui_game_symbol_fire" icon_color="0,160,255" icon_blink="true">
+			<stack_type value="replace"/>
+			<duration value="2"/>
+			<display_value_key value="Resisted Fire"/>
+		</buff>
 
 
+		<buff name="buffSnorkel" name_key="modSnorkel" description_key="modSnorkelDesc" icon="ui_game_symbol_snorkel" icon_color="0,160,255" hidden="true" remove_on_death="false">
+			<stack_type value="ignore"/>
+			<duration value="0"/>
+			<update_rate value=".25"/>
 
-
-
-
-
-
-
-
-
-
+			<effect_group>
+				<passive_effect name="SuffocationProtection" operation="base_add" value=".50"/>
+			</effect_group>
+		</buff>
 
 
     </append>
+
+	<append xpath="/buffs/buff[@name='buffBurningMolotov']">
+		<effect_group name="Fire Retardant Armor Liner - Molotov Resist">
+			<requirement name="HasBuff" buff="buffFireRetardantArmorLiner"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="90"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffBurningMolotov"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffIsOnFire"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffFireRetardantResistedDisplay"/>
+		</effect_group>
+	</append>
+
+	<append xpath="/buffs/buff[@name='buffBurningFlamingArrow']">
+		<effect_group name="Fire Retardant Armor Liner - Flaming Arrow Resist">
+			<requirement name="HasBuff" buff="buffFireRetardantArmorLiner"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="90"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffBurningFlamingArrow"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffIsOnFire"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffFireRetardantResistedDisplay"/>
+		</effect_group>
+	</append>
+
+	<append xpath="/buffs/buff[@name='buffBurningElement']">
+		<effect_group name="Fire Retardant Armor Liner - Burning Element Resist">
+			<requirement name="HasBuff" buff="buffFireRetardantArmorLiner"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="90"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffBurningElement"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffIsOnFire"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffFireRetardantResistedDisplay"/>
+		</effect_group>
+	</append>
+
+	<append xpath="/buffs/buff[@name='buffBurningEnvironment']">
+		<effect_group name="Fire Retardant Armor Liner - Environment Resist">
+			<requirement name="HasBuff" buff="buffFireRetardantArmorLiner"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="90"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffBurningEnvironment"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffIsOnFire"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffFireRetardantResistedDisplay"/>
+		</effect_group>
+	</append>
+
+	<append xpath="/buffs/buff[@name='buffHazardBurningElement']">
+		<effect_group name="Fire Retardant Armor Liner - Hazard Burn Resist">
+			<requirement name="HasBuff" buff="buffFireRetardantArmorLiner"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="90"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffHazardBurningElement"/>
+				<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffIsOnFire"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffFireRetardantResistedDisplay"/>
+		</effect_group>
+	</append>
 
 </configs>

@@ -1468,6 +1468,7 @@
             <property name="UserSpawnType" value="Menu"/>
             <property name="Tags" value="entity,zombie,walker,feral,zombieCop"/>
             <property name="Mesh" value="@:Entities/Zombies/Cop/ZCopFeral.prefab"/>
+			<property name="ParticleOnSpawn" value="@:ParticleEffects/RadiatedParticlesOnMesh.prefab" param1="SetShapeToMesh1"/>
             <!-- Gameplay zombieFatCopFeral -->
             <property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
             <property name="PainResistPerHit" value=".7"/><!-- Feral -->

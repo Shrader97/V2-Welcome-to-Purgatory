@@ -1044,6 +1044,21 @@ modUltraMaxDegradation,"Ultra Max Degradation"
 modBikecycleSpeedBoost,"Bicycle Speed Boost"
 modBikecycleSpeedBoostDesc,"Increases bicycle speed by gear ratio."
 
+modArmorFireRetardantLiner,Fire Retardant Armor Liner
+modArmorFireRetardantLinerDesc,A treated armor liner that greatly reduces your chance to catch fire and reduces heat damage if flames get through.
+modArmorFireRetardantLinerSchematic,Fire Retardant Armor Liner Schematic
+modArmorFireRetardantLinerSchematicDesc,Reading this schematic teaches you how to craft Fire Retardant Armor Liners.
+buffFireRetardantResistedDisplayName,Fire Resisted
+buffFireRetardantResistedDisplayDesc,Your fire-retardant armor liner resisted ignition.
+buffFireRetardantResistedDisplayTooltip,Fire resisted.
+
+
+
+
+
+
+
+
 CaptainPoetatoRentMoneyFundDesc,"Mr. Poetato Rent Money From the Tourist"
 CaptainPoetatoRentMoneyFund,"Captain Poetato's Rent Money"
 
