@@ -1983,18 +1983,6 @@
 			<display_value_key value="Resisted Fire"/>
 		</buff>
 
-
-		<buff name="buffSnorkel" name_key="modSnorkel" description_key="modSnorkelDesc" icon="ui_game_symbol_snorkel" icon_color="0,160,255" hidden="true" remove_on_death="false">
-			<stack_type value="ignore"/>
-			<duration value="0"/>
-			<update_rate value=".25"/>
-
-			<effect_group>
-				<passive_effect name="SuffocationProtection" operation="base_add" value=".50"/>
-			</effect_group>
-		</buff>
-
-
     </append>
 
 	<append xpath="/buffs/buff[@name='buffBurningMolotov']">

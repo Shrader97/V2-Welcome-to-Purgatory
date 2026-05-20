@@ -1,5 +1,7 @@
 <shark>
 
+	<append xpath="twitch">
+	
 		<action name="spawn_TickleMeDemo">
 			<property name="command" value="#spawn_TickleMeDemo" />
 			<property name="command_key" value="#spawn_TickleMeDemo" />
