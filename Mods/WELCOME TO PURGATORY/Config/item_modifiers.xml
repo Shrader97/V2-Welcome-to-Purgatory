@@ -437,7 +437,7 @@
             </effect_group>
         </item_modifier>
 
-        <item_modifier name="modCollegeJacket" installable_tags="armorChest" blocked_tags="clothing" modifier_tags="rare" type="attachment"> <!-- collegeJacket -->
+        <item_modifier name="modCollegeJacket" installable_tags="armorChest" blocked_tags="clothing" modifier_tags="noMods" type="attachment"> <!-- collegeJacket -->
             <property name="CustomIcon" value="apparelCoatJacketLetterZU"/>
             <property name="Stacknumber" value="1"/>
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
@@ -452,7 +452,7 @@
             </effect_group>
         </item_modifier>
 
-        <item_modifier name="modSuperCollegeJacket" installable_tags="armorChest" blocked_tags="clothing" modifier_tags="rare" type="attachment"> <!-- collegeJacket -->
+        <item_modifier name="modSuperCollegeJacket" installable_tags="armorChest" blocked_tags="clothing" modifier_tags="noMods" type="attachment"> <!-- collegeJacket -->
             <property name="CustomIcon" value="apparelCoatJacketLetterZU"/>
             <property name="Stacknumber" value="1"/>
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
@@ -467,7 +467,7 @@
             </effect_group>
         </item_modifier>
 
-        <item_modifier name="modUltraCollegeJacket" installable_tags="armorChest" blocked_tags="clothing" modifier_tags="rare" type="attachment"> <!-- collegeJacket -->
+        <item_modifier name="modUltraCollegeJacket" installable_tags="armorChest" blocked_tags="clothing" modifier_tags="noMods" type="attachment"> <!-- collegeJacket -->
             <property name="CustomIcon" value="apparelCoatJacketLetterZU"/>
             <property name="Stacknumber" value="1"/>
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
@@ -482,7 +482,7 @@
             </effect_group>
         </item_modifier>
 
-        <item_modifier name="modRunningShoesHP" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="rare" type="attachment">
+        <item_modifier name="modRunningShoesHP" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
             <property name="DescriptionKey" value="apparelRunningShoesHPDesc"/>
             <property name="CustomIcon" value="apparelRunningShoesRegular"/>
@@ -499,7 +499,7 @@
             </effect_group>
         </item_modifier>
 
-        <item_modifier name="modSuperRunningShoesHP" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="rare" type="attachment">
+        <item_modifier name="modSuperRunningShoesHP" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
             <property name="DescriptionKey" value="apparelRunningShoesHPDesc"/>
             <property name="CustomIcon" value="apparelRunningShoesRegular"/>
@@ -517,7 +517,7 @@
             </effect_group>
         </item_modifier>
 
-        <item_modifier name="modUltraRunningShoesHP" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="rare" type="attachment">
+        <item_modifier name="modUltraRunningShoesHP" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
             <property name="DescriptionKey" value="apparelRunningShoesHPDesc"/>
             <property name="CustomIcon" value="apparelRunningShoesRegular"/>
@@ -545,7 +545,7 @@
 
 
 
-        <item_modifier name="modGhillieSuitHood" installable_tags="armorHead" blocked_tags="clothing" modifier_tags="rare" type="attachment">
+        <item_modifier name="modGhillieSuitHood" installable_tags="armorHead" blocked_tags="clothing" modifier_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
             <property name="UnlockedBy" value="perkSniperComplete"/> <!-- BOOK_PERK -->
             <property name="CustomIcon" value="apparelGhillieSuitHood"/>
@@ -560,7 +560,7 @@
             </effect_group>
         </item_modifier>
 
-        <item_modifier name="modGhillieSuitPants" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="rare" type="attachment">
+        <item_modifier name="modGhillieSuitPants" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
             <property name="UnlockedBy" value="perkSniperComplete"/> <!-- BOOK_PERK -->
             <property name="CustomIcon" value="apparelGhillieSuitPants"/>
@@ -576,7 +576,7 @@
             </effect_group>
         </item_modifier>
 
-        <item_modifier name="modGhillieSuitJacket" installable_tags="armorChest" blocked_tags="clothing" modifier_tags="rare" type="attachment">
+        <item_modifier name="modGhillieSuitJacket" installable_tags="armorChest" blocked_tags="clothing" modifier_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
             <property name="UnlockedBy" value="perkSniperComplete"/> <!-- BOOK_PERK -->
             <property name="CustomIcon" value="apparelGhillieSuitJacket"/>
@@ -835,7 +835,7 @@
             </effect_group>
         </item_modifier>
 
-		<item_modifier name="modArmorFireRetardantLiner" installable_tags="armorHead,armorChest,armorHands,armorFeet" modifier_tags="thermal,fireRetardant" blocked_tags="noMods" type="attachment">
+		<item_modifier name="modArmorFireRetardantLiner" installable_tags="armorHead,armorChest,armorHands,armorFeet" modifier_tags="fireRetardant" blocked_tags="noMods" type="attachment">
 			<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
 			<property name="CustomIcon" value="modArmorInsulatedLinerT3"/>
             <property name="CustomIconTint" value="#FF0000"/>
@@ -869,26 +869,6 @@
             </effect_group>
         </item_modifier>
 
-		<item_modifier name="modArmorFireRetardantLiner" installable_tags="armorHead,armorChest,armorHands,armorFeet" modifier_tags="thermal,fireRetardant" blocked_tags="noMods" type="attachment">
-			<property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
-			<property name="CustomIcon" value="modArmorInsulatedLinerT3"/>
-            <property name="CustomIconTint" value="#FF0000"/>
-			<property name="UnlockedBy" value="modArmorFireRetardantLinerSchematic"/>
-			<property name="TraderStageTemplate" value="modsTier2"/>
-			<property name="DisplayType" value="modArmorLiners"/>
-			<property name="Material" value="Mcloth"/>
-			<property name="EconomicValue" value="700"/>
-
-			<effect_group tiered="false">
-				<passive_effect name="HyperthermalResist" operation="base_add" value="3"/>
-			</effect_group>
-
-			<effect_group tiered="false">
-				<requirement name="IsEquipped"/>
-				<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffSnorkel"/>
-				<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffSnorkel"/>
-			</effect_group>
-		</item_modifier>
 
 
 

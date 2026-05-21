@@ -10757,8 +10757,8 @@
 			<property name="DropMeshfile" value="@:Other/Items/Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mglass"/>
 			<property name="Weight" value="10"/>
-			<property name="Stacknumber" value="10"/> <!-- STK drink -->
-			<property name="EconomicValue" value="100"/>
+			<property name="Stacknumber" value="250"/> <!-- STK drink -->
+			<property name="EconomicValue" value="1000"/>
 			<property name="UnlockedBy" value="craftingFood"/>
 			<property name="DisplayType" value="VodkaDisplay"/>
 			<property name="Group" value="Food/Cooking,CFDrink/Cooking,Medical"/>
