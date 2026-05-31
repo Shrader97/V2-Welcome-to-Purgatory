@@ -1209,6 +1209,33 @@
             </effect_group>
         </recipe>
 
+        <recipe name="gunExplosivesT4MultiRocketLauncher" count="1" craft_area="workbench" tags="learnable,perkDemolitionsExpert,workbenchCrafting">
+            <ingredient name="gunExplosivesT3RocketLauncherParts" count="4"/>
+            <ingredient name="resourceForgedSteel" count="20"/>
+            <ingredient name="resourceDuctTape" count="3"/>
+            <ingredient name="resourceSpring" count="3"/>
+            <ingredient name="resourceLegendaryParts" count="0"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value="1,5" tags="gunExplosivesT3RocketLauncherParts,resourceForgedSteel,resourceDuctTape,resourceSpring"/>
+                <passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="1" tags="resourceLegendaryParts"/>
+            </effect_group>
+        </recipe>
+
+        <recipe name="gunRifleT3Rifle4Bore" count="1" craft_area="workbench" tags="learnable,perkDeadEye,workbenchCrafting">
+            <ingredient name="gunRifleT1HuntingRifleParts" count="13"/>
+            <ingredient name="resourceForgedSteel" count="100"/>
+            <ingredient name="resourceDuctTape" count="13"/>
+            <ingredient name="resourceSpring" count="25"/>
+            <ingredient name="resourceLegendaryParts" count="0"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="1,5" tags="gunRifleT1HuntingRifleParts,resourceDuctTape"/>
+                <passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="2,10" tags="resourceSpring"/>
+                <passive_effect name="CraftingIngredientCount" level="2,6" operation="base_add" value="10,50" tags="resourceForgedSteel"/>
+                <passive_effect name="CraftingIngredientCount" level="6" operation="base_add" value="1" tags="resourceLegendaryParts"/>
+            </effect_group>
+        </recipe>
+
+
         <recipe name="resourceGrenadeCasing" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering,learnable">
             <ingredient name="resourceScrapIron" count="50"/>
             <ingredient name="resourceClayLump" count="30"/>
@@ -3225,6 +3252,21 @@
 
 
 
+        <recipe name="resource4BoreBulletCasing" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
+            <ingredient name="resourceScrapBrass" count="20"/>
+            <ingredient name="resourceClayLump" count="5"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="resourceScrapBrass"/>
+            </effect_group>
+        </recipe>
+
+        <recipe name="resource4BoreBulletTip" count="1" material_based="true" craft_area="forge" is_trackable="false" tags="perkAdvancedEngineering">
+            <ingredient name="resourceScrapLead" count="20"/>
+            <ingredient name="resourceClayLump" count="5"/>
+            <effect_group>
+                <passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,1,2,3,4" value=".25,.25,.25,.12,.06" tags="resourceScrapLead"/>
+            </effect_group>
+        </recipe>
 
 
 

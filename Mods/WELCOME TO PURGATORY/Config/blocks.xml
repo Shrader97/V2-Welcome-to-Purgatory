@@ -341,10 +341,16 @@
 			<property name="Model" value="cube"/>
 			<property name="Group" value="Building,advBuilding"/>
 			<property name="FilterTags" value="MC_Shapes"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="TungstenShapes"/>
+				<property name="Item" value="resourceForgedTungsten"/>
+				<property name="ItemCount" value="5"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
 			<property class="RepairItems"> 
 				<property name="resourceForgedTitanium" value="1"/>
 			</property>
-			<property name="DowngradeBlock" value="stainlessSteelShapes"/>
+			<!--property name="DowngradeBlock" value="stainlessSteelShapes"/-->
 			<drop event="Harvest" name="resourceScrapIron" count="15" tag="allHarvest"/>
 			<drop event="Destroy" count="0"/>
 			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
@@ -354,6 +360,66 @@
 			<property name="SortOrder1" value="S200"/> 
 			<property name="CanPickup" value="false"/>
 		</block>
+
+		<block name="TungstenShapes" shapes="All">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIconTint" value="47556e" />
+			<property name="DisplayType" value="blockHardened"/>
+			<property name="DescriptionKey" value="steelBlockGroupDesc"/>
+			<property name="Material" value="MresourceTungsten"/>
+			<property name="Texture" value="543"/>
+			<property name="UiBackgroundTexture" value="435"/>
+			<property name="TintColor" value="47556e"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="cube"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="FilterTags" value="MC_Shapes"/>
+			<property class="UpgradeBlock">
+				<property name="ToBlock" value="TantalumShapes"/>
+				<property name="Item" value="resourceForgedTantalum"/>
+				<property name="ItemCount" value="5"/>
+				<property name="UpgradeHitCount" value="4"/>
+			</property>
+			<property class="RepairItems"> 
+				<property name="resourceForgedTungsten" value="1"/>
+			</property>
+			<drop event="Harvest" name="resourceScrapIron" count="15" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="SortOrder1" value="S200"/> 
+			<property name="CanPickup" value="false"/>
+		</block>
+
+		<block name="TantalumShapes" shapes="All">
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIconTint" value="47556e" />
+			<property name="DisplayType" value="blockHardened"/>
+			<property name="DescriptionKey" value="steelBlockGroupDesc"/>
+			<property name="Material" value="MresourceTantalum"/>
+			<property name="Texture" value="62"/>
+			<property name="UiBackgroundTexture" value="435"/>
+			<property name="TintColor" value="47556e"/>
+			<property name="Shape" value="New"/>
+			<property name="Model" value="cube"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="FilterTags" value="MC_Shapes"/>
+			<property class="RepairItems"> 
+				<property name="resourceForgedTantalum" value="1"/>
+			</property>
+			<drop event="Harvest" name="resourceScrapIron" count="15" tag="allHarvest"/>
+			<drop event="Destroy" count="0"/>
+			<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="EconomicBundleSize" value="1"/>
+			<property name="SellableToTrader" value="false"/>
+			<property name="SortOrder1" value="S200"/> 
+			<property name="CanPickup" value="false"/>
+		</block>
+
+
 
 	<!-- drawbridges -->
 		<block name="TitaniumReinforcedDrawBridge">
@@ -556,81 +622,6 @@
 			<property name="Tags" value="electricianSkill"/>
 		</block>
 
-
-
-
-        <!--block name="resourceTitaniumRock01">
-            <property name="CreativeMode" value="Dev"/>
-            <property name="DisplayType" value="blockHardenedMulti"/>
-            <property name="Map.Color" value="160,32,240"/>
-            <property name="Material" value="Mboulder"/>
-            <property name="Shape" value="ModelEntity"/>
-            <property name="Model" value="#@modfolder:Resources/titaniumore.unity3d?OreTitanium.prefab"/>
-            <property name="ModelOffset" value="0,0,0"/>
-            <property name="MultiBlockDim" value="3,2,3"/>
-            <property name="ImposterDontBlock" value="true"/>
-			<property name="MaxDamage" value="5000"/>
-            <property name="WaterFlow" value="permitted"/>
-            <property name="OnlySimpleRotations" value="true"/>
-            <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
-            <property name="BigDecorationRadius" value="3"/>
-            <property name="IsDistantDecoration" value="false"/>
-            <property name="IsTerrainDecoration" value="true"/>
-            <property name="StabilitySupport" value="false"/>
-            <property name="PassThroughDamage" value="true"/>
-            <drop event="Harvest" name="resourceTitanium" count="250" tag="oreWoodHarvest"/>
-            <drop event="Destroy" count="0"/>
-            <property name="FilterTags" value="MC_outdoor,SC_decor"/>
-        </block>
-
-        <block name="resourceCopperRock01">
-            <property name="CreativeMode" value="Dev"/>
-            <property name="DisplayType" value="blockHardenedMulti"/>
-            <property name="Map.Color" value="160,32,240"/>
-            <property name="Material" value="Mboulder"/>
-            <property name="Shape" value="ModelEntity"/>
-            <property name="Model" value="#@modfolder:Resources/Ore2.unity3d?CopperOre.prefab"/>
-            <property name="ModelOffset" value="0,0,0"/>
-            <property name="MultiBlockDim" value="3,2,3"/>
-            <property name="ImposterDontBlock" value="true"/>
-			<property name="MaxDamage" value="5000"/>
-            <property name="WaterFlow" value="permitted"/>
-            <property name="OnlySimpleRotations" value="true"/>
-            <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
-            <property name="BigDecorationRadius" value="3"/>
-            <property name="IsDistantDecoration" value="false"/>
-            <property name="IsTerrainDecoration" value="true"/>
-            <property name="StabilitySupport" value="false"/>
-            <property name="PassThroughDamage" value="true"/>
-            <drop event="Harvest" name="resourceCopper" count="250" tag="oreWoodHarvest"/>
-            <drop event="Destroy" count="0"/>
-            <property name="FilterTags" value="MC_outdoor,SC_decor"/>
-        </block>
-
-        <block name="resourceZincRock01">
-            <property name="CreativeMode" value="Dev"/>
-            <property name="DisplayType" value="blockHardenedMulti"/>
-            <property name="Map.Color" value="160,32,240"/>
-            <property name="Material" value="Mboulder"/>
-            <property name="Shape" value="ModelEntity"/>
-            <property name="Model" value="#@modfolder:Resources/Ore2.unity3d?ZincOre.prefab"/>
-            <property name="ModelOffset" value="0,0,0"/>
-            <property name="MultiBlockDim" value="3,2,3"/>
-            <property name="ImposterDontBlock" value="true"/>
-			<property name="MaxDamage" value="5000"/>
-            <property name="WaterFlow" value="permitted"/>
-            <property name="OnlySimpleRotations" value="true"/>
-            <property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
-            <property name="BigDecorationRadius" value="3"/>
-            <property name="IsDistantDecoration" value="false"/>
-            <property name="IsTerrainDecoration" value="true"/>
-            <property name="StabilitySupport" value="false"/>
-            <property name="PassThroughDamage" value="true"/>
-            <drop event="Harvest" name="resourceZinc" count="250" tag="oreWoodHarvest"/>
-            <drop event="Destroy" count="0"/>
-            <property name="FilterTags" value="MC_outdoor,SC_decor"/>
-        </block-->
-
         <block name="WaterTank001"> <!-- biome decoration -->
             <property name="CreativeMode" value="Dev"/>
             <property name="DisplayType" value="blockHardenedMulti"/>
@@ -713,7 +704,7 @@
 			<property name="Map.Color" value="187,184,178"/>
 			<property name="Material" value="MoreMetal"/>
 			<property name="Model" value="#@modfolder:Resources/ore2.unity3d?TungstenOreBoulder.prefab"/>
-			<drop event="Harvest" name="resourceZinc" count="105" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceTungsten" count="105" tag="oreWoodHarvest"/>
 			<property name="SortOrder2" value="0101"/>
 		</block>
 
@@ -722,7 +713,7 @@
 			<property name="Map.Color" value="105,110,118"/>
 			<property name="Material" value="MoreMetal"/>
 			<property name="Model" value="#@modfolder:Resources/ore1.unity3d?TantalumOreBoulder.prefab"/>
-			<drop event="Harvest" name="resourceZinc" count="105" tag="oreWoodHarvest"/>
+			<drop event="Harvest" name="resourceTantalum" count="105" tag="oreWoodHarvest"/>
 			<property name="SortOrder2" value="0101"/>
 		</block>
 

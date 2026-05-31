@@ -265,6 +265,20 @@ resourceGrenadeTip,"Grenade Tip"
 resourceGrenadeCasing,"Grenade Casing"
 40mmGAmmo,"40mm Grenade (Ammo)"
 40mmGHEAmmo,"40mm HE Grenade (Ammo)"
+40mmGForceAmmo,"40mm Force Grenade (Ammo)"
+
+resource4BoreBulletCasing,"4 Bore Bullet Casing"
+
+resource4BoreBulletTip,"4 Bore Bullet Tip"
+
+gunRifleT3Rifle4Bore,"4 Bore Rifle"
+
+
+
+
+
+
+
 
 CowStable001,Cow Stable
 
@@ -968,6 +982,23 @@ challengeGathererZinc,Gather Zinc
 challengeGathererZincShort,[DECEA3] Zinc [-]
 challengeGathererZincDesc,Gather some Zinc
 
+challengeGathererTungsten,Gather Tungsten 
+challengeGathererTungstenShort,[DECEA3] Tungsten [-]
+challengeGathererTungstenDesc,Gather some Tungsten
+
+challengeGathererTantalum,Gather Tantalum 
+challengeGathererTantalumShort,[DECEA3] Tantalum [-]
+challengeGathererTantalumDesc,Gather some Tantalum
+
+
+
+
+
+
+
+
+
+
 
 challengePlaceAdvForge,"Place Advanced Forge"
 challengePlaceAdvForgeShort,"[DECEA3]Advanced Forge[-]"
@@ -1054,7 +1085,7 @@ buffFireRetardantResistedDisplayTooltip,Fire resisted.
 
 
 
-
+gunExplosivesT4MultiRocketLauncher,"Multi Rocket Launcher"
 
 
 

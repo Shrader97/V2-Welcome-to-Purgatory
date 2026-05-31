@@ -191,19 +191,19 @@
 		<objective type="Harvest" item="resourceZinc" count="10000"/>
 	</challenge>
 
-	<!--challenge name="gathererStone" title_key="challengeGathererStone" icon="ui_game_symbol_mining" group="Advanced Gatherer"
-		short_description_key="challengeGathererStoneShort" description_key="challengeGathererStoneDesc"
+	<challenge name="gathererTungsten" title_key="challengeGathererTungsten" icon="ui_game_symbol_mining" group="Advanced Gatherer"
+		short_description_key="challengeGathererTungstenShort" description_key="challengeGathererTungstenDesc"
 		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
-		<objective type="Harvest" item="resourceRockSmall" count="2000" disable_tracking="true"/>
+		<objective type="Harvest" item="resourceTungsten" count="10000" disable_tracking="true"/>
 	</challenge>
 
-	<challenge name="gathererIron" title_key="challengeGathererIron" icon="ui_game_symbol_mining" group="Advanced Gatherer"
-		short_description_key="challengeGathererIronShort" description_key="challengeGathererIronDesc"
+	<challenge name="gathererTantalum" title_key="challengeGathererTantalum" icon="ui_game_symbol_mining" group="Advanced Gatherer"
+		short_description_key="challengeGathererTantalumShort" description_key="challengeGathererTantalumDesc"
 		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
-		<objective type="Harvest" item="resourceScrapIron" count="1000" block_tag="ore"/>
+		<objective type="Harvest" item="resourceTantalum" count="10000" block_tag="ore"/>
 	</challenge>
 
-	<challenge name="gathererLead" title_key="challengeGathererLead" icon="ui_game_symbol_mining" group="Advanced Gatherer"
+	<!--challenge name="gathererLead" title_key="challengeGathererLead" icon="ui_game_symbol_mining" group="Advanced Gatherer"
 		short_description_key="challengeGathererLeadShort" description_key="challengeGathererLeadDesc"
 		reward_text_key="challenge_reward_1000xp" reward_event="challenge_reward_1000">
 		<objective type="Harvest" item="resourceScrapLead" count="1000" block_tag="ore"/>

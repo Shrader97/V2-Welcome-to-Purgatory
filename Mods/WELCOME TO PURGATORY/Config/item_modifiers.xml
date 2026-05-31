@@ -535,21 +535,11 @@
             </effect_group>
         </item_modifier>
 
-
-
-
-
-
-
-
-
-
-
-        <item_modifier name="modGhillieSuitHood" installable_tags="armorHead" blocked_tags="clothing" modifier_tags="noMods" type="attachment">
+        <item_modifier name="modGhillieSuitHood" installable_tags="armorHead" blocked_tags="" modifier_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
             <property name="UnlockedBy" value="perkSniperComplete"/> <!-- BOOK_PERK -->
             <property name="CustomIcon" value="apparelGhillieSuitHood"/>
-            <property name="DisplayType" value="clothingGhillieHood"/>
+            <property name="DisplayType" value="GhillieHood"/>
             <property name="DescriptionKey" value="apparelGhillieSuitGroupDesc"/>
             <effect_group tiered="false">
                 <passive_effect name="HypothermalResist" operation="base_add" value="1"/>
@@ -560,11 +550,11 @@
             </effect_group>
         </item_modifier>
 
-        <item_modifier name="modGhillieSuitPants" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="noMods" type="attachment">
+        <item_modifier name="modGhillieSuitPants" installable_tags="armorFeet" blocked_tags="" modifier_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
             <property name="UnlockedBy" value="perkSniperComplete"/> <!-- BOOK_PERK -->
             <property name="CustomIcon" value="apparelGhillieSuitPants"/>
-            <property name="DisplayType" value="clothingGhillie"/>
+            <property name="DisplayType" value="Ghillie"/>
             <property name="DescriptionKey" value="apparelGhillieSuitGroupDesc"/>
             <effect_group tiered="false">
                 <passive_effect name="HypothermalResist" operation="base_add" value="1"/>
@@ -576,7 +566,7 @@
             </effect_group>
         </item_modifier>
 
-        <item_modifier name="modGhillieSuitJacket" installable_tags="armorChest" blocked_tags="clothing" modifier_tags="noMods" type="attachment">
+        <item_modifier name="modGhillieSuitJacket" installable_tags="armorChest" blocked_tags="" modifier_tags="noMods" type="attachment">
             <property name="Extends" value="modGeneralMaster" param1="CustomIcon"/>
             <property name="UnlockedBy" value="perkSniperComplete"/> <!-- BOOK_PERK -->
             <property name="CustomIcon" value="apparelGhillieSuitJacket"/>

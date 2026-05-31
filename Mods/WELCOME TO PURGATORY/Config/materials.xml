@@ -14,16 +14,29 @@
             <property name="Experience" value="3"/>
         </material>
 
-        <material id="MresourceReinforcedTitanium">
+        <material id="MresourceTungsten">
             <property name="damage_category" value="metal"/>
             <property name="surface_category" value="metal"/>
-            <property name="forge_category" value="Titanium"/>
+            <property name="forge_category" value="Tungsten"/>
             <property name="Hardness" type="float" value="1"/>
             <property name="stepsound" value="metal"/>
             <property name="stability_glue" value="4000"/>
             <property name="Mass" type="int" value="1"/>
             <property name="explosionresistance" value="3"/>
-            <property name="MaxDamage" value="100000"/>
+            <property name="MaxDamage" value="50000"/>
+            <property name="Experience" value="3"/>
+        </material>
+
+        <material id="MresourceTantalum">
+            <property name="damage_category" value="metal"/>
+            <property name="surface_category" value="metal"/>
+            <property name="forge_category" value="Tantalum"/>
+            <property name="Hardness" type="float" value="1"/>
+            <property name="stepsound" value="metal"/>
+            <property name="stability_glue" value="4000"/>
+            <property name="Mass" type="int" value="1"/>
+            <property name="explosionresistance" value="6"/>
+            <property name="MaxDamage" value="60000"/>
             <property name="Experience" value="3"/>
         </material>
 
