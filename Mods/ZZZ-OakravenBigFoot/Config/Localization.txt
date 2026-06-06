@@ -1,0 +1,6 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,spanish,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese
+
+zombieOakravenZombieBigFoot,entityclasses,Entity,,,Big Foot,,,,,,,,,,,,,
+zombieOakravenZombieBigFootSnow,entityclasses,Entity,,,Yeti,,,,,,,,,,,,,
+zombieOakravenZombieBigFootCharged,entityclasses,Entity,,,Charged Big Foot,,,,,,,,,,,,,
+zombieOakravenZombieBigFootInfernal,entityclasses,Entity,,,Infernal Big Foot,,,,,,,,,,,,,
